@@ -1,0 +1,15 @@
+extends ../root-layout
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/s-theme.css")
+  block styles
+
+block content
+  div.layout
+    include ../../components/headers/themes/s-header
+    main
+      block main
+    include ../../components/footers/themes/s-footer
+
+block scripts
+  block scripts

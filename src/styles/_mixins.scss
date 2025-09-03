@@ -1,0 +1,123 @@
+@use './variables.scss' as *;
+@use 'sass:math';
+
+@mixin media($size) {
+  @if ($size == 'md') {
+    @media only screen and (min-width: $media-md) {
+      @content;
+    }
+  } @else if ($size == 'lg') {
+    @media only screen and (min-width: $media-lg) {
+      @content;
+    }
+  } @else if ($size == 'xl') {
+    @media only screen and (min-width: $media-xl) {
+      @content;
+    }
+  }
+}
+
+@mixin customMedia($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+//rem
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+//em
+@function em($px, $current: 16) {
+  $result: math.div($px, $current) + em;
+  @return $result;
+}
+
+@mixin adaptiveValue($property, $startSize, $minSize, $keepSize: 0, $widthFrom: $containerWidth, $widthTo: $minWidth) {
+  @if ($startSize==0) {
+    $startSize: 0.000001;
+  }
+  @if ($minSize==0) {
+    $minSize: 0.000001;
+  }
+
+  //Для calc();
+  $addSize: math.div($startSize - $minSize, 16);
+
+  //Брейк-поинты в EM
+  $widthFromMedia: em($widthFrom);
+  $widthToMedia: em($widthTo);
+
+  //Формула плавающего значения
+  //Источник: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+  $slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo));
+  $yIntersection: -$widthTo * $slope + $minSize;
+  @if ($yIntersection==0) {
+    $yIntersection: 0.000001;
+  }
+  $flyValue: #{rem($yIntersection)}' + ' #{$slope * 100}vw;
+
+  //Получение значения свойства
+  $propertyValue: #{'clamp(' rem($minSize) ',' $flyValue ',' rem($startSize) ')'};
+  //Если отрицательные значения
+  @if ($minSize > $startSize) {
+    $propertyValue: #{'clamp(' rem($startSize) ',' $flyValue ',' rem($minSize) ')'};
+  }
+
+  //Устанавливаем значение по умолчанию
+  @if $keepSize != 1 and $keepSize != 3 {
+    @media (min-width: $widthFromMedia) {
+      #{$property}: rem($startSize);
+    }
+  }
+  //Адаптируем размер в промежутке между указанными ширинами вьюпорта
+  @media (min-width: $widthToMedia) and (max-width: $widthFromMedia) {
+    //Если поддерживается clamp();
+    @supports (#{$property}: $propertyValue) {
+      #{$property}: $propertyValue;
+    }
+    //Если не поддерживается clamp();
+    @supports not (#{$property}: $propertyValue) {
+      #{$property}: calc(
+        #{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($widthFrom, 16) -
+          math.div($widthTo, 16)}
+      );
+    }
+  }
+  @if $keepSize != 1 and $keepSize != 2 {
+    @media (max-width: $widthToMedia) {
+      #{$property}: rem($minSize);
+    }
+  }
+}
+
+@mixin border($width, $color) {
+  outline: $width solid $color;
+  outline-offset: -$width;
+}
+
+@mixin leading($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin hideScrollbar() {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin fontFace($fontFamily, $fontWeight, $fontStyle, $woff, $woff2) {
+  @font-face {
+    font-family: $fontFamily;
+    src: url($woff2) format('woff2'), url($woff) format('woff');
+    font-weight: $fontWeight;
+    font-style: $fontStyle;
+  }
+}

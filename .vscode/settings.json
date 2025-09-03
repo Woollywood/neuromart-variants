@@ -1,0 +1,19 @@
+{
+  "path-autocomplete.excludedItems": {},
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "autoprefix": "last 5 versions",
+      "extensionName": ".css",
+      "savePathReplacementPairs": {
+        "/src/styles": "/src/_compiled/styles"
+      }
+    }
+  ],
+  "liveSassCompile.settings.forceBaseDirectory": "/src",
+  "path-autocomplete.pathMappings": {
+    "@img": "${folder}/src/img",
+    "@styles": "${folder}/src/styles",
+    "@scripts": "${folder}/src/scripts"
+  }
+}

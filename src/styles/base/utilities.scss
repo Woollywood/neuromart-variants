@@ -1,0 +1,9 @@
+@use "../mixins" as *;
+
+.container {
+  padding: 0 var(--space-xs);
+
+  @include media('lg') {
+    padding: 0 var(--space-md);
+  }
+}

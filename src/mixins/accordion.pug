@@ -1,0 +1,15 @@
+include ./icon
+
+mixin accordion(label, links)
+  - const test = 'test'
+  div.accordion(data-component='accordion')
+    button.accordion-trigger(data-component='accordion-trigger')
+      span= label
+      div.accordion-trigger__icon
+        +icon('s-arrow-down')
+    div.accordion__body
+      a.accordion__link(href="#") Главная
+      a.accordion__link(href="#") Главная
+      a.accordion__link(href="#") Главная
+      a.accordion__link(href="#") Главная
+      a.accordion__link(href="#") Главная
