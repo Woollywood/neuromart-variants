@@ -12,8 +12,21 @@ block scripts
   script(src="../../scripts/modules/categorySlider.js")
 
 block main
+  -
+    const tags = [
+      'одежда для охоты',
+      'для рыбалки с берега, на месте',
+      'много хожу',
+      'рыбалка с лодки или катера',
+      'подобрать костюмы',
+      'выгодные предложения',
+    ]
   include ../../modules/stayertex/home/main-banner
   include ../../modules/stayertex/home/questions
   include ../../modules/stayertex/home/hits
-  include ../../components/category-section-right
-  include ../../components/category-section-left
+  include ../../modules/stayertex/home/category-section-left
+  include ../../modules/stayertex/home/category-section-right
+  include ../../modules/stayertex/home/category-section-left
+  include ../../modules/stayertex/home/category-section-right
+  include ../../modules/stayertex/home/category-about
+
