@@ -40,3 +40,10 @@ const observeHeight = (target, heightVariable) =>
   observeElement(target, heightVariable, (target) => target.clientHeight);
 
 const observeWidth = (target, heightVariable) => observeElement(target, heightVariable, (target) => target.clientWidth);
+
+const scrollLock = () => document.body.classList.toggle('scroll-lock');
+
+const modalToggle = () => {
+  modalToggle();
+  document.body.classList.toggle('modal-opened');
+};

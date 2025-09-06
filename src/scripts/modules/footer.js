@@ -1,4 +1,12 @@
-const accordions = document.querySelector("[data-component='footer']").querySelectorAll("[data-component='accordion']");
+const footerAccordions = document
+  .querySelector("[data-component='footer']")
+  .querySelectorAll("[data-component='accordion']");
+const modalAccordions = document
+  .querySelector("[data-component='modal-footer']")
+  .querySelectorAll("[data-component='accordion']");
+
+const accordions = [...footerAccordions, ...modalAccordions];
+
 accordions.forEach((item) => {
   item.addEventListener('click', () => {
     item.classList.add('touched');

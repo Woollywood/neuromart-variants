@@ -4,7 +4,7 @@ section.category-about-section.category-block.left
   div.category-block__container.container
     div.category-block__blocks
       div.category-about-section__left.category-block__block-left
-        div.category-image.contacts
+        div.category-image.contacts-type
           div.category-image__background
             img(src="@img/s-theme/home/categories/category-fishermen.jpg" alt="image")
           include ../../../components/background-gradient
@@ -26,7 +26,7 @@ section.category-about-section.category-block.left
                           +icon('s-whatsapp')
                         div.contact__icon
                           +icon('s-telegram')
-                  a.contact__button.contact__button_bottom(href=`mailto${contact.mailto}`)
+                  a.contact__button.contact__button_bottom(href=`mailto${contact.mailto}`)= contact.email
       div.category-about-section__right.right-category-about-section.category-block__block-right
         section.about
           div.about__wrapper

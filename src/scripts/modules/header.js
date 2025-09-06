@@ -22,11 +22,26 @@ document.querySelectorAll('.input-header__tag').forEach((tag) =>
 );
 
 document.querySelectorAll("[data-component='hamburger']").forEach((item) => {
+  let bodyScroll = 0;
+  let isOpened = false;
+
   item.querySelectorAll('[data-hamburger-button]').forEach((button) => {
     button.addEventListener('click', () => {
-      document.querySelector("[data-component='header-modal']")?.classList.toggle('open');
-      document.querySelector("[data-component='header']")?.classList.toggle('open');
-      modalToggle();
+      isOpened = !isOpened;
+      if (isOpened) {
+        bodyScroll = window.scrollY;
+      }
+      
+      document.querySelector("[data-component='header-modal']")?.classList.toggle('modal-open');
+      document.querySelector("[data-layout-part='main']")?.classList.toggle('modal-open');
+      document.querySelector("[data-component='header']")?.classList.toggle('modal-open');
+      document.querySelector("[data-component='footer']")?.classList.toggle('modal-open');
+
+      if (isOpened) {
+        window.scrollTo({ top: 0 });
+      } else {
+        window.scrollTo({ top: bodyScroll });
+      }
     });
   });
 });

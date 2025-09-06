@@ -390,7 +390,7 @@
   overflow: hidden;
   background-color: black;
 
-  &.contacts {
+  &.contacts-type {
     flex-direction: row;
     align-items: flex-end;
     aspect-ratio: 359 / 524;
@@ -399,7 +399,7 @@
   @include media('md') {
     border-radius: 0;
 
-    &.contacts {
+    &.contacts-type {
       aspect-ratio: 768 / 1024;
     }
   }
@@ -421,7 +421,7 @@
       width: 100%;
     }
 
-    .contacts & {
+    .contacts-type & {
       position: absolute;
       top: 0;
       left: 0;
@@ -661,6 +661,11 @@
 
   &__icon {
     color: var(--primary);
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
   }
 }
 
@@ -762,66 +767,66 @@
 }
 
 .category-about-section {
-    margin-bottom: 48px;
+  margin-bottom: 48px;
 
-    @include media('md') {
-      margin-bottom: 40px;
-    }
-
-    @include media('lg') {
-      margin-bottom: 72px;
-    }
-
-    @include media('xl') {
-      margin-bottom: 80px;
-    }
-
-    &__left {
-      @include media('md') {
-        margin: 0 -8px;
-      }
-
-      @include media('lg') {
-        margin: 0;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-
-    &__contacts {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 8px;
-
-      @include media('md') {
-        display: none;
-      }
-    }
-
-    &__right {
-      @include media('lg') {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
+  @include media('md') {
+    margin-bottom: 40px;
   }
 
-  .right-category-about-section {
+  @include media('lg') {
+    margin-bottom: 72px;
+  }
+
+  @include media('xl') {
+    margin-bottom: 80px;
+  }
+
+  &__left {
+    @include media('md') {
+      margin: 0 -8px;
+    }
+
     @include media('lg') {
-      overflow: hidden;
+      margin: 0;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0 112px;
-    }
-
-    @include media('xl') {
-      padding: 0 127px;
     }
   }
+
+  &__contacts {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+
+    @include media('md') {
+      display: none;
+    }
+  }
+
+  &__right {
+    @include media('lg') {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.right-category-about-section {
+  @include media('lg') {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 112px;
+  }
+
+  @include media('xl') {
+    padding: 0 127px;
+  }
+}
