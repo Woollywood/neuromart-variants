@@ -1,0 +1,24 @@
+div.roadmap
+  div.roadmap__container.container
+    div.roadmap__wrapper
+      -
+        const pages = [
+          { href: 'themes/stayertex/', label: 'home' },
+          { href: 'themes/stayertex/inventory', label: 'inventory' },
+          { href: 'themes/stayertex/detail', label: 'detail' },
+          { href: 'themes/stayertex/cart', label: 'cart' },
+          { href: 'themes/stayertex/order', label: 'order' },
+          { href: 'themes/stayertex/srp', label: 'SRP' },
+          { href: 'themes/stayertex/contact', label: 'contact' },
+          { href: 'themes/stayertex/blog-archive', label: 'blog-archive' },
+          { href: 'themes/stayertex/blog-single', label: 'blog-single' },
+          { href: 'themes/stayertex/agreement', label: 'agreement' },
+          { href: 'themes/stayertex/services', label: 'services' },
+          { href: 'themes/stayertex/account', label: 'account' },
+          { href: 'themes/stayertex/faq', label: 'faq' },
+        ];
+      ul.roadmap__pages
+        each page in pages
+          li
+            a.roadmap__page(href=page.href)
+              div.roadmap__page= page.label
