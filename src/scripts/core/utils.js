@@ -44,6 +44,6 @@ const observeWidth = (target, heightVariable) => observeElement(target, heightVa
 const scrollLock = () => document.body.classList.toggle('scroll-lock');
 
 const modalToggle = () => {
-  modalToggle();
+  scrollLock();
   document.body.classList.toggle('modal-opened');
 };

@@ -1,0 +1,23 @@
+extends ../../layouts/themes/s-layout
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/s-theme.css")
+  link(rel="stylesheet" href="../../styles/pages/detail.css")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
+  script(src="../../scripts/modules/catalogSlider.js")
+  script(src="../../scripts/modules/details.js")
+
+block main
+  div.detail
+    div.detail__container.container
+      div.detail__main
+        include ../../modules/stayertex/detail/gallery
+        include ../../modules/stayertex/detail/details
+      div.detail__bottom
+        include ../../components/catalog-slider-section
+        include ../../modules/stayertex/detail/questions
+        include ../../components/catalog-slider-section
+        include ../../components/catalog-slider-section

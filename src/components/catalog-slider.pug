@@ -1,6 +1,5 @@
 div.splide.catalog-slider(data-component='catalog-slider')
   div.splide__track.catalog-slider__track
     ul.splide__list.catalog-slider__list
-      - const catalogSlides = Array.from({ length: 8 })
-      each slide in catalogSlides
+      each slide in [0, 1, 2, 3, 4, 5, 6, 7]
         include ./catalog-slide

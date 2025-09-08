@@ -1,0 +1,11 @@
+include ../provider
+
+mixin filterAccordion(label, filters)
+  div.filter-accordion(data-component='filter-filter-accordion')
+    button.accordion-trigger.filter-accordion__trigger(type='button' data-component='accordion-trigger')
+      span= label
+      div.accordion-trigger__icon.filter-accordion__icon
+        +icon('s-arrow-down')
+    div.filter-accordion__body
+      each filter in filters
+        button.filter-accordion__filter(type='button')= filter

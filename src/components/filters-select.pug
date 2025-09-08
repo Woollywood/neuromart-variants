@@ -1,0 +1,44 @@
+include ../mixins/provider
+
+-
+  const items1 = [
+    { label: 'Популярности', isActive: false },
+    { label: 'Возрастанию цены', isActive: false },
+    { label: 'Убыванию цены', isActive: false },
+  ];
+  const items2 = [
+    { label: 'Теплоте', isActive: true },
+    { label: 'Шуршанию', isActive: false },
+    { label: 'Влагозащите', isActive: false },
+    { label: 'Дышащести', isActive: false },
+  ];
+
+div.filters-select(data-component='filters-select')
+  div.filters-select__trigger
+    div.filters-select__trigger-text
+      | <span>Сортировать:</span>
+      | По популярности
+    +icon('s-arrow-down')
+  div.filters-select__drawer.filters-select-drawer(data-component='filters-select-drawer')
+    div.filters-select-drawer__header
+      button.filters-select-drawer__button(data-action='close')
+        span Закрыть
+        +icon('s-close')
+    div.filters-select-drawer__content
+      div.filters-select-drawer__title
+        | Сортировать: 
+        span По Теплоте
+      div.filters-select-drawer__items
+        each item in items1
+          div.filters-select-drawer__item(class=item.isActive ? 'active' : '')
+            button.filters-select-drawer__item-radio
+            div= item.label
+      div.filters-select-drawer__label
+        | Умная сортировка
+        br
+        | Выбирайте не только по цене, но и по ощущениям:
+      div.filters-select-drawer__items
+        each item in items2
+          div.filters-select-drawer__item(class=item.isActive ? 'active' : '')
+            button.filters-select-drawer__item-radio
+            div= item.label

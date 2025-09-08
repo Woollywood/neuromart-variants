@@ -1,0 +1,645 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.inventory {
+  padding: 12px 0 40px;
+
+  @include media('md') {
+    padding: 14px 0 96px;
+  }
+
+  @include media('lg') {
+    padding: 16px 0 128px;
+  }
+
+  @include media('md') {
+    padding-top: 14px;
+  }
+
+  @include media('lg') {
+    padding-top: 16px;
+  }
+
+  &.opened {
+    .inventory__breadcrumbs {
+      display: none;
+    }
+
+    .inventory__header {
+      overflow: visible;
+    }
+
+    .inventory__header-content {
+      display: none;
+    }
+  }
+
+  &__container {
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4px;
+    overflow: hidden;
+
+    @include media('lg') {
+      overflow: visible;
+      position: relative;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+  }
+
+  &__row {
+  }
+
+  &__breadcrumbs {
+  }
+
+  &__header {
+    position: relative;
+    overflow: hidden;
+    grid-column: 1 / span 2;
+
+    @include media('lg') {
+      position: static;
+      overflow: auto;
+      grid-column: 1 / span 1;
+    }
+  }
+
+  &__title {
+    @include media('lg') {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__description {
+    display: none;
+
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--secondary);
+    margin-bottom: 28px;
+
+    @include media('lg') {
+      display: block;
+    }
+  }
+
+  &__filters {
+    margin-bottom: 24px;
+
+    @include media('md') {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__cards-bottom {
+  }
+
+  &__card-list {
+  }
+
+  &__slider-section {
+    grid-column: 1 / span 2;
+
+    &:not(:last-child) {
+      margin-top: 26px;
+      margin-bottom: 32px;
+
+      @include media('md') {
+        margin-bottom: 64px;
+      }
+
+      @include media('md') {
+        margin-top: 48px;
+      }
+    }
+
+    @include media('lg') {
+      grid-column: 1 / span 4;
+    }
+  }
+
+  &__pagination {
+    border-top: 1px solid var(--light-2);
+    grid-column: 1 / span 2;
+    padding: 8px 0;
+    margin-bottom: 42px;
+
+    @include media('md') {
+      margin-bottom: 48px;
+    }
+
+    @include media('lg') {
+      grid-column: 1 / span 4;
+    }
+
+    @include media('xl') {
+      margin-bottom: 52px;
+    }
+  }
+}
+
+.filter-accordion {
+  .filter-accordion__trigger {
+    color: var(--secondary);
+  }
+  &.open {
+    margin-bottom: 16px;
+
+    .filter-accordion__trigger {
+      color: var(--primary);
+    }
+  }
+
+  &__body {
+    display: none;
+
+    .open & {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+  }
+
+  &__icon {
+    color: var(--primary);
+  }
+
+  &__filter {
+    height: 32px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background-color: var(--white);
+    @include border(1px, var(--light-2));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--primary);
+    }
+
+    @include media('xl') {
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+}
+
+.filter-action-button {
+  height: 28px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background-color: var(--light);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-family: var(--font-primary);
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--secondary);
+
+  span {
+    transform: translateY(1px);
+  }
+
+  @include media('xl') {
+    padding: 10px 12px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  svg {
+    width: 10px;
+    height: 10px;
+    color: var(--secondary);
+
+    @include media('lg') {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+.filters-modal {
+  &__trigger {
+    font-family: var(--font-primary);
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 8px;
+    @include border(1px, var(--light-2));
+
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    height: 32px;
+
+    @include media('md') {
+      font-size: 13px;
+    }
+
+    @include media('xl') {
+      font-size: 16px;
+      height: 40px;
+    }
+
+    svg {
+      color: var(--primary);
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__container {
+    @include media('lg') {
+      padding: 0;
+
+      .opened & {
+        position: sticky;
+        top: var(--header-height);
+      }
+    }
+  }
+
+  &__body {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    z-index: 100;
+
+    @include media('lg') {
+      width: var(--inventory-header-width);
+      background: transparent;
+      z-index: 10;
+    }
+
+    &.opened {
+      display: block;
+      position: absolute;
+    }
+  }
+
+  &__wrapper {
+    height: 100%;
+  }
+
+  &__top {
+    @include media('lg') {
+      width: 100%;
+      padding: 12px 12px 24px;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: var(--white);
+      max-height: calc(100vh - var(--header-height) - var(--modal-footer-height) - 40px);
+      @include border(1px, var(--light-2));
+      overflow: auto;
+      margin-bottom: 8px;
+    }
+
+    @include media('xl') {
+      padding: 16px 16px 32px;
+    }
+  }
+
+  &__header {
+  }
+
+  &__content {
+    margin-top: calc(40px + var(--modal-header-height));
+    margin-bottom: calc(64px + var(--modal-footer-height));
+
+    @include media('lg') {
+      margin: 32px 0 0;
+    }
+
+    @include media('xl') {
+      margin: 48px 0 0;
+    }
+  }
+
+  &__footer {
+  }
+}
+
+.modal-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 8px;
+  width: 100%;
+  background-color: var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include media('lg') {
+    position: static;
+    padding: 0;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--secondary);
+
+    @include media('xl') {
+      font-size: 24px;
+    }
+  }
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include media('xl') {
+    gap: 16px;
+  }
+}
+
+.modal-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: var(--light);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 8px 0;
+
+  @include media('lg') {
+    position: static;
+    border-radius: 12px;
+    padding: 12px 0;
+  }
+
+  @include media('xl') {
+    padding: 16px 0;
+  }
+
+  &__container {
+    @include media('lg') {
+      padding: 0 12px;
+    }
+
+    @include media('xl') {
+      padding: 0 16px;
+    }
+  }
+
+  &__selected-filters {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+
+    @include media('lg') {
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    @include media('xl') {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__selected-filter {
+    height: 32px;
+    border-radius: 8px;
+    background-color: var(--white);
+    padding: 8px 12px;
+    @include border(1px, var(--light-2));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--primary);
+    }
+
+    @include media('xl') {
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    border-radius: 8px;
+    height: 48px;
+    padding: 10px 12px;
+    background-color: var(--primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-primary);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--white);
+
+    @include media('lg') {
+      height: 48px;
+    }
+  }
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  &.opened {
+    @include media('lg') {
+      display: none;
+    }
+  }
+
+  @include media('lg') {
+    gap: 0;
+  }
+
+  &__top {
+    display: contents;
+
+    @include media('lg') {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    @include media('xl') {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__block {
+    display: contents;
+
+    @include media('lg') {
+      flex-wrap: wrap;
+      gap: 8px;
+      display: flex;
+    }
+  }
+
+  &__actions {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  &__filter-button {
+    font-size: 12px;
+    background-color: var(--light-2);
+
+    @include media('lg') {
+      font-size: 14px;
+    }
+
+    @include media('xl') {
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    font-family: var(--font-primary);
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 8px;
+    @include border(1px, var(--light-2));
+
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    height: 32px;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--primary);
+    }
+
+    @include media('md') {
+      font-size: 13px;
+    }
+
+    @include media('xl') {
+      font-size: 16px;
+      height: 40px;
+    }
+
+    svg {
+      color: var(--primary);
+      width: 18px;
+      height: 18px;
+    }
+
+    &_more {
+      color: var(--primary);
+    }
+  }
+}
+
+.card {
+  padding: 12px 0 24px;
+
+  @include media('md') {
+    padding: 0 0 4px;
+  }
+
+  @include media('lg') {
+    padding: 0;
+  }
+
+  &__image {
+    position: relative;
+    aspect-ratio: 178 / 224;
+    width: 100%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    @include media('md') {
+      padding: 6px 16px 16px;
+    }
+
+    @include media('xl') {
+      padding: 12px 32px 24px;
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__actions {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+
+    @include media('md') {
+      flex-direction: row-reverse;
+    }
+  }
+}

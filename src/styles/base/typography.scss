@@ -2,7 +2,7 @@
 
 .title-block {
   font-weight: 800;
-  font-size: var(--text-size-sm + 2px);
+  font-size: calc(var(--text-size-sm) + 2px);
   text-transform: uppercase;
   color: var(--secondary);
 
@@ -22,12 +22,12 @@
 .subtitle-block {
   font-family: var(--font-secondary);
   font-weight: 500;
-  font-size: var(--text-size-xs + 1px);
+  font-size: calc(var(--text-size-xs) + 1px);
   line-height: var(--text-size-sm);
   color: var(--primary);
 
   @include media('md') {
-    font-size: var(--text-size-xs + 2px);
+    font-size: calc(var(--text-size-xs) + 2px);
     line-height: var(--text-size-sm);
   }
 
@@ -39,7 +39,7 @@
 .page-title {
   font-weight: 900;
   font-size: var(--text-size-lg);
-  line-height: var(--text-size-lg + 4px);
+  line-height: calc(var(--text-size-lg) + 4px);
   font-style: italic;
   text-transform: uppercase;
   color: var(--secondary);
@@ -50,7 +50,7 @@
   }
 
   @include media('xl') {
-    font-size: var(--text-size-xl + 16px);
-    line-height: var(--text-size-xl + 8px);
+    font-size: calc(var(--text-size-xl) + 16px);
+    line-height: calc(var(--text-size-xl) + 8px);
   }
 }
