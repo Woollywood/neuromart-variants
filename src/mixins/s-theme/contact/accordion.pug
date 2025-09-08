@@ -1,0 +1,15 @@
+include ../../provider
+
+mixin contactAccordion(accordion)
+  div.contact-accordion(data-component='contact-accordion')
+    button.accordion-trigger.contact-accordion__trigger(data-component='contact-accordion-trigger')
+      span= accordion.label
+      div.accordion-trigger__icon.contact-accordion__trigger-icon
+        +icon('s-arrow-down')
+    div.contact-accordion__body
+      div.contact-accordion__address
+        = accordion.content.address
+        span= accordion.content.text
+      a.contact-accordion__phone(href=`tel:${accordion.content.phone}`)= accordion.content.phone
+      div.contact-accordion__map-frame
+        include ../../../components/map
