@@ -1,0 +1,18 @@
+include ../../../mixins/provider
+
+div.personal-data(data-component='personal-data')
+  button.personal-data__trigger(data-component='personal-data-trigger')
+    span Персональные данные
+    +icon('s-arrow-down')
+  div.personal-data__content(data-component='personal-data-content')
+    div.personal-data__dates
+      div.personal-data__date Дата обновления: 16.12.2024 14:38:10
+      div.personal-data__date Последняя авторизация: 11.04.2025 13:24:51
+    form.personal-data__form
+      div.personal-data__form-fields
+        +fieldInput('ФИО Получателя', true)
+        +fieldInput('E-mail', true, 'email')
+        +fieldInput('Телефон', true)
+        +fieldInput('НОВЫЙ Пароль')
+        +fieldInput('Подтверждение нового пароля')
+      button.personal-data__submit-button Сохранить
