@@ -1,0 +1,12 @@
+include ./icon
+
+mixin fieldSelect(placeholder, required, type = 'filled')
+  div.field-select(class=type)
+    div.field-select__trigger
+      div.field-select__trigger-wrapper
+        div.field-select__placeholder-wrapper
+          div.field-select__placeholder= placeholder
+          if required
+            div.field-select__placeholder-required *
+        div.field-select__trigger-value оплата по безналу
+      +icon('s-arrow-down')
