@@ -1,0 +1,26 @@
+extends ../../layouts/themes/s-layout
+
+include ../../mixins/provider
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/s-theme.css")
+  link(rel="stylesheet" href="../../styles/pages/cart.css")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
+
+block scripts
+  script(src="../../scripts/modules/cart.js")
+
+block main
+  - const path = ['Магазин мужской одежды', 'Каталог', 'корзина'];
+  div.cart
+    div.cart__container.container
+      div.cart__wrapper
+        div.cart__top
+          +breadcrumbs(path)
+          h1.cart__title.page-title Корзина
+        div.cart__body
+          include ../../modules/stayertex/cart/cart-list
+          div.cart__body-bottom
+            div.cart__sticky
+              include ../../modules/stayertex/cart/cart-price
+              include ../../modules/stayertex/cart/cart-footer
