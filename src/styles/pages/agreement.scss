@@ -1,0 +1,107 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.agreement {
+  padding: 14px 0 44px;
+
+  @include media('lg') {
+    padding: 24px 0 76px;
+  }
+
+  @include media('xl') {
+    padding: 30px 0 106px;
+  }
+
+  &__container {
+  }
+
+  &__wrapper {
+  }
+
+  &__top {
+    margin-bottom: 8px;
+  }
+
+  &__title {
+  }
+
+  &__content {
+    > * {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      font-family: var(--font-secondary);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: var(--secondary);
+
+      @include media('lg') {
+        max-width: 616px;
+      }
+
+      @include media('xl') {
+        max-width: 960px;
+      }
+    }
+
+    ol {
+      list-style-type: none;
+      counter-reset: num;
+      padding-left: 16px;
+
+      @include media('lg') {
+        padding-left: 122px;
+      }
+
+      @include media('xl') {
+        padding-left: calc(166px + 16px);
+      }
+
+      li {
+        position: relative;
+        padding-left: 18px;
+
+        font-family: var(--font-secondary);
+        font-size: 14px;
+        line-height: 16px;
+        color: var(--secondary);
+
+        @include media('lg') {
+          padding-left: 24px;
+          max-width: 496px;
+        }
+
+        @include media('xl') {
+          max-width: 610px;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+
+          @include media('lg') {
+            margin-bottom: 16px;
+          }
+        }
+
+        &::before {
+          content: counter(num) '.';
+          counter-increment: num;
+
+          position: absolute;
+          left: 0;
+          top: 0;
+
+          font-weight: 900;
+          font-style: italic;
+          font-size: 14px;
+          text-transform: uppercase;
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}
