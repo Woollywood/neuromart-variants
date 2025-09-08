@@ -1,3 +1,5 @@
+include ../mixins/provider
+
 div.splide__slide.catalog-slider__slide.catalog-slide
   div.catalog-slide__inner
     div.catalog-slide__image
@@ -7,6 +9,4 @@ div.splide__slide.catalog-slider__slide.catalog-slide
       h2.card-content__subtitle Костюм Горка Зима Финл. ПК #309
       p.card-content__description Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая
       div.catalog-slide__action-wrapper
-        button.card-button.primary
-          | опт
-          span 7 712
+        +cardButton('опт', '7 712')

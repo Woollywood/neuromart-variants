@@ -1,3 +1,5 @@
+include ./provider
+
 mixin inventoryCardList(cardList)
   each card in cardList
     div.card
@@ -9,9 +11,5 @@ mixin inventoryCardList(cardList)
         p.card-content__description= card.description
         div.card__footer
           div.card__actions
-            button.card-button.secondary
-              | розница
-              span 7 712
-            button.card-button.primary
-              | розница
-              span 7 712
+            +cardButton('опт', '7 712', 'secondary')
+            +cardButton('розница', '7 712')
