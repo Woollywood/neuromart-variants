@@ -43,7 +43,7 @@
   font-style: italic;
   text-transform: uppercase;
   color: var(--secondary);
-  margin-bottom: var(--space-sm);
+  margin-bottom: 12px;
 
   @include media('lg') {
     font-size: var(--text-size-xl);

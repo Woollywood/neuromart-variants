@@ -19,15 +19,15 @@
   NotoSerif,
   300,
   normal,
-  '../fonts/NotoSerif_Condensed-Lightght.woff',
-  '../fonts/NotoSerif_Condensed-Lightht.woff2'
+  '../fonts/NotoSerif_Condensed-Light.woff',
+  '../fonts/NotoSerif_Condensed-Light.woff2'
 );
 @include fontFace(
   NotoSerif,
   400,
   normal,
-  '../fonts/NotoSerif_Condensed-Regularht.woff',
-  '../fonts/NotoSerif_Condensed-Regularght.woff2'
+  '../fonts/NotoSerif_Condensed-Regular.woff',
+  '../fonts/NotoSerif_Condensed-Regular.woff2'
 );
 
 @include fontFace(SofiaSans, 400, normal, '../fonts/SofiaSansCondensed-Regular.woff', '../fonts/SofiaSansCondensed-Regular.woff2');

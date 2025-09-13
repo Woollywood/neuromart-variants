@@ -1,0 +1,19 @@
+include ../../mixins/provider
+
+header.header(data-component='header')
+  div.header__container.container
+    div.header__wrapper
+      a.header__logo-wrapper
+        div.header__logo(href="/")
+          block logo
+        span Ювелирная упакова
+      block separator-outer
+      div.header__blocks
+        div.header__top-block
+          block input
+          block actions
+        block separator-inner
+        div.header__bottom-block(data-component='header-bottom-block')
+          block hamburger
+          div.header__info
+            block info
