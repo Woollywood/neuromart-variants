@@ -21,7 +21,11 @@ const watcher = () => {
   gulp.watch(path.watch.icons, icons);
 };
 
-gulp.task('default', gulp.series(clean, mainTasks, gulp.parallel(watcher, server)));
+const devTasks = gulp.series(clean, fontTasks, mainTasks, gulp.parallel(watcher, server));
+const buildTasks = gulp.series(clean, mainTasks);
+
+gulp.task('default', devTasks);
+gulp.task('build', buildTasks);
 
 const fonts = fontTasks;
 

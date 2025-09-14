@@ -1,64 +1,61 @@
+@media only screen and (min-width: 1180px) {
+  .details__wrapper {
+    position: sticky;
+    top: var(--header-height);
+  }
+}
 .details__title {
   margin-bottom: 8px;
 }
-
 .details__price-items {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-radius: 12px;
   outline: 1px solid var(--light-4);
   outline-offset: -1px;
   padding: 8px 12px;
   margin-bottom: 24px;
 }
-
 .details__price-item {
   padding: 4px 0 8px;
 }
-
 .details__price-item:not(:last-child) {
   border-right: 1px solid var(--light-4);
 }
-
 .details__price-item:not(:first-child) {
   padding-left: 12px;
 }
-
 .details__dimensions {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
   gap: 4px;
   margin-bottom: 24px;
 }
-
+@media only screen and (min-width: 768px) {
+  .details__dimensions {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .details__dimensions {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+}
 .details__add-cart {
   margin-bottom: 12px;
 }
-
 .details__separator {
   width: 100%;
   height: 1px;
   background-color: var(--light-2);
   margin-bottom: 12px;
 }
-
 .details__description {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 12px;
   border-radius: 12px;
   outline: 1px solid var(--light-2);
@@ -70,27 +67,21 @@
   line-height: 16px;
   color: var(--secondary);
 }
-
 .details__tags {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 4px;
   margin-bottom: 36px;
 }
-
+@media only screen and (min-width: 1180px) {
+  .details__tags {
+    gap: 8px;
+  }
+}
 .details__tag {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   gap: 6px;
   height: 32px;
   padding: 4px 12px;
@@ -101,27 +92,34 @@
   font-size: 12px;
   text-transform: uppercase;
   color: var(--secondary);
-  -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
-
 .details__tag svg {
   width: 10px;
   height: 14px;
 }
-
 .details__tag:hover {
   color: var(--primary);
 }
-
 .details__tag.fill {
   background-color: var(--light);
   outline: 1px solid var(--light);
   outline-offset: -1px;
 }
-
 .details__tag.fill:hover {
   color: var(--secondary);
+}
+@media only screen and (min-width: 768px) {
+  .details__tag {
+    border-radius: 8px;
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .details__tag {
+    font-size: 16px;
+    height: 40px;
+  }
 }
 
 .price-item__value {
@@ -129,11 +127,9 @@
   text-transform: uppercase;
   font-style: italic;
 }
-
 .price-item__value span {
   font-size: 24px;
 }
-
 .price-item__label {
   font-weight: 700;
   font-style: italic;
@@ -147,18 +143,20 @@
   border-radius: 12px;
   background-color: var(--light);
   height: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
 }
-
+@media only screen and (min-width: 1180px) {
+  .dimension {
+    height: 40px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .dimension {
+    height: 48px;
+  }
+}
 .dimension__value {
   font-weight: 800;
   font-size: 16px;
@@ -166,7 +164,16 @@
   text-transform: uppercase;
   color: var(--secondary);
 }
-
+@media only screen and (min-width: 1180px) {
+  .dimension__value {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .dimension__value {
+    font-size: 16px;
+  }
+}
 .dimension__label {
   font-family: var(--font-secondary);
   font-weight: 600;
@@ -174,6 +181,11 @@
   line-height: 14px;
   text-transform: uppercase;
   color: var(--primary);
+}
+@media only screen and (min-width: 1180px) {
+  .dimension__label {
+    font-size: 11px;
+  }
 }
 
 .sticky-button {
@@ -185,23 +197,20 @@
   background-color: var(--white);
   z-index: 10;
 }
-
 .sticky-button.hide {
   display: none;
 }
-
+@media only screen and (min-width: 1180px) {
+  .sticky-button {
+    display: none;
+  }
+}
 .add-cart-button {
   font-family: var(--font-primary);
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   border-radius: 12px;
   background-color: var(--primary);
   height: 64px;
@@ -212,67 +221,8 @@
   text-transform: uppercase;
   color: var(--white);
 }
-
 @media only screen and (min-width: 768px) {
-  .details__dimensions {
-    -ms-grid-columns: (1fr)[6];
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .details__tag {
-    border-radius: 8px;
-    font-size: 13px;
-  }
-
   .add-cart-button {
     height: 48px;
-  }
-}
-
-@media only screen and (min-width: 1180px) {
-  .details__wrapper {
-    position: sticky;
-    top: var(--header-height);
-  }
-
-  .details__dimensions {
-    -ms-grid-columns: (1fr)[3];
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-  }
-
-  .details__tags {
-    gap: 8px;
-  }
-
-  .dimension {
-    height: 40px;
-  }
-
-  .dimension__value {
-    font-size: 14px;
-  }
-
-  .dimension__label {
-    font-size: 11px;
-  }
-
-  .sticky-button {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .details__tag {
-    font-size: 16px;
-    height: 40px;
-  }
-
-  .dimension {
-    height: 48px;
-  }
-
-  .dimension__value {
-    font-size: 16px;
   }
 }
