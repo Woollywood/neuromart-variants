@@ -1,0 +1,35 @@
+mixin cart(cart)
+  div.cart-item
+    div.cart-item__image
+      img(src="@img/s-theme//home/hits/hits-slide-image.png" alt="image")
+    div.cart-item__content
+      div.cart-item__content-top
+        h3.cart-item__name= cart.name
+        div.cart-item__price-info.price-info
+          if cart.oldPrice
+            span.price-info__old-price= cart.oldPrice
+              | РУБ
+          =cart.price
+          span РУБ
+          span X
+          span= cart.count
+          <span>=</span>
+          span
+            =cart.totalPrice
+            span.price-info__old-price_currency руб
+      div.cart-item__dimensions
+        each dimension, idx in [0, 1, 2, 3, 4]
+          div.cart-item__dimension.dimension-cart
+            div.dimension-cart__row
+              div.dimension-cart__label(class=(idx !== 0) ? 'invisible' : '') Размер:
+              div.dimension-cart__select.field-select
+                div.dimension-cart__select-trigger.dimension-cart__field
+                  span 36
+                  +icon('s-arrow-down')
+              button.dimension-cart__action -
+              div.dimension-cart__field.field-normal 5
+              button.dimension-cart__action +
+      div.cart-item__actions
+        button.cart-item__add-dimension Добавить размер
+        button.cart-item__delete.cart-item__delete_mobile Убрать из Корзины
+    button.cart-item__delete.cart-item__delete_desktop Убрать из Корзины

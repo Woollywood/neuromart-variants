@@ -1,0 +1,8 @@
+mixin breadcrumbs(path)
+  ul.breadcrumbs
+    each item, idx in path
+      li.breadcrumbs__item
+        if idx === path.length - 1
+          span= item
+        else
+          a(href='#')= `${item} /`

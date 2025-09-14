@@ -1,0 +1,46 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.detail {
+  padding-top: 8px;
+  margin-bottom: 40px;
+
+  @include media('md') {
+    margin-bottom: 96px;
+  }
+
+  @include media('xl') {
+    margin-bottom: 128px;
+  }
+
+  &__container {
+  }
+
+  &__main {
+    @include media('lg') {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr 306px;
+      margin-bottom: 80px;
+    }
+
+    @include media('xl') {
+      margin-bottom: 112px;
+      grid-template-columns: 6fr 2fr;
+    }
+  }
+
+  &__gallery {
+    margin-bottom: 8px;
+
+    @include media('lg') {
+      margin: 0;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+}

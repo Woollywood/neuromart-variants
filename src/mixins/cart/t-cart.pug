@@ -1,0 +1,42 @@
+include ../provider
+
+mixin cart(cart)
+  div.cart-item
+    div.cart-item__image
+      img(src="@img/t-theme/cards/inventory-card.png" alt="image")
+    div.cart-item__content
+      div.cart-item__content-top
+        div.cart-item__text-wrapper
+          h3.cart-item__name= cart.name
+          h3.cart-item__description= cart.description
+        div.cart-item__price-info.price-info
+          span.visible= cart.price
+            | ₽
+          span x
+          span= cart.count
+          span
+            | =
+          span= cart.totalPrice
+            | ₽
+          if cart.economy
+            span.price-info__economy
+              | экономия
+              | 
+              = cart.economy
+              | ₽
+      div.cart-item__actions-wrapper
+        div.cart-item__actions
+          button.cart-item__action -
+          div.cart-item__action.cart-item__action_count= cart.count
+          button.cart-item__action +
+        div.cart-item__price-info.price-info.price-info_desktop
+          span.visible.bold= cart.price
+            | ₽
+          if cart.economy
+            span.price-info__economy
+              | экономия
+              | 
+              = cart.economy
+              | ₽
+        button.cart-item__delete
+          +icon('t-close')

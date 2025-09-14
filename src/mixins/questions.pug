@@ -1,0 +1,13 @@
+include ./icon
+
+mixin questions(tags)
+  div.question-card
+    div.question-card__tags
+      each tag in tags
+        div.question-card__tag= tag
+    p.question-card__text Здравствуйте! Я — менеджер магазина СтайрТекс, Введите, что ищете, или задайте вопрос.
+    div.question-card__bottom
+      p.question-card__hint среднее время ответа 15 секунд
+      div.question-card__input.input-question-card(data-component='question-input')
+        +icon('s-stars')
+        input.input-question-card__input(type="text" placeholder="Скажите, что ищете или задайте вопроc...")

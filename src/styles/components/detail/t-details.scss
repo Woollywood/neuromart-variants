@@ -1,0 +1,136 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.details {
+  &__wrapper {
+    @include media('lg') {
+      position: sticky;
+      top: var(--header-height);
+    }
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+
+    @include media('lg') {
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 400;
+
+    @include media('lg') {
+      font-size: 22px;
+    }
+  }
+
+  &__categories {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+
+    @include media('lg') {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__category {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    @include border(1px, rgba(0, 0, 0, 0.12));
+
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @include media('lg') {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  &__add-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 50px;
+
+    @include media('lg') {
+      gap: 16px;
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+  }
+
+  &__description {
+    margin-bottom: 12px;
+
+    @include media('lg') {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.sticky-button {
+  &.hide {
+    display: none;
+  }
+
+  @include media('lg') {
+    display: none;
+  }
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 0;
+  background-color: var(--white);
+  z-index: 10;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include media('lg') {
+      gap: 16px;
+    }
+  }
+}
+
+.add-cart-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 48px;
+  padding: 8px 12px;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--white);
+
+  &.outlined {
+    background-color: transparent;
+    @include border(1px, black);
+    color: black;
+  }
+
+  @include media('md') {
+    font-size: 18px;
+    height: 64px;
+  }
+}

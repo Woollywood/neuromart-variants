@@ -1,0 +1,16 @@
+include ../../mixins/provider
+
+section.question
+  div.question__container.container
+    div.question__wrapper
+      -
+        const questionsTags = [
+          'опт',
+          'весна',
+          'для рыбалки',
+          'влагозащитные',
+          'противомоскитные',
+          'подобрать костюмы',
+          'выгодные предложения',
+        ];
+      +questions(questionsTags)

@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG stack preview | svg-sprite</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                color: #666;
+                background: #fafafa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            header {
+                display: block;
+                padding: 3em 3em 2em;
+                background-color: #fff;
+            }
+
+            header p {
+                margin: 2em 0 0;
+            }
+
+            section {
+                border-top: 1px solid #eee;
+                padding: 2em 3em 0;
+            }
+
+            section ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            section li {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                margin: 0 2em 2em 0;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                padding: 1em 1em 3em;
+                cursor: default;
+            }
+
+            .icon-box {
+                margin: 0;
+                width: 144px;
+                height: 144px;
+                position: relative;
+                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+                border: 1px solid #ccc;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: 400;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 1em;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            footer {
+                display: block;
+                margin: 0;
+                padding: 0 3em 3em;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: .7em;
+            }
+
+            footer a {
+                color: #0f7595;
+                margin-left: 0;
+            }
+        </style>
+
+<!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+<style>
+ .svg-s-account-icon-dims { width: 20px; height: 20px; }
+ .svg-s-arrow-down-dims { width: 10px; height: 7px; }
+ .svg-s-cart-icon-dims { width: 20px; height: 20px; }
+ .svg-s-close-dims { width: 10px; height: 10px; }
+ .svg-s-comment-dims { width: 24px; height: 24px; }
+ .svg-s-dislike-dims { width: 24px; height: 24px; }
+ .svg-s-document-dims { width: 11px; height: 14px; }
+ .svg-s-filters-dims { width: 18px; height: 18px; }
+ .svg-s-like-dims { width: 24px; height: 24px; }
+ .svg-s-menu-dims { width: 16px; height: 6px; }
+ .svg-s-stars-dims { width: 25px; height: 18px; }
+ .svg-s-telegram-dims { width: 18px; height: 18px; }
+ .svg-s-whatsapp-dims { width: 18px; height: 18px; }
+ .svg-t-accessories-dims { width: 33px; height: 32px; }
+ .svg-t-arrow-down-dims { width: 9px; height: 6px; }
+ .svg-t-cart-dims { width: 38px; height: 38px; }
+ .svg-t-case-dims { width: 32px; height: 32px; }
+ .svg-t-chat-dims { width: 24px; height: 24px; }
+ .svg-t-close-dims { width: 40px; height: 40px; }
+ .svg-t-comment-dims { width: 24px; height: 24px; }
+ .svg-t-dislike-dims { width: 24px; height: 24px; }
+ .svg-t-filters-dims { width: 18px; height: 18px; }
+ .svg-t-glove-dims { width: 32px; height: 32px; }
+ .svg-t-like-dims { width: 24px; height: 24px; }
+ .svg-t-logo-dims { width: 143px; height: 32px; }
+ .svg-t-napkin-dims { width: 33px; height: 32px; }
+ .svg-t-package-dims { width: 33px; height: 32px; }
+ .svg-t-person-dims { width: 38px; height: 38px; }
+ .svg-t-pouch-dims { width: 32px; height: 32px; }
+ .svg-t-sort-dims { width: 17px; height: 16px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+    </head>
+    <body>
+        <header>
+            <h1>SVG stack preview</h1>
+            <p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+            <ul>
+                <li>Your browser has to <a href="https://caniuse.com/svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+                <li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+            </ul>
+        </header>
+        <section>
+
+<!--
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+-->
+
+            <ul>
+
+             <li title="s-account-icon">
+                    <div class="icon-box">
+                        <img src="../icons.pug#s-account-icon" class="svg-s-account-icon-dims" alt="s-account-icon">
+                    </div>
+                    <h2>s-account-icon, </h2>
+                </li>
+             <li title="s-arrow-down">
+                    <div class="icon-box">
+                        <img src="../icons.pug#s-arrow-down" class="svg-s-arrow-down-dims" alt="s-arrow-down">
+                    </div>
+                    <h2>s-arrow-down, </h2>
+                </li>
+             <li title="s-cart-icon">
+                    <div class="icon-box">
+                        <img src="../icons.pug#s-cart-icon" class="svg-s-cart-icon-dims" alt="s-cart-icon">
+                    </div>
+                    <h2>s-cart-icon, </h2>
+                </li>
+             <li title="s-close">
+                    <div class="icon-box">
+                        <img src="../icons.pug#s-close" class="svg-s-close-dims" alt="s-close">
+                    </div>
+                    <h2>s-close, </h2>
+                </li>
+             <li title="s-comment">
+                    <div class="icon-box">
+                        <img src="../icons.pug#s-comment" class="svg-s-comment-dims" alt="s-comment">
+                    </div>
+                    <h2>s-comment, </h2>
+                </li>
+             <li title="s-dislike">
+                    <div class="icon-box">
+                        <img src="../icons.pug#s-dislike" class="svg-s-dislike-dims" alt="s-dislike">
+                    </div>
+                    <h2>s-dislike, </h2>
+                </li>
+             <li title="s-document">
+                    <div class="icon-box">
+                        <img src="../icons.pug#s-document" class="svg-s-document-dims" alt="s-document">
+                    </div>
+                    <h2>s-document, </h2>
+                </li>
+             <li title="s-filters">
+                    <div class="icon-box">
+                        <img src="../icons.pug#s-filters" class="svg-s-filters-dims" alt="s-filters">
+                    </div>
+                    <h2>s-filters, </h2>
+                </li>
+             <li title="s-like">
+                    <div class="icon-box">
+                        <img src="../icons.pug#s-like" class="svg-s-like-dims" alt="s-like">
+                    </div>
+                    <h2>s-like, </h2>
+                </li>
+             <li title="s-menu">
+                    <div class="icon-box">
+                        <img src="../icons.pug#s-menu" class="svg-s-menu-dims" alt="s-menu">
+                    </div>
+                    <h2>s-menu, </h2>
+                </li>
+             <li title="s-stars">
+                    <div class="icon-box">
+                        <img src="../icons.pug#s-stars" class="svg-s-stars-dims" alt="s-stars">
+                    </div>
+                    <h2>s-stars, </h2>
+                </li>
+             <li title="s-telegram">
+                    <div class="icon-box">
+                        <img src="../icons.pug#s-telegram" class="svg-s-telegram-dims" alt="s-telegram">
+                    </div>
+                    <h2>s-telegram, </h2>
+                </li>
+             <li title="s-whatsapp">
+                    <div class="icon-box">
+                        <img src="../icons.pug#s-whatsapp" class="svg-s-whatsapp-dims" alt="s-whatsapp">
+                    </div>
+                    <h2>s-whatsapp, </h2>
+                </li>
+             <li title="t-accessories">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-accessories" class="svg-t-accessories-dims" alt="t-accessories">
+                    </div>
+                    <h2>t-accessories, </h2>
+                </li>
+             <li title="t-arrow-down">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-arrow-down" class="svg-t-arrow-down-dims" alt="t-arrow-down">
+                    </div>
+                    <h2>t-arrow-down, </h2>
+                </li>
+             <li title="t-cart">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-cart" class="svg-t-cart-dims" alt="t-cart">
+                    </div>
+                    <h2>t-cart, </h2>
+                </li>
+             <li title="t-case">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-case" class="svg-t-case-dims" alt="t-case">
+                    </div>
+                    <h2>t-case, </h2>
+                </li>
+             <li title="t-chat">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-chat" class="svg-t-chat-dims" alt="t-chat">
+                    </div>
+                    <h2>t-chat, </h2>
+                </li>
+             <li title="t-close">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-close" class="svg-t-close-dims" alt="t-close">
+                    </div>
+                    <h2>t-close, </h2>
+                </li>
+             <li title="t-comment">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-comment" class="svg-t-comment-dims" alt="t-comment">
+                    </div>
+                    <h2>t-comment, </h2>
+                </li>
+             <li title="t-dislike">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-dislike" class="svg-t-dislike-dims" alt="t-dislike">
+                    </div>
+                    <h2>t-dislike, </h2>
+                </li>
+             <li title="t-filters">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-filters" class="svg-t-filters-dims" alt="t-filters">
+                    </div>
+                    <h2>t-filters, </h2>
+                </li>
+             <li title="t-glove">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-glove" class="svg-t-glove-dims" alt="t-glove">
+                    </div>
+                    <h2>t-glove, </h2>
+                </li>
+             <li title="t-like">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-like" class="svg-t-like-dims" alt="t-like">
+                    </div>
+                    <h2>t-like, </h2>
+                </li>
+             <li title="t-logo">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-logo" class="svg-t-logo-dims" alt="t-logo">
+                    </div>
+                    <h2>t-logo, </h2>
+                </li>
+             <li title="t-napkin">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-napkin" class="svg-t-napkin-dims" alt="t-napkin">
+                    </div>
+                    <h2>t-napkin, </h2>
+                </li>
+             <li title="t-package">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-package" class="svg-t-package-dims" alt="t-package">
+                    </div>
+                    <h2>t-package, </h2>
+                </li>
+             <li title="t-person">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-person" class="svg-t-person-dims" alt="t-person">
+                    </div>
+                    <h2>t-person, </h2>
+                </li>
+             <li title="t-pouch">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-pouch" class="svg-t-pouch-dims" alt="t-pouch">
+                    </div>
+                    <h2>t-pouch, </h2>
+                </li>
+             <li title="t-sort">
+                    <div class="icon-box">
+                        <img src="../icons.pug#t-sort" class="svg-t-sort-dims" alt="t-sort">
+                    </div>
+                    <h2>t-sort, </h2>
+                </li>
+         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <footer>
+            <p>Generated at Sun, 14 Sep 2025 17:33:07 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+include ../../mixins/accordion
+
+-
+  const modalAccordions = [
+    {
+      label: 'О компании',
+      links: [
+        { label: 'Контакты', href: '#' },
+        { label: 'Реквизиты', href: '#' },
+        { label: 'Новости', href: '#' },
+        { label: 'Отзывы', href: '#' },
+        { label: 'Сертификаты', href: '#' },
+      ],
+    },
+    {
+      label: 'Интернет-Магазин',
+      links: [
+        { label: 'Личный кабинет', href: '#' },
+        { label: 'Доставка и оплата', href: '#' },
+        { label: 'Как сделать заказ', href: '#' },
+      ],
+    },
+    {
+      label: 'Информация',
+      links: [
+        { label: 'Вопросы и ответы', href: '#' },
+        { label: 'Каталог расцветок, Бланк заказа', href: '#' },
+        { label: 'Стать клиентом', href: '#' },
+      ],
+    },
+    {
+      label: 'Мы с в Соц.Сетях',
+      links: [
+        { label: 'Одноклассиники', href: '#' },
+        { label: 'VK', href: '#' },
+        { label: 'Youtube', href: '#' },
+        { label: 'Instagram', href: '#' },
+      ],
+    },
+  ]
+
+footer.footer(data-component='modal-footer')
+  div.footer__container.container
+    div.footer__inner
+      div.footer__accordions
+        each accordion in modalAccordions
+          +accordion(accordion.label, accordion.links, 'data-footer-accordion')
+      div.footer__copyright.copyright
+        p.copyright__text 2025 stayer-tex.ru © Все права защищены biznetman ® - создание сайта
+        a.copyright__link(href="#") Пользовательское соглашение

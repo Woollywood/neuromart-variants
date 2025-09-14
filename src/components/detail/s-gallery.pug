@@ -1,0 +1,21 @@
+include ../../mixins/provider
+
+div.detail__gallery
+  div.gallery
+    div.gallery__items
+      each item in [0, 1, 2, 3]
+        div.gallery__item
+          div.gallery__image
+            img(src="@img/s-theme/detail/gallery-image-01.png", alt="image")
+    div.gallery__link-wrapper
+      a.gallery__link(href='#')
+        span Показать еще 8 фото
+        div.gallery__link-icon
+          +icon('s-arrow-down')
+  div.splide.gallery-slider(data-gallery-slider)
+    div.splide__track
+      ul.splide__list
+        each item in [0, 1, 2, 3]
+          li.splide__slide.gallery-slider__slide
+            div.gallery-slider__image
+              img(src="@img/s-theme/detail/gallery-image-01.png", alt="image")

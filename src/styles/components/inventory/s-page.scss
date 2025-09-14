@@ -1,0 +1,146 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.inventory {
+  padding: 12px 0 40px;
+
+  @include media('md') {
+    padding: 14px 0 96px;
+  }
+
+  @include media('lg') {
+    padding: 16px 0 128px;
+  }
+
+  @include media('md') {
+    padding-top: 14px;
+  }
+
+  @include media('lg') {
+    padding-top: 16px;
+  }
+
+  &.opened {
+    .inventory__breadcrumbs {
+      display: none;
+    }
+
+    .inventory__header {
+      overflow: visible;
+    }
+
+    .inventory__header-content {
+      display: none;
+    }
+  }
+
+  &__container {
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4px;
+    overflow: hidden;
+
+    @include media('lg') {
+      overflow: visible;
+      position: relative;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+  }
+
+  &__row {
+  }
+
+  &__breadcrumbs {
+  }
+
+  &__header {
+    position: relative;
+    overflow: hidden;
+    grid-column: 1 / span 2;
+
+    @include media('lg') {
+      position: static;
+      overflow: auto;
+      grid-column: 1 / span 1;
+    }
+  }
+
+  &__title {
+    @include media('lg') {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__description {
+    display: none;
+
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--secondary);
+    margin-bottom: 28px;
+
+    @include media('lg') {
+      display: block;
+    }
+  }
+
+  &__filters {
+    margin-bottom: 24px;
+
+    @include media('md') {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__cards-bottom {
+  }
+
+  &__card-list {
+  }
+
+  &__slider-section {
+    grid-column: 1 / span 2;
+
+    &:not(:last-child) {
+      margin-top: 26px;
+      margin-bottom: 32px;
+
+      @include media('md') {
+        margin-bottom: 64px;
+      }
+
+      @include media('md') {
+        margin-top: 48px;
+      }
+    }
+
+    @include media('lg') {
+      grid-column: 1 / span 4;
+    }
+  }
+
+  &__pagination {
+    border-top: 1px solid var(--light-2);
+    grid-column: 1 / span 2;
+    padding: 8px 0;
+    margin-bottom: 42px;
+
+    @include media('md') {
+      margin-bottom: 48px;
+    }
+
+    @include media('lg') {
+      grid-column: 1 / span 4;
+    }
+
+    @include media('xl') {
+      margin-bottom: 52px;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  &.opened {
+    @include media('lg') {
+      display: none;
+    }
+  }
+
+  @include media('lg') {
+    gap: 0;
+  }
+
+  &__top {
+    display: contents;
+
+    @include media('lg') {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    @include media('xl') {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__block {
+    display: contents;
+
+    @include media('lg') {
+      flex-wrap: wrap;
+      gap: 8px;
+      display: flex;
+    }
+  }
+
+  &__actions {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  &__filter-button {
+    font-size: 12px;
+    background-color: var(--light-2);
+
+    @include media('lg') {
+      font-size: 14px;
+    }
+
+    @include media('xl') {
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    font-family: var(--font-primary);
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 8px;
+    @include border(1px, var(--light-2));
+
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    height: 32px;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--primary);
+    }
+
+    @include media('md') {
+      font-size: 13px;
+    }
+
+    @include media('xl') {
+      font-size: 16px;
+      height: 40px;
+    }
+
+    svg {
+      color: var(--primary);
+      width: 18px;
+      height: 18px;
+    }
+
+    &_more {
+      color: var(--primary);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+include ../provider
+
+mixin inventoryCard(card)
+  div.card
+    div.card__image
+      img(src="@img/s-theme/inventory/card.png" alt="image")
+    div.card-content.card__content.sm
+      p.card-content__title= card.country
+      h2.card-content__subtitle= card.title
+      p.card-content__description= card.description
+      div.card__footer
+        div.card__actions
+          +cardButton('опт', '7 712', 'secondary')
+          +cardButton('розница', '7 712')

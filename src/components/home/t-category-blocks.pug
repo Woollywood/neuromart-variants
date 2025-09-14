@@ -1,0 +1,11 @@
+include ../../mixins/category/t-category-block
+
+-
+  const categoryBlock = {
+    title: 'Мешочки',
+    links: ['Из бархата (флокированные)', 'Из атласа', 'Из замши', 'Из микрофибры', 'Из органзы', 'Из парчи', 'Из кожзама', 'Праздничные']
+  }
+
+div.category-blocks
+  +categoryBlock(categoryBlock.title, categoryBlock.links)
+  +categoryBlock(categoryBlock.title, categoryBlock.links)

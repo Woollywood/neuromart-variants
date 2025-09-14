@@ -1,0 +1,85 @@
+extends ../../layouts/themes/s-layout
+
+include ../../mixins/provider
+include ../../mixins/s-theme/contact/section
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/s-theme.css")
+  link(rel="stylesheet" href="../../styles/base/s-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/s-header.css")
+  link(rel="stylesheet" href="../../styles/components/footer/s-footer.css")
+  link(rel="stylesheet" href="../../styles/components/breadcrumbs/s-breadcrumbs.css")
+  link(rel="stylesheet" href="../../styles/components/pagination/s-pagination.css")
+  link(rel="stylesheet" href="../../styles/pages/contact.css")
+
+block scripts
+  script(src="https://api-maps.yandex.ru/v3/?apikey=32d0cc07-0fdf-4f55-8fa8-b03a63b80dc3&lang=ru_RU")
+  script(src="../../scripts/modules/contact.js")
+  script(src="../../scripts/modules/map.js")
+
+
+block main
+  -
+    const path = ['Магазин мужской одежды', 'Контакты'];
+    const sections = [
+      {
+        title: 'Главный офис',
+        accordions: [
+          {
+            label: 'Бухгалтерия',
+            content: {
+              address: 'Адрес: г.Москва, Сигнальный проезд 16, строение 20 (продаж нет).',
+              phone: '+7 (499) 703-39-03',
+              text: '(продаж нет)',
+            },
+          },
+          {
+            label: 'Бухгалтерия',
+            content: {
+              address: 'Адрес: г.Москва, Сигнальный проезд 16, строение 20 (продаж нет).',
+              phone: '+7 (499) 703-39-03',
+              text: '(продаж нет)',
+            },
+          },
+        ],
+      },
+      {
+        title: 'Главный офис',
+        accordions: [
+          {
+            label: 'Бухгалтерия',
+            content: {
+              address: 'Адрес: г.Москва, Сигнальный проезд 16, строение 20 (продаж нет).',
+              phone: '+7 (499) 703-39-03',
+              text: '(продаж нет)',
+            },
+          },
+          {
+            label: 'Бухгалтерия',
+            content: {
+              address: 'Адрес: г.Москва, Сигнальный проезд 16, строение 20 (продаж нет).',
+              phone: '+7 (499) 703-39-03',
+              text: '(продаж нет)',
+            },
+          },
+        ],
+      },
+    ];
+  div.contact
+    div.contact__container.container
+      div.contact__wrapper
+        div.contact__top
+          +breadcrumbs(path)
+          h1.contact__title.page-title Контакты
+        div.contact__cols
+          div.contact__sections
+            each section in sections
+              +section(section)
+          div.contact__details.details-contact
+            h2.details-contact__title рекВизиты
+            div.details-contact__body
+              p
+                | Общество с ограниченной ответственностью «Стайер Текс»Юр. адрес: 155250, Ивановская область, г.Родники,
+                | ул. Советская, д.4а.ИНН   3701047997/ КПП   370101001ОГРН 1133701000014р/с 40702810617000004569в
+                | Отделении №8639/069  СБЕРБАНКА РОССИИ г.ИвановоБИК 042406608 к/с  30101810000000000608 без НДС
+              p Генеральный директор: Коровкина Алевтина Зотиковна

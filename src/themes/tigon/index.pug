@@ -1,0 +1,35 @@
+extends ../../layouts/themes/t-layout
+
+include ../../mixins/category/t-category-block
+include ../../mixins/category/t-category-section
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/t-theme.css")
+  link(rel="stylesheet" href="../../styles/base/t-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/t-header.css")
+  link(rel="stylesheet" href="../../styles/components/header/t-header_home.css")
+  link(rel="stylesheet" href="../../styles/components/footer/t-footer.css")
+  link(rel="stylesheet" href="../../styles/components/catalog-slider/t-catalog-slider.css")
+  link(rel="stylesheet" href="../../styles/components/home/t-main-banner.css")
+  link(rel="stylesheet" href="../../styles/components/home/t-hits-section.css")
+  link(rel="stylesheet" href="../../styles/components/home/t-category-blocks.css")
+  link(rel="stylesheet" href="../../styles/components/home/t-category.css")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
+  script(src="../../scripts/modules/catalogSlider.js")
+
+block main
+  -
+    const categorySection = {
+      title: 'Собственное производство ',
+      description: 'Собственное производство — наша главная сила. Мы не перекупаем, а производим упаковку сами: это значит, что вы получаете стабильное качество, оперативное выполнение тиражей и возможность доработки под ваш бренд.',
+      items: ['Локация — 40 км от Москвы;', 'Цех со штатом мастеров;', 'Производительность до 3 000 изделий в день;', 'Ручная фасовка, упаковка, логистика;', 'Контроль качества на всех этапах.']
+    }
+  include ../../components/home/t-main-banner
+  include ../../components/home/t-hits-section
+  include ../../components/home/t-category-blocks
+  +categorySection('left', categorySection.title, categorySection.description, categorySection.items)
+  +categorySection('right', categorySection.title, categorySection.description, categorySection.items)
+  include ../../components/home/category/t-category-about

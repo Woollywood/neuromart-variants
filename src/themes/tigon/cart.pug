@@ -1,0 +1,122 @@
+extends ../../layouts/themes/t-layout
+
+include ../../mixins/provider
+include ../../mixins/cart/t-cart
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/t-theme.css")
+  link(rel="stylesheet" href="../../styles/base/t-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/t-header.css")
+  link(rel="stylesheet" href="../../styles/components/footer/t-footer.css")
+  link(rel="stylesheet" href="../../styles/components/breadcrumbs/t-breadcrumbs.css")
+  link(rel="stylesheet" href="../../styles/components/pagination/t-pagination.css")
+  link(rel="stylesheet" href="../../styles/components/cart/t-cart-footer.css")
+  link(rel="stylesheet" href="../../styles/components/cart/t-cart.css")
+  link(rel="stylesheet" href="../../styles/components/cart/t-page.css")
+
+block scripts
+  script(src="../../scripts/modules/cart.js")
+
+block header
+  include ../../components/header/t-header_cart
+
+block main
+  -
+    const path = ['Главная', 'Магазин', 'корзина'];
+
+    const carts = [
+      {
+        name: 'Мешочек ВК165',
+        description: 'Микрофибра, Ювелирный, C логотипом C логотипом',
+        price: '260',
+        count: '1',
+        totalPrice: '260',
+        economy: '33 890',
+      },
+      {
+        name: 'Мешочек ВК165',
+        description: 'Микрофибра, Ювелирный, C логотипом C логотипом',
+        price: '260',
+        count: '1',
+        totalPrice: '260',
+        economy: '33 890',
+      },
+      {
+        name: 'Мешочек ВК165',
+        description: 'Микрофибра, Ювелирный, C логотипом C логотипом',
+        price: '260',
+        count: '1',
+        totalPrice: '260',
+        economy: '33 890',
+      },
+      {
+        name: 'Мешочек ВК165',
+        description: 'Микрофибра, Ювелирный, C логотипом C логотипом',
+        price: '260',
+        count: '1',
+        totalPrice: '260',
+        economy: '33 890',
+      },
+      {
+        name: 'Мешочек ВК165',
+        description: 'Микрофибра, Ювелирный, C логотипом C логотипом',
+        price: '260',
+        count: '1',
+        totalPrice: '260',
+        economy: '33 890',
+      },
+      {
+        name: 'Мешочек ВК165',
+        description: 'Микрофибра, Ювелирный, C логотипом C логотипом',
+        price: '260',
+        count: '1',
+        totalPrice: '260',
+        economy: '33 890',
+      },
+      {
+        name: 'Мешочек ВК165',
+        description: 'Микрофибра, Ювелирный, C логотипом C логотипом',
+        price: '260',
+        count: '1',
+        totalPrice: '260',
+        economy: '33 890',
+      },
+      {
+        name: 'Мешочек ВК165',
+        description: 'Микрофибра, Ювелирный, C логотипом C логотипом',
+        price: '260',
+        count: '1',
+        totalPrice: '260',
+        economy: '33 890',
+      },
+      {
+        name: 'Мешочек ВК165',
+        description: 'Микрофибра, Ювелирный, C логотипом C логотипом',
+        price: '260',
+        count: '1',
+        totalPrice: '260',
+        economy: '33 890',
+      },
+      {
+        name: 'Мешочек ВК165',
+        description: 'Микрофибра, Ювелирный, C логотипом C логотипом',
+        price: '260',
+        count: '1',
+        totalPrice: '260',
+        economy: '33 890',
+      },
+    ];
+  div.cart
+    div.cart__container.container
+      div.cart__wrapper
+        div.cart__top
+          +breadcrumbs(path)
+          h1.cart__title.page-title Корзина
+            span - 4 товара
+        div.cart__body
+          div.cart__items
+            each cart in carts
+              +cart(cart)
+          div.cart__body-bottom
+            div.cart__sticky
+              include ../../components/cart/t-cart-footer

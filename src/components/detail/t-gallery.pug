@@ -1,0 +1,10 @@
+include ../../mixins/provider
+
+div.detail__gallery
+  div.splide.gallery-slider(data-gallery-slider)
+    div.splide__track
+      ul.splide__list
+        each item in [0, 1, 2, 3]
+          li.splide__slide.gallery-slider__slide
+            div.gallery-slider__image
+              img(src="@img/t-theme/slider/slide.png", alt="image")

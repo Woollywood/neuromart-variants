@@ -1,0 +1,59 @@
+include ../../mixins/provider
+
+-
+  const filters = [
+    {
+      title: 'Материал',
+      filters: ['Микрофибра', 'Кожа и кож.зам.', 'Бархат-флок', 'Органза', 'Замша'],
+      more: 5,
+    },
+    {
+      title: 'Фильтры',
+      filters: ['Праздничный', 'Подарочный', 'Новогодний', 'С Логотипом', 'С Рисунком', 'Премиум'],
+    },
+    {
+      title: 'Назначение',
+      filters: ['От пятен', 'Для золота', 'Для драгоценных камней', 'Для авто'],
+    },
+    {
+      title: 'Цвет',
+      filters: ['От пятен', 'Для золота', 'Для драгоценных камней', 'Для авто'],
+      closed: true,
+    },
+    {
+      title: 'Размер',
+      filters: ['От пятен', 'Для золота', 'Для драгоценных камней', 'Для авто'],
+      closed: true,
+    },
+  ]
+
+div.inventory__filters.filters
+  div.filters__actions
+    button.filters__all
+      +icon('t-filters')
+      span Все фильтры
+    button.filters__select
+      +icon('t-sort')
+      span По Популярности
+      +icon('t-arrow-down')
+  div.filters__items-wrapper
+    div.filters__items(data-component='filter-items')
+      each filter in filters
+        div.filters__filter(data-overflow-element)
+          if filter.closed
+            button.filters__title= filter.title
+              span +
+          else
+            h3.filters__title= filter.title
+          if !filter.closed
+            ul.filters__list
+              each filterLabel in filter.filters
+                li.filters__list-item
+                  button.filters__list-item-element
+                    div.filters__checkbox
+                    span.filters__list-item-label= filterLabel
+            if filter.more
+              button.filters__more
+                | Еще&nbsp;
+                = filter.more
+    button.filters__button-more Смотреть все

@@ -1,0 +1,346 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.filter-accordion {
+  .filter-accordion__trigger {
+    color: var(--secondary);
+  }
+  &.open {
+    margin-bottom: 16px;
+
+    .filter-accordion__trigger {
+      color: var(--primary);
+    }
+  }
+
+  &__body {
+    display: none;
+
+    .open & {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+  }
+
+  &__icon {
+    color: var(--primary);
+  }
+
+  &__filter {
+    height: 32px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background-color: var(--white);
+    @include border(1px, var(--light-2));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--primary);
+    }
+
+    @include media('xl') {
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+}
+
+.filter-action-button {
+  height: 28px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background-color: var(--light);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-family: var(--font-primary);
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--secondary);
+
+  span {
+    transform: translateY(1px);
+  }
+
+  @include media('xl') {
+    padding: 10px 12px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  svg {
+    width: 10px;
+    height: 10px;
+    color: var(--secondary);
+
+    @include media('lg') {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+.filters-modal {
+  &__trigger {
+    font-family: var(--font-primary);
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 8px;
+    @include border(1px, var(--light-2));
+
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    height: 32px;
+
+    @include media('md') {
+      font-size: 13px;
+    }
+
+    @include media('xl') {
+      font-size: 16px;
+      height: 40px;
+    }
+
+    svg {
+      color: var(--primary);
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__container {
+    @include media('lg') {
+      padding: 0;
+
+      .opened & {
+        position: sticky;
+        top: var(--header-height);
+      }
+    }
+  }
+
+  &__body {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    z-index: 100;
+
+    @include media('lg') {
+      width: var(--inventory-header-width);
+      background: transparent;
+      z-index: 10;
+    }
+
+    &.opened {
+      display: block;
+      position: absolute;
+    }
+  }
+
+  &__wrapper {
+    height: 100%;
+  }
+
+  &__top {
+    @include media('lg') {
+      width: 100%;
+      padding: 12px 12px 24px;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: var(--white);
+      max-height: calc(100vh - var(--header-height) - var(--modal-footer-height) - 40px);
+      @include border(1px, var(--light-2));
+      overflow: auto;
+      margin-bottom: 8px;
+    }
+
+    @include media('xl') {
+      padding: 16px 16px 32px;
+    }
+  }
+
+  &__header {
+  }
+
+  &__content {
+    margin-top: calc(40px + var(--modal-header-height));
+    margin-bottom: calc(64px + var(--modal-footer-height));
+
+    @include media('lg') {
+      margin: 32px 0 0;
+    }
+
+    @include media('xl') {
+      margin: 48px 0 0;
+    }
+  }
+
+  &__footer {
+  }
+}
+
+.modal-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 8px;
+  width: 100%;
+  background-color: var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include media('lg') {
+    position: static;
+    padding: 0;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--secondary);
+
+    @include media('xl') {
+      font-size: 24px;
+    }
+  }
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include media('xl') {
+    gap: 16px;
+  }
+}
+
+.modal-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: var(--light);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 8px 0;
+
+  @include media('lg') {
+    position: static;
+    border-radius: 12px;
+    padding: 12px 0;
+  }
+
+  @include media('xl') {
+    padding: 16px 0;
+  }
+
+  &__container {
+    @include media('lg') {
+      padding: 0 12px;
+    }
+
+    @include media('xl') {
+      padding: 0 16px;
+    }
+  }
+
+  &__selected-filters {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+
+    @include media('lg') {
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    @include media('xl') {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__selected-filter {
+    height: 32px;
+    border-radius: 8px;
+    background-color: var(--white);
+    padding: 8px 12px;
+    @include border(1px, var(--light-2));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--primary);
+    }
+
+    @include media('xl') {
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    border-radius: 8px;
+    height: 48px;
+    padding: 10px 12px;
+    background-color: var(--primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-primary);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--white);
+
+    @include media('lg') {
+      height: 48px;
+    }
+  }
+}

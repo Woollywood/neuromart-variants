@@ -1,0 +1,64 @@
+extends ../../layouts/themes/s-layout
+
+include ../../mixins/provider
+include ../../mixins/s-theme/blog-archive/card
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/s-theme.css")
+  link(rel="stylesheet" href="../../styles/base/s-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/s-header.css")
+  link(rel="stylesheet" href="../../styles/components/footer/s-footer.css")
+  link(rel="stylesheet" href="../../styles/components/catalog-slider/s-catalog-slider.css")
+  link(rel="stylesheet" href="../../styles/components/breadcrumbs/s-breadcrumbs.css")
+  link(rel="stylesheet" href="../../styles/components/pagination/s-pagination.css")
+  link(rel="stylesheet" href="../../styles/pages/blog-archive.css")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
+  script(src="../../scripts/modules/catalogSlider.js")
+  script(src="../../scripts/modules/cart.js")
+
+block main
+  -
+    const path = ['Магазин мужской одежды', 'о компании', 'новости'];
+    const cards = [
+      { title: 'НОВИНКА!!! Костюм "Горка 3" и Брюки "Горка 3"' },
+      {
+        image: true,
+        title: 'Костюм "Горка-3" на флисе Костюм "Горка-3" на флисе Костюм "Горка-3" на флисе',
+      },
+      {
+        image: true,
+        title: 'Костюм "Горка-3" на флисе Костюм "Горка-3" на флисе Костюм "Горка-3" на флисе',
+      },
+      {
+        image: true,
+        title: 'Костюм "Горка-3" на флисе',
+      },
+      {
+        image: true,
+        title: 'Костюм "Горка-3" на флисе',
+      },
+      { title: 'НОВИНКА!!! Костюм "Горка 3" и Брюки "Горка 3"' },
+      {
+        image: true,
+        title: 'Костюм "Горка-3" на флисе',
+      },
+      {
+        image: true,
+        title: 'Костюм "Горка-3" на флисе',
+      },
+    ];
+  div.blog-archive
+    div.blog-archive__container.container
+      div.blog-archive__wrapper
+        div.blog-archive__top
+          +breadcrumbs(path)
+          h1.blog-archive__title.page-title Новости
+        div.blog-archive__card-wrapper
+          div.blog-archive__cards
+            each card in cards
+              +blogArchiveCard(card)
+          include ../../components/pagination
+        include ../../components/catalog-slider/s-catalog-slider-section

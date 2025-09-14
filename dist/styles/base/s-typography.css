@@ -1,0 +1,60 @@
+.title-block {
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+
+.subtitle-block {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--primary);
+}
+
+.page-title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  font-style: italic;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .title-block {
+    font-size: 20px;
+  }
+
+  .subtitle-block {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media only screen and (min-width: 1180px) {
+  .title-block {
+    text-align: center;
+  }
+
+  .subtitle-block {
+    text-align: center;
+  }
+
+  .page-title {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .title-block {
+    font-size: 32px;
+  }
+
+  .page-title {
+    font-size: 48px;
+    line-height: 40px;
+  }
+}

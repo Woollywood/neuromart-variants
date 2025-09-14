@@ -1,0 +1,20 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.question {
+  margin-bottom: 38px;
+
+  @include media('md') {
+    margin-bottom: 48px;
+  }
+
+  @include media('lg') {
+    display: none;
+  }
+
+  &__container {
+  }
+
+  &__wrapper {
+  }
+}

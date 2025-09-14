@@ -1,0 +1,55 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.card {
+  padding: 12px 0 24px;
+
+  @include media('md') {
+    padding: 0 0 4px;
+  }
+
+  @include media('lg') {
+    padding: 0;
+  }
+
+  &__image {
+    position: relative;
+    aspect-ratio: 178 / 224;
+    width: 100%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    @include media('md') {
+      padding: 6px 16px 16px;
+    }
+
+    @include media('xl') {
+      padding: 12px 32px 24px;
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__actions {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+
+    @include media('md') {
+      flex-direction: row-reverse;
+    }
+  }
+}

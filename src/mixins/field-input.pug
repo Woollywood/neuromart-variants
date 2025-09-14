@@ -1,0 +1,8 @@
+mixin fieldInput(placeholder, required, type = 'text')
+  div.field-input(data-component='field-input')
+    div.field-input__wrapper
+      input.field-input__input(type=type)
+      div.field-input__label-wrapper
+        div.field-input__label= placeholder
+        if required
+          div.field-input__label-required *

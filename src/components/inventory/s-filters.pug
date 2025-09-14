@@ -1,0 +1,16 @@
+-
+  const topCategories = ['Зима', 'Демисезон'];
+  const bottomCategories = ['Нешуршащая', 'Непромокаемая', 'Дышащая', 'Морозоустойчивая'];
+
+div.filters(data-component='filters')
+  div.filters__top
+    div.filters__actions
+      include ./s-filters-modal
+      include ../filters-select
+    div.filters__block
+      each category in topCategories
+        button.filters__button= category
+    div.filters__block
+      each category in bottomCategories
+        button.filters__button= category
+      button.filters__button.filters__button_more Смотреть все

@@ -1,0 +1,5 @@
+mixin serviceCard(card, cols = 1)
+  div.card(class=`cols-${cols}`)
+    div.card__content
+      h3.card__title= card.title
+      a.card__link(href='#') узнать подробнее

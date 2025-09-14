@@ -1,0 +1,11 @@
+mixin blogArchiveCard(card)
+  div.blog-archive-card
+    div.blog-archive-card__header
+      div.blog-archive-card__label
+        span Новинка
+        | / 05.01.25
+    div.blog-archive-card__content(class=!card.image ? 'empty-image' : '')
+      h3.blog-archive-card__title= card.title
+      if card.image
+        div.blog-archive-card__image
+          img(src="@img/s-theme/blog-archive/blog-archive.png", alt="image")

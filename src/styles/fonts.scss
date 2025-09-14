@@ -1,0 +1,48 @@
+@use './mixins' as *;
+
+@include fontFace(Finlandica, 400, normal, '../fonts/Finlandica-Regular.woff', '../fonts/Finlandica-Regular.woff2');
+@include fontFace(Finlandica, 400, italic, '../fonts/Finlandica-Italic.woff', '../fonts/Finlandica-Italic.woff2');
+@include fontFace(Finlandica, 500, normal, '../fonts/Finlandica-Medium.woff', '../fonts/Finlandica-Medium.woff2');
+@include fontFace(Finlandica, 600, normal, '../fonts/Finlandica-SemiBold.woff', '../fonts/Finlandica-SemiBold.woff2');
+@include fontFace(Finlandica, 700, normal, '../fonts/Finlandica-Bold.woff', '../fonts/Finlandica-Bold.woff2');
+
+@include fontFace(FiraSans, 300, normal, '../fonts/FiraSans-Light.woff', '../fonts/FiraSans-Light.woff2');
+@include fontFace(FiraSans, 400, italic, '../fonts/FiraSans-Italic.woff', '../fonts/FiraSans-Italic.woff2');
+@include fontFace(FiraSans, 400, normal, '../fonts/FiraSans-Regular.woff', '../fonts/FiraSans-Regular.woff2');
+@include fontFace(FiraSans, 500, italic, '../fonts/FiraSans-MediumItalic.woff', '../fonts/FiraSans-MediumItalic.woff2');
+@include fontFace(FiraSans, 600, normal, '../fonts/FiraSans-SemiBold.woff', '../fonts/FiraSans-SemiBold.woff2');
+@include fontFace(FiraSans, 700, normal, '../fonts/FiraSans-Bold.woff', '../fonts/FiraSans-Bold.woff2');
+
+@include fontFace(Inter, 300, normal, '../fonts/Inter_Light.woff', '../fonts/Inter_Light.woff2');
+
+@include fontFace(
+  NotoSerif,
+  300,
+  normal,
+  '../fonts/NotoSerif_Condensed-Light.woff',
+  '../fonts/NotoSerif_Condensed-Light.woff2'
+);
+@include fontFace(
+  NotoSerif,
+  400,
+  normal,
+  '../fonts/NotoSerif_Condensed-Regular.woff',
+  '../fonts/NotoSerif_Condensed-Regular.woff2'
+);
+
+@include fontFace(SofiaSans, 400, normal, '../fonts/SofiaSansCondensed-Regular.woff', '../fonts/SofiaSansCondensed-Regular.woff2');
+@include fontFace(SofiaSans, 500, italic, '../fonts/SofiaSansCondensed-MediumItalic.woff', '../fonts/SofiaSansCondensed-MediumItalic.woff2');
+@include fontFace(SofiaSans, 600, italic, '../fonts/SofiaSansCondensed-SemiBoldItalic.woff', '../fonts/SofiaSansCondensed-SemiBoldItalic.woff2');
+@include fontFace(SofiaSans, 700, normal, '../fonts/SofiaSansCondensed-Bold.woff', '../fonts/SofiaSansCondensed-Bold.woff2');
+@include fontFace(SofiaSans, 700, italic, '../fonts/SofiaSansCondensed-BoldItalic.woff', '../fonts/SofiaSansCondensed-BoldItalic.woff2');
+@include fontFace(SofiaSans, 800, normal, '../fonts/SofiaSansCondensed-ExtraBold.woff', '../fonts/SofiaSansCondensed-ExtraBold.woff2');
+@include fontFace(SofiaSans, 800, italic, '../fonts/SofiaSansCondensed-ExtraBoldItalic.woff', '../fonts/SofiaSansCondensed-ExtraBoldItalic.woff2');
+@include fontFace(SofiaSans, 900, normal, '../fonts/SofiaSansCondensed-Black.woff', '../fonts/SofiaSansCondensed-Black.woff2');
+@include fontFace(SofiaSans, 900, italic, '../fonts/SofiaSansCondensed-BlackItalic.woff', '../fonts/SofiaSansCondensed-BlackItalic.woff2');
+
+@include fontFace(SourceSans3, 700, normal, '../fonts/SourceSans3-Bold.woff', '../fonts/SourceSans3-Bold.woff2');
+@include fontFace(SourceSans3, 700, italic, '../fonts/SourceSans3-BoldItalic.woff', '../fonts/SourceSans3-BoldItalic.woff2');
+@include fontFace(SourceSans3, 500, normal, '../fonts/SourceSans3-Medium.woff', '../fonts/SourceSans3-Medium.woff2');
+@include fontFace(SourceSans3, 500, italic, '../fonts/SourceSans3-MediumItalic.woff', '../fonts/SourceSans3-MediumItalic.woff2');
+@include fontFace(SourceSans3, 400, normal, '../fonts/SourceSans3-Regular.woff', '../fonts/SourceSans3-Regular.woff2');
+@include fontFace(SourceSans3, 600, normal, '../fonts/SourceSans3-SemiBold.woff', '../fonts/SourceSans3-SemiBold.woff2');

@@ -1,0 +1,30 @@
+mixin categorySection(direction = 'left', description, tags = [])
+  section.category-section.category-block(class=direction)
+    div.category-block__container.container
+      div.category-block__blocks
+        div.category-section__left.category-block__block-left
+          div.category-image.normal
+            div.category-image__background
+              img(src="@img/s-theme/home/categories/category-fishermen.jpg", alt="image")
+            include ../../components/background-gradient
+            div.category-image__content
+              p.category-image__description= description
+              div.category-tags.aboveImage
+                each tag in tags
+                  a.category-tags__tag(href='#')= tag
+        div.category-section__right.right-category-section.category-block__block-right
+          div.right-category-section__wrapper
+            div.right-category-section__top
+              h2.title-block Одежда Для Рыбалки
+              p.subtitle-block Текст комментария от нейросети для расшифровки
+            div.category-section__tags.category-tags.notAboveImage
+              each tag in tags
+                a.category-tags__tag(href='#')= tag
+            div.right-category-section__slider-wrapper
+              div.right-category-section__slider
+                div.splide.catalog-slider(data-component='category-slider')
+                  div.splide__track.catalog-slider__track
+                    ul.splide__list.catalog-slider__list
+                      each slide in [0, 1, 2, 3, 4, 5, 6, 7]
+                        include ../../components/catalog-slider/s-catalog-slide
+            include ../../components/catalog-slider/s-catalog-button

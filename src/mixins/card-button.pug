@@ -1,0 +1,7 @@
+mixin cardButton(text, price, type = 'primary')
+  button.card-button
+    div.card-button__inner(class=type)
+      = text
+      span
+        = price
+      | руб

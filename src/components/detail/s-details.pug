@@ -1,0 +1,68 @@
+include ../../mixins/provider
+
+-
+  const path = ['Магазин мужской одежды', 'Каталог', 'Костюм Горка Зима Финл. ПК олива'];
+  const itemList = [
+    { price: '5 200', label: 'Крупный опт' },
+    { price: '5 200', label: 'Крупный опт' },
+    { price: '5 200', label: 'Крупный опт' },
+  ];
+
+  const dimensions = [
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+  ];
+
+  const tags = [
+    'Детская',
+    'Нешуршащая',
+    'Капюшон',
+    'Детская',
+    'Нешуршащая',
+    'Капюшон',
+    'Детская',
+    'Нешуршащая',
+    'Капюшон',
+  ];
+
+
+div.details
+  div.details__wrapper
+    +breadcrumbs(path)
+    h1.details__title.page-title Костюм Горка Зима Финл. ПК олива
+    div.details__price-items
+      each item in itemList
+        div.details__price-item.price-item
+          div.price-item__value
+            span= item.price
+              | &nbsp;руб
+            div.price-item__label= item.label
+    div.details__dimensions
+      each dimension in dimensions
+        div.dimension
+          div.dimension__value= dimension.value
+          div.dimension__label= dimension.label
+    div.sticky-button(data-component='sticky-button')
+      div.sticky-button__container.container
+        button.add-cart-button добавить в корзину
+    div.details__add-cart
+      button.add-cart-button(data-button-position) добавить в корзину
+    div.details__separator
+    p.details__description
+      | Куртка прямого силуэта, с центральной бортовой застёжкой на молнию, ветрозащитным клапаном,  застёгивающимся на
+      | петлю и пуговицу,съёмным капюшоном - по лицевому вырезу стягивается шнуром.
+    div.details__tags
+      a.details__tag.fill(href='#')
+        +icon('s-document')
+        span Полное описание
+      each tag in tags
+        a.details__tag(href='#')= tag

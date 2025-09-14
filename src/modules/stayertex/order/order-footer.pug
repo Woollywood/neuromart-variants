@@ -1,0 +1,8 @@
+include ../../../mixins/provider
+
+div.order-footer(data-component='order-footer')
+  div.order-footer__container.container
+    div.order-footer__wrapper
+      div.order-footer__checkbox
+        +checkbox('я даю согласие на обработку своих персональных данных')
+      button.order-footer__submit-button ПодтВердить заказ

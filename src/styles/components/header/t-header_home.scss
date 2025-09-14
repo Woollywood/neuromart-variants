@@ -1,0 +1,113 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.header {
+  background-color: transparent;
+
+  &.scrolled {
+    background-color: var(--white);
+  }
+
+  &__logo-wrapper {
+    color: var(--white);
+
+    .scrolled & {
+      color: black;
+    }
+  }
+
+  &__category {
+    color: var(--white);
+    @include border(1px, rgba(255, 255, 255, 0.12));
+
+    @include media('lg') {
+      outline: 0;
+    }
+
+    .scrolled & {
+      color: black;
+      @include border(1px, rgba(0, 0, 0, 0.12));
+      
+      @include media('lg') {
+        outline: 0;
+      }
+    }
+  }
+
+  &__action {
+    color: var(--white);
+
+    .scrolled & {
+      color: black;
+    }
+  }
+}
+
+.input-header {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+
+  .scrolled & {
+    background-color: rgba(0, 0, 0, 0.08);
+    backdrop-filter: none;
+  }
+
+  &__icon {
+    color: var(--white);
+
+    .scrolled & {
+      color: black;
+    }
+  }
+
+  &__input {
+    color: var(--white);
+
+    .scrolled & {
+      color: black;
+    }
+
+    &::placeholder {
+      color: var(--white);
+
+      .scrolled & {
+        color: black;
+      }
+    }
+  }
+
+  &__label {
+    color: var(--white);
+
+    .scrolled & {
+      color: black;
+    }
+  }
+
+  &__tag {
+    color: var(--white);
+    @include border(1px, var(--white));
+
+    .scrolled & {
+      color: black;
+      @include border(1px, rgba(0, 0, 0, 0.24));
+    }
+  }
+}
+
+.hamburger {
+  @include media('lg') {
+    display: none;
+  }
+
+  &__button {
+    background-color: transparent;
+    @include border(1px, rgba(255, 255, 255, 0.24));
+    color: var(--white);
+
+    .scrolled & {
+      color: var(--secondary);
+      @include border(1px, rgba(0, 0, 0, 0.12));
+    }
+  }
+}

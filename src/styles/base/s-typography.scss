@@ -1,0 +1,56 @@
+@use '../mixins' as *;
+
+.title-block {
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--secondary);
+
+  @include media('md') {
+    font-size: 20px;
+  }
+
+  @include media('lg') {
+    text-align: center;
+  }
+
+  @include media('xl') {
+    font-size: 32px;
+  }
+}
+
+.subtitle-block {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--primary);
+
+  @include media('md') {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @include media('lg') {
+    text-align: center;
+  }
+}
+
+.page-title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  font-style: italic;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 12px;
+
+  @include media('lg') {
+    font-size: 32px;
+  }
+
+  @include media('xl') {
+    font-size: 48px;
+    line-height: 40px;
+  }
+}

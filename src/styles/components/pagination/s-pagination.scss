@@ -1,0 +1,42 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &__button {
+    font-family: var(--font-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background-color: var(--light-2);
+    border-radius: 8px;
+    height: 32px;
+
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--secondary);
+
+    @include media('xl') {
+      font-size: 16px;
+      height: 40px;
+    }
+
+    &.number {
+      width: 32px;
+      font-size: 16px;
+
+      @include media('xl') {
+        width: 40px;
+      }
+    }
+
+    &.current {
+      color: var(--primary);
+    }
+  }
+}

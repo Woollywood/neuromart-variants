@@ -1,0 +1,94 @@
+extends ../../layouts/themes/s-layout
+
+include ../../mixins/provider
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/s-theme.css")
+  link(rel="stylesheet" href="../../styles/base/s-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/s-header.css")
+  link(rel="stylesheet" href="../../styles/components/footer/s-footer.css")
+  link(rel="stylesheet" href="../../styles/components/catalog-slider/s-catalog-slider.css")
+  link(rel="stylesheet" href="../../styles/components/breadcrumbs/s-breadcrumbs.css")
+  link(rel="stylesheet" href="../../styles/components/pagination/s-pagination.css")
+  link(rel="stylesheet" href="../../styles/pages/blog-single.css")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
+  script(src="../../scripts/modules/catalogSlider.js")
+
+block main
+  - const path = ['Магазин мужской одежды', 'о компании', 'новости'];
+  div.blog-single
+    div.blog-single__container.container
+      div.blog-single__wrapper
+        div.blog-single__top
+          +breadcrumbs(path)
+          h1.blog-single__title.page-title Встречайте Стайер весенний сезон 2020г !!!
+        div.blog-single__content
+          div.blog-single__content-sticky
+            div.blog-single__main
+              div.blog-single__main-image
+                img.mobile(src="@img/s-theme/blog-single/main.png", alt="image")
+                img.desktop(src="@img/s-theme/blog-single/main--desktop.png", alt="image")
+              a.blog-single-link(href='#')
+                div.blog-single-link__text
+                  span Смотреть:
+                  | Костюм Горка Лето Твил 128
+                +icon('s-arrow-down')
+          div.blog-single__content-scroll
+            div.blog-single__meet
+              div.blog-single__meet-text
+                p Встречайте Стайер весенний сезон 2020г !!! — новую коллекцию демисезонной одежды 2020 года.
+                p
+                  | В коллекции представлены НОВИНКИ: Лесник ПФ: стильный костюм - дизайнерское решение на карманах, низ
+                  | брюк обработан под любую обувь, большой выбор комбинаций расцветок.
+                p
+                  | В коллекции представлены НОВИНКИ: Лесник ПФ: стильный костюм - дизайнерское решение на карманах, низ
+                  | брюк обработан под любую обувь, большой выбор комбинаций расцветок.
+                p
+                  | В коллекции представлены НОВИНКИ: Лесник ПФ: стильный костюм - дизайнерское решение на карманах, низ
+                  | брюк обработан под любую обувь, большой выбор комбинаций расцветок.
+              div.blog-single__meet-images
+                div.blog-single__meet-image
+                  img(src="@img/s-theme/blog-single/twin-01.png", alt="image")
+                div.blog-single__meet-image
+                  img(src="@img/s-theme/blog-single/twin-02.png", alt="image")
+                div.blog-single__meet-image
+                  img(src="@img/s-theme/blog-single/twin-02.png", alt="image")
+                div.blog-single__meet-image
+                  img(src="@img/s-theme/blog-single/twin-02.png", alt="image")
+              div.blog-single__meet-links
+                a.blog-single-link(href='#')
+                  div.blog-single-link__text
+                    span Смотреть:
+                    | Футболка Хаки Мужская
+                  +icon('s-arrow-down')
+                a.blog-single-link(href='#')
+                  div.blog-single-link__text
+                    span Смотреть:
+                    | Футболка Камуфлжная детская
+                  +icon('s-arrow-down')
+            div.blog-single__bottom
+              div.blog-single__bottom-text
+                p
+                  | Классическая модель Горка2 на флисе: проверенная временем, прошита в песочном цвете в ткани рип-стоп.
+                  | Флисовые костюмы: широкий размерный ряд с 28-30р по 60-62р, флис высокой плотности, теплый, приятен к
+                  | телу, на мужской модели предусмотрено усиление на коленях и локтях.
+                p
+                  | Классическая модель Горка2 на флисе: проверенная временем, прошита в песочном цвете в ткани рип-стоп.
+                  | Флисовые костюмы: широкий размерный ряд с 28-30р по 60-62р, флис высокой плотности, теплый, приятен к
+                  | телу, на мужской модели предусмотрено усиление на коленях и локтях.
+                p Все костюмы сертифицированы, проверены ОТК.
+                p Все костюмы сертифицированы, проверены ОТК.
+                p
+                  | Классическая модель Горка2 на флисе: проверенная временем, прошита в песочном цвете в ткани рип-стоп.
+                  | Флисовые костюмы: широкий размерный ряд с 28-30р по 60-62р, флис высокой плотности, теплый, приятен к
+                  | телу, на мужской модели предусмотрено усиление на коленях и локтях.
+                p Все костюмы сертифицированы, проверены ОТК.
+              div.blog-single__bottom-image
+                img(src="@img/s-theme/blog-single/bottom.png", alt="image")
+        div.blog-single__bottom-links
+          a.blog-single__bottom-link(href='#') предыдущая
+          a.blog-single__bottom-link(href='#') Следующая
+        include ../../components/catalog-slider/s-catalog-slider-section

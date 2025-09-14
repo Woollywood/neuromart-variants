@@ -1,0 +1,32 @@
+section.banner(data-component='main-banner')
+  div.banner__container.container
+    div.splide
+      div.splide__track
+        - 
+          const mainBannerSlides = [
+            {
+              title: 'Производим в России Проверено природой',
+              subtitle: 'Сделано для охоты, рыбалки и настоящей погоды',
+            },
+            {
+              title: 'Производим в России Проверено природой',
+              subtitle: 'Сделано для охоты, рыбалки и настоящей погоды',
+            },
+            {
+              title: 'Производим в России Проверено природой',
+              subtitle: 'Сделано для охоты, рыбалки и настоящей погоды',
+            },
+          ];
+        div.splide__list
+          each slide in mainBannerSlides
+            div.splide__slide.banner-slide
+              div.banner-slide__image
+                img.banner-slide__image_mobile(src="@img/s-theme/home/banner/banner-slide-mobile.jpg" alt="image")
+                img.banner-slide__image_desktop(src="@img/s-theme/home/banner/banner-slide-desktop.jpg" alt="image")
+              div.banner-slide__description
+                div.banner-slide__description-inner
+                  div.banner-slide__description-gradient
+                  div.banner-slide__description-content
+                    h2.banner-slide__title= slide.title
+                    p.banner-slide__subtitle= slide.subtitle
+                    a.banner-slide__button(href='#') Перейти в каталог

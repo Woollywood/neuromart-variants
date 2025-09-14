@@ -1,0 +1,48 @@
+include ../../mixins/provider
+
+header.header(data-component='header')
+  div.header__container.container
+    div.header__wrapper
+      a.header__logo-wrapper(href="/")
+        div.header__logo
+          +icon('t-logo')
+        span Ювелирная упакова
+      div.header__blocks
+        div.header__top-block
+          div.header__input.input-header(data-component='header-input')
+            div.input-header__field
+              div.input-header__icon
+                +icon('t-chat')
+              input.input-header__input.header-input(type="text")
+              p.input-header__label.header-input
+                span.input-header__label_first Найти или задать вопрос...
+            div.input-header__tags
+              - const inputTags = ['Доставка и оплата', 'Нужна помощь с выбором', 'Что покупают чаще?', 'Индивидуальный заказ', 'Контакты', 'Наши услуги', 'Наши преимущества']
+              each tag in inputTags
+                button.input-header__tag= tag
+          div.header__actions
+            a.header__action(href="#")
+              +icon('t-person')
+            a.header__action(href="#")
+              +icon('t-cart')
+        div.header__bottom-block(data-component='header-bottom-block')
+          div.hamburger(data-component='hamburger')
+            button.hamburger__button.hamburger__button_closed(data-hamburger-button)
+              +icon('s-menu')
+            button.hamburger__button.hamburger__button_opened(data-hamburger-button)
+              +icon('s-close')
+          div.header__info
+            -
+              const categories = [
+                { label: 'ФУтляры', href: '#', icon: 't-pouch' },
+                { label: 'Мешочки', href: '#', icon: 't-case' },
+                { label: 'перчатки', href: '#', icon: 't-glove' },
+                { label: 'Салфетки', href: '#', icon: 't-napkin' },
+                { label: 'Упаковка', href: '#', icon: 't-package' },
+                { label: 'Аксессуары', href: '#', icon: 't-accessories' },
+              ];
+            div.header__categories
+              each category in categories
+                a.header__category(href=category.href)
+                  +icon(category.icon)
+                  span= category.label

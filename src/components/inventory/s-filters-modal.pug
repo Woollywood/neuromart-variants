@@ -1,0 +1,70 @@
+include ../../mixins/provider
+include ../../mixins/inventory/s-filter-accordion
+
+- const selectedFilters = ['Очистить', 'Тафетта'];
+
+-
+  const filters = [
+    { label: 'Сезон', filters: ['Зима', 'Демисезон', 'Лето'] },
+    { label: 'Тип рисунка', filters: ['Камуфляж', 'Гладкокрашенная'] },
+    {
+      label: 'Фильтр',
+      filters: [
+        'Непромокаемая',
+        'Средняя степень защиты от влаги',
+        'Нешуршащая',
+        'Дышащая',
+        'Капюшон',
+        'защита Противомоскитная и противоэнцефалитная',
+        'Морозоустойчивая',
+        'Ветрозащитная',
+        'патронташ',
+      ],
+    },
+    {
+      label: 'Ткань',
+      filters: [
+        'финляндия',
+        'Рип0стоп',
+        'Флис',
+        'Полофлис',
+        'трикотаж',
+        'Палатка',
+        'сорочечная',
+        'Понж',
+        'Таслан',
+        'Алова',
+        'Бязь',
+        'Исландия',
+        'Твил',
+      ],
+    },
+    { label: 'Состав ткани', filters: ['100%ПЭ', '80%ПЭ, 20%ХЛ', '100%хлопок', '65%ПЭ, 35%ХЛ', '90%ПЭ, 10%ХЛ'] },
+    { label: 'Подкладка', filters: ['Тафетта', 'Термостежка', 'Флис'] },
+  ];
+
+.filters-modal(data-component='filters-modal')
+  button.filters-modal__trigger.filters__filter-button(data-component='filters-modal-trigger')
+    +icon('s-filters')
+    span Все фильтры
+  div.filters-modal__body(data-component='filters-modal-body')
+    div.filters-modal__container.container
+      form.filters-modal__wrapper
+        div.filters-modal__top
+          div.filters-modal__header.modal-header(data-component='filters-modal-header')
+            button.filter-action-button(type='button' data-filter-action='reset')
+              span Сбросить
+              +icon('s-close')
+            h2.modal-header__title фильтры
+            button.filter-action-button(type='button' data-filter-action='close')
+              span Закрыть
+              +icon('s-close')
+          div.filters-modal__content.modal-content
+            each filter in filters
+              +filterAccordion(filter.label, filter.filters)
+        div.filters-modal__footer.modal-footer(data-component='filters-modal-footer')
+          div.modal-footer__container.container
+            div.modal-footer__selected-filters
+              each selectedFilter in selectedFilters
+                button.modal-footer__selected-filter(type='button')= selectedFilter
+            button.modal-footer__submit Применить

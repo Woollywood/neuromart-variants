@@ -1,0 +1,174 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.banner {
+  margin-bottom: 8px;
+
+  @include media('lg') {
+    margin-bottom: 20px;
+  }
+
+  &__container {
+  }
+}
+
+.banner-slide {
+  width: 100%;
+  aspect-ratio: 359 / 192;
+  border-radius: 12px;
+  overflow: hidden;
+
+  @include media('lg') {
+    aspect-ratio: auto;
+    @include adaptiveValue('height', 480, 320, $adaptive-lg, $adaptive-xxl);
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &_mobile {
+      @include media('md') {
+        display: none;
+      }
+    }
+
+    &_desktop {
+      display: none;
+
+      @include media('md') {
+        display: block;
+      }
+    }
+  }
+
+  &__description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__description-inner {
+    position: relative;
+    color: var(--white);
+    @include adaptiveValue('padding-top', 116, 36, $adaptive-sm, $adaptive-md);
+
+    @include media('lg') {
+      padding-top: 100px;
+    }
+  }
+
+  &__description-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    z-index: 30;
+
+    @include media('lg') {
+      align-items: center;
+      padding-right: 68px;
+    }
+  }
+
+  &__description-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, #000);
+    z-index: 20;
+    pointer-events: none;
+    transform: rotate(-45deg) scale(6);
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-right: 16px;
+
+    @include adaptiveValue('font-size', 24, 16, $adaptive-sm, $adaptive-md);
+    @include adaptiveValue('max-width', 272, 160, $adaptive-sm, $adaptive-md);
+    @include adaptiveValue('text-indent', -60, -20, $adaptive-sm, $adaptive-md);
+
+    @include media('md') {
+      @include adaptiveValue('font-size', 26, 24, $adaptive-md, $adaptive-lg);
+    }
+
+    @include media('lg') {
+      max-width: 100%;
+      text-indent: 0;
+      margin-right: 0;
+    }
+
+    @include media('xl') {
+      font-size: 40px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    margin-bottom: 8px;
+
+    @include adaptiveValue('font-size', 14, 10, $adaptive-sm, $adaptive-md);
+    @include adaptiveValue('max-width', 136, 90, $adaptive-sm, $adaptive-md);
+    @include adaptiveValue('text-indent', -8, -16, $adaptive-sm, $adaptive-md);
+    @include adaptiveValue('margin-right', 64, 24, $adaptive-sm, $adaptive-md);
+
+    @include media('lg') {
+      max-width: 100%;
+      text-indent: 0;
+      margin-right: 0;
+      margin-bottom: 12px;
+    }
+
+    @include media('xl') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 8px;
+    border-radius: 4px;
+    background-color: var(--primary);
+    font-weight: 800;
+    text-transform: uppercase;
+
+    @include adaptiveValue('font-size', 16, 12, $adaptive-sm, $adaptive-md);
+    @include adaptiveValue('margin-right', 126, 40, $adaptive-sm, $adaptive-md);
+
+    @include media('md') {
+      padding: 8px 12px;
+    }
+
+    @include media('lg') {
+      font-size: 14px;
+      margin-right: 0;
+    }
+
+    @include media('xl') {
+      font-size: 20px;
+      padding: 12px 16px;
+    }
+  }
+}

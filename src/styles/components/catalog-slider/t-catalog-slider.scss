@@ -1,0 +1,131 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.catalog-slider-section {
+  &__content {
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+
+    @include media('lg') {
+      gap: 10px;
+    }
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    @include media('lg') {
+      gap: 8px;
+    }
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    padding: 4px 6px;
+    @include border(1px, rgba(0, 0, 0, 0.12));
+
+    font-size: 10px;
+    text-transform: uppercase;
+
+    @include media('lg') {
+      font-size: 14px;
+      padding: 4px 8px;
+      height: 24px;
+    }
+  }
+
+  &__subtitle {
+    text-align: left;
+    margin-bottom: 16px;
+  }
+}
+
+.catalog-slider {
+  @include media('lg') {
+    margin-right: 0;
+  }
+
+  &__track {
+  }
+
+  &__list {
+  }
+}
+
+.catalog-slide {
+  &__inner {
+  }
+
+  &__image {
+    position: relative;
+    aspect-ratio: 144 / 120;
+    margin-bottom: 8px;
+
+    @include media('lg') {
+      aspect-ratio: 301 / 240;
+      margin-bottom: 14px;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__action-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.card-content {
+  &__title {
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+
+    @include media('lg') {
+      margin-bottom: 6px;
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 2px;
+
+    @include media('lg') {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+  }
+
+  &__description {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.4);
+
+    @include media('lg') {
+      font-size: 14px;
+    }
+  }
+}

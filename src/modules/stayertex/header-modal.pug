@@ -1,0 +1,59 @@
+include ../../mixins/provider
+
+-
+  const modalProducts = [
+    {
+      title: 'Мужская',
+      subtitle: 'Одежда для охоты, рыбалки и активного отдыха',
+      href: '#',
+    },
+    {
+      title: 'Мужская',
+      subtitle: 'Одежда для охоты, рыбалки и активного отдыха',
+      href: '#',
+    },
+    {
+      title: 'Мужская',
+      subtitle: 'Одежда для охоты, рыбалки и активного отдыха',
+      href: '#',
+    },
+    {
+      title: 'Мужская',
+      subtitle: 'Одежда для охоты, рыбалки и активного отдыха',
+      href: '#',
+    },
+  ];
+
+-
+  const modalContacts = [
+    { phone: '+7-906-512-25-55', name: 'Татьяна', email: 'mta37@stayer-tex.ru' },
+    { phone: '+7-906-512-25-55', name: 'Татьяна', email: 'mta37@stayer-tex.ru' },
+  ];
+
+div.header-modal(data-component='header-modal')
+  div.header-modal__products
+    each product in modalProducts
+      a.header-modal__product(href=product.href)
+        div.header-modal__product-image-wrapper
+          div.header-modal__product-image
+            img(src="@img/s-theme/products/product-01.png" alt="image")
+        div.header-modal__product-body
+          h3.header-modal__product-title= product.title
+          h4.header-modal__product-subtitle= product.subtitle
+  div.header-modal__buttons
+    a.header-modal-button(href='#') Прайс
+    a.header-modal-button(href='#') Акции
+  div.header-modal__contacts
+    each contact in modalContacts
+      div.header-modal-contact
+        div.header-modal-contact__name= contact.name
+        div.header-modal-contact__button.header-modal-button
+          div.header-modal-contact__phone
+            a(href=`tel${contact.phone}`)= contact.phone
+          div.header-modal-contact__icons
+            a.header-modal-contact__icon(href='#')
+              +icon('s-whatsapp')
+            a.header-modal-contact__icon(href='#')
+              +icon('s-telegram')
+        div.header-modal-button-outlined= contact.email
+  include ../../components/footer/s-modal-footer

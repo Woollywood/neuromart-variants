@@ -1,0 +1,192 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.catalog-slider-section {
+  &__content {
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__subtitle {
+    text-align: left;
+    margin-bottom: 8px;
+
+    @include media('lg') {
+      margin-bottom: 16px;
+    }
+
+    @include media('xl') {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.catalog-slider {
+  @include border(1px, var(--light-2));
+  margin-right: -8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+
+  @include media('lg') {
+    margin-right: 0;
+    border-radius: 8px;
+  }
+
+  @include media('xl') {
+    border-radius: 12px;
+  }
+
+  &__track {
+  }
+
+  &__list {
+  }
+}
+
+.catalog-slide {
+  padding: 8px 0;
+
+  &__inner {
+    border-right: 1px solid var(--light-2);
+  }
+
+  &__image {
+    position: relative;
+    aspect-ratio: 117 / 144;
+    margin-bottom: 6px;
+
+    @include media('md') {
+      aspect-ratio: 187 / 288;
+    }
+
+    @include media('lg') {
+      aspect-ratio: 201 / 288;
+    }
+
+    @include media('xl') {
+      aspect-ratio: 229 / 328;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__action-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.card-content {
+  padding: 6px 8px 0;
+
+  @include media('md') {
+    padding: 10px 12px 12px;
+  }
+
+  @include media('lg') {
+    padding: 6px 12px 12px;
+  }
+
+  @include media('xl') {
+    padding: 12px 12px 24px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-style: italic;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary);
+
+    @include media('md') {
+      font-size: 13px;
+    }
+
+    @include media('lg') {
+      font-size: 14px;
+    }
+
+    @include media('xl') {
+      font-size: 16px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 800;
+    font-style: italic;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 2px;
+
+    .sm & {
+      @include leading(1);
+    }
+
+    .md & {
+      @include leading(2);
+
+      @include media('lg') {
+        @include leading(1);
+      }
+    }
+
+    @include media('md') {
+      font-size: 13px;
+    }
+
+    @include media('lg') {
+      font-size: 14px;
+    }
+
+    @include media('xl') {
+      font-size: 16px;
+    }
+  }
+
+  &__description {
+    font-weight: 600;
+    font-style: italic;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 6px;
+
+    .sm & {
+      @include leading(2);
+    }
+
+    .md & {
+      @include leading(3);
+
+      @include media('md') {
+        @include leading(2);
+      }
+
+      @include media('xl') {
+        @include leading(1);
+      }
+    }
+
+    @include media('md') {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    @include media('lg') {
+      font-size: 11px;
+    }
+  }
+}

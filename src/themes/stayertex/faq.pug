@@ -1,0 +1,37 @@
+extends ../../layouts/themes/s-layout
+
+include ../../mixins/provider
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/s-theme.css")
+  link(rel="stylesheet" href="../../styles/base/s-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/s-header.css")
+  link(rel="stylesheet" href="../../styles/components/footer/s-footer.css")
+  link(rel="stylesheet" href="../../styles/components/breadcrumbs/s-breadcrumbs.css")
+  link(rel="stylesheet" href="../../styles/components/pagination/s-pagination.css")
+  link(rel="stylesheet" href="../../styles/pages/faq.css")
+
+block scripts
+  script(src="../../scripts/modules/question-input.js")
+
+block main
+  -
+    const path = ['Магазин мужской одежды', 'вопрос-ответ'];
+
+    const questionsTags = [
+      'опт',
+      'весна',
+      'для рыбалки',
+      'влагозащитные',
+      'противомоскитные',
+      'подобрать костюмы',
+      'выгодные предложения',
+    ];
+  div.faq
+    div.faq__container.container
+      div.faq__wrapper
+        div.faq__top
+          +breadcrumbs(path)
+          h1.faq__title.page-title Вопрос-ответ
+        div.faq__content
+          +questions(questionsTags)

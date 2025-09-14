@@ -1,0 +1,13 @@
+mixin categorySection(direction = 'left', title, description, items = [])
+  section.category-section(class=direction)
+    div.category-section__image.category-section-block
+      img(src="@img/t-theme/home/category.png" alt="image")
+      include ../../components/radial-gradient
+    div.category-section__content.category-section-block
+      h2.category-section__title= title
+      p.category-section__description= description
+      ul.category-section__list
+        each item in items
+          li.category-section__list-item= item
+      div.category-section__icon
+        img(src="@img/t-theme/home/icons/icon_1.svg" alt="img")

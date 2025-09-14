@@ -1,0 +1,59 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Roadmap
+
+    link(rel="stylesheet" href="../../styles/roadmap.css")
+
+    link(rel="stylesheet" href="../../styles/tokens/tokens-core.css")
+    link(rel="stylesheet" href="../../styles/tokens/tokens-typography.css")
+
+    link(rel="stylesheet" href="../../styles/base/core.css")
+    link(rel="stylesheet" href="../../styles/base/utilities.css")
+    link(rel="stylesheet" href="../../styles/base/components.css")
+    link(rel="stylesheet" href="../../styles/base/typography.css")
+  body 
+    div.roadmap
+      div.roadmap__container.container
+        div.roadmap__wrapper
+          -
+            const themes = [
+              {
+                title: 'stayertex',
+                pages: [
+                  { href: 'themes/stayertex', label: 'home' },
+                  { href: 'themes/stayertex/inventory.html', label: 'inventory' },
+                  { href: 'themes/stayertex/detail.html', label: 'detail' },
+                  { href: 'themes/stayertex/cart.html', label: 'cart' },
+                  { href: 'themes/stayertex/order.html', label: 'order' },
+                  { href: 'themes/stayertex/srp.html', label: 'SRP' },
+                  { href: 'themes/stayertex/contact.html', label: 'contact' },
+                  { href: 'themes/stayertex/blog-archive.html', label: 'blog-archive' },
+                  { href: 'themes/stayertex/blog-single.html', label: 'blog-single' },
+                  { href: 'themes/stayertex/agreement.html', label: 'agreement' },
+                  { href: 'themes/stayertex/services.html', label: 'services' },
+                  { href: 'themes/stayertex/account.html', label: 'account' },
+                  { href: 'themes/stayertex/faq.html', label: 'faq' },
+                ]
+              },
+              {
+                title: 'tigon',
+                pages: [
+                  { href: 'themes/tigon', label: 'home' },
+                  { href: 'themes/tigon/inventory.html', label: 'inventory' },
+                  { href: 'themes/tigon/detail.html', label: 'detail' },
+                  { href: 'themes/tigon/cart.html', label: 'cart' },
+                ]
+              },
+            ]
+
+          div.roadmap__cols
+            each theme in themes
+              ul.roadmap__pages
+                h2.roadmap__title= theme.title
+                each page in theme.pages
+                  li
+                    a.roadmap__page(href=page.href)
+                      div.roadmap__page= page.label

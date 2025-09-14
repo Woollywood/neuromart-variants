@@ -1,0 +1,31 @@
+include ../../mixins/provider
+
+header.header.cart(data-component='header')
+  div.header__container.container
+    div.header__wrapper
+      a.header__logo-wrapper(href="/")
+        div.header__logo
+          +icon('t-logo')
+        span Ювелирная упакова
+      div.header__blocks
+        div.header__top-block
+          div.header__input.input-header(data-component='header-input')
+            div.input-header__field
+              div.input-header__icon
+                +icon('t-chat')
+              input.input-header__input.header-input(type="text")
+              p.input-header__label.header-input
+                span.input-header__label_first Найти или задать вопрос...
+          div.header__actions
+            a.header__action(href="#")
+              +icon('t-person')
+            a.header__action(href="#")
+              +icon('t-cart')
+        div.header__bottom-block(data-component='header-bottom-block')
+          div.hamburger(data-component='hamburger')
+            button.hamburger__button.hamburger__button_closed(data-hamburger-button)
+              +icon('s-menu')
+            button.hamburger__button.hamburger__button_opened(data-hamburger-button)
+              +icon('s-close')
+          div.header__info
+            a.header__back-button(href='#') Назад к покупкам

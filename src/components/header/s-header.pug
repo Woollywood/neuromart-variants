@@ -1,0 +1,58 @@
+include ../../mixins/provider
+
+header.header(data-component='header')
+  div.header__container.container
+    div.header__wrapper
+      a.header__logo(href="/")
+        img(src="@img/s-theme/logo.svg" alt="logo")
+      div.header__separator.header__separator_outer
+      div.header__blocks
+        div.header__top-block
+          div.header__input.input-header(data-component='header-input')
+            div.input-header__field
+              div.input-header__icon
+                +icon('s-stars')
+              input.input-header__input.header-input(type="text")
+              p.input-header__label.header-input
+                span.input-header__label_first Найти или задать вопрос...
+                span.input-header__label_second среднее время ответа 15 секунд
+            div.input-header__tags
+              - const inputTags = ['Доставка и оплата', 'Нужна помощь с выбором', 'Индивидуальный заказ']
+              each tag in inputTags
+                button.input-header__tag= tag
+          div.header__actions
+            a.header__action(href="#")
+              +icon('s-account-icon')
+            a.header__action(href="#")
+              +icon('s-cart-icon')
+        div.header__separator.header__separator_inner
+        div.header__bottom-block(data-component='header-bottom-block')
+          div.hamburger(data-component='hamburger')
+            button.hamburger__button.hamburger__button_closed(data-hamburger-button)
+              +icon('s-menu')
+            button.hamburger__button.hamburger__button_opened(data-hamburger-button)
+              span Закрыть
+              +icon('s-close')
+          div.header__info
+            -
+              const categories = [
+                { label: 'Мужская одежда', href: '#' },
+                { label: 'Трикотаж', href: '#' },
+                { label: 'Детская', href: '#' },
+                { label: 'Спецодежда', href: '#' },
+                { label: 'Прайс', href: '#' },
+                { label: 'Акции', href: '#' },
+              ];
+              const contacts = ['+7-906-512-25-55', '+7-906-512-25-55']
+            div.header__contacts
+              each contact in contacts
+                div.header__contact
+                  div.header__contact-icons
+                    a.header__contact-icon(href="#")
+                      +icon('s-whatsapp')
+                    a.header__contact-icon(href="#")
+                      +icon('s-telegram')
+                    a.header__contact-phone(href=`tel:${contact}`)= contact
+            div.header__categories
+              each category in categories
+                a.header__category(href=category.href)= category.label

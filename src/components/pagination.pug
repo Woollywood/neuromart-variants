@@ -1,0 +1,8 @@
+-
+  const pages = [1, 2, 3, 4, 5]
+  const currentPage = 1;
+
+div.pagination
+  each page, idx in pages
+    button.pagination__button.number(class=(page === currentPage) ? 'current' : '')= page
+  button.pagination__button Следующая

@@ -1,0 +1,8 @@
+mixin inventoryCard(card)
+  a.card(href='#')
+    div.card__image
+      img(src="@img/t-theme/cards/inventory-card.png" alt="image")
+    div.card-content.card__content.sm
+      p.card-content__title= card.title
+      h2.card-content__subtitle= card.subtitle
+      p.card-content__description= card.description

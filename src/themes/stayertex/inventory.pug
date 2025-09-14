@@ -1,0 +1,56 @@
+extends ../../layouts/themes/s-layout
+
+include ../../mixins/inventory/s-card
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/s-theme.css")
+  link(rel="stylesheet" href="../../styles/base/s-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/s-header.css")
+  link(rel="stylesheet" href="../../styles/components/footer/s-footer.css")
+  link(rel="stylesheet" href="../../styles/components/catalog-slider/s-catalog-slider.css")
+  link(rel="stylesheet" href="../../styles/components/breadcrumbs/s-breadcrumbs.css")
+  link(rel="stylesheet" href="../../styles/components/pagination/s-pagination.css")
+  link(rel="stylesheet" href="../../styles/components/inventory/s-filters.css")
+  link(rel="stylesheet" href="../../styles/components/inventory/s-modal-filters.css")
+  link(rel="stylesheet" href="../../styles/components/inventory/s-card.css")
+  link(rel="stylesheet" href="../../styles/components/inventory/s-page.css")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
+  script(src="../../scripts/modules/catalogSlider.js")
+  script(src="../../scripts/modules/inventory.js")
+  script(src="../../scripts/modules/filtersSelect.js")
+  script(src="../../scripts/modules/filterAccordion.js")
+
+block main
+  -
+    const content = {
+      country: 'Финляндия',
+      title: 'Костюм Горка Зима Финл. ПК #309',
+      description: 'Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая,',
+      price: '7 712',
+      retail: '13 000',
+    };
+    const cardList = Array.from({ length: 12 }).map(() => content);
+    const slides = Array.from({ length: 8 })
+  div.inventory(data-component='inventory')
+    div.inventory__container.container
+      div.inventory__grid
+        div.inventory__header(data-component='inventory-header')
+          div.inventory__header-content
+            - const path = ['Магазин мужской одежды', 'одежда', 'для охоты и рыбалки', 'костюмы']
+            +breadcrumbs(path)
+            h1.inventory__title.page-title Костюмы
+            p.inventory__description C отрезной нагрудной частью,  центральной застёжкой на молнию. На передних половинках обработаны два объёмных накладных боковых кармана, на нагрудной части  накладной карман с клапаном.
+          include ../../components/inventory/s-filters
+        each card in cardList
+          +inventoryCard(card)
+        div.inventory__slider-section
+          include ../../components/catalog-slider/s-catalog-slider-section
+        each card in cardList
+          +inventoryCard(card)
+      div.inventory__pagination
+        include ../../components/pagination
+      div.inventory__slider-section.inventory__slider-section_bottom
+        include ../../components/catalog-slider/s-catalog-slider-section
