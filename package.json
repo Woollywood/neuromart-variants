@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build --build && gulp fonts",
+    "build": "gulp build --build",
     "icons": "gulp icons",
     "fonts": "gulp fonts"
   },

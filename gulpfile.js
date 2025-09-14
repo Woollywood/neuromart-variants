@@ -22,7 +22,7 @@ const watcher = () => {
 };
 
 const devTasks = gulp.series(clean, fontTasks, mainTasks, gulp.parallel(watcher, server));
-const buildTasks = gulp.series(clean, mainTasks);
+const buildTasks = gulp.series(clean, fontTasks, mainTasks);
 
 gulp.task('default', devTasks);
 gulp.task('build', buildTasks);
