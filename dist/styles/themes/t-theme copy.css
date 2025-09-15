@@ -1,0 +1,13 @@
+:root {
+  --dark: #333;
+  --white: #fff;
+  --primary: #a9987a;
+  --secondary: #322d2a;
+  --light: #f2ede8;
+  --light-2: #e8e1d9;
+  --light-3: #aca196;
+  --light-4: #ddd6ca;
+  --font-primary: NotoSerif, sans-serif;
+  --font-secondary: Inter, sans-serif;
+  --font-weight: 300;
+}

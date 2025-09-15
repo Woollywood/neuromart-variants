@@ -1,0 +1,263 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.category-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @include media('lg') {
+    flex-direction: row;
+
+    &.right {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+    color: var(--white);
+
+    @include media('lg') {
+      padding: 0 6vw;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    text-align: left;
+
+    @include media('md') {
+      text-align: center;
+    }
+
+    @include media('lg') {
+      font-size: 48px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__description {
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 14px;
+
+    @include media('md') {
+      text-align: center;
+      padding: 0 80px;
+    }
+
+    @include media('lg') {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__categories {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+
+    @include media('lg') {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border-radius: 6px;
+    @include border(1px, rgba(255, 255, 255, 0.2));
+
+    &.active {
+      outline: 0;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    position: relative;
+    aspect-ratio: 382 / 160;
+    width: 240px;
+
+    @include media('lg') {
+      width: 382px;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.category-section-block {
+  aspect-ratio: 320 / 478;
+  width: 100%;
+  overflow: hidden;
+  flex: 1 1 50%;
+
+  @include media('lg') {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.category-about {
+  position: relative;
+  padding-top: 40%;
+  overflow: hidden;
+  margin-bottom: 32px;
+
+  @include media('lg') {
+    margin-bottom: 72px;
+  }
+
+  @include media('xl') {
+    margin-bottom: 114px;
+  }
+
+  @include media('lg') {
+    padding: 0;
+    aspect-ratio: 2 / 1;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content-wrapper {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    @include media('lg') {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__placeholder {
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 48px 0;
+  }
+
+  &__title {
+    color: var(--white);
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+
+    span {
+      color: #ff8200;
+    }
+  }
+
+  &__text-wrapper {
+    margin-bottom: 16px;
+
+    font-size: 14px;
+    color: var(--white);
+
+    > p {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    gap: 4px;
+
+    @include media('lg') {
+      flex-direction: row;
+      align-self: flex-start;
+      gap: 8px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 24px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    @include border(1px, rgba(255, 255, 255, 0.2));
+
+    &.active {
+      outline: 0;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--white);
+
+    @include media('lg') {
+      width: auto;
+      font-size: 14px;
+      padding: 6px 12px;
+      height: 32px;
+    }
+  }
+}

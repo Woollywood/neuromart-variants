@@ -97,11 +97,6 @@
 
     @include media('lg') {
       display: block;
-      max-width: 512px;
-    }
-
-    @include media('xl') {
-      max-width: 612px;
     }
   }
 

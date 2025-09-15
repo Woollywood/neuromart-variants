@@ -1,0 +1,44 @@
+include ../../mixins/provider
+
+header.header(data-component='header')
+  div.header__filter
+  div.header__container.container
+    div.header__wrapper
+      div.header__left-blocks
+        div.hamburger(data-component='hamburger')
+          button.hamburger__button.hamburger__button_desktop
+            +icon('s-menu')
+        div.header__categories(data-component='header-categories')
+          -
+            const categories = [
+              { label: 'Мужская одежда для охоты, рыбалки, туризма', href: '#' },
+              { label: 'спецодежда', href: '#' },
+              { label: 'Детская Камуфляжная одежда', href: '#' },
+              { label: 'Обувь', href: '#' },
+            ];
+          each category in categories
+            a.header__category(href=category.href data-overflow-element)
+              span= category.label
+      div.header__top-blocks
+        button.hamburger__button.hamburger__button_mobile
+          +icon('s-menu')
+        div.header__logo-wrapper
+          a.header__logo(href='/')
+            img(src="@img/i-theme/logo.svg" alt="img")
+        div.header__actions.header__actions_mobile
+          a.header__action(href="#")
+            +icon('i-person')
+          a.header__action(href="#")
+            +icon('i-cart')
+      div.header__right-blocks
+        div.header__input.input-header(data-component='header-input')
+          div.input-header__field
+            div.input-header__icon
+              +icon('i-chat')
+            input.input-header__input.header-input(type="text")
+            p.input-header__label Найти или задать вопрос...
+        div.header__actions.header__actions_desktop
+          a.header__action(href="#")
+            +icon('i-person')
+          a.header__action(href="#")
+            +icon('i-cart')

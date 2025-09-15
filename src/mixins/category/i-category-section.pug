@@ -1,0 +1,23 @@
+mixin categorySection(direction = 'left', title, description, items = [])
+  section.category-section(class=direction)
+    div.category-section__image.category-section-block
+      img(src="@img/t-theme/home/category.png" alt="image")
+      include ../../components/radial-gradient
+    div.category-section__content.category-section-block
+      h2.category-section__title= title
+      p.category-section__description= description
+      div.category-section__categories
+        -
+          const categories = [
+            {
+              label: 'О Производстве',
+              active: true
+            },
+            {
+              label: 'Смотреть каталог'
+            }
+          ]
+        each category in categories
+          a.category-section__category(href='#' class=category.active? 'active' : '')= category.label
+      div.category-section__icon
+        img(src="@img/i-theme/home/icon.svg" alt="img")

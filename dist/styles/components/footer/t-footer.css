@@ -83,12 +83,6 @@
 @media only screen and (min-width: 1180px) {
   .footer__subscribtion {
     display: block;
-    max-width: 512px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .footer__subscribtion {
-    max-width: 612px;
   }
 }
 .footer__subscribtion-title {

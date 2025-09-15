@@ -1,0 +1,33 @@
+.title-section__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0 48px;
+}
+.title-section__title {
+  text-align: center;
+  margin-bottom: 4px;
+}
+.title-section__description {
+  margin-bottom: 18px;
+  text-align: center;
+}
+.title-section__categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.title-section__category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 8px 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+}

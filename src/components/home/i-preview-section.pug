@@ -1,0 +1,13 @@
+section.preview-section
+  div.preview-section__wrapper
+    div.preview-section__image
+      img(src="@img/i-theme/home/preview.png", alt="image")
+    div.preview-section__content
+      h3.preview-section__title Мужская одежда
+      p.preview-section__description
+        | Текст комментария от нейросети для расшифровки
+        br
+        | Весной на рыбалке важно не промокнуть, не замёрзнуть и не вспотеть.
+      ul.preview-section__list
+        each item in ['Из бархата (флокированные)', 'Из атласа', 'Из бархата (флокированные)', 'Из атласа', 'Из бархата (флокированные)', 'Из атласа', 'Из бархата (флокированные)', 'Из атласа']
+          li.preview-section__list-item= item

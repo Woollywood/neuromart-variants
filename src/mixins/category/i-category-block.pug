@@ -1,0 +1,14 @@
+mixin categoryBlock(title, links)
+  div.category-block
+    div.category-block__image
+      img(src="@img/t-theme/home/background.png" alt="img")
+    include ../../components/radial-gradient
+    if (title && links)
+      div.category-block__content
+        h2.category-block__title= title
+        ul.category-block__links
+          each link in links
+            li.category-block__link-item
+              a.category-block__link(href='#')= link
+          li.category-block__link-item
+            a.category-block__link(href='#') Смотреть все Мешочки

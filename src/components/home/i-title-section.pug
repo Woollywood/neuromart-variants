@@ -1,0 +1,11 @@
+section.title-section
+  div.title-section__container.container
+    div.title-section__wrapper
+      h2.title-section__title.page-title Заголовок
+      p.title-section__description.page-description 
+        | Текст комментария от нейросети для расшифровки
+        br
+        | Весной на рыбалке важно не промокнуть, не замёрзнуть и не вспотеть.
+      div.title-section__categories
+        each category in ['Лето', 'Демисезон', 'Зима']
+          a.title-section__category(href='#')= category

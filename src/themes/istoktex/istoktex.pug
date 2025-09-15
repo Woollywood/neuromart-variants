@@ -1,0 +1,38 @@
+extends ../../layouts/themes/i-layout
+
+include ../../mixins/category/i-category-block
+include ../../mixins/category/i-category-section
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/i-theme.css")
+  link(rel="stylesheet" href="../../styles/base/i-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/i-header.css")
+  link(rel="stylesheet" href="../../styles/components/footer/i-footer.css")
+  link(rel="stylesheet" href="../../styles/components/catalog-slider/i-catalog-slider.css")
+  link(rel="stylesheet" href="../../styles/components/home/i-main-banner.css")
+  link(rel="stylesheet" href="../../styles/components/home/i-preview-section.css")
+  link(rel="stylesheet" href="../../styles/components/home/i-title-section.css")
+  link(rel="stylesheet" href="../../styles/components/home/i-hits-section.css")
+  link(rel="stylesheet" href="../../styles/components/home/i-category-blocks.css")
+  link(rel="stylesheet" href="../../styles/components/home/i-category.css")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
+  script(src="../../scripts/modules/catalogSlider.js")
+
+block main
+  -
+    const categorySection = {
+      title: 'Собственное производство ',
+      description: 'Собственное производство — наша главная сила. Мы не перекупаем, а производим упаковку сами: это значит, что вы получаете стабильное качество, оперативное выполнение тиражей и возможность доработки под ваш бренд.',
+      items: ['Локация — 40 км от Москвы;', 'Цех со штатом мастеров;', 'Производительность до 3 000 изделий в день;', 'Ручная фасовка, упаковка, логистика;', 'Контроль качества на всех этапах.']
+    }
+  include ../../components/home/i-main-banner
+  include ../../components/home/i-title-section
+  include ../../components/home/i-hits-section
+  include ../../components/home/i-preview-section
+  include ../../components/home/i-category-blocks
+  +categorySection('left', categorySection.title, categorySection.description, categorySection.items)
+  +categorySection('right', categorySection.title, categorySection.description, categorySection.items)
+  include ../../components/home/category/i-category-about
