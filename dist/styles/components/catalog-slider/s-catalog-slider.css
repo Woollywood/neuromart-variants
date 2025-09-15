@@ -1,0 +1,208 @@
+.catalog-slider-section__title {
+  text-align: left;
+}
+.catalog-slider-section__subtitle {
+  text-align: left;
+  margin-bottom: 8px;
+}
+@media only screen and (min-width: 1180px) {
+  .catalog-slider-section__subtitle {
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .catalog-slider-section__subtitle {
+    margin-bottom: 8px;
+  }
+}
+
+.catalog-slider {
+  outline: 1px solid var(--light-2);
+  outline-offset: -1px;
+  margin-right: -8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+@media only screen and (min-width: 1180px) {
+  .catalog-slider {
+    margin-right: 0;
+    border-radius: 8px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .catalog-slider {
+    border-radius: 12px;
+  }
+}
+.catalog-slide {
+  padding: 8px 0;
+}
+.catalog-slide__inner {
+  border-right: 1px solid var(--light-2);
+}
+.catalog-slide__image {
+  position: relative;
+  aspect-ratio: 117/144;
+  margin-bottom: 6px;
+}
+@media only screen and (min-width: 768px) {
+  .catalog-slide__image {
+    aspect-ratio: 187/288;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .catalog-slide__image {
+    aspect-ratio: 201/288;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .catalog-slide__image {
+    aspect-ratio: 229/328;
+  }
+}
+.catalog-slide__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.catalog-slide__action-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.card-content {
+  padding: 6px 8px 0;
+}
+@media only screen and (min-width: 768px) {
+  .card-content {
+    padding: 10px 12px 12px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .card-content {
+    padding: 6px 12px 12px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .card-content {
+    padding: 12px 12px 24px;
+  }
+}
+.card-content__title {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+@media only screen and (min-width: 768px) {
+  .card-content__title {
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .card-content__title {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .card-content__title {
+    font-size: 16px;
+  }
+}
+.card-content__subtitle {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 2px;
+}
+.sm .card-content__subtitle {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.md .card-content__subtitle {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1180px) {
+  .md .card-content__subtitle {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .card-content__subtitle {
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .card-content__subtitle {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .card-content__subtitle {
+    font-size: 16px;
+  }
+}
+.card-content__description {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 6px;
+}
+.sm .card-content__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.md .card-content__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media only screen and (min-width: 768px) {
+  .md .card-content__description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .md .card-content__description {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .card-content__description {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .card-content__description {
+    font-size: 11px;
+  }
+}

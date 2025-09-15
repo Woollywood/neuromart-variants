@@ -136,6 +136,11 @@
   }
 
   &__bottom-block {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-grow: 1;
+
     .cart & {
       display: none;
 

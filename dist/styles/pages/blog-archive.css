@@ -1,0 +1,123 @@
+.blog-archive {
+  padding: 14px 0 40px;
+}
+@media only screen and (min-width: 1180px) {
+  .blog-archive {
+    padding: 20px 0 74px;
+  }
+}
+.blog-archive__top {
+  margin-bottom: 16px;
+}
+.blog-archive__card-wrapper {
+  margin-bottom: 50px;
+}
+.blog-archive__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--light-2);
+}
+@media only screen and (min-width: 1180px) {
+  .blog-archive__cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.blog-archive-card {
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--light-2);
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.blog-archive-card__header {
+  padding: 8px 0;
+  margin: 0 8px;
+  border-bottom: 1px solid var(--light-2);
+}
+.blog-archive-card__label {
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+@media only screen and (min-width: 1180px) {
+  .blog-archive-card__label {
+    font-size: 16px;
+  }
+}
+.blog-archive-card__label span {
+  font-weight: 900;
+  font-style: italic;
+}
+.blog-archive-card__content {
+  padding: 16px 16px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 1180px) {
+  .blog-archive-card__content {
+    padding: 20px 32px 0;
+  }
+}
+.blog-archive-card__content.empty-image {
+  padding-top: 0;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.blog-archive-card__title {
+  text-align: center;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
+@media only screen and (min-width: 1180px) {
+  .blog-archive-card__title {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .blog-archive-card__title {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+}
+.empty-image .blog-archive-card__title {
+  margin-bottom: 0;
+}
+.blog-archive-card__image {
+  position: relative;
+  aspect-ratio: 136/198;
+  width: 100%;
+}
+@media only screen and (min-width: 1180px) {
+  .blog-archive-card__image {
+    aspect-ratio: 236/314;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .blog-archive-card__image {
+    aspect-ratio: 340/472;
+  }
+}
+.blog-archive-card__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

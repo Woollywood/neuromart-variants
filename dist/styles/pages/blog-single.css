@@ -1,0 +1,224 @@
+.blog-single-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 32px;
+  padding: 8px 12px;
+  background-color: var(--light);
+  border-radius: 8px;
+}
+@media only screen and (min-width: 1440px) {
+  .blog-single-link {
+    height: 40px;
+  }
+}
+.blog-single-link svg {
+  transform: rotate(-90deg);
+  width: 10px;
+  height: 6px;
+  color: var(--secondary);
+}
+@media only screen and (min-width: 1440px) {
+  .blog-single-link svg {
+    width: 12px;
+    height: 8px;
+  }
+}
+.blog-single-link__text {
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+@media only screen and (min-width: 1440px) {
+  .blog-single-link__text {
+    font-size: 16px;
+  }
+}
+.blog-single-link__text span {
+  color: var(--primary);
+}
+
+.blog-single__wrapper {
+  padding: 14px 0 40px;
+}
+.blog-single__top {
+  margin-bottom: 12px;
+}
+.blog-single__content p {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--secondary);
+}
+@media only screen and (min-width: 768px) {
+  .blog-single__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .blog-single__content {
+    gap: 8px;
+  }
+}
+.blog-single__main {
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .blog-single__main {
+    margin: 0;
+    position: sticky;
+    top: var(--header-height);
+  }
+}
+.blog-single__main-image {
+  position: relative;
+  aspect-ratio: 298/447;
+  width: 100%;
+  border: 1px solid var(--light-2);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+@media only screen and (min-width: 768px) {
+  .blog-single__main-image {
+    aspect-ratio: 626/466;
+    border-radius: 12px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .blog-single__main-image {
+    margin-bottom: 8px;
+  }
+}
+.blog-single__main-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media only screen and (min-width: 768px) {
+  .blog-single__main-image img.mobile {
+    display: none;
+  }
+}
+.blog-single__main-image img.desktop {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .blog-single__main-image img.desktop {
+    display: block;
+  }
+}
+.blog-single__meet {
+  margin-bottom: 20px;
+}
+.blog-single__meet-text {
+  margin-bottom: 20px;
+}
+.blog-single__meet-text p:not(:last-child) {
+  margin-bottom: 16px;
+}
+.blog-single__meet-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+@media only screen and (min-width: 1440px) {
+  .blog-single__meet-images {
+    gap: 8px;
+  }
+}
+.blog-single__meet-image {
+  position: relative;
+  aspect-ratio: 160/240;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--light-2);
+  overflow: hidden;
+}
+.blog-single__meet-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(0.84);
+}
+.blog-single__meet-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+@media only screen and (min-width: 1180px) {
+  .blog-single__meet-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.blog-single__bottom-text {
+  margin-bottom: 24px;
+}
+.blog-single__bottom-text p:not(:last-child) {
+  margin-bottom: 16px;
+}
+.blog-single__bottom-image {
+  position: relative;
+  aspect-ratio: 292/438;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--light-2);
+}
+.blog-single__bottom-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blog-single__bottom-links {
+  padding-top: 8px;
+  margin: 8px 0 50px;
+  border-top: 1px solid var(--light-2);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+@media only screen and (min-width: 1440px) {
+  .blog-single__bottom-links {
+    gap: 8px;
+  }
+}
+.blog-single__bottom-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background-color: var(--light);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+@media only screen and (min-width: 1440px) {
+  .blog-single__bottom-link {
+    height: 40px;
+    font-size: 16px;
+  }
+}

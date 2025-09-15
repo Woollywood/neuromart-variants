@@ -1,0 +1,15 @@
+.roadmap {
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.roadmap__cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.roadmap__title {
+  margin-bottom: 24px;
+}
