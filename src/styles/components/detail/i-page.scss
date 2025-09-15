@@ -1,0 +1,94 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.detail {
+  padding-top: 8px;
+  margin-bottom: 40px;
+
+  @include media('md') {
+    margin-bottom: 96px;
+  }
+
+  @include media('xl') {
+    margin-bottom: 128px;
+  }
+
+  &__container {
+  }
+
+  &__wrapper {
+  }
+
+  &__details {
+    margin-bottom: 92px;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px 0 20px;
+
+    @include media('lg') {
+      margin: 12px 0 44px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__description {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: center;
+
+    @include media('lg') {
+      font-size: 16px;
+    }
+
+    span {
+      font-size: 18px;
+      color: #ff6412;
+
+      @include media('lg') {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__main {
+    @include media('lg') {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 1fr 306px;
+      margin-bottom: 80px;
+    }
+
+    @include media('xl') {
+      gap: 80px;
+      margin-bottom: 112px;
+      grid-template-columns: 6fr 2fr;
+    }
+  }
+
+  &__gallery {
+    margin-bottom: 24px;
+
+    @include media('lg') {
+      margin: 0;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    @include media('lg') {
+      gap: 92px;
+    }
+  }
+}

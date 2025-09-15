@@ -1,0 +1,60 @@
+include ../../mixins/provider
+
+-
+  const itemList = [
+    { price: '5 200', label: 'Крупный опт' },
+    { price: '5 200', label: 'Крупный опт' },
+    { price: '5 200', label: 'Крупный опт' },
+  ];
+
+  const dimensions = [
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+    { value: '44–46', label: '170 / 176  (3/4)' },
+  ];
+
+  const tags = [
+    'Гладкокрашенный',
+    'Дышащая',
+    'Зимняя',
+    'Непромокаемая',
+    'Охота, рыбалка, туризм',
+    'Исландия',
+    'Термофин',
+    'Термофин',
+    '-40O',
+    '80% ПЭ 20% нейлон',
+  ];
+
+
+div.detail__details.details
+  div.details__wrapper
+    div.details__dimensions
+      each dimension in dimensions
+        div.dimension
+          div.dimension__value= dimension.value
+          div.dimension__label= dimension.label
+    div.sticky-button(data-component='sticky-button')
+      div.sticky-button__container.container
+        button.add-cart-button добавить в корзину
+    div.details__add-cart
+      button.add-cart-button(data-button-position) добавить в корзину
+    p.details__description
+      | Куртка прямого силуэта, с центральной бортовой застёжкой на молнию, ветрозащитным клапаном,  застёгивающимся на
+      | петлю и пуговицу,съёмным капюшоном - по лицевому вырезу стягивается шнуром.
+    div.details__more-wrapper
+      button.details__more
+        +icon('s-arrow-down')
+    div.details__separator
+    div.details__tags
+      each tag in tags
+        a.details__tag(href='#')= tag
+      button.details__tag.fill(href='#') +

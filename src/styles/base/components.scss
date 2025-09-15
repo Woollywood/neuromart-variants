@@ -228,69 +228,6 @@
   }
 }
 
-.card-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-
-  &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    height: 32px;
-
-    padding: 8px 10px;
-    border-radius: 8px;
-    @include border(1px, var(--light-2));
-    width: 100%;
-
-    font-family: var(--font-primary);
-    font-size: 11px;
-    font-weight: 900;
-    font-style: italic;
-    font-size: 11px;
-    text-transform: uppercase;
-    color: var(--primary);
-
-    &.primary {
-      background-color: transparent;
-    }
-
-    &.secondary {
-      background-color: var(--light);
-      @include border(1px, var(--light));
-    }
-
-    @include media('md') {
-      display: inline-flex;
-      width: auto;
-      padding: 6px 10px;
-    }
-
-    @include media('xl') {
-      align-items: flex-end;
-      padding: 10px;
-    }
-
-    span {
-      line-height: 11px;
-      font-size: 16px;
-      white-space: nowrap;
-
-      @include media('md') {
-        font-size: 20px;
-      }
-
-      @include media('xl') {
-        font-size: 16px;
-        line-height: 12px;
-      }
-    }
-  }
-}
-
 .catalog-button {
   @include media('md') {
     display: flex;

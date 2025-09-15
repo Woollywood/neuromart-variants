@@ -1,15 +1,32 @@
 const gallerySlider = document.querySelector('[data-gallery-slider]');
 if (gallerySlider) {
+  const type = gallerySlider.dataset.type;
+  const getOptions = () => {
+    switch (type) {
+      case 'i':
+        return {
+          gap: 4,
+          autoWidth: true,
+          perPage: 'auto',
+          breakpoints: {
+            [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 3, gap: 4, autoWidth: false },
+          },
+        };
+      default:
+        return {
+          gap: 8,
+          breakpoints: {
+            [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 2, gap: 16, pagination: true },
+          },
+        };
+    }
+  };
   new Splide(gallerySlider, {
     type: 'loop',
     arrows: false,
     pagination: false,
-    perPage: 1,
     mediaQuery: 'min',
-    gap: 8,
-    breakpoints: {
-      [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 2, gap: 16, pagination: true },
-    },
+    ...getOptions(),
   }).mount();
 }
 

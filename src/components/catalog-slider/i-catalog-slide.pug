@@ -1,8 +1,13 @@
+include ../../mixins/card-button/i-card-button
+
 a.splide__slide.catalog-slider__slide.catalog-slide(href='#')
   div.catalog-slide__inner
     div.catalog-slide__image
-      img(src="@img/t-theme/slider/slide.png" alt="image")
+      img(src="@img/i-theme/detail.png" alt="image")
     div.card-content
-      p.card-content__title 260 ₽
-      h2.card-content__subtitle Мешочек ВК165
-      p.card-content__description Микрофибра, Ювелирный, C логотипом
+      p.card-content__title Костюм арт. 202 Фаворит Зима Исландия
+      h2.card-content__subtitle Зимняя / Исландия
+      div.catalog-slide__footer
+        div.catalog-slide__actions
+          +cardButton('опт', '7 712')
+          +cardButton(undefined, '7 712', 'secondary')

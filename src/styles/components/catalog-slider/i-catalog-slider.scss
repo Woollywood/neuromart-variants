@@ -12,7 +12,7 @@
     margin-bottom: 8px;
 
     @include media('lg') {
-      gap: 10px;
+      gap: 12px;
     }
   }
 
@@ -36,9 +36,13 @@
     justify-content: center;
     height: 16px;
     padding: 4px 6px;
+    color: var(--white);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
     @include border(1px, rgba(0, 0, 0, 0.12));
 
     font-size: 10px;
+    font-weight: 500;
     text-transform: uppercase;
 
     @include media('lg') {
@@ -72,12 +76,20 @@
 
   &__image {
     position: relative;
-    aspect-ratio: 144 / 120;
-    margin-bottom: 8px;
+    aspect-ratio: 117 / 189;
+    overflow: hidden;
+    border-radius: 8px;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+
+      @include media('lg') {
+        margin-bottom: 12px;
+      }
+    }
 
     @include media('lg') {
-      aspect-ratio: 301 / 240;
-      margin-bottom: 14px;
+      aspect-ratio: 318 / 512;
     }
 
     img {
@@ -90,32 +102,41 @@
     }
   }
 
-  &__action-wrapper {
+  &__footer {
+    width: 100%;
     display: flex;
     justify-content: center;
+  }
+
+  &__actions {
+    display: inline-flex;
+    gap: 4px;
   }
 }
 
 .card-content {
+  color: var(--white);
+
   &__title {
-    font-weight: 400;
-    font-size: 14px;
+    font-size: 6px;
+    font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 4px;
+    text-align: center;
+    margin-bottom: 1px;
 
     @include media('lg') {
-      margin-bottom: 6px;
-      font-size: 20px;
+      font-size: 14px;
+      margin-bottom: 4px;
     }
   }
 
   &__subtitle {
-    font-size: 11px;
-    color: rgba(0, 0, 0, 0.4);
+    font-size: 5px;
     margin-bottom: 2px;
+    text-align: center;
 
     @include media('lg') {
-      font-size: 14px;
+      font-size: 12px;
       margin-bottom: 6px;
     }
   }

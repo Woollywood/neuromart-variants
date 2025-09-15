@@ -1,0 +1,45 @@
+extends ../../layouts/themes/i-layout
+
+include ../../mixins/provider
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/i-theme.css")
+  link(rel="stylesheet" href="../../styles/base/i-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/i-header.css")
+  link(rel="stylesheet" href="../../styles/components/footer/i-footer.css")
+  link(rel="stylesheet" href="../../styles/components/card-button/i-card-button.css")
+  link(rel="stylesheet" href="../../styles/components/catalog-slider/i-catalog-slider.css")
+  link(rel="stylesheet" href="../../styles/components/breadcrumbs/i-breadcrumbs.css")
+  link(rel="stylesheet" href="../../styles/components/detail/i-page.css")
+  link(rel="stylesheet" href="../../styles/components/detail/i-details.css")
+  link(rel="stylesheet" href="../../styles/components/detail/i-gallery.css")
+  link(rel="stylesheet" href="../../styles/components/detail/i-questions.css")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
+  script(src="../../scripts/modules/catalogSlider.js")
+  script(src="../../scripts/modules/details.js")
+
+block main
+  div.detail
+    div.detail__container.container
+      div.detail__wrapper
+        - const path = ['Главная', 'Магазин', 'Мужская одежда для охоты, рыбалки, туризма', 'Костюм арт. 202']
+        +breadcrumbs(path, '-')
+        div.detail__top
+          h1.detail__title.page-title Костюм арт. 202 Фаворит Зима Исландия
+          p.detail__description
+            | оптовая цена: 
+            |
+            span 7 712 руб
+            |
+            | Розница: 11 685 руб
+        div.detail__main
+          include ../../components/detail/i-gallery
+          include ../../components/detail/i-details
+        div.detail__bottom
+          include ../../components/catalog-slider/i-catalog-slider-section
+          include ../../components/catalog-slider/i-catalog-slider-section
+          include ../../components/catalog-slider/i-catalog-slider-section
+          include ../../components/catalog-slider/i-catalog-slider-section_sm
