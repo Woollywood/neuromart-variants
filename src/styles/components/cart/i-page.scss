@@ -1,0 +1,89 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.cart {
+  padding-top: 14px;
+
+  @include media('xl') {
+    padding-top: 28px;
+  }
+
+  &__container {
+  }
+
+  &__top {
+    margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    padding-bottom: var(--cart-footer-height);
+
+    @include media('lg') {
+      padding: 0;
+    }
+  }
+
+  &__body {
+    @include media('lg') {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr 396px;
+    }
+
+    @include media('xl') {
+      gap: 24px;
+      grid-template-columns: 1fr 586px;
+    }
+  }
+
+  &__body-bottom {
+  }
+
+  &__sticky {
+    @include media('lg') {
+      position: sticky;
+      top: var(--header-height);
+    }
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 6px;
+
+    @include media('lg') {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 4px;
+
+    @include media('lg') {
+      text-align: center;
+      margin-bottom: 6px;
+    }
+  }
+
+  &__description {
+    @include media('lg') {
+      text-align: center;
+      margin-bottom: 54px;
+    }
+  }
+
+  &__items {
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  }
+
+  &__footer {
+    @include media('lg') {
+      .cart-footer__wrapper {
+        display: none;
+      }
+    }
+  }
+}
+
+.footer {
+  display: none;
+}

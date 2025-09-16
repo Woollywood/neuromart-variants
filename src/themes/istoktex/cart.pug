@@ -1,0 +1,81 @@
+extends ../../layouts/themes/i-layout
+
+include ../../mixins/provider
+include ../../mixins/cart/i-cart
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/i-theme.css")
+  link(rel="stylesheet" href="../../styles/base/i-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/i-header.css")
+  link(rel="stylesheet" href="../../styles/components/footer/i-footer.css")
+  link(rel="stylesheet" href="../../styles/components/card-button/i-card-button.css")
+  link(rel="stylesheet" href="../../styles/components/breadcrumbs/i-breadcrumbs.css")
+  link(rel="stylesheet" href="../../styles/components/pagination/i-pagination.css")
+  link(rel="stylesheet" href="../../styles/components/cart/i-cart-footer.css")
+  link(rel="stylesheet" href="../../styles/components/cart/i-cart-price.css")
+  link(rel="stylesheet" href="../../styles/components/cart/i-cart.css")
+  link(rel="stylesheet" href="../../styles/components/cart/i-page.css")
+
+block scripts
+  script(src="../../scripts/modules/cart.js")
+
+block main
+  -
+    const path = ['Магазин мужской одежды', 'Каталог', 'корзина'];
+
+    const carts = [
+      {
+        name: 'Костюм арт. 202 Фаворит Зима Исландия',
+        price: '7 712',
+        totalPrice: '10 500',
+        dimensionCount: 10,
+      },
+      {
+        name: 'Костюм арт. 202 Фаворит Зима Исландия',
+        oldPrice: '7 712',
+        newPrice: '7 712',
+        economy: '500',
+        totalPrice: '10 500',
+        dimensionCount: 10,
+      },
+      {
+        name: 'Костюм арт. 202 Фаворит Зима Исландия',
+        oldPrice: '7 712',
+        newPrice: '7 712',
+        economy: '500',
+        totalPrice: '10 500',
+        dimensionCount: 10,
+      },
+      {
+        name: 'Костюм арт. 202 Фаворит Зима Исландия',
+        oldPrice: '7 712',
+        newPrice: '7 712',
+        economy: '500',
+        totalPrice: '10 500',
+        dimensionCount: 10,
+      },
+      {
+        name: 'Костюм арт. 202 Фаворит Зима Исландия',
+        oldPrice: '7 712',
+        newPrice: '7 712',
+        economy: '500',
+        totalPrice: '10 500',
+        dimensionCount: 10,
+      },
+    ];
+  div.cart
+    div.cart__container.container
+      div.cart__wrapper
+        div.cart__top
+          +breadcrumbs(path, '-')
+          h1.cart__title.page-title Корзина
+          p.cart__description.page-description Текст комментария от нейросети для расшифровки
+        div.cart__body
+          div.cart__items
+            each cart in carts
+              +cart(cart)
+          div.cart__body-bottom
+            div.cart__sticky
+              include ../../components/cart/i-cart-price
+              div.cart__footer
+                include ../../components/cart/i-cart-footer

@@ -1,0 +1,32 @@
+-
+  const data = {
+    count: '8',
+    totalPrice: '1 444 128',
+    discount: '288 128',
+    totalPriceWithDiscount: '1 156 000',
+  };
+
+div.cart-price
+  div.cart-price__items
+    div.cart-price__item
+      div.cart-price__item_left Ваш заказ:
+      div.cart-price__item_right
+        =data.count
+        | ТОВАРОВ
+    div.cart-price__item
+      div.cart-price__item_left Товары на сумму:
+      div.cart-price__item_right
+        = data.totalPrice
+        span.cart-price__item_small РУБ
+    div.cart-price__item
+      div.cart-price__item_left Скидка:
+      div.cart-price__item_right
+        = data.discount
+        span.cart-price__item_small РУБ
+    div.cart-price__separator
+    div.cart-price__item
+      div.cart-price__item_left Итого:
+      div.cart-price__item_right
+        = data.totalPriceWithDiscount
+        span.cart-price__item_small РУБ
+  include ./i-cart-footer

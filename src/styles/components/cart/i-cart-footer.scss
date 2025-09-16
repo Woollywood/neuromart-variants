@@ -1,0 +1,163 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.cart-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+
+  @include media('lg') {
+    position: static;
+  }
+
+  &__container {
+    @include media('lg') {
+      padding: 0;
+    }
+  }
+
+  &__wrapper {
+    padding-top: 16px;
+
+    @include media('lg') {
+      padding: 0;
+    }
+  }
+
+  &__order-button {
+  }
+
+  &__bottom {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+
+    @include media('md') {
+      padding: 16px 0;
+    }
+
+    @include media('lg') {
+      padding: 24px 0 0;
+    }
+
+    @include media('xl') {
+      padding: 28px 0 0;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__sep {
+    width: 1px;
+    height: 20px;
+    background-color: var(--light-2);
+
+    @include media('md') {
+      display: none;
+    }
+  }
+
+  &__link {
+    position: relative;
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--white);
+
+    @include media('md') {
+      font-size: 13px;
+    }
+
+    @include media('lg') {
+      font-size: 14px;
+
+      span {
+        padding-left: 4px;
+        display: inline-block;
+      }
+    }
+
+    @include media('xl') {
+      font-size: 16px;
+    }
+
+    &_mobile {
+      @include media('lg') {
+        display: none;
+      }
+    }
+
+    &_desktop {
+      display: none;
+
+      @include media('lg') {
+        display: inline-block;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--primary);
+    }
+  }
+}
+
+.order-button {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 24px;
+  background-color: var(--white);
+
+  @include media('md') {
+    height: 56px;
+  }
+
+  @include media('lg') {
+    border-radius: 48px;
+    height: 72px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: black;
+
+    @include media('xl') {
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: black;
+
+    @include media('md') {
+      display: none;
+    }
+  }
+}
