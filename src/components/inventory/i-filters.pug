@@ -1,0 +1,24 @@
+include ../../mixins/provider
+
+-
+  const filterSelects = ['Сезон', 'РАсцветка', 'Размер', 'Цена']
+  const filterCategories = ['РАспродажа', 'Новинки', 'Брюки', 'Демисезонная', 'Дышащая и непромокаемая одежда', 'Дышащая и непромокаемая одежда', 'РАспродажа', 'Новинки', 'Брюки', 'Демисезонная', 'Дышащая и непромокаемая одежда', 'Дышащая и непромокаемая одежда']
+
+div.inventory__filters.filters
+  div.filters__wrapper
+    button.filters__button
+      +icon('i-filters')
+      span Все фильтры
+    button.filters__button
+      +icon('i-sort')
+      span по Популярности
+    each select in filterSelects
+      button.filters__select
+        span= select
+        +icon('s-arrow-down')
+    button.filters__select.mobile
+      span Смотреть все
+      +icon('s-arrow-down')
+    each category in filterCategories
+      button.filters__button.desktop
+        span= category

@@ -1,0 +1,95 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.filters {
+  &__wrapper {
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    @include hideScrollbar();
+
+    @include media('lg') {
+      gap: 8px;
+    }
+  }
+
+  &__button {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 32px;
+    border-radius: 8px;
+    padding: 8px 12px;
+    @include border(1px, rgba(255, 255, 255, 0.24));
+    backdrop-filter: blur(12px);
+
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--white);
+    text-transform: uppercase;
+    word-wrap: nowrap;
+
+    @include media('lg') {
+      height: 40px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &.desktop {
+      display: none;
+
+      @include media('lg') {
+        display: flex;
+      }
+    }
+
+    svg {
+      color: #ff6412;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__select {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 8px;
+    padding: 6px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 32px;
+
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+
+    &.mobile {
+      @include media('lg') {
+        display: none;
+      }
+    }
+
+    @include media('lg') {
+      gap: 16px;
+      height: 40px;
+      font-size: 16px;
+      padding: 8px 12px;
+    }
+
+    svg {
+      display: none;
+
+      @include media('lg') {
+        display: block;
+        width: 16px;
+        height: 8px;
+      }
+    }
+  }
+}

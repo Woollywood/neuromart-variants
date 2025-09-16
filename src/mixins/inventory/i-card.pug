@@ -1,0 +1,13 @@
+include ../card-button/i-card-button
+
+mixin inventoryCard(card)
+  a.card(href='#')
+    div.card__image
+      img(src="@img/i-theme/detail.png" alt="image")
+    div.card-content.card__content.sm
+      p.card-content__title= card.title
+      h2.card-content__subtitle= card.subtitle
+      div.card__footer
+        div.card__actions
+          +cardButton('опт', '7 712')
+          +cardButton(undefined, '7 712', 'secondary')

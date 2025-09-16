@@ -1,0 +1,121 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.inventory {
+  padding: 12px 0 40px;
+
+  @include media('md') {
+    padding: 14px 0 96px;
+  }
+
+  @include media('lg') {
+    padding: 16px 0 128px;
+  }
+
+  @include media('md') {
+    padding-top: 14px;
+  }
+
+  @include media('lg') {
+    padding-top: 16px;
+  }
+
+  &__container {
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    column-gap: 4px;
+    row-gap: 24px;
+    overflow: hidden;
+    margin-bottom: 56px;
+
+    @include media('md') {
+      margin-bottom: 72px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media('lg') {
+      overflow: visible;
+      position: relative;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 2px;
+      row-gap: 48px;
+      margin-bottom: 158px;
+    }
+  }
+
+  &__row {
+  }
+
+  &__breadcrumbs {
+  }
+
+  &__header {
+    position: relative;
+    overflow: hidden;
+
+    @include media('lg') {
+      position: static;
+      overflow: auto;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 24px;
+
+    @include media('lg') {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 16px;
+
+    @include media('lg') {
+      margin-bottom: 34px;
+    }
+  }
+
+  &__filters {
+    margin-bottom: 4px;
+
+    @include media('lg') {
+      margin-bottom: 16px;
+    }
+
+    @include media('xl') {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__cards-bottom {
+  }
+
+  &__card-list {
+  }
+
+  &__slider-section {
+    grid-column: 1 / span 2;
+
+    &:not(:last-child) {
+      margin-top: 26px;
+      margin-bottom: 32px;
+
+      @include media('md') {
+        margin-bottom: 64px;
+      }
+
+      @include media('md') {
+        margin-top: 48px;
+      }
+    }
+
+    @include media('lg') {
+      grid-column: 1 / span 4;
+    }
+  }
+}
