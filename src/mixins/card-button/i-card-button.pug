@@ -1,5 +1,5 @@
-mixin cardButton(text, price, type = 'primary')
-  button.card-button
+mixin cardButton(text, price, type = 'primary', size = 'sm')
+  button.card-button(class=size)
     div.card-button__inner(class=type)
       if text
         = text

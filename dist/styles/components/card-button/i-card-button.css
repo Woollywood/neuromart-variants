@@ -9,13 +9,20 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
-  height: 12px;
-  padding: 2px 4px;
   border-radius: 8px;
   width: 100%;
-  font-size: 5px;
   font-weight: 500;
   text-transform: uppercase;
+}
+.sm .card-button__inner {
+  padding: 2px 4px;
+  height: 12px;
+  font-size: 5px;
+}
+.md .card-button__inner {
+  font-size: 11px;
+  padding: 4px 10px;
+  height: 32px;
 }
 .card-button__inner.primary {
   color: #ff6412;
@@ -29,41 +36,55 @@
 }
 @media only screen and (min-width: 768px) {
   .card-button__inner {
-    font-size: 8px;
     display: inline-flex;
     width: auto;
+  }
+  .sm .card-button__inner {
+    font-size: 8px;
     height: 16px;
   }
 }
 @media only screen and (min-width: 1180px) {
-  .card-button__inner {
+  .sm .card-button__inner {
     padding: 2px 6px;
     font-size: 9px;
     height: 24px;
   }
+  .md .card-button__inner {
+    font-size: 12px;
+  }
 }
 @media only screen and (min-width: 1440px) {
   .card-button__inner {
-    align-items: flex-end;
     padding: 8px 10px;
     height: 32px;
+  }
+  .card-button__inner.sm {
     font-size: 12px;
   }
 }
 .card-button__inner span {
-  font-size: 6px;
   line-height: 118%;
   white-space: nowrap;
 }
+.sm .card-button__inner span {
+  font-size: 6px;
+}
+.md .card-button__inner span {
+  font-size: 16px;
+}
 @media only screen and (min-width: 768px) {
-  .card-button__inner span {
+  .sm .card-button__inner span {
     line-height: 108%;
     font-size: 9px;
   }
 }
 @media only screen and (min-width: 1180px) {
-  .card-button__inner span {
+  .sm .card-button__inner span {
     font-size: 12px;
+  }
+  .md .card-button__inner span {
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 1440px) {

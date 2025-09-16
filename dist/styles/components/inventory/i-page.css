@@ -22,8 +22,8 @@
   }
 }
 .inventory__grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   column-gap: 4px;
   row-gap: 24px;
   overflow: hidden;
@@ -32,7 +32,6 @@
 @media only screen and (min-width: 768px) {
   .inventory__grid {
     margin-bottom: 72px;
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
