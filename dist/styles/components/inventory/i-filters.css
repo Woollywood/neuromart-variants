@@ -15,6 +15,7 @@
   }
 }
 .filters__button {
+  position: relative;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -53,6 +54,7 @@
   height: 18px;
 }
 .filters__select {
+  position: relative;
   flex-shrink: 0;
   display: flex;
   align-items: center;

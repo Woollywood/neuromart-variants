@@ -1,0 +1,70 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.inventory {
+  &__title {
+    position: relative;
+    z-index: 10;
+    margin: 0;
+
+    @include media('lg') {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__banner-placeholder {
+    display: none;
+
+    @include media('lg') {
+      display: block;
+      height: 244px;
+    }
+  }
+
+  &__banner {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 372px;
+    margin: -6% 0;
+    z-index: -1;
+
+    @include media('lg') {
+      margin: 0;
+      height: 600px;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__filters {
+    position: relative;
+    z-index: 10;
+
+    &::before {
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 64px;
+      // transform: translateY(-100%);
+      background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+
+      @include media('lg') {
+        height: 158px;
+        bottom: -24px;
+      }
+    }
+  }
+}

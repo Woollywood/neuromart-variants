@@ -1,0 +1,51 @@
+extends ../../layouts/themes/i-layout
+
+include ../../mixins/inventory/i-card
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/i-theme.css")
+  link(rel="stylesheet" href="../../styles/base/i-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/i-header.css")
+  link(rel="stylesheet" href="../../styles/components/footer/i-footer.css")
+  link(rel="stylesheet" href="../../styles/components/card-button/i-card-button.css")
+  link(rel="stylesheet" href="../../styles/components/catalog-slider/i-catalog-slider.css")
+  link(rel="stylesheet" href="../../styles/components/breadcrumbs/i-breadcrumbs.css")
+  link(rel="stylesheet" href="../../styles/components/inventory/i-filters.css")
+  link(rel="stylesheet" href="../../styles/components/inventory/i-card.css")
+  link(rel="stylesheet" href="../../styles/components/inventory/i-page.css")
+  link(rel="stylesheet" href="../../styles/components/inventory/i-page_banner.css")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
+  script(src="../../scripts/modules/catalogSlider.js")
+  script(src="../../scripts/modules/inventory.js")
+
+block main
+  -
+    const content = {
+      title: 'Костюм арт. 202 Фаворит Зима Исландия',
+      subtitle: 'Зимняя / Исландия',
+    };
+    const cardList = Array.from({ length: 12 }).map(() => content);
+    const slides = Array.from({ length: 8 });
+  div.inventory.banner(data-component='inventory')
+    div.inventory__container.container
+      div.inventory__header
+        div.inventory__header-content
+          - const path = ['Главная', 'Магазин', 'Мужская одежда для охоты, рыбалки, туризма']
+          +breadcrumbs(path, '-')
+          div.inventory__banner-placeholder
+          h1.inventory__title.page-title Мужская одежда для охоты, рыбалки, туризма
+          div.inventory__banner
+            img(src="@img/i-theme/hero.png" alt="img")
+      include ../../components/inventory/i-filters
+      div.inventory__grid
+        each card in cardList
+          +inventoryCard(card)
+        div.inventory__slider-section
+          include ../../components/catalog-slider/i-catalog-slider-section
+        each card in cardList
+          +inventoryCard(card)
+      div.inventory__slider-section.inventory__slider-section_bottom
+        include ../../components/catalog-slider/i-catalog-slider-section_sm
