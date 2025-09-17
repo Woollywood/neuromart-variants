@@ -1,9 +1,11 @@
 section.hits-section
-    div.hits-section__wrapper
-      div.hits-section__list
-        each hit in ['Летние Костюмы', 'Летние Брюки', 'Летние КУртки', 'Летние Жилеты']
-          div.hits-section__hit
-            div.hits-section__hit-content
-              h3.hits-section__hit-title= hit
-              div.hits-section__hit-link-wrapper
-                a.hits-section__hit-link(href='#') смотреть каталог
+  div.hits-section__wrapper
+    div.splide(data-component='hits-slider')
+      div.splide__track
+        ul.splide__list
+          each hit in ['Летние Костюмы', 'Летние Брюки', 'Летние КУртки', 'Летние Жилеты', 'Летние Костюмы', 'Летние Брюки', 'Летние КУртки', 'Летние Жилеты']
+            li.splide__slide.hits-section__hit
+              div.hits-section__hit-content
+                h3.hits-section__hit-title= hit
+                div.hits-section__hit-link-wrapper
+                  a.hits-section__hit-link(href='#') смотреть каталог

@@ -29,6 +29,8 @@ block main
     };
     const cardList = Array.from({ length: 12 }).map(() => content);
     const slides = Array.from({ length: 8 });
+  div.inventory__banner
+    img(src="@img/i-theme/hero.png" alt="img")
   div.inventory.banner(data-component='inventory')
     div.inventory__container.container
       div.inventory__header
@@ -37,8 +39,6 @@ block main
           +breadcrumbs(path, '-')
           div.inventory__banner-placeholder
           h1.inventory__title.page-title Мужская одежда для охоты, рыбалки, туризма
-          div.inventory__banner
-            img(src="@img/i-theme/hero.png" alt="img")
       include ../../components/inventory/i-filters
       div.inventory__grid
         each card in cardList

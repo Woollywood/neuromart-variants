@@ -20,11 +20,12 @@
     <link rel="stylesheet" href="../../styles/components/home/i-hits-section.css">
     <link rel="stylesheet" href="../../styles/components/home/i-category-blocks.css">
     <link rel="stylesheet" href="../../styles/components/home/i-category.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
   </head>
   <body>
     <div class="layout">
+      <div class="header__filter"></div>
       <header class="header" data-component="header">
-        <div class="header__filter"></div>
         <div class="header__container container">
           <div class="header__wrapper">
             <div class="header__left-blocks">
@@ -101,30 +102,58 @@
         </section>
         <section class="hits-section">
           <div class="hits-section__wrapper">
-            <div class="hits-section__list">
-              <div class="hits-section__hit">
-                <div class="hits-section__hit-content">
-                  <h3 class="hits-section__hit-title">Летние Костюмы</h3>
-                  <div class="hits-section__hit-link-wrapper"><a class="hits-section__hit-link" href="#">смотреть каталог</a></div>
-                </div>
-              </div>
-              <div class="hits-section__hit">
-                <div class="hits-section__hit-content">
-                  <h3 class="hits-section__hit-title">Летние Брюки</h3>
-                  <div class="hits-section__hit-link-wrapper"><a class="hits-section__hit-link" href="#">смотреть каталог</a></div>
-                </div>
-              </div>
-              <div class="hits-section__hit">
-                <div class="hits-section__hit-content">
-                  <h3 class="hits-section__hit-title">Летние КУртки</h3>
-                  <div class="hits-section__hit-link-wrapper"><a class="hits-section__hit-link" href="#">смотреть каталог</a></div>
-                </div>
-              </div>
-              <div class="hits-section__hit">
-                <div class="hits-section__hit-content">
-                  <h3 class="hits-section__hit-title">Летние Жилеты</h3>
-                  <div class="hits-section__hit-link-wrapper"><a class="hits-section__hit-link" href="#">смотреть каталог</a></div>
-                </div>
+            <div class="splide" data-component="hits-slider">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide hits-section__hit">
+                    <div class="hits-section__hit-content">
+                      <h3 class="hits-section__hit-title">Летние Костюмы</h3>
+                      <div class="hits-section__hit-link-wrapper"><a class="hits-section__hit-link" href="#">смотреть каталог</a></div>
+                    </div>
+                  </li>
+                  <li class="splide__slide hits-section__hit">
+                    <div class="hits-section__hit-content">
+                      <h3 class="hits-section__hit-title">Летние Брюки</h3>
+                      <div class="hits-section__hit-link-wrapper"><a class="hits-section__hit-link" href="#">смотреть каталог</a></div>
+                    </div>
+                  </li>
+                  <li class="splide__slide hits-section__hit">
+                    <div class="hits-section__hit-content">
+                      <h3 class="hits-section__hit-title">Летние КУртки</h3>
+                      <div class="hits-section__hit-link-wrapper"><a class="hits-section__hit-link" href="#">смотреть каталог</a></div>
+                    </div>
+                  </li>
+                  <li class="splide__slide hits-section__hit">
+                    <div class="hits-section__hit-content">
+                      <h3 class="hits-section__hit-title">Летние Жилеты</h3>
+                      <div class="hits-section__hit-link-wrapper"><a class="hits-section__hit-link" href="#">смотреть каталог</a></div>
+                    </div>
+                  </li>
+                  <li class="splide__slide hits-section__hit">
+                    <div class="hits-section__hit-content">
+                      <h3 class="hits-section__hit-title">Летние Костюмы</h3>
+                      <div class="hits-section__hit-link-wrapper"><a class="hits-section__hit-link" href="#">смотреть каталог</a></div>
+                    </div>
+                  </li>
+                  <li class="splide__slide hits-section__hit">
+                    <div class="hits-section__hit-content">
+                      <h3 class="hits-section__hit-title">Летние Брюки</h3>
+                      <div class="hits-section__hit-link-wrapper"><a class="hits-section__hit-link" href="#">смотреть каталог</a></div>
+                    </div>
+                  </li>
+                  <li class="splide__slide hits-section__hit">
+                    <div class="hits-section__hit-content">
+                      <h3 class="hits-section__hit-title">Летние КУртки</h3>
+                      <div class="hits-section__hit-link-wrapper"><a class="hits-section__hit-link" href="#">смотреть каталог</a></div>
+                    </div>
+                  </li>
+                  <li class="splide__slide hits-section__hit">
+                    <div class="hits-section__hit-content">
+                      <h3 class="hits-section__hit-title">Летние Жилеты</h3>
+                      <div class="hits-section__hit-link-wrapper"><a class="hits-section__hit-link" href="#">смотреть каталог</a></div>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -373,6 +402,7 @@
                   </ul>
                 </div>
               </nav>
+              <div class="footer__placeholder"></div>
               <div class="footer__subscribtion">
                 <p class="footer__subscribtion-title">Получайте выгодное предложение уже сейчас</p>
                 <form class="footer__subscribtion-form">
@@ -397,5 +427,7 @@
     <script src="../../scripts/modules/slider.js"></script>
     <script src="../../scripts/modules/footer.js"></script>
     <script src="../../scripts/modules/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="../../scripts/modules/hitsSlider.js"></script>
   </body>
 </html>

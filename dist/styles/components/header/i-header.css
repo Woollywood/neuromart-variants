@@ -4,6 +4,10 @@
   left: 0;
   width: 100%;
   z-index: 60;
+  transition: all 0.3s ease-in-out;
+}
+.header.scrolled {
+  background-color: black;
 }
 .header__filter {
   position: absolute;
@@ -13,6 +17,12 @@
   height: 420px;
   background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+.scrolled .header__filter {
+  opacity: 0;
+  visibility: hidden;
 }
 @media only screen and (min-width: 1180px) {
   .header__filter {
@@ -25,13 +35,13 @@
   display: flex;
   gap: 12px;
   flex-direction: column;
-  padding: 12px 0 8px;
+  padding: 12px 0;
 }
 @media only screen and (min-width: 1180px) {
   .header__wrapper {
     display: grid;
     grid-template-columns: 1fr 180px 1fr;
-    padding: 8px 0;
+    padding: 8px 0 12px;
   }
 }
 .header__left-blocks {

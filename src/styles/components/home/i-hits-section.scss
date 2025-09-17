@@ -8,9 +8,6 @@
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
   }
 
   &__hit {
@@ -30,11 +27,15 @@
   }
 
   &__hit-title {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 5px;
+
+    @include media('lg') {
+      font-size: 32px;
+    }
   }
 
   &__hit-link-wrapper {
@@ -44,8 +45,12 @@
   }
 
   &__hit-link {
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: underline;
     text-decoration-color: #ff6412;
+
+    @include media('lg') {
+      font-size: 16px;
+    }
   }
 }

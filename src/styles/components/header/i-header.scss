@@ -7,15 +7,27 @@
   left: 0;
   width: 100%;
   z-index: 60;
+  transition: all 0.3s ease-in-out;
+
+  &.scrolled {
+    background-color: black;
+  }
 
   &__filter {
+    .scrolled & {
+      opacity: 0;
+      visibility: hidden;
+    }
+
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 420px;
-    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
     pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
 
     @include media('lg') {
       height: 320px;
@@ -31,12 +43,12 @@
     display: flex;
     gap: 12px;
     flex-direction: column;
-    padding: 12px 0 8px;
+    padding: 12px 0;
 
     @include media('lg') {
       display: grid;
       grid-template-columns: 1fr 180px 1fr;
-      padding: 8px 0;
+      padding: 8px 0 12px;
     }
   }
 

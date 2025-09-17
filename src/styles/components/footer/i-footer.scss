@@ -18,6 +18,14 @@
   &__copyright {
   }
 
+  &__placeholder {
+    display: none;
+
+    @include media('xl') {
+      display: block;
+    }
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -26,6 +34,15 @@
 
     @include media('md') {
       margin-bottom: 64px;
+    }
+
+    @include media('lg') {
+      display: grid;
+      grid-template-columns: 4fr 4fr;
+    }
+
+    @include media('xl') {
+      grid-template-columns: 4fr 3fr 5fr;
     }
   }
 
@@ -63,11 +80,6 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-
-    @include media('xl') {
-      gap: 10px;
-      min-width: 300px;
-    }
   }
 
   &__nav-item {
@@ -104,10 +116,15 @@
   }
 
   &__subscribtion-form {
-    display: flex;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
     align-items: center;
-    gap: 8px;
+    gap: 16px;
     margin-bottom: 12px;
+
+    @include media('xl') {
+      grid-template-columns: 3fr 2fr;
+    }
   }
 
   &__subscribtion-input {
@@ -128,14 +145,9 @@
     }
 
     @include media('lg') {
-      min-width: 468px;
       padding: 16px 20px;
       height: 64px;
       padding: 16px 24px;
-    }
-
-    @include media('xl') {
-      min-width: 468px;
     }
   }
 
@@ -149,7 +161,6 @@
     background-color: rgba(255, 255, 255, 0.2);
 
     @include media('lg') {
-      flex-grow: 1;
       height: 64px;
       padding: 16px;
     }
