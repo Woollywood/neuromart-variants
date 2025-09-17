@@ -35,6 +35,7 @@
 }
 
 .page-description {
+  font-family: var(--font-secondary);
   font-size: 13px;
 
   @include media('lg') {

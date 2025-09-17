@@ -16,6 +16,12 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.catalog-slider-section__tags::-webkit-scrollbar {
+  display: none;
 }
 @media only screen and (min-width: 1180px) {
   .catalog-slider-section__tags {
@@ -53,12 +59,18 @@
 .catalog-slide__image {
   position: relative;
   aspect-ratio: 144/120;
+}
+.catalog-slide__image:not(:last-child) {
   margin-bottom: 8px;
+}
+@media only screen and (min-width: 1180px) {
+  .catalog-slide__image:not(:last-child) {
+    margin-bottom: 14px;
+  }
 }
 @media only screen and (min-width: 1180px) {
   .catalog-slide__image {
     aspect-ratio: 301/240;
-    margin-bottom: 14px;
   }
 }
 .catalog-slide__image img {

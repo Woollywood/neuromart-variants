@@ -72,13 +72,13 @@
 }
 @font-face {
   font-family: NotoSerif;
-  src: url("../fonts/NotoSerif_Condensed-Light.woff2") format("woff2"), url("../fonts/NotoSerif_Condensed-Light.woff") format("woff");
+  src: url("../fonts/NotoSerif-Light.woff2") format("woff2"), url("../fonts/NotoSerif-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: NotoSerif;
-  src: url("../fonts/NotoSerif_Condensed-Regular.woff2") format("woff2"), url("../fonts/NotoSerif_Condensed-Regular.woff") format("woff");
+  src: url("../fonts/NotoSerif-Regular.woff2") format("woff2"), url("../fonts/NotoSerif-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }

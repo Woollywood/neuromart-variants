@@ -28,7 +28,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 10px;
+  padding: 14px 8px 48px;
+  min-height: auto !important;
+}
+@media only screen and (min-width: 768px) {
+  .category-section__content {
+    padding: 32px 8px 72px;
+  }
 }
 @media only screen and (min-width: 1180px) {
   .category-section__content {
@@ -36,10 +42,11 @@
   }
 }
 .category-section__title {
-  font-size: 18px;
+  font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 6px;
   text-align: left;
+  width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .category-section__title {
@@ -53,9 +60,11 @@
   }
 }
 .category-section__description {
-  font-size: 12px;
+  font-size: 13px;
+  line-height: 16px;
   text-align: left;
   margin-bottom: 14px;
+  text-indent: 36px;
 }
 @media only screen and (min-width: 768px) {
   .category-section__description {
@@ -65,6 +74,7 @@
 @media only screen and (min-width: 1180px) {
   .category-section__description {
     font-size: 16px;
+    line-height: 20px;
     margin-bottom: 12px;
   }
 }
@@ -73,11 +83,12 @@
   flex-direction: column;
   gap: 4px;
   align-self: flex-start;
-  padding-left: 18px;
-  margin-bottom: 6px;
+  padding-left: 8px;
+  margin-bottom: 29px;
 }
 @media only screen and (min-width: 1180px) {
   .category-section__list {
+    padding-left: 0;
     align-self: unset;
     margin-bottom: 60px;
   }
@@ -85,7 +96,7 @@
 .category-section__list-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 .category-section__list-item::before {
   content: "";
@@ -123,10 +134,29 @@
 }
 
 .category-section-block {
-  aspect-ratio: 320/478;
+  position: relative;
+  min-height: 512px;
   width: 100%;
-  overflow: hidden;
   flex: 1 1 50%;
+  overflow: visible;
+}
+.category-section-block::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 8px;
+  right: 8px;
+  transform: translateY(-50%);
+  height: 1px;
+  background-color: var(--white);
+  z-index: 100;
+}
+@media only screen and (min-width: 1180px) {
+  .category-section-block::after {
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.24);
+  }
 }
 @media only screen and (min-width: 1180px) {
   .category-section-block {
@@ -136,13 +166,23 @@
 
 .category-about {
   position: relative;
-  padding-top: 40%;
-  overflow: hidden;
+  padding-top: 368px;
 }
 @media only screen and (min-width: 1180px) {
   .category-about {
-    padding: 0;
-    aspect-ratio: 2/1;
+    padding: 232px 0 265px;
+    min-height: 100svh;
+  }
+  .category-about::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.24);
+    z-index: 100;
   }
 }
 .category-about__image {
@@ -162,7 +202,7 @@
 }
 .category-about__content-wrapper {
   position: relative;
-  z-index: 10;
+  z-index: 20;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -181,10 +221,25 @@
   padding: 48px 0;
 }
 .category-about__title {
-  font-size: 32px;
+  font-size: 20px;
   text-transform: uppercase;
   color: var(--white);
   margin-bottom: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .category-about__title {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .category-about__title {
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .category-about__title {
+    font-size: 32px;
+  }
 }
 .category-about__text-wrapper {
   margin-bottom: 16px;
@@ -195,11 +250,21 @@
   }
 }
 .category-about__text {
-  font-size: 16px;
+  font-size: 13px;
+  line-height: 16px;
   color: var(--white);
+}
+@media only screen and (min-width: 1180px) {
+  .category-about__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 .category-about__text:not(:last-child) {
   margin-bottom: 8px;
+}
+.category-about__text.padding {
+  padding-left: 10vw;
 }
 @media only screen and (min-width: 1180px) {
   .category-about__text.padding {
@@ -209,24 +274,22 @@
 .category-about__buttons {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  align-self: center;
+  align-items: flex-start;
+  gap: 8px;
+  padding-left: 10vw;
 }
 @media only screen and (min-width: 1180px) {
   .category-about__buttons {
     flex-direction: row;
     align-self: flex-start;
     padding-left: 6vw;
-    gap: 8px;
-    padding-left: 6vw;
   }
 }
 .category-about__button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: auto;
   font-size: 12px;
   height: 32px;
   padding: 4px 8px;

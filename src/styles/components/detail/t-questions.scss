@@ -28,10 +28,12 @@
 
     @include media('md') {
       display: grid;
+      gap: 4px;
       grid-template-columns: 1fr 1fr;
     }
 
     @include media('lg') {
+      gap: 8px;
       margin-bottom: 8px;
     }
 

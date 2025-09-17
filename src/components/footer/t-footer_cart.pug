@@ -1,0 +1,20 @@
+include ../../mixins/accordion
+
+-
+  const navList = [
+    {
+      title: 'О компании',
+      links: ['Контакты', 'Реквизиты', 'Новости', 'Производство', 'Часто задаваемые вопросы']
+    },
+    {
+      title: 'Магазин',
+      links: ['Личный кабинет', 'Доставка и оплата', 'Как сделать заказ']
+    },
+  ]
+
+footer.footer
+  div.footer__container.container
+    div.footer__inner
+      div.footer__copyright.copyright
+        p.copyright__text 2016-2025 www.tigon.ru © Все права защищены biznetman ® - создание сайта
+        a.copyright__link(href="#") Пользовательское соглашение

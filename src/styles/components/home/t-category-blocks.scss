@@ -2,8 +2,30 @@
 @use '../../variables' as *;
 
 .category-blocks {
+  position: relative;
   display: flex;
   flex-direction: column;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    right: 8px;
+    transform: translateY(-50%);
+    height: 1px;
+    background-color: var(--white);
+    z-index: 20;
+
+    @include media('lg') {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.24);
+    }
+  }
 
   @include media('lg') {
     display: grid;
@@ -13,14 +35,18 @@
 
 .category-block {
   position: relative;
-  aspect-ratio: 320 / 478;
+  min-height: 512px;
   width: 100%;
   overflow: hidden;
 
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 0 58px 66px;
+  padding: 60% 58px 43px;
+
+  @include media('md') {
+    padding-bottom: 66px;
+  }
 
   @include media('lg') {
     aspect-ratio: 1 / 1;
@@ -47,16 +73,16 @@
 
   &__content {
     position: relative;
-    z-index: 10;
+    z-index: 20;
     width: 100%;
 
     color: var(--white);
   }
 
   &__title {
-    font-size: 12px;
+    font-size: 20px;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     text-align: center;
 
     @include media('lg') {
@@ -66,28 +92,24 @@
   }
 
   &__links {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-
-    @include media('lg') {
-      border: 0;
-    }
   }
 
   &__link-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__link {
     display: block;
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
 
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
     text-transform: uppercase;
     padding: 4px 0;
 
     @include media('lg') {
       font-size: 18px;
-      border: 0;
       text-decoration: underline;
     }
   }

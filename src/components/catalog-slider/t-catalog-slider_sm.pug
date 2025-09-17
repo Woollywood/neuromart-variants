@@ -2,4 +2,7 @@ div.splide.catalog-slider(data-component='catalog-slider' data-size='sm')
   div.splide__track.catalog-slider__track
     ul.splide__list.catalog-slider__list
       each slide in [0, 1, 2, 3, 4, 5, 6, 7]
-        include ./t-catalog-slide
+        a.splide__slide.catalog-slider__slide.catalog-slide(href='#')
+          div.catalog-slide__inner
+            div.catalog-slide__image
+              img(src="@img/t-theme/slider/slide.png" alt="image")

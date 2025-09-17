@@ -1,9 +1,16 @@
 .cart {
   padding-top: 14px;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .cart {
+    margin-bottom: 96px;
+  }
 }
 @media only screen and (min-width: 1440px) {
   .cart {
     padding-top: 28px;
+    margin-bottom: 128px;
   }
 }
 .cart__wrapper {
@@ -50,8 +57,4 @@
   .cart__items {
     border-bottom: 1px solid black;
   }
-}
-
-.footer {
-  display: none;
 }

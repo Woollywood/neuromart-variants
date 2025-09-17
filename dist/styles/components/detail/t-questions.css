@@ -26,11 +26,13 @@
 @media only screen and (min-width: 768px) {
   .questions__select-wrapper {
     display: grid;
+    gap: 4px;
     grid-template-columns: 1fr 1fr;
   }
 }
 @media only screen and (min-width: 1180px) {
   .questions__select-wrapper {
+    gap: 8px;
     margin-bottom: 8px;
   }
 }

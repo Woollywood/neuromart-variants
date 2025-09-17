@@ -33,7 +33,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 10px;
+    padding: 14px 8px 48px;
+    min-height: auto !important;
+
+    @include media('md') {
+      padding: 32px 8px 72px;
+    }
 
     @include media('lg') {
       padding: 0 9vw;
@@ -41,10 +46,11 @@
   }
 
   &__title {
-    font-size: 18px;
+    font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 6px;
     text-align: left;
+    width: 100%;
 
     @include media('md') {
       text-align: center;
@@ -57,9 +63,11 @@
   }
 
   &__description {
-    font-size: 12px;
+    font-size: 13px;
+    line-height: 16px;
     text-align: left;
     margin-bottom: 14px;
+    text-indent: 36px;
 
     @include media('md') {
       text-align: center;
@@ -67,6 +75,7 @@
 
     @include media('lg') {
       font-size: 16px;
+      line-height: 20px;
       margin-bottom: 12px;
     }
   }
@@ -77,10 +86,11 @@
     gap: 4px;
 
     align-self: flex-start;
-    padding-left: 18px;
-    margin-bottom: 6px;
+    padding-left: 8px;
+    margin-bottom: 29px;
 
     @include media('lg') {
+      padding-left: 0;
       align-self: unset;
       margin-bottom: 60px;
     }
@@ -89,7 +99,7 @@
   &__list-item {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 
     &::before {
       content: '';
@@ -128,10 +138,29 @@
 }
 
 .category-section-block {
-  aspect-ratio: 320 / 478;
+  position: relative;
+  min-height: 512px;
   width: 100%;
-  overflow: hidden;
   flex: 1 1 50%;
+  overflow: visible;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 8px;
+    right: 8px;
+    transform: translateY(-50%);
+    height: 1px;
+    background-color: var(--white);
+    z-index: 100;
+
+    @include media('lg') {
+      left: 0;
+      right: 0;
+      background-color: rgba(255, 255, 255, 0.24);
+    }
+  }
 
   @include media('lg') {
     aspect-ratio: 1 / 1;
@@ -140,12 +169,24 @@
 
 .category-about {
   position: relative;
-  padding-top: 40%;
-  overflow: hidden;
+  padding-top: 368px;
 
+  
   @include media('lg') {
-    padding: 0;
-    aspect-ratio: 2 / 1;
+    padding: 232px 0 265px;
+    min-height: 100svh;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.24);
+      z-index: 100;
+    }
   }
 
   &__image {
@@ -167,7 +208,7 @@
 
   &__content-wrapper {
     position: relative;
-    z-index: 10;
+    z-index: 20;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -190,10 +231,22 @@
   }
 
   &__title {
-    font-size: 32px;
+    font-size: 20px;
     text-transform: uppercase;
     color: var(--white);
     margin-bottom: 8px;
+
+    @include media('md') {
+      font-size: 24px;
+    }
+
+    @include media('lg') {
+      font-size: 28px;
+    }
+
+    @include media('xl') {
+      font-size: 32px;
+    }
   }
 
   &__text-wrapper {
@@ -205,14 +258,22 @@
   }
 
   &__text {
-    font-size: 16px;
+    font-size: 13px;
+    line-height: 16px;
     color: var(--white);
+
+    @include media('lg') {
+      font-size: 16px;
+      line-height: 20px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 8px;
     }
 
     &.padding {
+      padding-left: 10vw;
+
       @include media('lg') {
         padding-left: 6vw;
       }
@@ -222,25 +283,23 @@
   &__buttons {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    align-self: center;
+    align-items: flex-start;
+    gap: 8px;
+    padding-left: 10vw;
 
     @include media('lg') {
       flex-direction: row;
       align-self: flex-start;
       padding-left: 6vw;
-      gap: 8px;
-      padding-left: 6vw;
     }
   }
 
   &__button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: auto;
 
-    width: 100%;
     font-size: 12px;
     height: 32px;
     padding: 4px 8px;

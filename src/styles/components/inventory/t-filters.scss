@@ -134,7 +134,6 @@
 
   &__list-item-element {
     display: flex;
-    align-items: center;
     gap: 8px;
   }
 
@@ -147,6 +146,8 @@
   }
 
   &__list-item-label {
+    text-align: left;
+    line-height: 20px;
   }
 
   &__more {

@@ -39,7 +39,6 @@
 @media only screen and (min-width: 1180px) {
   .header__logo-wrapper span {
     line-height: 16px;
-    font-size: 13px;
   }
 }
 .header__logo {
@@ -132,11 +131,11 @@
   gap: 4px;
   flex-grow: 1;
 }
-.cart .header__bottom-block {
+.header-cart .header__bottom-block {
   display: none;
 }
 @media only screen and (min-width: 1180px) {
-  .cart .header__bottom-block {
+  .header-cart .header__bottom-block {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -448,7 +447,7 @@
   color: black;
 }
 
-.cart .hamburger {
+.header-cart .hamburger {
   display: none;
 }
 @media only screen and (min-width: 1180px) {

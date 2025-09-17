@@ -112,7 +112,6 @@
 }
 .filters__list-item-element {
   display: flex;
-  align-items: center;
   gap: 8px;
 }
 .filters__checkbox {
@@ -122,6 +121,10 @@
   background-color: transparent;
   outline: 1px solid black;
   outline-offset: -1px;
+}
+.filters__list-item-label {
+  text-align: left;
+  line-height: 20px;
 }
 .filters__more {
   display: none;

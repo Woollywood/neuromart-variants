@@ -24,6 +24,8 @@
     display: flex;
     align-items: center;
     gap: 4px;
+    overflow: auto;
+    @include hideScrollbar();
 
     @include media('lg') {
       gap: 8px;
@@ -73,11 +75,17 @@
   &__image {
     position: relative;
     aspect-ratio: 144 / 120;
-    margin-bottom: 8px;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+
+      @include media('lg') {
+        margin-bottom: 14px;
+      }
+    }
 
     @include media('lg') {
       aspect-ratio: 301 / 240;
-      margin-bottom: 14px;
     }
 
     img {

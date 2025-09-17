@@ -1,24 +1,30 @@
 .main-banner {
   position: relative;
   margin-top: calc(var(--header-height) * -1);
+  padding-top: calc(var(--header-height) + 49px);
   width: 100%;
-  height: 100svh;
   overflow: hidden;
+  min-height: 478px;
   margin-bottom: 24px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1180px) {
   .main-banner {
+    padding-top: 0;
+    height: 100svh;
     margin-bottom: 32px;
     justify-content: flex-start;
   }
 }
 @media only screen and (min-width: 1180px) {
   .main-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 42px;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
   }
 }
 .main-banner__image {
@@ -27,6 +33,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 .main-banner__image img {
   position: absolute;
@@ -45,6 +52,14 @@
     padding: 0 12vw;
   }
 }
+@media only screen and (min-width: 1180px) {
+  .main-banner__description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+}
 .main-banner__description-inner {
   position: relative;
   color: var(--white);
@@ -55,6 +70,11 @@
   align-items: flex-end;
   position: relative;
   z-index: 30;
+}
+@media only screen and (min-width: 768px) {
+  .main-banner__description-content {
+    align-items: center;
+  }
 }
 .main-banner__title {
   text-align: center;
@@ -79,27 +99,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .main-banner__buttons {
+    flex-direction: row;
+  }
 }
 .main-banner__button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 8px;
+  padding: 4px 6px;
   background-color: transparent;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 16px;
   outline: 1px solid var(--white);
   outline-offset: -1px;
 }
 @media only screen and (min-width: 768px) {
   .main-banner__button {
-    padding: 8px 12px;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .main-banner__button {
-    font-size: 14px;
+    padding: 6px 12px;
   }
 }
 @media only screen and (min-width: 1440px) {

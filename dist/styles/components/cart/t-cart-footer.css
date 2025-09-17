@@ -27,7 +27,7 @@
   align-items: flex-start;
   gap: 6px;
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1600px) {
   .cart-footer__bottom {
     flex-direction: row;
     gap: 16px;
@@ -65,14 +65,9 @@
   font-size: 11px;
   text-transform: uppercase;
 }
-@media only screen and (min-width: 1180px) {
-  .cart-footer__link {
-    font-size: 14px;
-  }
-}
 @media only screen and (min-width: 1440px) {
   .cart-footer__link {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 .cart-footer__link_underline::after {
