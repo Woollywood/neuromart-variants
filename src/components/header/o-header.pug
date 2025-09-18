@@ -1,0 +1,57 @@
+include ../../mixins/provider
+
+header.header(data-component='header')
+  div.header__container.container
+    div.header__wrapper
+      div.header__left-blocks
+        div.header__left-blocks-top
+          div.hamburger(data-component='hamburger')
+            button.hamburger__button.hamburger__button_desktop
+              +icon('s-menu')
+          div.header__categories
+            -
+              const topCategories = [
+                { label: 'женская обувь', href: '#' },
+                { label: 'мужская обувь', href: '#' },
+                { label: 'детская обувь', href: '#' },
+                { label: 'Итальянская обувь', href: '#' },
+                { label: 'Одежда', href: '#' },
+              ];
+            each category in topCategories
+              a.header__category(href=category.href)
+                span= category.label
+        div.header__left-blocks-bottom
+          div.header__categories
+            -
+              const bottomCategories = [
+                { label: 'Текстиль', href: '#' },
+                { label: 'Аксессуары', href: '#' },
+                { label: 'Посуда', href: '#' },
+              ];
+            each category in bottomCategories
+              a.header__category(href=category.href )
+                span= category.label
+          div.header__sep
+          a.header__phone(href='tel:+7 (964) 495-6000')
+            +icon('o-phone')
+            span +7 (964) 495-6000
+      div.header__logo-wrapper
+        a.header__logo(href='/')
+          img(src="@img/o-theme/logo.svg" alt="img")
+      div.header__right-blocks
+        div.header__right-blocks-inner
+          div.header__input-wrapper
+            div.header__input.input-header(data-component='header-input')
+              div.input-header__field
+                div.input-header__icon
+                  +icon('o-chat')
+                input.input-header__input.header-input(type="text")
+                p.input-header__label Найти или задать вопрос...
+            div.header__input-bottom-tags
+              each tag in ['aaaaaaa', 'bbbbbbb']
+                a.header__input-bottom-tag(href='#')= tag
+          div.header__actions
+            a.header__action(href="#")
+              +icon('o-person')
+            a.header__action(href="#")
+              +icon('o-cart')

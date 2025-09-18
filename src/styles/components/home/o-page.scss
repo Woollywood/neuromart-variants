@@ -1,0 +1,12 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.catalog-slider-block {
+  padding-top: 16;
+  padding-bottom: 24px;
+
+  @include media('lg') {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+}

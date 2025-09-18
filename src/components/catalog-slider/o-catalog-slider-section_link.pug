@@ -1,0 +1,9 @@
+div.catalog-slider-section
+  div.catalog-slider-section__content
+    div.catalog-slider-section__title-wrapper
+      h2.catalog-slider-section__title.title-block Популярные
+      div.catalog-slider-section__tags
+        each tag in ['Сандали', 'Ботильоны', 'Туфли', 'Timberland', 'Calvin Klein', 'GEOX', 'NIKE']
+          a.catalog-slider-section__tag(href='#')= tag
+    p.catalog-slider-section__subtitle.subtitle-block Текст комментария от нейросети для расшифровки
+    include ./o-catalog-slider_link

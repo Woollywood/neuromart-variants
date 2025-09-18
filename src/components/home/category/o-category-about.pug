@@ -1,0 +1,52 @@
+include ../../../mixins/provider
+
+section.category-about-section.category-block.left
+  div.category-block__container.container
+    div.category-block__blocks
+      div.category-about-section__left.category-block__block-left
+        div.category-image.contacts-type
+          div.category-image__background
+            img(src="@img/s-theme/home/categories/category-fishermen.jpg" alt="image")
+          div.category-image__content
+            -
+              const AboutContacts = [
+                { name: 'Татьяна', phone: '+7-906-512-25-55', email: 'mta37@stayer-tex.ru' },
+                { name: 'Татьяна', phone: '+7-906-512-25-55', email: 'mta37@stayer-tex.ru' },
+              ];
+            div.category-about-section__contacts.contacts
+              each contact in AboutContacts
+                div.contacts__contact.contact
+                  p.contact__name= contact.name
+                  div.contact__button.contact__button_top
+                    div.contact__button-inner
+                      a.contact__phone(href=`tel:${contact.phone}`)= contact.phone
+                      div.contact__icons
+                        div.contact__icon
+                          +icon('s-whatsapp')
+                        div.contact__icon
+                          +icon('s-telegram')
+                  a.contact__button.contact__button_bottom(href=`mailto${contact.mailto}`)= contact.email
+      div.category-about-section__right.right-category-about-section.category-block__block-right
+        section.about
+          div.about__wrapper
+            div.about__title-wrapper
+              h2.about__title Одежда для охоты, рыбалки, туризма и уличных работ
+            div.about__description-wrapper
+              p 
+                | СтайерТекс — российский производитель практичной одежды для активного использования на открытом воздухе. В
+                | каталоге представлены костюмы для охоты, рыбалки, туризма и сезонных работ: лёгкие летние модели, утеплённые
+                | костюмы с флисовой подкладкой, влагозащитой, москитной сеткой и усилением на коленях и локтях.
+              p 
+                | Мы работаем с розничными и оптовыми покупателями по всей России. Каждая модель разрабатывается с учётом задач
+                | реального использования: анатомичный крой не сковывает движения, ткани надёжно защищают от влаги, ветра и
+                | насекомых, а фурнитура выдерживает интенсивную нагрузку. Подбираем одежду под сезон, условия и вид активности —
+                | от спокойной рыбалки до тяжёлой работы на улице.
+            -
+              const links = [
+                { href: '#', label: 'О компании' },
+                { href: '#', label: 'О компании' },
+                { href: '#', label: 'О компании' },
+              ];
+            div.about__links
+              each link in links
+                a.about__link(href=link.href)= link.label

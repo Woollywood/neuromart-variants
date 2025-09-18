@@ -1,0 +1,38 @@
+include ../../mixins/accordion
+
+-
+  const navList = [
+    {
+      title: 'О компании',
+      links: ['Контакты', 'Реквизиты', 'Новости', 'Производство', 'Часто задаваемые вопросы']
+    },
+    {
+      title: 'Магазин',
+      links: ['Личный кабинет', 'Доставка и оплата', 'Как сделать заказ']
+    },
+  ]
+
+footer.footer
+  div.footer__container.container
+    div.footer__inner
+      div.footer__top
+        nav.footer__nav
+          each nav in navList
+            div.footer__nav-list
+              p.footer__nav-title= nav.title
+              ul.footer__nav-list-item
+                each link in nav.links
+                  li.footer__nav-item
+                    a.footer__nav-link(href='#')= link
+        div.footer__placeholder
+        div.footer__subscribtion
+          p.footer__subscribtion-title Получайте выгодное предложение уже сейчас
+          form.footer__subscribtion-form
+            input.footer__subscribtion-input(placeholder='Введите свой E-mail')
+            button.footer__subscribtion-button Подписаться
+          p.footer__subscription-agreement Нажимая кнопку «Подписаться», я даю свое согласие на обработку персональных данных в соответствии с указанным 
+            a(href='#') здесь
+            | текстом.
+      div.footer__copyright.copyright
+        p.copyright__text 2025 okeanobuvi.ru © Все права защищены biznetman ® - создание сайта
+        a.copyright__link(href="#") Пользовательское соглашение

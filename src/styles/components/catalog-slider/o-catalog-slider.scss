@@ -1,0 +1,161 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.catalog-slider-section {
+  &__content {
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @include media('lg') {
+      gap: 12px;
+    }
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow: auto;
+    @include hideScrollbar();
+
+    @include media('lg') {
+      gap: 8px;
+    }
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    @include border(1px, rgba(0, 0, 0, 0.12));
+
+    font-size: 12px;
+    text-transform: uppercase;
+
+    @include media('lg') {
+      font-size: 14px;
+      padding: 4px 8px;
+      height: 24px;
+    }
+  }
+
+  &__subtitle {
+    text-align: left;
+    margin-bottom: 8px;
+  }
+}
+
+.catalog-slider {
+  @include media('lg') {
+    margin-right: 0;
+  }
+
+  &__track {
+  }
+
+  &__list {
+  }
+}
+
+.catalog-slide {
+  &__inner {
+  }
+
+  &__image {
+    position: relative;
+    aspect-ratio: 116 / 172;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+
+      @include media('lg') {
+        margin-bottom: 12px;
+      }
+    }
+
+    @include media('lg') {
+      aspect-ratio: 301 / 448;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__actions {
+    display: inline-flex;
+    gap: 4px;
+  }
+}
+
+.card-content {
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+
+    @include media('lg') {
+      font-size: 20px;
+    }
+  }
+
+  &__price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__price {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+
+    @include media('lg') {
+      font-size: 20px;
+    }
+
+    &_old {
+      text-decoration: line-through;
+    }
+
+    &_new {
+      color: #d10c54;
+    }
+  }
+
+  &__subtitle {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    @include leading(1);
+
+    @include media('lg') {
+      font-size: 16px;
+    }
+  }
+}

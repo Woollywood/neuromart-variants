@@ -1,0 +1,15 @@
+extends ../root-layout
+
+block styles
+  block styles
+
+block content
+  div.layout
+    include ../../components/header/o-header
+    main(data-layout-part='main')
+      block main
+    include ../../modules/stayertex/header-modal
+    include ../../components/footer/o-footer
+
+block scripts
+  block scripts

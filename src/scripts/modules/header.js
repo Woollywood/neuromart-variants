@@ -1,7 +1,7 @@
 (() => {
   const header = document.querySelector("[data-component='header']");
   observeHeight(header, '--header-height');
-  overflowItems(document.querySelector("[data-component='header-categories']"))
+  document.querySelectorAll("[data-component='header-categories']").forEach(overflowItems);
 
   const checkHeaderScroll = () => {
     if (isScrolled()) {

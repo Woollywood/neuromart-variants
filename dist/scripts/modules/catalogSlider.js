@@ -15,6 +15,7 @@
             },
           };
         case 'i_sm':
+        case 'o_sm':
           return {
             perPage: 4,
             gap: 2,
