@@ -11,6 +11,11 @@
 .header.transformed {
   transform: translateY(calc(-1 * (var(--logo-wrapper-height) + 16px)));
 }
+@media only screen and (min-width: 1180px) {
+  .header.transformed {
+    transform: translateY(0);
+  }
+}
 .header.modal-open {
   overflow: visible;
 }
