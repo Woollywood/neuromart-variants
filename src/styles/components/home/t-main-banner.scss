@@ -3,8 +3,6 @@
 
 .main-banner {
   position: relative;
-  margin-top: calc(var(--header-height) * -1);
-  padding-top: calc(var(--header-height) + 49px);
   width: 100%;
   overflow: hidden;
   min-height: 478px;
@@ -12,10 +10,10 @@
 
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 
   @include media('lg') {
-    padding-top: 0;
+    margin-top: calc(var(--header-height) * -1);
     height: 100svh;
     margin-bottom: 32px;
     justify-content: flex-start;
@@ -76,6 +74,7 @@
     z-index: 30;
 
     @include media('md') {
+      padding: 0 16px;
       align-items: center;
     }
   }

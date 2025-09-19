@@ -6,6 +6,10 @@
   width: 100%;
   background-color: var(--white);
   z-index: 60;
+  transition: transform 0.3s ease-in-out;
+}
+.header.transformed {
+  transform: translateY(calc(-1 * (var(--logo-wrapper-height) + 16px)));
 }
 .header.modal-open {
   overflow: visible;
@@ -31,6 +35,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+.header__logo-wrapper.scrolled {
+  transform: translateY(-200%);
+}
+@media only screen and (min-width: 1180px) {
+  .header__logo-wrapper.scrolled {
+    transform: translateY(0);
+  }
 }
 .header__logo-wrapper span {
   text-transform: uppercase;
@@ -72,9 +85,11 @@
   flex-direction: column;
   gap: 4px;
   overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 @media only screen and (min-width: 1180px) {
   .header__blocks {
+    transform: translateY(0);
     align-items: flex-start;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -338,7 +353,7 @@
   .input-header {
     padding: 8px;
     gap: 26px;
-    width: 516px;
+    width: 522px;
   }
 }
 .input-header__field {

@@ -1,18 +1,16 @@
 .main-banner {
   position: relative;
-  margin-top: calc(var(--header-height) * -1);
-  padding-top: calc(var(--header-height) + 49px);
   width: 100%;
   overflow: hidden;
   min-height: 478px;
   margin-bottom: 24px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 @media only screen and (min-width: 1180px) {
   .main-banner {
-    padding-top: 0;
+    margin-top: calc(var(--header-height) * -1);
     height: 100svh;
     margin-bottom: 32px;
     justify-content: flex-start;
@@ -73,6 +71,7 @@
 }
 @media only screen and (min-width: 768px) {
   .main-banner__description-content {
+    padding: 0 16px;
     align-items: center;
   }
 }

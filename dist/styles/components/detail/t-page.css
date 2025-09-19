@@ -23,7 +23,7 @@
 @media only screen and (min-width: 1440px) {
   .detail__main {
     margin-bottom: 112px;
-    grid-template-columns: 6fr 2fr;
+    grid-template-columns: 6fr 3fr;
     gap: 16px;
   }
 }

@@ -14,7 +14,7 @@
 @media only screen and (min-width: 1180px) {
   .details__title-wrapper {
     padding-bottom: 14px;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
   }
 }
 .details__title {
@@ -64,7 +64,7 @@
 @media only screen and (min-width: 1180px) {
   .details__add-cart {
     gap: 16px;
-    flex-direction: column;
+    flex-direction: row;
     margin-bottom: 0;
   }
 }

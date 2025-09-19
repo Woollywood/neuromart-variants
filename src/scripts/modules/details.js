@@ -49,15 +49,42 @@ window.addEventListener('scroll', checkPosition);
 
 const slider = document.querySelector("[data-component='question-slider']");
 if (slider) {
+  const size = slider.dataset.size ?? 'sm';
+  console.log({ size });
+
+  const getOptions = () => {
+    switch (size) {
+      case 'sm':
+        return {
+          gap: 4,
+          breakpoints: {
+            [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 4, gap: 8 },
+            [getMediaCssParsedVariable(MediaSizes.MD)]: { perPage: 2, autoWidth: false },
+          },
+        };
+      case 'md':
+        return {
+          gap: 4,
+          breakpoints: {
+            [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 4, gap: 16 },
+            [getMediaCssParsedVariable(MediaSizes.MD)]: { perPage: 2, autoWidth: false },
+          },
+        };
+      default:
+        return {
+          gap: 4,
+          breakpoints: {
+            [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 4, gap: 8 },
+            [getMediaCssParsedVariable(MediaSizes.MD)]: { perPage: 2, autoWidth: false },
+          },
+        };
+    }
+  };
   new Splide(slider, {
     pagination: false,
     arrows: false,
     mediaQuery: 'min',
     autoWidth: true,
-    gap: 4,
-    breakpoints: {
-      [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 4, gap: 8 },
-      [getMediaCssParsedVariable(MediaSizes.MD)]: { perPage: 2, autoWidth: false },
-    },
+    ...getOptions(),
   }).mount();
 }

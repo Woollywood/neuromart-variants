@@ -18,6 +18,24 @@
     position: relative;
     width: 100%;
 
+    &::after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 8px;
+      right: 8px;
+      transform: translateY(-50%);
+      height: 1px;
+      background-color: var(--white);
+      z-index: 100;
+
+      @include media('lg') {
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.24);
+      }
+    }
+
     img {
       position: absolute;
       top: 0;
@@ -144,24 +162,6 @@
   flex: 1 1 50%;
   overflow: visible;
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: 8px;
-    right: 8px;
-    transform: translateY(-50%);
-    height: 1px;
-    background-color: var(--white);
-    z-index: 100;
-
-    @include media('lg') {
-      left: 0;
-      right: 0;
-      background-color: rgba(255, 255, 255, 0.24);
-    }
-  }
-
   @include media('lg') {
     aspect-ratio: 1 / 1;
   }
@@ -171,11 +171,10 @@
   position: relative;
   padding-top: 368px;
 
-  
   @include media('lg') {
     padding: 232px 0 265px;
     min-height: 100svh;
-    
+
     &::after {
       content: '';
       position: absolute;

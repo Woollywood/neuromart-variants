@@ -123,6 +123,7 @@
   outline-offset: -1px;
 }
 .filters__list-item-label {
+  font-family: var(--font-secondary);
   text-align: left;
   line-height: 20px;
 }

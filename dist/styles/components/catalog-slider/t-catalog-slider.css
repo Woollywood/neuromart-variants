@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 @media only screen and (min-width: 1180px) {
   .catalog-slider-section__title-wrapper {

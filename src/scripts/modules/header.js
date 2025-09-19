@@ -1,7 +1,21 @@
 (() => {
   const header = document.querySelector("[data-component='header']");
+  const logoWrapper = document.querySelector("[data-component='logo-wrapper']");
   observeHeight(header, '--header-height');
+  observeHeight(logoWrapper, '--logo-wrapper-height');
   document.querySelectorAll("[data-component='header-categories']").forEach(overflowItems);
+
+  const checkMobileScroll = () => {
+    if (window.scrollY >= 76) {
+      logoWrapper.classList.add('scrolled');
+      header.classList.add('transformed')
+    } else {
+      logoWrapper.classList.remove('scrolled');
+      header.classList.remove('transformed')
+    }
+  };
+  checkMobileScroll();
+  window.addEventListener('scroll', checkMobileScroll);
 
   const checkHeaderScroll = () => {
     if (isScrolled()) {
@@ -61,4 +75,12 @@
       });
     });
   });
+})();
+
+(() => {
+  const getScrollPosition = () => {
+    setCssVariable('--scroll-y', window.scrollY);
+  };
+  getScrollPosition();
+  window.addEventListener('scroll', getScrollPosition);
 })();
