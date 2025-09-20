@@ -18,15 +18,16 @@
 
   &__main {
     @include media('lg') {
+      margin-top: calc((-1 * var(--header-height)) + 24px + var(--logo-wrapper-height));
       display: grid;
-      gap: 8px;
-      grid-template-columns: 1fr 306px;
-      margin-bottom: 80px;
+      gap: 12px;
+      grid-template-columns: 8fr 4fr;
+      margin-bottom: 46px;
     }
 
     @include media('xl') {
+      margin-top: calc((-1 * var(--header-height)) + 24px + var(--logo-wrapper-height) + 16px);
       margin-bottom: 112px;
-      grid-template-columns: 6fr 3fr;
       gap: 16px;
     }
   }

@@ -25,20 +25,21 @@
 }
 @media only screen and (min-width: 768px) {
   .questions__select-wrapper {
+    gap: 8px;
     display: grid;
-    gap: 4px;
     grid-template-columns: 1fr 1fr;
   }
 }
 @media only screen and (min-width: 1180px) {
   .questions__select-wrapper {
-    gap: 8px;
+    gap: 12px;
     margin-bottom: 8px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 1440px) {
   .questions__select-wrapper {
-    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
   }
 }
 .select-questions__trigger {

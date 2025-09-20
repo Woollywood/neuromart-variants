@@ -25,13 +25,12 @@
   .cart__body {
     display: grid;
     gap: 16px;
-    grid-template-columns: 1fr 396px;
+    grid-template-columns: 8fr 4fr;
   }
 }
 @media only screen and (min-width: 1440px) {
   .cart__body {
     gap: 32px;
-    grid-template-columns: 1fr 615px;
   }
 }
 @media only screen and (min-width: 1180px) {

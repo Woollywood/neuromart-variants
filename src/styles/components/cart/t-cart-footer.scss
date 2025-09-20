@@ -1,7 +1,7 @@
 @use '../../mixins' as *;
 @use '../../variables' as *;
 
-$custom-media: 1600px;
+$custom-media: 1900px;
 
 .cart-footer {
   position: fixed;
@@ -65,7 +65,7 @@ $custom-media: 1600px;
     background-color: #d9d9d9;
     display: none;
 
-    @include media('xl') {
+    @include media($custom-media) {
       display: block;
     }
   }

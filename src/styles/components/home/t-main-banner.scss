@@ -7,12 +7,13 @@
   overflow: hidden;
   min-height: 478px;
   margin-bottom: 24px;
+  background-color: black;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 
   @include media('lg') {
+    grid-template-rows: auto;
     margin-top: calc(var(--header-height) * -1);
     height: 100svh;
     margin-bottom: 32px;
@@ -20,20 +21,42 @@
   }
 
   @include media('lg') {
-    display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 12px;
     margin-bottom: 42px;
     justify-content: center;
     align-items: center;
   }
 
+  @include media('xl') {
+    gap: 16px;
+  }
+
   &__image {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 130px);
     pointer-events: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 56%;
+      width: 100%;
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    }
+
+    @include media('lg') {
+      height: 100%;
+
+      &::after {
+        content: none;
+      }
+    }
 
     img {
       position: absolute;
@@ -64,6 +87,11 @@
   &__description-inner {
     position: relative;
     color: var(--white);
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__description-content {
@@ -72,10 +100,21 @@
     align-items: flex-end;
     position: relative;
     z-index: 30;
+    padding: 0 12px;
 
     @include media('md') {
-      padding: 0 16px;
+      padding-left: 16px;
+      padding-right: 12px;
       align-items: center;
+    }
+
+    @include media('lg') {
+      margin-right: -12px;
+    }
+
+    @include media('xl') {
+      padding: 0 16px;
+      margin-right: -16px;
     }
   }
 

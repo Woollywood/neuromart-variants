@@ -26,7 +26,7 @@
     font-size: 14px;
     font-weight: 400;
 
-    @include media('lg') {
+    @include media('xl') {
       font-size: 22px;
     }
   }
@@ -38,6 +38,11 @@
     margin-bottom: 24px;
 
     @include media('lg') {
+      margin-bottom: 16px;
+    }
+
+    @include media('xl') {
+      gap: 12px;
       margin-bottom: 32px;
     }
   }
@@ -55,6 +60,13 @@
     text-transform: uppercase;
 
     @include media('lg') {
+      height: 20px;
+      font-weight: 300;
+      font-size: 12px;
+    }
+
+    @include media('xl') {
+      height: 32px;
       font-size: 14px;
       font-weight: 300;
     }
@@ -67,8 +79,9 @@
     margin-bottom: 50px;
 
     @include media('lg') {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 16px;
-      flex-direction: row;
       margin-bottom: 0;
     }
   }
@@ -77,6 +90,10 @@
     margin-bottom: 12px;
 
     @include media('lg') {
+      margin-bottom: 10px;
+    }
+
+    @include media('xl') {
       margin-bottom: 22px;
     }
   }
@@ -129,8 +146,15 @@
     color: black;
   }
 
-  @include media('md') {
+  @include media('lg') {
+    font-size: 13px;
+    height: 44px;
+    padding: 8px 4px;
+  }
+
+  @include media('xl') {
     font-size: 18px;
     height: 64px;
+    padding: 8px 12px;
   }
 }

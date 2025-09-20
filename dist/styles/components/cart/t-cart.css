@@ -41,6 +41,12 @@
   .cart-item__content {
     gap: 16px;
     display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .cart-item__content {
+    gap: 16px;
     grid-template-columns: 1fr 1fr;
   }
 }

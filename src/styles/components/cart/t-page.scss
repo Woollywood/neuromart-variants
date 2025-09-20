@@ -32,12 +32,11 @@
     @include media('lg') {
       display: grid;
       gap: 16px;
-      grid-template-columns: 1fr 396px;
+      grid-template-columns: 8fr 4fr;
     }
 
     @include media('xl') {
       gap: 32px;
-      grid-template-columns: 1fr 615px;
     }
   }
 

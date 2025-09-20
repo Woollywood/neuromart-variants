@@ -3,15 +3,30 @@
   const logoWrapper = document.querySelector("[data-component='logo-wrapper']");
   observeHeight(header, '--header-height');
   observeHeight(logoWrapper, '--logo-wrapper-height');
-  document.querySelectorAll("[data-component='header-categories']").forEach(overflowItems);
+
+  const overflow = () => {
+    const categories = header.querySelector("[data-component='header-categories']");
+    const inputTags = header.querySelector("[data-component='header-bottom-block']");
+
+    if (window.innerWidth > MediaSizesValue.LG) {
+      overflowItems(categories);
+      overflowItems(inputTags);
+    } else {
+      unoverflowItems(categories);
+      unoverflowItems(inputTags);
+    }
+  };
+
+  window.addEventListener('resize', overflow);
+  window.addEventListener('scroll', overflow);
 
   const checkMobileScroll = () => {
     if (window.scrollY >= 76) {
-      logoWrapper.classList.add('scrolled');
-      header.classList.add('transformed')
+      logoWrapper?.classList.add('scrolled');
+      header?.classList.add('transformed');
     } else {
-      logoWrapper.classList.remove('scrolled');
-      header.classList.remove('transformed')
+      logoWrapper?.classList.remove('scrolled');
+      header?.classList.remove('transformed');
     }
   };
   checkMobileScroll();

@@ -3,16 +3,23 @@
 
 .header {
   position: sticky;
-  overflow: hidden;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--white);
   z-index: 60;
   transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+
+  @include media('lg') {
+    overflow: visible;
+  }
+
+  &.scrolled {
+    background-color: var(--white);
+  }
 
   &.transformed {
-    transform: translateY(calc(-1 * (var(--logo-wrapper-height) + 16px)));
+    transform: translateY(calc(-1 * (var(--logo-wrapper-height) + 16px + 8px)));
 
     @include media('lg') {
       transform: translateY(0);
@@ -27,19 +34,23 @@
   }
 
   &__wrapper {
-    overflow: hidden;
     padding: 16px 0 8px;
     padding-right: 0px;
 
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 16px;
 
     @include media('lg') {
+      display: grid;
+      grid-template-columns: 1fr 11fr;
       align-items: flex-start;
-      flex-direction: row;
-      gap: 32px;
+      padding: 16px 0;
+      gap: 12px;
+    }
+
+    @include media('xl') {
+      gap: 16px;
       padding: 24px 0;
     }
   }
@@ -49,6 +60,7 @@
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s ease-in-out;
+    margin-bottom: 16px;
 
     &.scrolled {
       transform: translateY(-200%);
@@ -58,12 +70,22 @@
       }
     }
 
+    @include media('lg') {
+      margin-bottom: 0;
+    }
+
     span {
       text-transform: uppercase;
       font-size: 11px;
 
       @include media('lg') {
+        font-size: 8px;
+        line-height: 10px;
+      }
+
+      @include media('xl') {
         line-height: 16px;
+        font-size: 11px;
       }
     }
   }
@@ -74,6 +96,11 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+
+    @include media('lg') {
+      width: 96px;
+      height: 22px;
+    }
 
     @include media('xl') {
       width: 143px;
@@ -98,19 +125,24 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    overflow: hidden;
     transition: transform 0.3s ease-in-out;
 
     @include media('lg') {
-      transform: translateY(0);
-      align-items: flex-start;
+      gap: 12px;
+      display: grid;
+      grid-template-columns: 7fr 4fr;
+      align-items: center;
       flex-direction: row-reverse;
       justify-content: space-between;
-      gap: 24px;
+    }
+
+    @include media('xl') {
+      gap: 16px;
     }
   }
 
   &__top-block {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -122,7 +154,12 @@
     }
 
     @include media('lg') {
+      order: 2;
       padding: 0;
+      gap: 8px;
+    }
+
+    @include media('lg') {
       gap: 16px;
     }
   }
@@ -148,6 +185,11 @@
       height: 32px;
 
       @include media('lg') {
+        width: 22px;
+        height: 22px;
+      }
+
+      @include media('xl') {
         width: 38px;
         height: 38px;
       }
@@ -158,7 +200,7 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    flex-grow: 1;
+    overflow: hidden;
 
     .header-cart & {
       display: none;
@@ -167,7 +209,6 @@
         display: flex;
         align-items: center;
         gap: 4px;
-        flex-grow: 1;
       }
     }
   }
@@ -192,18 +233,21 @@
   &__categories {
     display: flex;
     align-items: center;
-    column-gap: 4px;
-    row-gap: 4px;
+    gap: 4px;
     overflow-x: auto;
     width: 100%;
-
     @include hideScrollbar();
 
     @include media('lg') {
+      overflow: hidden;
       overflow: auto;
-      column-gap: 24px;
-      row-gap: 8px;
-      flex-wrap: wrap;
+      gap: 12px;
+      padding: 0 8px;
+    }
+
+    @include media('xl') {
+      padding: 0 20px;
+      gap: 24px;
     }
 
     svg {
@@ -234,16 +278,26 @@
       width: 20px;
       height: 20px;
 
-      @include media('lg') {
+      @include media('xl') {
+        width: 22px;
+        height: 22px;
+      }
+
+      @include media('xl') {
         width: 32px;
         height: 32px;
       }
     }
 
     @include media('lg') {
-      font-size: 14px;
-      padding: 0;
+      font-size: 12px;
       outline: none;
+      padding: 0;
+      gap: 8px;
+    }
+
+    @include media('xl') {
+      font-size: 14px;
       gap: 12px;
     }
   }
@@ -297,6 +351,20 @@
     }
   }
 
+  &__input-placeholder {
+    height: 100%;
+    position: relative;
+    width: 100%;
+
+    @include media('lg') {
+      height: 32px;
+    }
+
+    @include media('xl') {
+      height: 40px;
+    }
+  }
+
   &__contact-phone {
     font-weight: 900;
     font-style: italic;
@@ -325,6 +393,18 @@
     font-size: 14px;
     text-transform: uppercase;
 
+    @include media('lg') {
+      overflow: hidden;
+      overflow: auto;
+      gap: 12px;
+      margin: 0 24px;
+    }
+
+    @include media('xl') {
+      margin: 0 32px;
+      gap: 24px;
+    }
+
     @include media('xl') {
       height: 40px;
     }
@@ -344,28 +424,27 @@
 }
 
 .input-header {
-  position: relative;
   font-family: var(--font-secondary);
   font-size: 12px;
   line-height: 16px;
   width: 100%;
-  background-color: transparent;
-
   padding: 6px;
   background-color: rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(16px);
 
   @include media('lg') {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 12px;
-    width: 416px;
+    gap: 20px;
   }
 
   @include media('xl') {
     padding: 8px;
     gap: 26px;
-    width: 522px;
   }
 
   &__field {
@@ -429,6 +508,10 @@
       white-space: pre-wrap;
 
       @include media('lg') {
+        font-size: 12px;
+      }
+
+      @include media('xl') {
         font-size: 14px;
       }
     }
@@ -455,9 +538,17 @@
   &__tags {
     display: none;
 
+    .scrolled & {
+      display: none;
+    }
+
     @include media('lg') {
       display: flex;
       flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    @include media('xl') {
       gap: 8px;
     }
   }
@@ -476,6 +567,16 @@
     font-size: 14px;
     letter-spacing: calc(14px * -0.02);
     color: black;
+
+    @include media('lg') {
+      font-size: 12px;
+      height: 20px;
+    }
+
+    @include media('xl') {
+      font-size: 14px;
+      height: 24px;
+    }
   }
 }
 

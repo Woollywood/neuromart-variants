@@ -1,3 +1,11 @@
+.catalog-slider-section__content {
+  margin-right: -8px;
+}
+@media only screen and (min-width: 1180px) {
+  .catalog-slider-section__content {
+    margin-right: 0;
+  }
+}
 .catalog-slider-section__title-wrapper {
   display: flex;
   align-items: center;
@@ -17,6 +25,7 @@
   align-items: center;
   gap: 4px;
   overflow: auto;
+  padding-right: 8px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -25,6 +34,7 @@
 }
 @media only screen and (min-width: 1180px) {
   .catalog-slider-section__tags {
+    padding-right: 0;
     gap: 8px;
   }
 }
@@ -94,6 +104,12 @@
 }
 @media only screen and (min-width: 1180px) {
   .card-content__title {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .card-content__title {
     margin-bottom: 6px;
     font-size: 20px;
   }
@@ -103,7 +119,14 @@
   color: rgba(0, 0, 0, 0.4);
   margin-bottom: 2px;
 }
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1440px) {
+  .card-content__subtitle {
+    font-size: 11px;
+    line-height: 12px;
+    margin-bottom: 0px;
+  }
+}
+@media only screen and (min-width: 1440px) {
   .card-content__subtitle {
     font-size: 14px;
     margin-bottom: 6px;
@@ -113,7 +136,13 @@
   font-size: 11px;
   color: rgba(0, 0, 0, 0.4);
 }
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1440px) {
+  .card-content__description {
+    font-size: 11px;
+    line-height: 12px;
+  }
+}
+@media only screen and (min-width: 1440px) {
   .card-content__description {
     font-size: 14px;
   }

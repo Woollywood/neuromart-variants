@@ -8,17 +8,7 @@
 }
 @media only screen and (min-width: 1180px) {
   .inventory {
-    padding: 16px 0 128px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .inventory {
-    padding-top: 14px;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .inventory {
-    padding-top: 16px;
+    padding: 46px 0 128px;
   }
 }
 .inventory__grid {

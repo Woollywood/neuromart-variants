@@ -12,6 +12,14 @@ if (gallerySlider) {
             [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 3, gap: 4, autoWidth: false },
           },
         };
+      case 't':
+        return {
+          gap: 8,
+          breakpoints: {
+            [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 2, gap: 12, pagination: true },
+            [getMediaCssParsedVariable(MediaSizes.XL)]: { perPage: 2, gap: 16, pagination: true },
+          },
+        };
       default:
         return {
           gap: 8,
@@ -49,37 +57,38 @@ window.addEventListener('scroll', checkPosition);
 
 const slider = document.querySelector("[data-component='question-slider']");
 if (slider) {
-  const size = slider.dataset.size ?? 'sm';
-  console.log({ size });
+  const type = slider.dataset.type ?? 's';
 
   const getOptions = () => {
-    switch (size) {
-      case 'sm':
+    switch (type) {
+      case 's':
         return {
           gap: 4,
           breakpoints: {
-            [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 4, gap: 8 },
             [getMediaCssParsedVariable(MediaSizes.MD)]: { perPage: 2, autoWidth: false },
+            [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 4, gap: 8 },
           },
         };
-      case 'md':
+      case 't':
         return {
           gap: 4,
           breakpoints: {
-            [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 4, gap: 16 },
-            [getMediaCssParsedVariable(MediaSizes.MD)]: { perPage: 2, autoWidth: false },
+            [getMediaCssParsedVariable(MediaSizes.MD)]: { perPage: 2, gap: 8, autoWidth: false },
+            [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 3, gap: 12 },
+            [getMediaCssParsedVariable(MediaSizes.XL)]: { perPage: 3, gap: 16 },
           },
         };
       default:
         return {
           gap: 4,
           breakpoints: {
-            [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 4, gap: 8 },
             [getMediaCssParsedVariable(MediaSizes.MD)]: { perPage: 2, autoWidth: false },
+            [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 4, gap: 8 },
           },
         };
     }
   };
+
   new Splide(slider, {
     pagination: false,
     arrows: false,

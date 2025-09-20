@@ -9,17 +9,18 @@ header.header(data-component='header')
         span Ювелирная упакова
       div.header__blocks
         div.header__top-block
-          div.header__input.input-header(data-component='header-input')
-            div.input-header__field
-              div.input-header__icon
-                +icon('t-chat')
-              input.input-header__input.header-input(type="text")
-              p.input-header__label.header-input
-                span.input-header__label_first Найти или задать вопрос...
-            div.input-header__tags
-              - const inputTags = ['Доставка и оплата', 'Нужна помощь с выбором', 'Что покупают чаще?', 'Индивидуальный заказ', 'Контакты', 'Наши услуги', 'Наши преимущества']
-              each tag in inputTags
-                button.input-header__tag= tag
+          div.header__input-placeholder
+            div.header__input.input-header(data-component='header-input')
+              div.input-header__field
+                div.input-header__icon
+                  +icon('t-chat')
+                input.input-header__input.header-input(type="text")
+                p.input-header__label.header-input
+                  span.input-header__label_first Найти или задать вопрос...
+              div.input-header__tags(data-component='header-tags')
+                - const inputTags = ['Доставка и оплата', 'Нужна помощь с выбором', 'Что покупают чаще?', 'Индивидуальный заказ', 'Контакты', 'Наши услуги', 'Наши преимущества']
+                each tag in inputTags
+                  button.input-header__tag(data-overflow-element)= tag
           div.header__actions
             a.header__action(href="#")
               +icon('t-person')
@@ -41,8 +42,8 @@ header.header(data-component='header')
                 { label: 'Упаковка', href: '#', icon: 't-package' },
                 { label: 'Аксессуары', href: '#', icon: 't-accessories' },
               ];
-            div.header__categories
+            div.header__categories(data-component='header-categories')
               each category in categories
-                a.header__category(href=category.href)
+                a.header__category(href=category.href data-overflow-element)
                   +icon(category.icon)
                   span= category.label

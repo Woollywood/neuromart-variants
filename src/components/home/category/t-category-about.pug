@@ -30,9 +30,10 @@
   }
 
 section.category-about
+  include ../../radial-gradient
   div.category-about__image
-    img(src="@img/t-theme/home/about-background.svg" alt="alt")
-    include ../../radial-gradient
+    img.desktop-image(src="@img/t-theme/home/about-background.png" alt="alt")
+    img.mobile-image(src="@img/t-theme/home/about-background_mobile.png" alt="alt")
   div.category-about__content-wrapper.container
     div.category-about__placeholder
     div.category-about__content

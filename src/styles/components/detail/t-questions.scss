@@ -27,18 +27,19 @@
     margin-bottom: 8px;
 
     @include media('md') {
+      gap: 8px;
       display: grid;
-      gap: 4px;
       grid-template-columns: 1fr 1fr;
     }
 
     @include media('lg') {
-      gap: 8px;
+      gap: 12px;
       margin-bottom: 8px;
+      grid-template-columns: repeat(3, 1fr);
     }
 
     @include media('xl') {
-      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
     }
   }
 

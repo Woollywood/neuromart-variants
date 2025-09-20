@@ -14,6 +14,16 @@
               [getMediaCssParsedVariable(MediaSizes.XL)]: { perPage: 6 },
             },
           };
+        case 't':
+          return {
+            perPage: 2.5,
+            gap: 8,
+            breakpoints: {
+              [getMediaCssParsedVariable(MediaSizes.MD)]: { perPage: 4 },
+              [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 6, gap: 12 },
+              [getMediaCssParsedVariable(MediaSizes.XL)]: { perPage: 6, gap: 16 },
+            },
+          };
         case 'i_sm':
         case 'o_sm':
           return {

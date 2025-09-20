@@ -3,6 +3,11 @@
 
 .catalog-slider-section {
   &__content {
+    margin-right: -8px;
+
+    @include media('lg') {
+      margin-right: 0;
+    }
   }
 
   &__title-wrapper {
@@ -25,9 +30,11 @@
     align-items: center;
     gap: 4px;
     overflow: auto;
+    padding-right: 8px;
     @include hideScrollbar();
 
     @include media('lg') {
+      padding-right: 0;
       gap: 8px;
     }
   }
@@ -112,6 +119,11 @@
     margin-bottom: 4px;
 
     @include media('lg') {
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    @include media('xl') {
       margin-bottom: 6px;
       font-size: 20px;
     }
@@ -122,7 +134,13 @@
     color: rgba(0, 0, 0, 0.4);
     margin-bottom: 2px;
 
-    @include media('lg') {
+    @include media('xl') {
+      font-size: 11px;
+      line-height: 12px;
+      margin-bottom: 0px;
+    }
+
+    @include media('xl') {
       font-size: 14px;
       margin-bottom: 6px;
     }
@@ -132,7 +150,12 @@
     font-size: 11px;
     color: rgba(0, 0, 0, 0.4);
 
-    @include media('lg') {
+    @include media('xl') {
+      font-size: 11px;
+      line-height: 12px;
+    }
+
+    @include media('xl') {
       font-size: 14px;
     }
   }

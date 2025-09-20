@@ -1,7 +1,7 @@
 const MediaSizesValue = {
   SM: 375,
   MD: 768,
-  LG: 1180,
+  LG: 1280,
   XL: 1440,
   XXL: 1920,
 };
@@ -89,5 +89,17 @@ const overflowItems = (container) => {
   const itemsWidth = lastItemBox.right - containerBox.left;
   if (itemsWidth > containerBox.width) {
     overflowItemsInner();
+  }
+};
+
+const unoverflowItems = (container) => {
+  if (!container) {
+    return;
+  }
+
+  const items = container.querySelectorAll('[data-overflow-element]');
+  for (const item of items) {
+    item.classList.remove('overflowed');
+    item.style.display = '';
   }
 };

@@ -97,12 +97,13 @@
   font-size: 12px;
   text-transform: uppercase;
   padding: 4px 0;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 @media only screen and (min-width: 1180px) {
   .category-block__link {
-    font-size: 18px;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
     text-underline-offset: 4px;
+    font-size: 18px;
   }
 }
