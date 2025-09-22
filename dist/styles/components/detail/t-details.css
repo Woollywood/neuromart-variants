@@ -79,8 +79,13 @@
   .details__add-cart {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 12px;
     margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .details__add-cart {
+    gap: 16px;
   }
 }
 .details__description {

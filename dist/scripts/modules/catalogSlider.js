@@ -35,13 +35,13 @@
               [getMediaCssParsedVariable(MediaSizes.XL)]: { perPage: 12 },
             },
           };
-        case 'sm':
+        case 't_sm':
           return {
             perPage: 4,
             breakpoints: {
-              [getMediaCssParsedVariable(MediaSizes.MD)]: { perPage: 5 },
-              [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 8, gap: 16 },
-              [getMediaCssParsedVariable(MediaSizes.XL)]: { perPage: 12 },
+              [getMediaCssParsedVariable(MediaSizes.MD)]: { perPage: 8, gap: 8 },
+              [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 12, gap: 12 },
+              [getMediaCssParsedVariable(MediaSizes.XL)]: { gap: 16 },
             },
           };
         case 'md':

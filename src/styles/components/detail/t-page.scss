@@ -21,7 +21,7 @@
       margin-top: calc((-1 * var(--header-height)) + 24px + var(--logo-wrapper-height));
       display: grid;
       gap: 12px;
-      grid-template-columns: 8fr 4fr;
+      grid-template-columns: 4fr 4fr 4fr;
       margin-bottom: 46px;
     }
 
@@ -36,12 +36,12 @@
     margin-bottom: 20px;
 
     @include media('lg') {
+      grid-column: 1 / span 2;
       margin: 0;
     }
   }
 
   &__details {
-
     @include media('lg') {
       display: flex;
       align-items: flex-end;

@@ -36,7 +36,7 @@
 @media only screen and (min-width: 1180px) {
   .header__wrapper {
     display: grid;
-    grid-template-columns: 1fr 11fr;
+    grid-template-columns: 4fr 4fr 4fr;
     align-items: flex-start;
     padding: 16px 0;
     gap: 12px;
@@ -48,9 +48,26 @@
     padding: 24px 0;
   }
 }
+.header__wrapper-inner {
+  display: contents;
+}
+@media only screen and (min-width: 1180px) {
+  .header__wrapper-inner {
+    grid-column: 1/span 2;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .header__wrapper-inner {
+    gap: 16px;
+  }
+}
 .header__logo-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   transition: transform 0.3s ease-in-out;
   margin-bottom: 16px;
@@ -125,7 +142,6 @@
 @media only screen and (min-width: 1180px) {
   .header__blocks {
     gap: 12px;
-    display: grid;
     grid-template-columns: 7fr 4fr;
     align-items: center;
     flex-direction: row-reverse;
@@ -143,21 +159,17 @@
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 4px;
-  padding-right: 4px;
-}
-@media only screen and (min-width: 768px) {
-  .header__top-block {
-    padding-right: 8px;
-  }
+  width: 100%;
+  margin-bottom: 4px;
 }
 @media only screen and (min-width: 1180px) {
   .header__top-block {
     order: 2;
     padding: 0;
-    gap: 8px;
+    gap: 12px;
   }
 }
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1440px) {
   .header__top-block {
     gap: 16px;
   }
@@ -165,10 +177,11 @@
 .header__actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 @media only screen and (min-width: 1180px) {
   .header__actions {
+    gap: 8px;
     align-self: flex-start;
   }
 }
@@ -199,6 +212,8 @@
   align-items: center;
   gap: 4px;
   overflow: hidden;
+  width: 100%;
+  order: 3;
 }
 .header-cart .header__bottom-block {
   display: none;
@@ -208,6 +223,11 @@
     display: flex;
     align-items: center;
     gap: 4px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .header__bottom-block {
+    order: unset;
   }
 }
 .header__info {

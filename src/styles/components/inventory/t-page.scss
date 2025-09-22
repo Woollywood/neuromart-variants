@@ -20,7 +20,6 @@
     flex-direction: column;
     column-gap: 4px;
     row-gap: 8px;
-    overflow: hidden;
 
     @include media('md') {
       display: grid;

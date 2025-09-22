@@ -31,12 +31,12 @@
   &__body {
     @include media('lg') {
       display: grid;
-      gap: 16px;
-      grid-template-columns: 8fr 4fr;
+      gap: 12px;
+      grid-template-columns: 4fr 4fr 4fr;
     }
 
     @include media('xl') {
-      gap: 32px;
+      gap: 16px;
     }
   }
 
@@ -69,7 +69,13 @@
     border-top: 1px solid black;
 
     @include media('lg') {
+      grid-column: 1 / span 2;
+      margin-right: 4px;
       border-bottom: 1px solid black;
+    }
+
+    @include media('xl') {
+      margin-right: 16px;
     }
   }
 }

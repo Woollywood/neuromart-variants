@@ -24,13 +24,13 @@
 @media only screen and (min-width: 1180px) {
   .cart__body {
     display: grid;
-    gap: 16px;
-    grid-template-columns: 8fr 4fr;
+    gap: 12px;
+    grid-template-columns: 4fr 4fr 4fr;
   }
 }
 @media only screen and (min-width: 1440px) {
   .cart__body {
-    gap: 32px;
+    gap: 16px;
   }
 }
 @media only screen and (min-width: 1180px) {
@@ -54,6 +54,13 @@
 }
 @media only screen and (min-width: 1180px) {
   .cart__items {
+    grid-column: 1/span 2;
+    margin-right: 4px;
     border-bottom: 1px solid black;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .cart__items {
+    margin-right: 16px;
   }
 }

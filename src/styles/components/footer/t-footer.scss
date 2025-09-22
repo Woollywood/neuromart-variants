@@ -31,9 +31,9 @@
   }
 
   &__top {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    gap: 8px;
     margin-bottom: 32px;
 
     @include media('md') {
@@ -41,11 +41,12 @@
     }
 
     @include media('lg') {
-      display: grid;
+      gap: 12px;
       grid-template-columns: 4fr 4fr;
     }
 
     @include media('xl') {
+      gap: 16px;
       grid-template-columns: 4fr 3fr 5fr;
     }
   }
@@ -60,6 +61,14 @@
       width: auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    @include media('lg') {
+      gap: 12px;
+    }
+
+    @include media('xl') {
       gap: 16px;
     }
   }
@@ -125,10 +134,14 @@
 
   &__subscribtion-form {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 2fr;
     align-items: center;
     gap: 16px;
     margin-bottom: 4px;
+
+    @include media('lg') {
+      gap: 12px;
+    }
 
     @include media('xl') {
       grid-template-columns: 3fr 2fr;
@@ -168,6 +181,21 @@
     @include media('lg') {
       height: 48px;
       padding: 16px;
+    }
+  }
+
+  &__subscription-agreement-wrapper {
+    margin-bottom: 4px;
+
+    @include media('lg') {
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+      align-items: center;
+      gap: 12px;
+    }
+
+    @include media('xl') {
+      display: block;
     }
   }
 

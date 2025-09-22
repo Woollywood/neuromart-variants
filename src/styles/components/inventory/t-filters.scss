@@ -171,6 +171,7 @@
     align-items: center;
     justify-content: center;
     padding: 4px 10px;
+    white-space: nowrap;
     @include border(1px, rgba(0, 0, 0, 0.12));
 
     font-size: 12px;

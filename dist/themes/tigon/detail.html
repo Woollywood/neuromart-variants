@@ -26,44 +26,13 @@
     <div class="layout">
       <header class="header" data-component="header">
         <div class="header__container container">
-          <div class="header__wrapper"><a class="header__logo-wrapper" href="/" data-component="logo-wrapper">
-              <div class="header__logo">
-                      <svg>
-                        <use xlink:href="#t-logo"></use>
-                      </svg>
-              </div><span>Ювелирная упакова</span></a>
-            <div class="header__blocks">
-              <div class="header__top-block">
-                <div class="header__input-placeholder">
-                  <div class="header__input input-header" data-component="header-input">
-                    <div class="input-header__field">
-                      <div class="input-header__icon">
-                              <svg>
-                                <use xlink:href="#t-chat"></use>
-                              </svg>
-                      </div>
-                      <input class="input-header__input header-input" type="text">
-                      <p class="input-header__label header-input"><span class="input-header__label_first">Найти или задать вопрос...</span></p>
-                    </div>
-                    <div class="input-header__tags" data-component="header-tags">
-                      <button class="input-header__tag" data-overflow-element>Доставка и оплата</button>
-                      <button class="input-header__tag" data-overflow-element>Нужна помощь с выбором</button>
-                      <button class="input-header__tag" data-overflow-element>Что покупают чаще?</button>
-                      <button class="input-header__tag" data-overflow-element>Индивидуальный заказ</button>
-                      <button class="input-header__tag" data-overflow-element>Контакты</button>
-                      <button class="input-header__tag" data-overflow-element>Наши услуги</button>
-                      <button class="input-header__tag" data-overflow-element>Наши преимущества</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="header__actions"><a class="header__action" href="#">
-                          <svg>
-                            <use xlink:href="#t-person"></use>
-                          </svg></a><a class="header__action" href="#">
-                          <svg>
-                            <use xlink:href="#t-cart"></use>
-                          </svg></a></div>
-              </div>
+          <div class="header__wrapper">
+            <div class="header__wrapper-inner"><a class="header__logo-wrapper" href="/" data-component="logo-wrapper">
+                <div class="header__logo">
+                        <svg>
+                          <use xlink:href="#t-logo"></use>
+                        </svg>
+                </div><span>Ювелирная упакова</span></a>
               <div class="header__bottom-block" data-component="header-bottom-block">
                 <div class="hamburger" data-component="hamburger">
                   <button class="hamburger__button hamburger__button_closed" data-hamburger-button>
@@ -77,29 +46,58 @@
                           </svg>
                   </button>
                 </div>
-                <div class="header__info">
-                  <div class="header__categories" data-component="header-categories"><a class="header__category" href="#" data-overflow-element>
+                <div class="header__categories" data-component="header-categories"><a class="header__category" href="#" data-overflow-element>
+                          <svg>
+                            <use xlink:href="#t-pouch"></use>
+                          </svg><span>ФУтляры</span></a><a class="header__category" href="#" data-overflow-element>
+                          <svg>
+                            <use xlink:href="#t-case"></use>
+                          </svg><span>Мешочки</span></a><a class="header__category" href="#" data-overflow-element>
+                          <svg>
+                            <use xlink:href="#t-glove"></use>
+                          </svg><span>перчатки</span></a><a class="header__category" href="#" data-overflow-element>
+                          <svg>
+                            <use xlink:href="#t-napkin"></use>
+                          </svg><span>Салфетки</span></a><a class="header__category" href="#" data-overflow-element>
+                          <svg>
+                            <use xlink:href="#t-package"></use>
+                          </svg><span>Упаковка</span></a><a class="header__category" href="#" data-overflow-element>
+                          <svg>
+                            <use xlink:href="#t-accessories"></use>
+                          </svg><span>Аксессуары</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="header__top-block">
+              <div class="header__input-placeholder">
+                <div class="header__input input-header" data-component="header-input">
+                  <div class="input-header__field">
+                    <div class="input-header__icon">
                             <svg>
-                              <use xlink:href="#t-pouch"></use>
-                            </svg><span>ФУтляры</span></a><a class="header__category" href="#" data-overflow-element>
-                            <svg>
-                              <use xlink:href="#t-case"></use>
-                            </svg><span>Мешочки</span></a><a class="header__category" href="#" data-overflow-element>
-                            <svg>
-                              <use xlink:href="#t-glove"></use>
-                            </svg><span>перчатки</span></a><a class="header__category" href="#" data-overflow-element>
-                            <svg>
-                              <use xlink:href="#t-napkin"></use>
-                            </svg><span>Салфетки</span></a><a class="header__category" href="#" data-overflow-element>
-                            <svg>
-                              <use xlink:href="#t-package"></use>
-                            </svg><span>Упаковка</span></a><a class="header__category" href="#" data-overflow-element>
-                            <svg>
-                              <use xlink:href="#t-accessories"></use>
-                            </svg><span>Аксессуары</span></a>
+                              <use xlink:href="#t-chat"></use>
+                            </svg>
+                    </div>
+                    <input class="input-header__input header-input" type="text">
+                    <p class="input-header__label header-input"><span class="input-header__label_first">Найти или задать вопрос...</span></p>
+                  </div>
+                  <div class="input-header__tags" data-component="header-tags">
+                    <button class="input-header__tag" data-overflow-element>Доставка и оплата</button>
+                    <button class="input-header__tag" data-overflow-element>Нужна помощь с выбором</button>
+                    <button class="input-header__tag" data-overflow-element>Что покупают чаще?</button>
+                    <button class="input-header__tag" data-overflow-element>Индивидуальный заказ</button>
+                    <button class="input-header__tag" data-overflow-element>Контакты</button>
+                    <button class="input-header__tag" data-overflow-element>Наши услуги</button>
+                    <button class="input-header__tag" data-overflow-element>Наши преимущества</button>
                   </div>
                 </div>
               </div>
+              <div class="header__actions"><a class="header__action" href="#">
+                        <svg>
+                          <use xlink:href="#t-person"></use>
+                        </svg></a><a class="header__action" href="#">
+                        <svg>
+                          <use xlink:href="#t-cart"></use>
+                        </svg></a></div>
             </div>
           </div>
         </div>
@@ -556,7 +554,7 @@
                     </div>
                   </div>
                   <p class="catalog-slider-section__subtitle subtitle-block">Текст комментария от нейросети для расшифровки</p>
-                  <div class="splide catalog-slider" data-component="catalog-slider" data-size="sm">
+                  <div class="splide catalog-slider" data-component="catalog-slider" data-size="t_sm">
                     <div class="splide__track catalog-slider__track">
                       <ul class="splide__list catalog-slider__list"><a class="splide__slide catalog-slider__slide catalog-slide" href="#">
                           <div class="catalog-slide__inner">
@@ -737,7 +735,9 @@
                   <input class="footer__subscribtion-input" placeholder="Введите свой E-mail">
                   <button class="footer__subscribtion-button">Подписаться</button>
                 </form>
-                <p class="footer__subscription-agreement">Нажимая кнопку «Подписаться», я даю свое согласие на обработку персональных данных в соответствии с указанным <a href="#">здесь</a>текстом.</p>
+                <div class="footer__subscription-agreement-wrapper">
+                  <p class="footer__subscription-agreement">Нажимая кнопку «Подписаться», я даю свое согласие на обработку персональных данных в соответствии с указанным <a href="#">здесь</a>текстом.</p>
+                </div>
               </div>
             </div>
             <div class="footer__copyright copyright">

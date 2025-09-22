@@ -43,7 +43,7 @@
 
     @include media('lg') {
       display: grid;
-      grid-template-columns: 1fr 11fr;
+      grid-template-columns: 4fr 4fr 4fr;
       align-items: flex-start;
       padding: 16px 0;
       gap: 12px;
@@ -55,9 +55,25 @@
     }
   }
 
+  &__wrapper-inner {
+    display: contents;
+
+    @include media('lg') {
+      grid-column: 1 / span 2;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    @include media('xl') {
+      gap: 16px;
+    }
+  }
+
   &__logo-wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     transition: transform 0.3s ease-in-out;
     margin-bottom: 16px;
@@ -129,7 +145,6 @@
 
     @include media('lg') {
       gap: 12px;
-      display: grid;
       grid-template-columns: 7fr 4fr;
       align-items: center;
       flex-direction: row-reverse;
@@ -147,19 +162,16 @@
     grid-template-columns: 1fr auto;
     align-items: center;
     gap: 4px;
-    padding-right: 4px;
-
-    @include media('md') {
-      padding-right: 8px;
-    }
+    width: 100%;
+    margin-bottom: 4px;
 
     @include media('lg') {
       order: 2;
       padding: 0;
-      gap: 8px;
+      gap: 12px;
     }
 
-    @include media('lg') {
+    @include media('xl') {
       gap: 16px;
     }
   }
@@ -167,9 +179,10 @@
   &__actions {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 
     @include media('lg') {
+      gap: 8px;
       align-self: flex-start;
     }
   }
@@ -201,6 +214,8 @@
     align-items: center;
     gap: 4px;
     overflow: hidden;
+    width: 100%;
+    order: 3;
 
     .header-cart & {
       display: none;
@@ -210,6 +225,10 @@
         align-items: center;
         gap: 4px;
       }
+    }
+
+    @include media('lg') {
+      order: unset;
     }
   }
 

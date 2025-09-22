@@ -35,7 +35,10 @@ trigger?.addEventListener('click', () => {
 observeHeight(header, '--modal-header-height');
 observeHeight(footer, '--modal-footer-height');
 observeWidth(inventoryHeader, '--inventory-header-width');
-overflowItems(document.querySelector("[data-component='filter-items']"))
+
+const overflow = () => overflowItems(document.querySelector("[data-component='filter-items']"));
+overflow();
+window.addEventListener('resize', overflow);
 
 const observeModal = () => {
   const windowWidth = window.innerWidth;

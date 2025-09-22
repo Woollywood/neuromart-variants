@@ -81,8 +81,12 @@
     @include media('lg') {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      gap: 12px;
       margin-bottom: 0;
+    }
+
+    @include media('xl') {
+      gap: 16px;
     }
   }
 
