@@ -9,6 +9,14 @@
     gap: 4px;
     @include hideScrollbar();
 
+    .banner & {
+      padding-right: 8px;
+
+      @include media('lg') {
+        padding-right: 16px;
+      }
+    }
+
     @include media('lg') {
       gap: 8px;
     }
@@ -65,6 +73,7 @@
     padding: 6px 10px;
     background-color: rgba(255, 255, 255, 0.2);
     height: 32px;
+    backdrop-filter: blur(2px);
 
     font-size: 12px;
     font-weight: 700;

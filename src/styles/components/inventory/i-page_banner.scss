@@ -5,8 +5,16 @@
   z-index: 20;
 }
 
+.banner {
+  padding-top: 0;
+}
+
+.breadcrumbs {
+  margin-bottom: 16px;
+}
+
 .inventory {
-  margin-top: -360px;
+  margin-top: calc((372px + 72px) * -1);
 
   @include media('lg') {
     margin-top: 0;
@@ -31,7 +39,23 @@
   }
 
   &__header {
+    position: relative;
     overflow: visible;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 200px;
+      background: linear-gradient(180deg, #000 40%, rgba(0, 0, 0, 0) 100%);
+      margin: 0 -8px;
+
+      @include media('lg') {
+        content: none;
+      }
+    }
   }
 
   &__banner-placeholder {
@@ -44,18 +68,19 @@
   }
 
   &__banner {
+    position: relative;
     pointer-events: none;
     width: 100%;
     height: 372px;
-    margin: -6% -8px;
+    margin-top: 72px;
     z-index: -1;
 
     @include media('lg') {
+      position: absolute;
       top: 0;
       left: 0;
-      position: absolute;
-      margin: 0;
       height: 600px;
+      margin-top: 0;
     }
 
     img {
@@ -71,6 +96,11 @@
   &__filters {
     position: relative;
     z-index: 10;
+    margin: -44px -8px;
+
+    @include media('lg') {
+      margin: 0 -16px;
+    }
 
     &::before {
       content: '';
@@ -86,6 +116,27 @@
       @include media('lg') {
         height: 158px;
         bottom: -24px;
+      }
+    }
+  }
+
+  &__grid {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -8px;
+      right: -8px;
+      width: calc(100% + 16px);
+      height: 100%;
+      background-color: black;
+
+      @include media('lg') {
+        width: calc(100% + 32px);
+        left: -16px;
+        right: -16px;
       }
     }
   }
