@@ -1,0 +1,117 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.filters {
+  &__wrapper {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+
+    @include media('md') {
+      flex-direction: row;
+      gap: 8px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &.full-width {
+      width: 100%;
+
+      @include media('md') {
+        width: auto;
+      }
+
+      > * {
+        &.full-width {
+          flex-shrink: 1;
+          width: 100%;
+
+          @include media('md') {
+            flex-shrink: 0;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  &__select {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    gap: 10px;
+    border-radius: 8px;
+    padding: 6px 12px;
+    background-color: transparent;
+    height: 32px;
+    backdrop-filter: blur(24px);
+    @include border(1px, rgba(0, 0, 0, 0.12));
+
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: black;
+
+    svg {
+      flex-shrink: 0;
+      width: 6px;
+      height: 4px;
+
+      @include media('lg') {
+        width: 12px;
+        height: 8px;
+        margin-left: 8px;
+      }
+    }
+
+    &.mobile {
+      svg {
+        display: none;
+
+        @include media('md') {
+          display: block;
+        }
+      }
+    }
+
+    &.icon-prepend {
+      svg {
+        &:first-child {
+          margin: 0;
+          color: black;
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    @include media('lg') {
+      gap: 8px;
+      height: 40px;
+      font-size: 16px;
+      padding: 8px 8x;
+    }
+  }
+
+  &__button-all {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    padding: 6px 10px;
+    height: 32px;
+    border-radius: 8px;
+    @include border(1px, rgba(0, 0, 0, 0.12));
+
+    @include media('md') {
+      display: none;
+    }
+  }
+}

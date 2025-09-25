@@ -42,7 +42,7 @@
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
-  color: var(--white);
+  color: black;
   margin-bottom: 4px;
 
   @include media('lg') {
@@ -56,10 +56,12 @@
 }
 
 .page-description {
+  font-family: var(--font-secondary);
   font-size: 12px;
+  line-height: 16px;
   font-weight: 400;
-  text-transform: uppercase;
-  color: var(--white);
+  text-transform: capitalize;
+  color: black;
 
   @include media('lg') {
     font-size: 14px;

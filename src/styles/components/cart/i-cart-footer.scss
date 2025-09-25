@@ -9,6 +9,7 @@
   background-color: black;
 
   @include media('lg') {
+    background-color: transparent;
     position: static;
   }
 

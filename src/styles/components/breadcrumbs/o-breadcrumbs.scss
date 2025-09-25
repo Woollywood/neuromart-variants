@@ -1,0 +1,33 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.breadcrumbs {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  overflow: auto;
+  margin-right: -8px;
+  padding-right: 8px;
+  margin-bottom: 4px;
+  @include hideScrollbar();
+
+  font-family: var(--font-secondary);
+  font-size: 12px;
+  color: black;
+
+  @include media('lg') {
+    margin-right: 0;
+    padding-right: 0;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+}

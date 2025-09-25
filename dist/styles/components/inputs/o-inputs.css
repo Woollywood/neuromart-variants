@@ -1,0 +1,214 @@
+.field-input {
+  height: 48px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.08);
+  transition: all 0.1s ease-in-out;
+  cursor: text;
+}
+@media only screen and (min-width: 1180px) {
+  .field-input {
+    height: 56px;
+  }
+}
+.field-input.focused, .field-input.active {
+  background-color: transparent;
+  outline: 1px solid rgba(0, 0, 0, 0.08);
+  outline-offset: -1px;
+}
+.field-input__wrapper {
+  position: relative;
+  height: 100%;
+}
+.field-input__input {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 14px;
+  color: black;
+}
+.focused .field-input__input, .active .field-input__input {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.field-input__label-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: all 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.focused .field-input__label-wrapper, .active .field-input__label-wrapper {
+  top: 0;
+  transform: translateY(-4px);
+}
+.field-input__label {
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.focused .field-input__label, .active .field-input__label {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.field-input__label-required {
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #d10c54;
+}
+
+.field-select__trigger {
+  width: 100%;
+  height: 48px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1180px) {
+  .field-select__trigger {
+    height: 56px;
+  }
+}
+.filled .field-select__trigger {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.outlined .field-select__trigger {
+  background-color: transparent;
+  outline: 1px solid rgba(0, 0, 0, 0.04);
+  outline-offset: -1px;
+}
+.field-select__trigger svg {
+  width: 16px;
+  height: 8px;
+  color: black;
+}
+.selected .field-select__trigger svg {
+  display: none;
+}
+.field-select__trigger-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.field-select__trigger-value {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.selected .field-select__trigger-value {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.field-select__placeholder-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  transition: all 0.1s ease-in-out;
+}
+.selected .field-select__placeholder-wrapper {
+  top: 0;
+  transform: translateY(-4px);
+}
+.field-select__placeholder {
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--secondary);
+  text-transform: uppercase;
+  transition: all 0.1s ease-in-out;
+}
+.selected .field-select__placeholder {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.field-select__placeholder-required {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.input-file {
+  position: relative;
+  padding: 10px 12px;
+  background-color: transparent;
+  height: 48px;
+  outline: 1px solid var(--light-2);
+  outline-offset: -1px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media only screen and (min-width: 1180px) {
+  .input-file {
+    height: 56px;
+  }
+}
+.input-file__input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.input-file__placeholder {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  cursor: pointer;
+}
+.checkbox__input {
+  display: none;
+}
+.checkbox__field {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  outline: 1px solid #d10c54;
+  outline-offset: -1px;
+}
+.checkbox__label {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--secondary);
+}

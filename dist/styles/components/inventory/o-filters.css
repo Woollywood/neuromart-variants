@@ -1,0 +1,104 @@
+.filters__wrapper {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .filters__wrapper {
+    flex-direction: row;
+    gap: 8px;
+  }
+}
+.filters__row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.filters__row.full-width {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .filters__row.full-width {
+    width: auto;
+  }
+}
+.filters__row.full-width > *.full-width {
+  flex-shrink: 1;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .filters__row.full-width > *.full-width {
+    flex-shrink: 0;
+    width: auto;
+  }
+}
+.filters__select {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 6px 12px;
+  background-color: transparent;
+  height: 32px;
+  backdrop-filter: blur(24px);
+  outline: 1px solid rgba(0, 0, 0, 0.12);
+  outline-offset: -1px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: black;
+}
+.filters__select svg {
+  flex-shrink: 0;
+  width: 6px;
+  height: 4px;
+}
+@media only screen and (min-width: 1180px) {
+  .filters__select svg {
+    width: 12px;
+    height: 8px;
+    margin-left: 8px;
+  }
+}
+.filters__select.mobile svg {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .filters__select.mobile svg {
+    display: block;
+  }
+}
+.filters__select.icon-prepend svg:first-child {
+  margin: 0;
+  color: black;
+  width: 18px;
+  height: 18px;
+}
+@media only screen and (min-width: 1180px) {
+  .filters__select {
+    gap: 8px;
+    height: 40px;
+    font-size: 16px;
+    padding: 8px 8x;
+  }
+}
+.filters__button-all {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  padding: 6px 10px;
+  height: 32px;
+  border-radius: 8px;
+  outline: 1px solid rgba(0, 0, 0, 0.12);
+  outline-offset: -1px;
+}
+@media only screen and (min-width: 768px) {
+  .filters__button-all {
+    display: none;
+  }
+}

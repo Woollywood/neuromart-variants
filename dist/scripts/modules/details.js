@@ -20,6 +20,14 @@ if (gallerySlider) {
             [getMediaCssParsedVariable(MediaSizes.XL)]: { perPage: 2, gap: 16, pagination: true },
           },
         };
+      case 'o':
+        return {
+          gap: 8,
+          breakpoints: {
+            [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 2, gap: 12 },
+            [getMediaCssParsedVariable(MediaSizes.XL)]: { perPage: 2, gap: 16 },
+          },
+        };
       default:
         return {
           gap: 8,

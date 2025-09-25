@@ -1,0 +1,41 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &__button {
+    font-family: var(--font-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    background: var(--8-dark, rgba(0, 0, 0, 0.08));
+    border-radius: 8px;
+    height: 32px;
+
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: black;
+
+    @include media('xl') {
+      font-size: 16px;
+      height: 40px;
+    }
+
+    &.number {
+      width: 32px;
+
+      @include media('xl') {
+        width: 40px;
+      }
+    }
+
+    &.current {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}

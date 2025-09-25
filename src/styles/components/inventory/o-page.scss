@@ -1,0 +1,138 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.inventory {
+  padding: 12px 0 40px;
+
+  @include media('md') {
+    padding: 14px 0 96px;
+  }
+
+  @include media('lg') {
+    padding: 16px 0 128px;
+  }
+
+  @include media('md') {
+    padding-top: 14px;
+  }
+
+  @include media('lg') {
+    padding-top: 16px;
+  }
+
+  &__container {
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4px;
+    row-gap: 6px;
+    overflow: hidden;
+
+    @include media('md') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media('lg') {
+      overflow: visible;
+      position: relative;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 16px;
+      row-gap: 16px;
+    }
+  }
+
+  &__row {
+  }
+
+  &__breadcrumbs {
+  }
+
+  &__header {
+    position: relative;
+    overflow: hidden;
+
+    @include media('lg') {
+      position: static;
+      overflow: auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+
+    @include media('lg') {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__description {
+    display: none;
+
+    @include media('lg') {
+      display: block;
+      margin-bottom: 34px;
+    }
+  }
+
+  &__filters {
+    margin-bottom: 16px;
+
+    @include media('lg') {
+      margin-bottom: 20px;
+    }
+
+    @include media('xl') {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__cards-bottom {
+  }
+
+  &__card-list {
+  }
+
+  &__slider-section {
+    grid-column: 1 / span 2;
+
+    &.border-top {
+      margin-top: 72px;
+
+      &.bottom {
+        margin-top: 34px;
+
+        @include media('lg') {
+          margin-top: 64px;
+        }
+      }
+
+      @include media('lg') {
+        margin-top: 112px;
+      }
+    }
+
+    &.border-bottom {
+      @include media('lg') {
+        margin-top: 112px;
+      }
+    }
+
+    @include media('lg') {
+      grid-column: 1 / span 4;
+    }
+  }
+
+  &__pagination {
+    padding: 8px 0;
+    margin: 6px 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+    @include media('lg') {
+      margin: 32px 0 0;
+      padding: 8px 0;
+      border-top: none;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.cart {
+  padding-top: 14px;
+
+  @include media('xl') {
+    padding-top: 28px;
+  }
+
+  &__container {
+  }
+
+  &__top {
+    margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    padding-bottom: var(--cart-footer-height);
+
+    @include media('lg') {
+      padding: 0;
+    }
+  }
+
+  &__body {
+    @include media('lg') {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: 4fr 4fr 4fr;
+    }
+
+    @include media('xl') {
+      gap: 16px;
+    }
+  }
+
+  &__body-bottom {
+  }
+
+  &__sticky {
+    @include media('lg') {
+      position: sticky;
+      top: var(--header-height);
+    }
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 6px;
+
+    @include media('lg') {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__title {
+  }
+
+  &__items {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+    @include media('lg') {
+      grid-column: 1 / span 2;
+    }
+  }
+
+  &__footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+
+    @include media('lg') {
+      padding: 0;
+      position: static;
+    }
+  }
+}
+
+.footer {
+  display: none;
+}

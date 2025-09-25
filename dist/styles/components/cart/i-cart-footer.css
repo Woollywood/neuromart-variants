@@ -7,6 +7,7 @@
 }
 @media only screen and (min-width: 1180px) {
   .cart-footer {
+    background-color: transparent;
     position: static;
   }
 }

@@ -1,0 +1,73 @@
+extends ../../layouts/themes/o-layout
+
+include ../../mixins/provider
+include ../../mixins/cart/o-cart
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/o-theme.css")
+  link(rel="stylesheet" href="../../styles/themes/o-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/o-header.css")
+  link(rel="stylesheet" href="../../styles/components/footer/o-footer.css")
+  link(rel="stylesheet" href="../../styles/components/breadcrumbs/o-breadcrumbs.css")
+  link(rel="stylesheet" href="../../styles/components/pagination/o-pagination.css")
+  link(rel="stylesheet" href="../../styles/components/cart/o-cart-footer.css")
+  link(rel="stylesheet" href="../../styles/components/cart/o-cart-price.css")
+  link(rel="stylesheet" href="../../styles/components/cart/o-cart.css")
+  link(rel="stylesheet" href="../../styles/components/cart/o-page.css")
+
+block scripts
+  script(src="../../scripts/modules/cart.js")
+
+block main
+  -
+    const path = ['Магазин мужской одежды', 'Каталог', 'корзина'];
+
+    const carts = [
+      {
+        name: 'Костюм арт. 202 Фаворит Зима Исландия',
+        oldPrice: '7 712',
+        newPrice: '7 712',
+        economy: '500',
+        totalPrice: '10 500',
+        dimensionCount: 10,
+      },
+      {
+        name: 'Костюм арт. 202 Фаворит Зима Исландия',
+        oldPrice: '7 712',
+        newPrice: '7 712',
+        economy: '500',
+        totalPrice: '10 500',
+        dimensionCount: 10,
+      },
+      {
+        name: 'Костюм арт. 202 Фаворит Зима Исландия',
+        oldPrice: '7 712',
+        newPrice: '7 712',
+        economy: '500',
+        totalPrice: '10 500',
+        dimensionCount: 10,
+      },
+      {
+        name: 'Костюм арт. 202 Фаворит Зима Исландия',
+        oldPrice: '7 712',
+        newPrice: '7 712',
+        economy: '500',
+        totalPrice: '10 500',
+        dimensionCount: 10,
+      },
+    ];
+  div.cart
+    div.cart__container.container
+      div.cart__wrapper
+        div.cart__top
+          +breadcrumbs(path, '-')
+          h1.cart__title.page-title Корзина
+        div.cart__body
+          div.cart__items
+            each cart in carts
+              +cart(cart)
+          div.cart__body-bottom
+            div.cart__sticky
+              div.cart__footer.container
+                include ../../components/cart/o-cart-price
+                include ../../components/cart/o-cart-footer

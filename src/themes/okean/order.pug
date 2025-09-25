@@ -1,0 +1,58 @@
+extends ../../layouts/themes/o-layout
+
+include ../../mixins/provider
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/o-theme.css")
+  link(rel="stylesheet" href="../../styles/themes/o-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/o-header.css")
+  link(rel="stylesheet" href="../../styles/components/footer/o-footer.css")
+  link(rel="stylesheet" href="../../styles/components/card-button/o-card-button.css")
+  link(rel="stylesheet" href="../../styles/components/inputs/o-inputs.css")
+  link(rel="stylesheet" href="../../styles/components/breadcrumbs/o-breadcrumbs.css")
+  link(rel="stylesheet" href="../../styles/components/pagination/o-pagination.css")
+  link(rel="stylesheet" href="../../styles/components/order/o-page.css")
+  link(rel="stylesheet" href="../../styles/components/order/o-order-footer.css")
+  link(rel="stylesheet" href="../../styles/components/order/o-order-slider.css")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
+  script(src="../../scripts/core/ui-kit.js")
+  script(src="../../scripts/modules/order.js")
+
+block main
+  - const path = ['Магазин мужской одежды', 'корзина', 'Оформление заказа'];
+  div.order
+    div.order__container.container
+      div.order__wrapper
+        div.order__top
+          +breadcrumbs(path)
+          h1.order__title.page-title оформление Заказа
+        form.order__form
+          div.order__sections
+            div.order__section.section-order
+              h3.section-order__title Данные получателя
+              div.section-order__fields
+                +fieldInput('ФИО Получателя', true)
+                +fieldInput('E-mail', true)
+                +fieldInput('Телефон', true)
+                +fieldInput('Серия и номер паспорта или ИНН (для ИП или ООО)', true)
+            div.order__section.section-order
+              h3.section-order__title Доставка
+              div.section-order__fields
+                +fieldSelect('Выберите способ', true)
+                +fieldInput('Город Доставки', true)
+            div.order__section.section-order
+              h3.section-order__title Способ оплаты
+              div.section-order__fields
+                +fieldSelect('Выберите способ оплаты')
+                +fieldSelect('Добавить комментарии к заказу', false, 'outlined')
+            include ../../components/order/o-order-footer
+          div.order__section.section-order.transformed
+            div.section-order__top
+              div.section-order__title-wrapper
+                h3.section-order__title Ваш заказ
+                button.section-order__change-order Изменить
+              p.section-order__description 8 наименований, 96 единиц на сумму 1 048 000 Руб.
+            include ../../components/order/o-order-slider

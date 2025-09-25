@@ -8,9 +8,12 @@ block styles
   link(rel="stylesheet" href="../../styles/components/header/s-header.css")
   link(rel="stylesheet" href="../../styles/components/footer/s-footer.css")
   link(rel="stylesheet" href="../../styles/components/card-button/s-card-button.css")
+  link(rel="stylesheet" href="../../styles/components/inputs/s-inputs.css")
   link(rel="stylesheet" href="../../styles/components/breadcrumbs/s-breadcrumbs.css")
   link(rel="stylesheet" href="../../styles/components/pagination/s-pagination.css")
-  link(rel="stylesheet" href="../../styles/pages/order.css")
+  link(rel="stylesheet" href="../../styles/components/order/s-page.css")
+  link(rel="stylesheet" href="../../styles/components/order/s-order-footer.css")
+  link(rel="stylesheet" href="../../styles/components/order/s-order-slider.css")
   link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
 
 block scripts
@@ -46,11 +49,11 @@ block main
                 +fieldSelect('Выберите способ оплаты')
                 +fieldSelect('Добавить комментарии к заказу', false, 'outlined')
                 +inputFile('прикрепить реквизиты')
-            include ../../modules/stayertex/order/order-footer
+            include ../../components/order/s-order-footer
           div.order__section.order__section_order-info.section-order.transformed
             div.section-order__top
               div.section-order__title-wrapper
                 h3.section-order__title Ваш заказ
                 button.section-order__change-order Изменить
               p.section-order__description 8 наименований, 96 единиц на сумму 1 048 000 Руб.
-            include ../../modules/stayertex/order/order-slider
+            include ../../components/order/s-order-slider

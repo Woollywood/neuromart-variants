@@ -1,0 +1,12 @@
+- const phone = '+7 (495) 782-28-93';
+
+footer.cart-footer(data-component='cart-footer')
+  div.cart-footer__wrapper
+    button.cart-footer__order-button.order-button Перейти к Оформлению
+    div.cart-footer__bottom
+      div.cart-footer__contacts
+        a.cart-footer__link(href=`tel:${phone}`)= phone
+        a.cart-footer__link.cart-footer__link_desktop(href=`tel:${phone}`) Обратный звонок
+        div.cart-footer__sep
+        a.cart-footer__link.cart-footer__link_mobile(href=`tel:${phone}`)= phone
+      a.cart-footer__link(href='#') О доставке и оплате

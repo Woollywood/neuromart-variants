@@ -1,0 +1,51 @@
+extends ../../layouts/themes/o-layout
+
+include ../../mixins/inventory/o-card
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/o-theme.css")
+  link(rel="stylesheet" href="../../styles/themes/o-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/o-header.css")
+  link(rel="stylesheet" href="../../styles/components/footer/o-footer.css")
+  link(rel="stylesheet" href="../../styles/components/catalog-slider/o-catalog-slider.css")
+  link(rel="stylesheet" href="../../styles/components/breadcrumbs/o-breadcrumbs.css")
+  link(rel="stylesheet" href="../../styles/components/pagination/o-pagination.css")
+  link(rel="stylesheet" href="../../styles/components/inventory/o-filters.css")
+  link(rel="stylesheet" href="../../styles/components/inventory/o-card.css")
+  link(rel="stylesheet" href="../../styles/components/inventory/o-page.css")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
+  script(src="../../scripts/modules/catalogSlider.js")
+  script(src="../../scripts/modules/inventory.js")
+
+block main
+  -
+    const content = {
+      oldPrice: '7 712 руб',
+      newPrice: '500 руб',
+      title: 'Босоножки SEBASTIAN (S5200/BEewqeqewqeqwe)',
+    };
+    const cardList = Array.from({ length: 12 }).map(() => content);
+    const slides = Array.from({ length: 8 });
+  div.inventory(data-component='inventory')
+    div.inventory__container.container
+      div.inventory__header
+        div.inventory__header-content
+          - const path = ['Главная', 'Магазин', 'женская обувь', 'босоножки']
+          +breadcrumbs(path)
+          h1.inventory__title.page-title Босоножки для женщин
+          p.inventory__description.page-description Покупайте босоножки для женщин по выгодным ценам
+      include ../../components/inventory/o-filters
+      div.inventory__grid
+        each card in cardList
+          +inventoryCard(card)
+        div.inventory__slider-section.border-top.border-bottom
+          include ../../components/catalog-slider/o-catalog-slider-section
+        each card in cardList
+          +inventoryCard(card)
+      div.inventory__pagination
+        include ../../components/pagination
+      div.inventory__slider-section.border-top.bottom
+        include ../../components/catalog-slider/o-catalog-slider-section_sm

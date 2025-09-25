@@ -1,0 +1,42 @@
+include ../../mixins/provider
+
+-
+  const detailCategories = [
+    'Мешочек',
+    'Белый',
+    'Микрофибра',
+    'Ювелирный',
+    'Под заказ',
+    'С Логотипом',
+  ];
+
+div.detail__details.details
+  div.details__wrapper
+    div.details__top
+      div.details__tags
+        each tag in ['S5200/BEIGE', ' в наличии']
+          div.details__tag= tag
+    div.details__title-wrapper.page-title
+      h1.details__title
+        | Босоножки SEBASTIAN 
+        span.regular (S5200/BEIGE)
+      h2.details__title
+        span.stroke 22390 
+        | руб 
+        span.accent 300 руб 
+        span.regular | (-99%)
+    div.details__labels-container
+      p.details__description.page-description Классическое сочетание формы и цвета созданное в бумаге. Создание индивидуальной коллекции по размерам клиента. Смена текстуры бумаги и перед Вами абсолютно новый продукт. Размер: 5,0 х 5,0 х 3,0 см. 
+      div.details__labels
+        each label in ['Характеристики', 'Описание']
+          button.details__label= label
+    div.details__dimensions
+      p.details__dimensions-label Выберите размер:
+      div.details__dimensions-list
+        each dimension in ['38', '40', '42', '43', '44', '45']
+          button.details__dimension= dimension
+    div.sticky-button(data-component='sticky-button')
+      div.sticky-button__container.container
+        button.add-cart-button добавить в корзину
+    div.details__add-cart(data-button-position)
+      button.add-cart-button добавить в корзину

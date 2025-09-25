@@ -1,0 +1,23 @@
+include ../../mixins/provider
+
+- const filtersSelects = ['Цена', 'Размер', 'Размер', 'Размер']
+
+div.inventory__filters.filters
+  div.filters__wrapper
+    div.filters__row.full-width
+      button.filters__select.icon-prepend.full-width
+        +icon('o-filters')
+        span Все фильтры
+      button.filters__select.icon-prepend.full-width
+        +icon('o-sort')
+        span по Популярности
+        +icon('s-arrow-down')
+      button.filters__select.mobile
+        span Бренд
+        +icon('s-arrow-down')
+    div.filters__row
+      each filter in filtersSelects
+        button.filters__select.mobile
+          span= filter
+          +icon('s-arrow-down')
+      button.filters__button-all Смотреть все
