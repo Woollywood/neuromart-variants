@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../styles/base/reset.css">
     <link rel="stylesheet" href="../../styles/tokens/tokens-core.css">
     <link rel="stylesheet" href="../../styles/base/core.css">
+    <link rel="stylesheet" href="../../styles/base/variables.css">
     <link rel="stylesheet" href="../../styles/base/utilities.css">
     <link rel="stylesheet" href="../../styles/base/components.css">
     <link rel="stylesheet" href="../../styles/themes/o-theme.css">
@@ -19,6 +20,7 @@
     <link rel="stylesheet" href="../../styles/components/detail/o-page.css">
     <link rel="stylesheet" href="../../styles/components/detail/o-details.css">
     <link rel="stylesheet" href="../../styles/components/detail/o-gallery.css">
+    <link rel="stylesheet" href="../../styles/components/detail/o-questions.css">
     <link rel="stylesheet" href="../../styles/components/detail/o-questions.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
   </head>
@@ -36,11 +38,11 @@
                           </svg>
                   </button>
                 </div>
-                <div class="header__categories"><a class="header__category" href="#"><span>женская обувь</span></a><a class="header__category" href="#"><span>мужская обувь</span></a><a class="header__category" href="#"><span>детская обувь</span></a><a class="header__category" href="#"><span>Итальянская обувь</span></a><a class="header__category" href="#"><span>Одежда</span></a>
+                <div class="header__categories" data-overflow><a class="header__category" href="#" data-overflow-element><span>женская обувь</span></a><a class="header__category" href="#" data-overflow-element><span>мужская обувь</span></a><a class="header__category" href="#" data-overflow-element><span>детская обувь</span></a><a class="header__category" href="#" data-overflow-element><span>Итальянская обувь</span></a><a class="header__category" href="#" data-overflow-element><span>Одежда</span></a>
                 </div>
               </div>
               <div class="header__left-blocks-bottom">
-                <div class="header__categories"><a class="header__category" href="#"><span>Текстиль</span></a><a class="header__category" href="#"><span>Аксессуары</span></a><a class="header__category" href="#"><span>Посуда</span></a>
+                <div class="header__categories header__categories_bottom" data-overflow><a class="header__category" href="#" data-overflow-element><span>Текстиль</span></a><a class="header__category" href="#" data-overflow-element><span>Аксессуары</span></a><a class="header__category" href="#" data-overflow-element><span>Посуда</span></a>
                 </div>
                 <div class="header__sep"></div><a class="header__phone" href="tel:+7 (964) 495-6000">
                         <svg>
@@ -213,6 +215,165 @@
                               </div>
                             </div></a>
                         </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="detail__questions">
+                <div class="detail__questions questions">
+                  <h2 class="questions__title title-block">Вопросы о товаре</h2>
+                  <p class="questions__subtitle subtitle-block">Текст комментария от нейросети для расшифровки</p>
+                  <div class="questions__select-wrapper">
+                    <div class="questions__select select-questions">
+                      <button class="select-questions__trigger"><span>Задайте свой интересующий вопрос</span>
+                                        <svg>
+                                          <use xlink:href="#s-arrow-down"></use>
+                                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="questions__questions splide" data-component="question-slider" data-type="o">
+                    <div class="splide__track">
+                      <div class="splide__list">
+                        <div class="question__question splide__slide question">
+                          <div class="question__question"><span>Вопрос:</span> Смогу ли я поехать в этом  костюме в тайгу в январе?
+                          </div>
+                          <div class="question__answer">Да, костюм рассчитан на суровые зимние условия. Благодаря плотному утеплителю  и ветрозащитной ткани он подойдёт для экспедиций, охоты и работы в тайге даже при температуре до -30 °C. Главное — правильно подобрать термобельё.</div>
+                          <div class="question__actions">
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-like"></use>
+                                              </svg>
+                            </button>
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-dislike"></use>
+                                              </svg>
+                            </button>
+                            <div class="question__actions-sep"></div>
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-comment"></use>
+                                              </svg><span>уточнить</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="question__question splide__slide question">
+                          <div class="question__question"><span>Вопрос:</span> Смогу ли я поехать в этом  костюме в тайгу в январе?
+                          </div>
+                          <div class="question__answer">Да, костюм рассчитан на суровые зимние условия. Благодаря плотному утеплителю  и ветрозащитной ткани он подойдёт для экспедиций, охоты и работы в тайге даже при температуре до -30 °C. Главное — правильно подобрать термобельё.</div>
+                          <div class="question__actions">
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-like"></use>
+                                              </svg>
+                            </button>
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-dislike"></use>
+                                              </svg>
+                            </button>
+                            <div class="question__actions-sep"></div>
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-comment"></use>
+                                              </svg><span>уточнить</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="question__question splide__slide question">
+                          <div class="question__question"><span>Вопрос:</span> Смогу ли я поехать в этом  костюме в тайгу в январе?
+                          </div>
+                          <div class="question__answer">Да, костюм рассчитан на суровые зимние условия. Благодаря плотному утеплителю  и ветрозащитной ткани он подойдёт для экспедиций, охоты и работы в тайге даже при температуре до -30 °C. Главное — правильно подобрать термобельё.</div>
+                          <div class="question__actions">
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-like"></use>
+                                              </svg>
+                            </button>
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-dislike"></use>
+                                              </svg>
+                            </button>
+                            <div class="question__actions-sep"></div>
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-comment"></use>
+                                              </svg><span>уточнить</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="question__question splide__slide question">
+                          <div class="question__question"><span>Вопрос:</span> Смогу ли я поехать в этом  костюме в тайгу в январе?
+                          </div>
+                          <div class="question__answer">Да, костюм рассчитан на суровые зимние условия. Благодаря плотному утеплителю  и ветрозащитной ткани он подойдёт для экспедиций, охоты и работы в тайге даже при температуре до -30 °C. Главное — правильно подобрать термобельё.</div>
+                          <div class="question__actions">
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-like"></use>
+                                              </svg>
+                            </button>
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-dislike"></use>
+                                              </svg>
+                            </button>
+                            <div class="question__actions-sep"></div>
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-comment"></use>
+                                              </svg><span>уточнить</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="question__question splide__slide question">
+                          <div class="question__question"><span>Вопрос:</span> Смогу ли я поехать в этом  костюме в тайгу в январе?
+                          </div>
+                          <div class="question__answer">Да, костюм рассчитан на суровые зимние условия. Благодаря плотному утеплителю  и ветрозащитной ткани он подойдёт для экспедиций, охоты и работы в тайге даже при температуре до -30 °C. Главное — правильно подобрать термобельё.</div>
+                          <div class="question__actions">
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-like"></use>
+                                              </svg>
+                            </button>
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-dislike"></use>
+                                              </svg>
+                            </button>
+                            <div class="question__actions-sep"></div>
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-comment"></use>
+                                              </svg><span>уточнить</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="question__question splide__slide question">
+                          <div class="question__question"><span>Вопрос:</span> Смогу ли я поехать в этом  костюме в тайгу в январе?
+                          </div>
+                          <div class="question__answer">Да, костюм рассчитан на суровые зимние условия. Благодаря плотному утеплителю  и ветрозащитной ткани он подойдёт для экспедиций, охоты и работы в тайге даже при температуре до -30 °C. Главное — правильно подобрать термобельё.</div>
+                          <div class="question__actions">
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-like"></use>
+                                              </svg>
+                            </button>
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-dislike"></use>
+                                              </svg>
+                            </button>
+                            <div class="question__actions-sep"></div>
+                            <button class="question__action">
+                                              <svg>
+                                                <use xlink:href="#s-comment"></use>
+                                              </svg><span>уточнить</span>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -8,7 +8,7 @@ header.header(data-component='header')
           div.header__logo
             +icon('t-logo')
           span Ювелирная упакова
-        div.header__bottom-block(data-component='header-bottom-block')
+        div.header__bottom-block(data-overflow)
           div.hamburger(data-component='hamburger')
             button.hamburger__button.hamburger__button_closed(data-hamburger-button)
               +icon('s-menu')
@@ -23,7 +23,7 @@ header.header(data-component='header')
               { label: 'Упаковка', href: '#', icon: 't-package' },
               { label: 'Аксессуары', href: '#', icon: 't-accessories' },
             ];
-          div.header__categories(data-component='header-categories')
+          div.header__categories(data-overflow)
             each category in categories
               a.header__category(href=category.href data-overflow-element)
                 +icon(category.icon)

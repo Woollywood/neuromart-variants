@@ -78,6 +78,7 @@ if (slider) {
           },
         };
       case 't':
+      case 'o':
         return {
           gap: 4,
           breakpoints: {

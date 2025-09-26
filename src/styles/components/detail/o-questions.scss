@@ -1,0 +1,172 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.questions {
+  &__title {
+    text-align: left;
+  }
+
+  &__subtitle {
+    text-align: left;
+    margin-bottom: 8px;
+
+    @include media('md') {
+      margin-bottom: 12px;
+    }
+
+    @include media('lg') {
+      margin-bottom: 16px;
+    }
+
+    @include media('xl') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__select-wrapper {
+    margin-bottom: 4px;
+
+    @include media('md') {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+    }
+
+    @include media('lg') {
+      margin-bottom: 8px;
+    }
+
+    @include media('xl') {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__select {
+  }
+
+  &__questions {
+  }
+}
+
+.select-questions {
+  &__trigger {
+    width: 100%;
+    padding: 4px 12px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.08);
+
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: black;
+
+    @include media('md') {
+      font-size: 13px;
+    }
+
+    @include media('xl') {
+      font-size: 16px;
+      height: 40px;
+    }
+
+    svg {
+      width: 8px;
+      height: 4px;
+
+      @include media('md') {
+        width: 12px;
+        height: 6px;
+      }
+    }
+  }
+}
+
+.question {
+  width: 294px;
+  min-width: 294px;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+
+  @include media('md') {
+    width: 100%;
+    min-width: auto;
+  }
+
+  @include media('xl') {
+    padding: 16px;
+  }
+
+  &__question {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: black;
+    margin-bottom: 4px;
+
+    @include media('xl') {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    > span {
+      font-style: italic;
+      font-weight: 500;
+      color: #d10c54;
+    }
+  }
+
+  &__answer {
+    font-family: var(--font-secondary);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--secondary);
+    margin-bottom: 16px;
+
+    @include media('md') {
+      margin-bottom: 24px;
+    }
+
+    @include media('xl') {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    gap: 6px;
+
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.4);
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__actions-sep {
+    margin: 0 4px;
+    height: 24px;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+}

@@ -1,0 +1,10 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.header {
+  background-color: transparent;
+
+  &.scrolled {
+    background-color: var(--white);
+  }
+}

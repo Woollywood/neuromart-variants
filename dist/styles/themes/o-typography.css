@@ -23,6 +23,7 @@
 }
 
 .subtitle-block {
+  font-family: var(--font-secondary);
   font-size: 11px;
   line-height: 16px;
 }

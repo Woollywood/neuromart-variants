@@ -5,18 +5,18 @@
   observeHeight(logoWrapper, '--logo-wrapper-height');
 
   const overflow = () => {
-    const categories = header.querySelector("[data-component='header-categories']");
-    const inputTags = header.querySelector("[data-component='header-bottom-block']");
+    const items = header.querySelectorAll('[data-overflow]');
 
     if (window.innerWidth > MediaSizesValue.LG) {
-      overflowItems(categories);
-      overflowItems(inputTags);
+      items.forEach(overflowItems);
     } else {
-      unoverflowItems(categories);
-      unoverflowItems(inputTags);
+      items.forEach(unoverflowItems);
     }
   };
 
+  setTimeout(() => {
+    overflow();
+  }, 0);
   window.addEventListener('resize', overflow);
   window.addEventListener('scroll', overflow);
 
