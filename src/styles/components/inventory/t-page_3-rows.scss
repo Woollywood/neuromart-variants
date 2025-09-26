@@ -1,0 +1,54 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.inventory {
+  &__container {
+  }
+
+  &__grid {
+    @include media('md') {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media('lg') {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__row {
+  }
+
+  &__breadcrumbs {
+  }
+
+  &__header {
+  }
+
+  &__title {
+  }
+
+  &__description {
+  }
+
+  &__filters {
+  }
+
+  &__cards-bottom {
+  }
+
+  &__card-list {
+  }
+
+  &__slider-section {
+    @include media('lg') {
+      grid-column: 1 / span 3;
+    }
+  }
+
+  &__pagination {
+    @include media('lg') {
+      grid-column: 1 / span 3;
+    }
+  }
+}

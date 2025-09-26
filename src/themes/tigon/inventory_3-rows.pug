@@ -1,0 +1,52 @@
+extends ../../layouts/themes/t-layout
+
+include ../../mixins/inventory/t-card
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/t-theme.css")
+  link(rel="stylesheet" href="../../styles/themes/t-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/t-header.css")
+  link(rel="stylesheet" href="../../styles/components/footer/t-footer.css")
+  link(rel="stylesheet" href="../../styles/components/catalog-slider/t-catalog-slider.css")
+  link(rel="stylesheet" href="../../styles/components/breadcrumbs/t-breadcrumbs.css")
+  link(rel="stylesheet" href="../../styles/components/pagination/t-pagination.css")
+  link(rel="stylesheet" href="../../styles/components/inventory/t-filters.css")
+  link(rel="stylesheet" href="../../styles/components/inventory/t-card.css")
+  link(rel="stylesheet" href="../../styles/components/inventory/t-page.css")
+  link(rel="stylesheet" href="../../styles/components/inventory/t-page_3-rows.css")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
+  script(src="../../scripts/modules/catalogSlider.js")
+  script(src="../../scripts/modules/inventory.js")
+
+block main
+  -
+    const content = {
+      title: '260 ₽',
+      subtitle: 'Мешочек ВК165',
+      description: 'Микрофибра, Ювелирный, C логотипом',
+    };
+    const cardList = Array.from({ length: 12 }).map(() => content);
+    const slides = Array.from({ length: 8 });
+  div.inventory(data-component='inventory')
+    div.inventory__container.container
+      div.inventory__header
+        div.inventory__header-content
+          - const path = ['Ювелирная упаковка', 'Магазин', 'Ювелирные мешочки']
+          +breadcrumbs(path)
+          h1.inventory__title.page-title Ювелирные мешочки
+          p.inventory__description.page-description Продажа и производство ювелирных мешочков для украшений и ювелирных изделий по оптовым ценам. Собственное производство. Любые размеры под заказ. С логотипом и без.
+      div.inventory__grid
+        include ../../components/inventory/t-filters
+        each card in cardList
+          +inventoryCard(card)
+        div.inventory__slider-section
+          include ../../components/catalog-slider/t-catalog-slider-section
+        each card in cardList
+          +inventoryCard(card)
+      div.inventory__pagination
+        include ../../components/pagination
+      div.inventory__slider-section.inventory__slider-section_bottom
+        include ../../components/catalog-slider/t-catalog-slider-section_sm
