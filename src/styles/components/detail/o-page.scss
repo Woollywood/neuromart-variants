@@ -18,8 +18,10 @@
 
   &__main {
     margin-bottom: 48px;
+    overflow: hidden;
 
     @include media('lg') {
+      max-height: calc(100svh - var(--header-height) - 8px);
       display: grid;
       gap: 12px;
       grid-template-columns: 4fr 4fr 4fr;

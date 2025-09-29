@@ -1,0 +1,40 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.blog-archive {
+  padding: 14px 0 40px;
+
+  @include media('lg') {
+    padding: 20px 0 74px;
+  }
+
+  &__container {
+  }
+
+  &__wrapper {
+  }
+
+  &__top {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+  }
+
+  &__card-wrapper {
+    margin-bottom: 50px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--light-2);
+
+    @include media('lg') {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

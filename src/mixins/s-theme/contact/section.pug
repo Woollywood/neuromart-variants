@@ -1,8 +1,0 @@
-include ./accordion
-
-mixin section(section)
-  div.contact-section
-    div.contact-section__title= section.title
-      div.contact-section__accordions
-        each accordion in section.accordions
-          +contactAccordion(accordion)

@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="../../styles/base/reset.css">
     <link rel="stylesheet" href="../../styles/tokens/tokens-core.css">
     <link rel="stylesheet" href="../../styles/base/core.css">
+    <link rel="stylesheet" href="../../styles/base/variables.css">
     <link rel="stylesheet" href="../../styles/base/utilities.css">
     <link rel="stylesheet" href="../../styles/base/components.css">
     <link rel="stylesheet" href="../../styles/themes/o-theme.css">
     <link rel="stylesheet" href="../../styles/themes/o-typography.css">
     <link rel="stylesheet" href="../../styles/components/header/o-header.css">
+    <link rel="stylesheet" href="../../styles/components/header/o-header_transparent.css">
     <link rel="stylesheet" href="../../styles/components/footer/o-footer.css">
     <link rel="stylesheet" href="../../styles/components/catalog-slider/o-catalog-slider.css">
     <link rel="stylesheet" href="../../styles/components/home/o-page.css">
@@ -34,11 +36,11 @@
                           </svg>
                   </button>
                 </div>
-                <div class="header__categories"><a class="header__category" href="#"><span>женская обувь</span></a><a class="header__category" href="#"><span>мужская обувь</span></a><a class="header__category" href="#"><span>детская обувь</span></a><a class="header__category" href="#"><span>Итальянская обувь</span></a><a class="header__category" href="#"><span>Одежда</span></a>
+                <div class="header__categories" data-overflow><a class="header__category" href="#" data-overflow-element><span>женская обувь</span></a><a class="header__category" href="#" data-overflow-element><span>мужская обувь</span></a><a class="header__category" href="#" data-overflow-element><span>детская обувь</span></a><a class="header__category" href="#" data-overflow-element><span>Итальянская обувь</span></a><a class="header__category" href="#" data-overflow-element><span>Одежда</span></a><a class="header__category mobile" href="#" data-overflow-element><span>Текстиль</span></a><a class="header__category mobile" href="#" data-overflow-element><span>Аксессуары</span></a><a class="header__category mobile" href="#" data-overflow-element><span>Посуда</span></a>
                 </div>
               </div>
               <div class="header__left-blocks-bottom">
-                <div class="header__categories"><a class="header__category" href="#"><span>Текстиль</span></a><a class="header__category" href="#"><span>Аксессуары</span></a><a class="header__category" href="#"><span>Посуда</span></a>
+                <div class="header__categories header__categories_bottom" data-overflow><a class="header__category" href="#" data-overflow-element><span>Текстиль</span></a><a class="header__category" href="#" data-overflow-element><span>Аксессуары</span></a><a class="header__category" href="#" data-overflow-element><span>Посуда</span></a>
                 </div>
                 <div class="header__sep"></div><a class="header__phone" href="tel:+7 (964) 495-6000">
                         <svg>
@@ -78,7 +80,7 @@
       </header>
       <main data-layout-part="main">
         <section class="main-banner">
-          <div class="main-banner__image"><img src="../../img/i-theme/hero.png" alt="image"></div>
+          <div class="main-banner__image"><img src="../../img/o-theme/catalog-slide.png" alt="image"></div>
           <div class="main-banner__description">
             <div class="main-banner__description-inner">
               <div class="main-banner__description-content">
@@ -205,7 +207,7 @@
                 </div>
               </div>
               <p class="catalog-slider-section__subtitle subtitle-block">Текст комментария от нейросети для расшифровки</p>
-              <div class="splide catalog-slider" data-component="catalog-slider" data-size="i">
+              <div class="splide catalog-slider" data-component="catalog-slider" data-size="o">
                 <div class="splide__track catalog-slider__track">
                   <ul class="splide__list catalog-slider__list"><a class="splide__slide catalog-slider__slide catalog-slide" href="#">
                       <div class="catalog-slide__inner">
@@ -305,7 +307,7 @@
                 </div>
               </div>
               <p class="catalog-slider-section__subtitle subtitle-block">Текст комментария от нейросети для расшифровки</p>
-              <div class="splide catalog-slider" data-component="catalog-slider" data-size="i">
+              <div class="splide catalog-slider" data-component="catalog-slider" data-size="o">
                 <div class="splide__track catalog-slider__track">
                   <ul class="splide__list catalog-slider__list"><a class="splide__slide catalog-slider__slide catalog-slide" href="#">
                       <div class="catalog-slide__inner">
@@ -405,7 +407,7 @@
                 </div>
               </div>
               <p class="catalog-slider-section__subtitle subtitle-block">Текст комментария от нейросети для расшифровки</p>
-              <div class="splide catalog-slider" data-component="catalog-slider" data-size="i">
+              <div class="splide catalog-slider" data-component="catalog-slider" data-size="o">
                 <div class="splide__track catalog-slider__track">
                   <ul class="splide__list catalog-slider__list"><a class="splide__slide catalog-slider__slide catalog-slide" href="#">
                       <div class="catalog-slide__inner">
@@ -526,18 +528,33 @@
                     <div class="about__title-wrapper">
                       <h2 class="about__title">Одежда для охоты, рыбалки, туризма и уличных работ</h2>
                     </div>
-                    <div class="about__description-wrapper">
-                      <p>
-                         СтайерТекс — российский производитель практичной одежды для активного использования на открытом воздухе. В
-                        каталоге представлены костюмы для охоты, рыбалки, туризма и сезонных работ: лёгкие летние модели, утеплённые
-                        костюмы с флисовой подкладкой, влагозащитой, москитной сеткой и усилением на коленях и локтях.
-                      </p>
-                      <p>
-                         Мы работаем с розничными и оптовыми покупателями по всей России. Каждая модель разрабатывается с учётом задач
-                        реального использования: анатомичный крой не сковывает движения, ткани надёжно защищают от влаги, ветра и
-                        насекомых, а фурнитура выдерживает интенсивную нагрузку. Подбираем одежду под сезон, условия и вид активности —
-                        от спокойной рыбалки до тяжёлой работы на улице.
-                      </p>
+                    <div class="about__description-grid">
+                      <div class="about__description-wrapper">
+                        <p>
+                           СтайерТекс — российский производитель практичной одежды для активного использования на открытом воздухе. В
+                          каталоге представлены костюмы для охоты, рыбалки, туризма и сезонных работ: лёгкие летние модели, утеплённые
+                          костюмы с флисовой подкладкой, влагозащитой, москитной сеткой и усилением на коленях и локтях.
+                        </p>
+                        <p>
+                           Мы работаем с розничными и оптовыми покупателями по всей России. Каждая модель разрабатывается с учётом задач
+                          реального использования: анатомичный крой не сковывает движения, ткани надёжно защищают от влаги, ветра и
+                          насекомых, а фурнитура выдерживает интенсивную нагрузку. Подбираем одежду под сезон, условия и вид активности —
+                          от спокойной рыбалки до тяжёлой работы на улице.
+                        </p>
+                      </div>
+                      <div class="about__description-wrapper">
+                        <p>
+                           СтайерТекс — российский производитель практичной одежды для активного использования на открытом воздухе. В
+                          каталоге представлены костюмы для охоты, рыбалки, туризма и сезонных работ: лёгкие летние модели, утеплённые
+                          костюмы с флисовой подкладкой, влагозащитой, москитной сеткой и усилением на коленях и локтях.
+                        </p>
+                        <p>
+                           Мы работаем с розничными и оптовыми покупателями по всей России. Каждая модель разрабатывается с учётом задач
+                          реального использования: анатомичный крой не сковывает движения, ткани надёжно защищают от влаги, ветра и
+                          насекомых, а фурнитура выдерживает интенсивную нагрузку. Подбираем одежду под сезон, условия и вид активности —
+                          от спокойной рыбалки до тяжёлой работы на улице.
+                        </p>
+                      </div>
                     </div>
                     <div class="about__links"><a class="about__link" href="#">О компании</a><a class="about__link" href="#">О компании</a><a class="about__link" href="#">О компании</a>
                     </div>

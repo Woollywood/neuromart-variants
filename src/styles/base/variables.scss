@@ -1,0 +1,11 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+:root {
+  --container-gap-x: 8px;
+  --container-max-width: 100%;
+
+  @include media('lg') {
+    --container-gap-x: 16px;
+  }
+}

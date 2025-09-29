@@ -1,0 +1,20 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.contact-section {
+  &__title {
+    font-weight: 900;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 5px;
+  }
+
+  &__accordions {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

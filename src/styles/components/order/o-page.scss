@@ -59,6 +59,7 @@
     margin-bottom: 4px;
 
     @include media('lg') {
+      margin-right: calc(-1 * var(--container-gap-x));
       margin-bottom: 8px;
       overflow: hidden;
     }
@@ -77,6 +78,16 @@
     font-family: var(--font-secondary);
     font-size: 13px;
     line-height: 24px;
+    margin-bottom: 4px;
+
+    &.margin-fix {
+      margin-bottom: 0;
+    }
+
+    @include media('lg') {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
   }
 
   &__fields {
@@ -86,12 +97,13 @@
   }
 
   &__top {
-    margin-bottom: 7px;
+    margin-bottom: 6px;
 
     @include media('lg') {
       display: flex;
       align-items: center;
       gap: 8px;
+      transform: translateY(4px);
     }
   }
 
@@ -100,6 +112,10 @@
     align-items: center;
     gap: 8px;
     margin-bottom: 8px;
+
+    @include media('lg') {
+      margin-bottom: 0;
+    }
   }
 
   &__change-order {

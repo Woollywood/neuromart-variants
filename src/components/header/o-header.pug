@@ -8,7 +8,7 @@ header.header(data-component='header')
           div.hamburger(data-component='hamburger')
             button.hamburger__button.hamburger__button_desktop
               +icon('s-menu')
-          div.header__categories
+          div.header__categories(data-overflow)
             -
               const topCategories = [
                 { label: 'женская обувь', href: '#' },
@@ -16,12 +16,15 @@ header.header(data-component='header')
                 { label: 'детская обувь', href: '#' },
                 { label: 'Итальянская обувь', href: '#' },
                 { label: 'Одежда', href: '#' },
+                { label: 'Текстиль', href: '#', mobile: true },
+                { label: 'Аксессуары', href: '#', mobile: true },
+                { label: 'Посуда', href: '#', mobile: true },
               ];
             each category in topCategories
-              a.header__category(href=category.href)
+              a.header__category(href=category.href class=category.mobile ? 'mobile' : undefined data-overflow-element)
                 span= category.label
         div.header__left-blocks-bottom
-          div.header__categories
+          div.header__categories.header__categories_bottom(data-overflow)
             -
               const bottomCategories = [
                 { label: 'Текстиль', href: '#' },
@@ -29,7 +32,7 @@ header.header(data-component='header')
                 { label: 'Посуда', href: '#' },
               ];
             each category in bottomCategories
-              a.header__category(href=category.href )
+              a.header__category(href=category.href data-overflow-element)
                 span= category.label
           div.header__sep
           a.header__phone(href='tel:+7 (964) 495-6000')

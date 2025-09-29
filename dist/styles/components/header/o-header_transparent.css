@@ -1,0 +1,6 @@
+.header {
+  background-color: transparent;
+}
+.header.scrolled {
+  background-color: var(--white);
+}

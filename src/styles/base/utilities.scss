@@ -1,9 +1,7 @@
-@use "../mixins" as *;
+@use '../mixins' as *;
 
 .container {
-  padding: 0 8px;
-
-  @include media('lg') {
-    padding: 0 16px;
-  }
+  margin: 0 auto;
+  padding: 0 var(--container-gap-x);
+  max-width: var(--container-max-width);
 }

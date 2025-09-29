@@ -30,14 +30,14 @@
 }
 @media only screen and (min-width: 768px) {
   .inventory__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 1180px) {
   .inventory__grid {
     overflow: visible;
     position: relative;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     column-gap: 16px;
     row-gap: 16px;
   }
@@ -106,9 +106,14 @@
     margin-top: 112px;
   }
 }
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 768px) {
   .inventory__slider-section {
     grid-column: 1/span 4;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .inventory__slider-section {
+    grid-column: 1/span 6;
   }
 }
 .inventory__pagination {

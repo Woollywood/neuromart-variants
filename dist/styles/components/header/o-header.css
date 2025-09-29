@@ -16,10 +16,15 @@
 }
 @media only screen and (min-width: 1180px) {
   .header__wrapper {
-    gap: 36px;
+    gap: 12px;
     display: grid;
-    grid-template-columns: 1fr 186px 1fr;
-    padding: 8px 0 12px;
+    grid-template-columns: repeat(3, 4fr);
+    padding: 16px 0;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .header__wrapper {
+    gap: 16px;
   }
 }
 .header__left-blocks {
@@ -28,7 +33,6 @@
 @media only screen and (min-width: 1180px) {
   .header__left-blocks {
     order: unset;
-    overflow: hidden;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -64,6 +68,7 @@
 .header__phone {
   display: flex;
   align-items: center;
+  white-space: nowrap;
   font-size: 16px;
   font-weight: 700;
   height: 40px;
@@ -87,7 +92,18 @@
   display: none;
 }
 @media only screen and (min-width: 1180px) {
+  .header__categories.mobile {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .header__categories_bottom {
+    padding-right: 8px !important;
+  }
+}
+@media only screen and (min-width: 1180px) {
   .header__categories {
+    padding: 0;
     gap: 8px;
   }
 }
@@ -172,15 +188,29 @@
   }
 }
 .header__right-blocks {
+  --gap: 4px;
   order: 2;
+}
+@media only screen and (min-width: 768px) {
+  .header__right-blocks {
+    --gap: 8px;
+  }
 }
 @media only screen and (min-width: 1180px) {
   .header__right-blocks {
+    --gap: 12px;
     order: unset;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    justify-self: flex-end;
     gap: 8px;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .header__right-blocks {
+    --gap: 16px;
   }
 }
 .header__right-blocks-inner {
@@ -188,6 +218,12 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
+  gap: 6px;
+}
+@media only screen and (min-width: 1180px) {
+  .header__right-blocks-inner {
+    gap: 8px;
+  }
 }
 .header__input-wrapper {
   display: flex;
@@ -196,7 +232,7 @@
 }
 @media only screen and (min-width: 1180px) {
   .header__input-wrapper {
-    max-width: 523px;
+    flex-grow: 1;
     gap: 8px;
   }
 }
@@ -207,6 +243,7 @@
   .header__input-bottom-tags {
     display: flex;
     align-items: center;
+    gap: 8px;
   }
 }
 .header__input-bottom-tag {

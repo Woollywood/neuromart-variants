@@ -11,7 +11,9 @@ block styles
   link(rel="stylesheet" href="../../styles/components/catalog-slider/s-catalog-slider.css")
   link(rel="stylesheet" href="../../styles/components/breadcrumbs/s-breadcrumbs.css")
   link(rel="stylesheet" href="../../styles/components/pagination/s-pagination.css")
-  link(rel="stylesheet" href="../../styles/pages/account.css")
+  link(rel="stylesheet" href="../../styles/components/account/s-page.css")
+  link(rel="stylesheet" href="../../styles/components/account/s-history.css")
+  link(rel="stylesheet" href="../../styles/components/account/s-personal-data.css")
   link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
 
 block scripts
@@ -30,9 +32,10 @@ block main
           +breadcrumbs(path)
           h1.account__title.page-title Личный кабинет
       div.account__personal-data-wrapper
-        include ../../modules/stayertex/account/personal-data
+        include ../../components/account/s-personal-data
       div.account__content
-        include ../../modules/stayertex/account/history
+        div.account__history
+          include ../../components/account/s-history
         div.account__bought
           include ../../components/catalog-slider/s-catalog-slider-section
         div.account__recommendatitions

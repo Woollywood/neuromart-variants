@@ -22,6 +22,7 @@
 }
 
 .subtitle-block {
+  font-family: var(--font-secondary);
   font-size: 11px;
   line-height: 16px;
 
@@ -38,20 +39,14 @@
 .page-title {
   position: relative;
   z-index: 1;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 28px;
   text-transform: uppercase;
   color: black;
   margin-bottom: 4px;
 
   @include media('lg') {
-    font-size: 32px;
-  }
-
-  @include media('xl') {
-    font-size: 40px;
-    line-height: 100%;
+    font-size: 24px;
   }
 }
 
@@ -60,7 +55,6 @@
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
-  text-transform: capitalize;
   color: black;
 
   @include media('lg') {

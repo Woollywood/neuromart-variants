@@ -21,10 +21,14 @@
     padding: 16px 0 8px;
 
     @include media('lg') {
-      gap: 36px;
+      gap: 12px;
       display: grid;
-      grid-template-columns: 1fr 186px 1fr;
-      padding: 8px 0 12px;
+      grid-template-columns: repeat(3, 4fr);
+      padding: 16px 0;
+    }
+
+    @include media('xl') {
+      gap: 16px;
     }
   }
 
@@ -33,7 +37,6 @@
 
     @include media('lg') {
       order: unset;
-      overflow: hidden;
       display: flex;
       align-items: flex-start;
       flex-direction: column;
@@ -71,6 +74,7 @@
   &__phone {
     display: flex;
     align-items: center;
+    white-space: nowrap;
     font-size: 16px;
     font-weight: 700;
     height: 40px;
@@ -91,7 +95,20 @@
     padding-right: 8px;
     @include hideScrollbar();
 
+    &.mobile {
+      @include media('lg') {
+        display: none;
+      }
+    }
+
+    &_bottom {
+      @include media('lg') {
+        padding-right: 8px !important;
+      }
+    }
+
     @include media('lg') {
+      padding: 0;
       gap: 8px;
     }
   }
@@ -179,14 +196,28 @@
   }
 
   &__right-blocks {
+    --gap: 4px;
+
     order: 2;
 
+    @include media('md') {
+      --gap: 8px;
+    }
+
     @include media('lg') {
+      --gap: 12px;
+
       order: unset;
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      justify-self: flex-end;
       gap: 8px;
+      width: 100%;
+    }
+
+    @include media('xl') {
+      --gap: 16px;
     }
   }
 
@@ -195,6 +226,11 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
+    gap: 6px;
+
+    @include media('lg') {
+      gap: 8px;
+    }
   }
 
   &__input {
@@ -206,7 +242,7 @@
     flex-grow: 1;
 
     @include media('lg') {
-      max-width: 523px;
+      flex-grow: 1;
       gap: 8px;
     }
   }
@@ -217,6 +253,7 @@
     @include media('lg') {
       display: flex;
       align-items: center;
+      gap: 8px;
     }
   }
 

@@ -1,0 +1,97 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.personal-data {
+  &__trigger {
+    width: 100%;
+    height: 32px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: var(--light);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--secondary);
+
+    @include media('xl') {
+      height: 40px;
+      font-size: 16px;
+    }
+
+    svg {
+      width: 10px;
+      height: 6px;
+      color: var(--secondary);
+
+      @include media('xl') {
+        width: 12px;
+        height: 8px;
+      }
+
+      .modal-opened & {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+
+    .modal-opened & {
+      display: block;
+
+      margin-top: 16px;
+      margin-bottom: 64px;
+    }
+  }
+
+  &__dates {
+    padding: 0 12px;
+    margin-bottom: 19px;
+  }
+
+  &__date {
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--secondary);
+  }
+
+  &__form {
+  }
+
+  &__form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    margin-bottom: 16px;
+  }
+
+  &__submit-button {
+    width: 100%;
+    height: 64px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background-color: var(--primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--primary);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+}

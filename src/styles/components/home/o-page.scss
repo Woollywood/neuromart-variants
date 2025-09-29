@@ -2,7 +2,7 @@
 @use '../../variables' as *;
 
 .catalog-slider-block {
-  padding-top: 16;
+  padding-top: 16px;
   padding-bottom: 24px;
 
   @include media('lg') {

@@ -31,13 +31,13 @@
     overflow: hidden;
 
     @include media('md') {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
 
     @include media('lg') {
       overflow: visible;
       position: relative;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       column-gap: 16px;
       row-gap: 16px;
     }
@@ -119,8 +119,12 @@
       }
     }
 
-    @include media('lg') {
+    @include media('md') {
       grid-column: 1 / span 4;
+    }
+
+    @include media('lg') {
+      grid-column: 1 / span 6;
     }
   }
 

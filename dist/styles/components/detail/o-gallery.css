@@ -16,7 +16,7 @@
 }
 @media only screen and (min-width: 1180px) {
   .gallery-slider__image {
-    aspect-ratio: 619/920;
+    aspect-ratio: 619/720;
   }
 }
 .gallery-slider__image img {

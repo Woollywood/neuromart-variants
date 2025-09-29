@@ -1,0 +1,73 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.contact-accordion {
+  &__trigger {
+    .open & {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      margin: 0;
+    }
+  }
+
+  &__trigger-icon {
+    .open & {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__body {
+    display: none;
+    background-color: var(--light);
+    padding: 0 12px 12px;
+
+    .open & {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+
+  &__address {
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--secondary);
+
+    margin-bottom: 12px;
+    margin-right: 36px;
+
+    span {
+      font-style: italic;
+    }
+  }
+
+  &__phone {
+    height: 32px;
+    padding: 8px 10px;
+    background-color: transparent;
+    @include border(1px, var(--primary));
+    border-radius: 8px;
+
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--secondary);
+  }
+
+  &__map-frame {
+    position: relative;
+    aspect-ratio: 335 / 192;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}

@@ -11,6 +11,7 @@ block styles
   link(rel="stylesheet" href="../../styles/components/detail/o-details.css")
   link(rel="stylesheet" href="../../styles/components/detail/o-gallery.css")
   link(rel="stylesheet" href="../../styles/components/detail/o-questions.css")
+  link(rel="stylesheet" href="../../styles/components/detail/o-questions.css")
   link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
 
 block scripts
@@ -27,6 +28,8 @@ block main
       div.detail__bottom
         div.detail__catalog-slider-section.border-top.border-bottom
           include ../../components/catalog-slider/o-catalog-slider-section
+        div.detail__questions
+          include ../../components/detail/o-questions
         div.div.detail__catalog-slider-section.border-top
           include ../../components/catalog-slider/o-catalog-slider-section
         div.div.detail__catalog-slider-section.border-top

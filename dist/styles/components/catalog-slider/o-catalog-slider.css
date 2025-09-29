@@ -107,13 +107,14 @@
 .card-content__price-wrapper {
   display: flex;
   align-items: center;
-  gap: 4px;
+  flex-wrap: wrap;
+  column-gap: 4px;
+  margin-bottom: 4px;
 }
 .card-content__price {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 4px;
 }
 @media only screen and (min-width: 1180px) {
   .card-content__price {

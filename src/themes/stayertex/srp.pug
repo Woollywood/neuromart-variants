@@ -1,6 +1,6 @@
 extends ../../layouts/themes/s-layout
 
-include ../../mixins/s-theme/srp/card-list
+include ../../mixins/srp/s-card
 
 block styles
   link(rel="stylesheet" href="../../styles/themes/s-theme.css")
@@ -11,7 +11,8 @@ block styles
   link(rel="stylesheet" href="../../styles/components/catalog-slider/s-catalog-slider.css")
   link(rel="stylesheet" href="../../styles/components/breadcrumbs/s-breadcrumbs.css")
   link(rel="stylesheet" href="../../styles/components/pagination/s-pagination.css")
-  link(rel="stylesheet" href="../../styles/pages/srp.css")
+  link(rel="stylesheet" href="../../styles/components/srp/s-page.css")
+  link(rel="stylesheet" href="../../styles/components/srp/s-card.css")
   link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
 
 block scripts
@@ -55,10 +56,14 @@ block main
   div.srp
     div.srp__container.container
       div.srp__wrapper
-        +cardList(cards)
+        div.srp__card-list
+          each card of cards
+            +card(card)
         div.srp__section-sep
           include ../../components/catalog-slider/s-catalog-slider
-        +cardList(cards)
+        div.srp__card-list
+          each card of cards
+            +card(card)
         div.srp__pagination
           include ../../components/pagination
         div.srp__description
