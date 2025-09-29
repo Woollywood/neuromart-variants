@@ -83,7 +83,10 @@
     gap: 8px;
     height: 40px;
     font-size: 16px;
-    padding: 8px 8x;
+    padding: 8px 8px;
+  }
+  .filters__select span {
+    transform: translateY(1px);
   }
 }
 .filters__button-all {

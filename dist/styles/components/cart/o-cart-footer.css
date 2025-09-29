@@ -19,11 +19,6 @@
     padding: 24px 0 0;
   }
 }
-@media only screen and (min-width: 1440px) {
-  .cart-footer__bottom {
-    padding: 28px 0 0;
-  }
-}
 .cart-footer__contacts {
   display: flex;
   align-items: center;

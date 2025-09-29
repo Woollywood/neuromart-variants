@@ -17,6 +17,7 @@
   font-family: var(--font-secondary);
   font-size: 12px;
   color: black;
+  text-transform: lowercase;
 
   @include media('lg') {
     margin-right: 0;

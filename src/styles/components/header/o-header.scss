@@ -24,7 +24,7 @@
       gap: 12px;
       display: grid;
       grid-template-columns: repeat(3, 4fr);
-      padding: 8px 0 12px;
+      padding: 16px 0;
     }
 
     @include media('xl') {
@@ -94,6 +94,12 @@
     margin-right: -8px;
     padding-right: 8px;
     @include hideScrollbar();
+
+    &.mobile {
+      @include media('lg') {
+        display: none;
+      }
+    }
 
     &_bottom {
       @include media('lg') {

@@ -24,8 +24,9 @@ if (gallerySlider) {
         return {
           gap: 8,
           breakpoints: {
-            [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 2, gap: 12 },
-            [getMediaCssParsedVariable(MediaSizes.XL)]: { perPage: 2, gap: 16 },
+            [getMediaCssParsedVariable(MediaSizes.MD)]: { perPage: 2, gap: 8 },
+            [getMediaCssParsedVariable(MediaSizes.LG)]: { gap: 12 },
+            [getMediaCssParsedVariable(MediaSizes.XL)]: { gap: 16 },
           },
         };
       default:

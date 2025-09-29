@@ -7,10 +7,13 @@
   border-radius: 8px;
 
   @include media('lg') {
-    padding: 19px 0;
+    border: none;
+    padding: 4px 0;
+    padding-left: 24px;
   }
 
   &__wrapper {
+    padding-right: var(--container-gap-x) !important;
   }
 
   &__list {

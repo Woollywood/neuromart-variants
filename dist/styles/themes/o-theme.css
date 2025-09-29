@@ -1,3 +1,7 @@
+body {
+  letter-spacing: -0.02em;
+}
+
 :root {
   --dark: #333;
   --white: #fff;

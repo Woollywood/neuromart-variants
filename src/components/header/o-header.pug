@@ -16,9 +16,12 @@ header.header(data-component='header')
                 { label: 'детская обувь', href: '#' },
                 { label: 'Итальянская обувь', href: '#' },
                 { label: 'Одежда', href: '#' },
+                { label: 'Текстиль', href: '#', mobile: true },
+                { label: 'Аксессуары', href: '#', mobile: true },
+                { label: 'Посуда', href: '#', mobile: true },
               ];
             each category in topCategories
-              a.header__category(href=category.href data-overflow-element)
+              a.header__category(href=category.href class=category.mobile ? 'mobile' : undefined data-overflow-element)
                 span= category.label
         div.header__left-blocks-bottom
           div.header__categories.header__categories_bottom(data-overflow)

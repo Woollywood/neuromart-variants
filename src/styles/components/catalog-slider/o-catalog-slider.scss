@@ -127,14 +127,15 @@
   &__price-wrapper {
     display: flex;
     align-items: center;
-    gap: 4px;
+    flex-wrap: wrap;
+    column-gap: 4px;
+    margin-bottom: 4px;
   }
 
   &__price {
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 4px;
 
     @include media('lg') {
       font-size: 20px;

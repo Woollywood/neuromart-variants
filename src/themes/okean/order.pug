@@ -32,19 +32,19 @@ block main
         form.order__form
           div.order__sections
             div.order__section.section-order
-              h3.section-order__title Данные получателя
+              h3.section-order__title Данные получателя:
               div.section-order__fields
                 +fieldInput('ФИО Получателя', true)
                 +fieldInput('E-mail', true)
                 +fieldInput('Телефон', true)
                 +fieldInput('Серия и номер паспорта или ИНН (для ИП или ООО)', true)
             div.order__section.section-order
-              h3.section-order__title Доставка
+              h3.section-order__title Доставка:
               div.section-order__fields
                 +fieldSelect('Выберите способ', true)
                 +fieldInput('Город Доставки', true)
             div.order__section.section-order
-              h3.section-order__title Способ оплаты
+              h3.section-order__title Способ оплаты:
               div.section-order__fields
                 +fieldSelect('Выберите способ оплаты')
                 +fieldSelect('Добавить комментарии к заказу', false, 'outlined')
@@ -52,7 +52,7 @@ block main
           div.order__section.section-order.transformed
             div.section-order__top
               div.section-order__title-wrapper
-                h3.section-order__title Ваш заказ
+                h3.section-order__title.margin-fix Ваш заказ
                 button.section-order__change-order Изменить
               p.section-order__description 8 наименований, 96 единиц на сумму 1 048 000 Руб.
             include ../../components/order/o-order-slider

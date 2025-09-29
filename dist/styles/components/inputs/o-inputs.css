@@ -190,7 +190,7 @@
 
 .checkbox {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: 8px;
   cursor: pointer;
@@ -207,6 +207,7 @@
   outline-offset: -1px;
 }
 .checkbox__label {
+  padding-top: 4px;
   font-family: var(--font-secondary);
   font-size: 14px;
   line-height: 16px;

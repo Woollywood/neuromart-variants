@@ -5,8 +5,13 @@
 }
 @media only screen and (min-width: 1180px) {
   .order-slider {
-    padding: 19px 0;
+    border: none;
+    padding: 4px 0;
+    padding-left: 24px;
   }
+}
+.order-slider__wrapper {
+  padding-right: var(--container-gap-x) !important;
 }
 .order-slider__image {
   position: relative;
