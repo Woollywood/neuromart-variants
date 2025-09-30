@@ -2,149 +2,103 @@
   .header {
     background-color: transparent;
   }
-
   .header.scrolled {
     background-color: var(--white);
   }
-
   .header__logo-wrapper {
     color: var(--white);
   }
-
   .scrolled .header__logo-wrapper {
     color: black;
   }
-
   .header__category {
     color: var(--white);
     outline: 1px solid rgba(255, 255, 255, 0.12);
     outline-offset: -1px;
   }
-
+}
+@media only screen and (min-width: 1180px) and (min-width: 1180px) {
+  .header__category {
+    outline: 0;
+  }
+}
+@media only screen and (min-width: 1180px) {
   .scrolled .header__category {
     color: black;
     outline: 1px solid rgba(0, 0, 0, 0.12);
     outline-offset: -1px;
   }
-
+}
+@media only screen and (min-width: 1180px) and (min-width: 1180px) {
+  .scrolled .header__category {
+    outline: 0;
+  }
+}
+@media only screen and (min-width: 1180px) {
   .header__action {
     color: var(--white);
   }
-
   .scrolled .header__action {
     color: black;
   }
-
   .input-header {
     background-color: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(12px);
   }
-
   .scrolled .input-header {
     background-color: rgba(0, 0, 0, 0.08);
     backdrop-filter: none;
   }
-
   .input-header__icon {
     color: var(--white);
   }
-
   .scrolled .input-header__icon {
     color: black;
   }
-
   .input-header__input {
     color: var(--white);
   }
-
   .scrolled .input-header__input {
     color: black;
   }
-
-  .input-header__input::-webkit-input-placeholder {
-    color: var(--white);
-  }
-
-  .input-header__input::-moz-placeholder {
-    color: var(--white);
-  }
-
-  .input-header__input:-ms-input-placeholder {
-    color: var(--white);
-  }
-
-  .input-header__input::-ms-input-placeholder {
-    color: var(--white);
-  }
-
   .input-header__input::placeholder {
     color: var(--white);
   }
-
-  .scrolled .input-header__input::-webkit-input-placeholder {
-    color: black;
-  }
-
-  .scrolled .input-header__input::-moz-placeholder {
-    color: black;
-  }
-
-  .scrolled .input-header__input:-ms-input-placeholder {
-    color: black;
-  }
-
-  .scrolled .input-header__input::-ms-input-placeholder {
-    color: black;
-  }
-
   .scrolled .input-header__input::placeholder {
     color: black;
   }
-
   .input-header__label {
     color: var(--white);
   }
-
   .scrolled .input-header__label {
     color: black;
   }
-
   .input-header__tag {
     color: var(--white);
     outline: 1px solid var(--white);
     outline-offset: -1px;
   }
-
   .scrolled .input-header__tag {
     color: black;
     outline: 1px solid rgba(0, 0, 0, 0.24);
     outline-offset: -1px;
   }
-
+}
+@media only screen and (min-width: 1180px) and (min-width: 1180px) {
+  .hamburger {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1180px) {
   .hamburger__button {
     background-color: transparent;
     outline: 1px solid rgba(255, 255, 255, 0.24);
     outline-offset: -1px;
     color: var(--white);
   }
-
   .scrolled .hamburger__button {
     color: var(--secondary);
     outline: 1px solid rgba(0, 0, 0, 0.12);
     outline-offset: -1px;
-  }
-}
-
-@media only screen and (min-width: 1180px) and (min-width: 1180px) {
-  .header__category {
-    outline: 0;
-  }
-
-  .scrolled .header__category {
-    outline: 0;
-  }
-
-  .hamburger {
-    display: none;
   }
 }

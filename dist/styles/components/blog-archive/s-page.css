@@ -1,33 +1,27 @@
 .blog-archive {
   padding: 14px 0 40px;
 }
-
+@media only screen and (min-width: 1180px) {
+  .blog-archive {
+    padding: 20px 0 74px;
+  }
+}
 .blog-archive__top {
   margin-bottom: 16px;
 }
-
 .blog-archive__card-wrapper {
   margin-bottom: 50px;
 }
-
 .blog-archive__cards {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 6px;
   margin-bottom: 8px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--light-2);
 }
-
 @media only screen and (min-width: 1180px) {
-  .blog-archive {
-    padding: 20px 0 74px;
-  }
-
   .blog-archive__cards {
-    -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4, 1fr);
   }
 }

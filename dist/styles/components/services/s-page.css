@@ -10,42 +10,47 @@
 .services {
   padding: 14px 0 48px;
 }
-
+@media only screen and (min-width: 1180px) {
+  .services {
+    padding: 20px 0 76px;
+  }
+}
 .services__top {
   margin-bottom: 18px;
 }
-
 .services__header {
   margin-bottom: 19px;
 }
-
 .services__cards-title {
   margin-bottom: 5px;
 }
-
 .services__cards {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 4px;
+}
+@media only screen and (min-width: 1180px) {
+  .services__cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
 }
 
 .header-services__title {
   margin-bottom: 5px;
 }
 
+@media only screen and (min-width: 1180px) {
+  .services-header__link-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+}
 .services-header__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-grid-row: 16;
+  align-items: center;
+  justify-content: space-between;
   grid-area: 16px;
   height: 32px;
   padding: 8px 12px;
@@ -56,39 +61,18 @@
   text-transform: uppercase;
   color: var(--secondary);
 }
-
-.services-header__link svg {
-  width: 10px;
-  height: 6px;
-  color: var(--secondary);
-}
-
-@media only screen and (min-width: 1180px) {
-  .services {
-    padding: 20px 0 76px;
-  }
-
-  .services__cards {
-    -ms-grid-columns: (1fr)[4];
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-  }
-
-  .services-header__link-wrapper {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[4];
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-  }
-}
-
 @media only screen and (min-width: 1440px) {
   .services-header__link {
     height: 40px;
     font-size: 16px;
   }
-
+}
+.services-header__link svg {
+  width: 10px;
+  height: 6px;
+  color: var(--secondary);
+}
+@media only screen and (min-width: 1440px) {
   .services-header__link svg {
     width: 12px;
     height: 8px;

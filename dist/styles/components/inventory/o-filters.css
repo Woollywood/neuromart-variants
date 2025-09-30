@@ -1,47 +1,43 @@
 .filters__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 4px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
+@media only screen and (min-width: 768px) {
+  .filters__wrapper {
+    flex-direction: row;
+    gap: 8px;
+  }
+}
 .filters__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 4px;
 }
-
 .filters__row.full-width {
   width: 100%;
 }
-
+@media only screen and (min-width: 768px) {
+  .filters__row.full-width {
+    width: auto;
+  }
+}
 .filters__row.full-width > *.full-width {
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
+  flex-shrink: 1;
   width: 100%;
 }
-
+@media only screen and (min-width: 768px) {
+  .filters__row.full-width > *.full-width {
+    flex-shrink: 0;
+    width: auto;
+  }
+}
 .filters__select {
   position: relative;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-shrink: 0;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   white-space: nowrap;
   gap: 10px;
   border-radius: 8px;
@@ -56,25 +52,43 @@
   text-transform: uppercase;
   color: black;
 }
-
 .filters__select svg {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   width: 6px;
   height: 4px;
 }
-
+@media only screen and (min-width: 1180px) {
+  .filters__select svg {
+    width: 12px;
+    height: 8px;
+    margin-left: 8px;
+  }
+}
 .filters__select.mobile svg {
   display: none;
 }
-
+@media only screen and (min-width: 768px) {
+  .filters__select.mobile svg {
+    display: block;
+  }
+}
 .filters__select.icon-prepend svg:first-child {
   margin: 0;
   color: black;
   width: 18px;
   height: 18px;
 }
-
+@media only screen and (min-width: 1180px) {
+  .filters__select {
+    gap: 8px;
+    height: 40px;
+    font-size: 16px;
+    padding: 8px 8px;
+  }
+  .filters__select span {
+    transform: translateY(1px);
+  }
+}
 .filters__button-all {
   font-size: 12px;
   font-weight: 700;
@@ -86,52 +100,8 @@
   outline: 1px solid rgba(0, 0, 0, 0.12);
   outline-offset: -1px;
 }
-
 @media only screen and (min-width: 768px) {
-  .filters__wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    gap: 8px;
-  }
-
-  .filters__row.full-width {
-    width: auto;
-  }
-
-  .filters__row.full-width > *.full-width {
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-    width: auto;
-  }
-
-  .filters__select.mobile svg {
-    display: block;
-  }
-
   .filters__button-all {
     display: none;
-  }
-}
-
-@media only screen and (min-width: 1180px) {
-  .filters__select svg {
-    width: 12px;
-    height: 8px;
-    margin-left: 8px;
-  }
-
-  .filters__select {
-    gap: 8px;
-    height: 40px;
-    font-size: 16px;
-    padding: 8px 8px;
-  }
-
-  .filters__select span {
-    -webkit-transform: translateY(1px);
-        -ms-transform: translateY(1px);
-            transform: translateY(1px);
   }
 }

@@ -1,44 +1,37 @@
 .catalog-slider-section__title-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 8px;
 }
-
+@media only screen and (min-width: 1180px) {
+  .catalog-slider-section__title-wrapper {
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+}
 .catalog-slider-section__title {
   text-align: left;
 }
-
 .catalog-slider-section__tags {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 4px;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
 .catalog-slider-section__tags::-webkit-scrollbar {
   display: none;
 }
-
+@media only screen and (min-width: 1180px) {
+  .catalog-slider-section__tags {
+    gap: 8px;
+  }
+}
 .catalog-slider-section__tag {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 20px;
   padding: 4px 8px;
   border-radius: 8px;
@@ -47,45 +40,55 @@
   font-size: 12px;
   text-transform: uppercase;
 }
-
+@media only screen and (min-width: 1180px) {
+  .catalog-slider-section__tag {
+    font-size: 14px;
+    padding: 4px 8px;
+    height: 24px;
+  }
+}
 .catalog-slider-section__subtitle {
   text-align: left;
   margin-bottom: 8px;
 }
 
+@media only screen and (min-width: 1180px) {
+  .catalog-slider {
+    margin-right: 0;
+  }
+}
 .catalog-slide__image {
   position: relative;
   aspect-ratio: 116/172;
   overflow: hidden;
 }
-
 .catalog-slide__image:not(:last-child) {
   margin-bottom: 8px;
 }
-
+@media only screen and (min-width: 1180px) {
+  .catalog-slide__image:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .catalog-slide__image {
+    aspect-ratio: 301/448;
+  }
+}
 .catalog-slide__image img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
-
 .catalog-slide__footer {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .catalog-slide__actions {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   gap: 4px;
 }
@@ -96,36 +99,34 @@
   text-transform: uppercase;
   margin-bottom: 4px;
 }
-
+@media only screen and (min-width: 1180px) {
+  .card-content__title {
+    font-size: 20px;
+  }
+}
 .card-content__price-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-column-gap: 4px;
-     -moz-column-gap: 4px;
-          column-gap: 4px;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 4px;
   margin-bottom: 4px;
 }
-
 .card-content__price {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
 }
-
+@media only screen and (min-width: 1180px) {
+  .card-content__price {
+    font-size: 20px;
+  }
+}
 .card-content__price_old {
   text-decoration: line-through;
 }
-
 .card-content__price_new {
   color: #d10c54;
 }
-
 .card-content__subtitle {
   font-size: 11px;
   color: rgba(0, 0, 0, 0.4);
@@ -135,43 +136,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
 @media only screen and (min-width: 1180px) {
-  .catalog-slider-section__title-wrapper {
-    gap: 12px;
-    margin-bottom: 6px;
-  }
-
-  .catalog-slider-section__tags {
-    gap: 8px;
-  }
-
-  .catalog-slider-section__tag {
-    font-size: 14px;
-    padding: 4px 8px;
-    height: 24px;
-  }
-
-  .catalog-slider {
-    margin-right: 0;
-  }
-
-  .catalog-slide__image:not(:last-child) {
-    margin-bottom: 12px;
-  }
-
-  .catalog-slide__image {
-    aspect-ratio: 301/448;
-  }
-
-  .card-content__title {
-    font-size: 20px;
-  }
-
-  .card-content__price {
-    font-size: 20px;
-  }
-
   .card-content__subtitle {
     font-size: 16px;
   }

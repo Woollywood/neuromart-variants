@@ -10,6 +10,7 @@
   cursor: text;
 
   @include media('lg') {
+    padding: 14px 16px;
     height: 56px;
   }
 
@@ -39,6 +40,10 @@
     font-size: 14px;
     color: black;
 
+    @include media('lg') {
+      font-size: 16px;
+    }
+
     .focused &,
     .active & {
       opacity: 1;
@@ -60,8 +65,8 @@
 
     .focused &,
     .active & {
-      top: 0;
       transform: translateY(-4px);
+      top: 0;
     }
   }
 
@@ -74,6 +79,10 @@
     .active & {
       font-size: 12px;
       color: rgba(0, 0, 0, 0.4);
+    }
+
+    @include media('lg') {
+      font-size: 16px;
     }
   }
 
@@ -90,7 +99,7 @@
     width: 100%;
     height: 48px;
     padding: 10px 12px;
-    border-radius: 8px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -171,6 +180,10 @@
     text-transform: uppercase;
     transition: all 0.1s ease-in-out;
 
+    @include media('lg') {
+      font-size: 16px;
+    }
+
     .selected & {
       font-size: 12px;
       color: rgba(0, 0, 0, 0.4);
@@ -181,7 +194,11 @@
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;
-    color: var(--primary);
+    color: #d10c54;
+
+    @include media('lg') {
+      font-size: 16px;
+    }
   }
 }
 
@@ -191,7 +208,7 @@
   background-color: transparent;
   height: 48px;
   @include border(1px, var(--light-2));
-  border-radius: 8px;
+  border-radius: 16px;
   cursor: pointer;
 
   @include media('lg') {
@@ -217,7 +234,10 @@
     font-size: 14px;
     line-height: 24px;
     text-transform: uppercase;
-    color: var(--primary);
+
+    @include media('lg') {
+      font-size: 16px;
+    }
   }
 }
 

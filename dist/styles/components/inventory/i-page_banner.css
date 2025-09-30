@@ -13,22 +13,33 @@
 .inventory {
   margin-top: -444px;
 }
-
+@media only screen and (min-width: 1180px) {
+  .inventory {
+    margin-top: 0;
+  }
+}
 .inventory__title {
   position: relative;
   z-index: 10;
   margin: 0;
 }
-
+@media only screen and (min-width: 1180px) {
+  .inventory__title {
+    margin-bottom: 42px;
+  }
+}
 .inventory__header-content {
   margin-bottom: 372px;
 }
-
+@media only screen and (min-width: 1180px) {
+  .inventory__header-content {
+    margin-bottom: 0;
+  }
+}
 .inventory__header {
   position: relative;
   overflow: visible;
 }
-
 .inventory__header::before {
   content: "";
   position: absolute;
@@ -36,15 +47,23 @@
   left: 0;
   width: 100vw;
   height: 200px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #000), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(180deg, #000 40%, rgba(0, 0, 0, 0) 100%);
   margin: 0 -8px;
 }
-
+@media only screen and (min-width: 1180px) {
+  .inventory__header::before {
+    content: none;
+  }
+}
 .inventory__banner-placeholder {
   display: none;
 }
-
+@media only screen and (min-width: 1180px) {
+  .inventory__banner-placeholder {
+    display: block;
+    height: 244px;
+  }
+}
 .inventory__banner {
   position: relative;
   pointer-events: none;
@@ -53,23 +72,33 @@
   margin-top: 72px;
   z-index: -1;
 }
-
+@media only screen and (min-width: 1180px) {
+  .inventory__banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 600px;
+    margin-top: 0;
+  }
+}
 .inventory__banner img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-
 .inventory__filters {
   position: relative;
   z-index: 10;
   margin: -44px -8px;
 }
-
+@media only screen and (min-width: 1180px) {
+  .inventory__filters {
+    margin: 0 -16px;
+  }
+}
 .inventory__filters::before {
   content: "";
   pointer-events: none;
@@ -78,14 +107,17 @@
   left: 0;
   width: 100%;
   height: 64px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#000), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
 }
-
+@media only screen and (min-width: 1180px) {
+  .inventory__filters::before {
+    height: 158px;
+    bottom: -24px;
+  }
+}
 .inventory__grid {
   position: relative;
 }
-
 .inventory__grid::before {
   content: "";
   position: absolute;
@@ -96,53 +128,14 @@
   height: 100%;
   background-color: black;
 }
-
-.header__filter {
-  z-index: 10;
-}
-
 @media only screen and (min-width: 1180px) {
-  .inventory {
-    margin-top: 0;
-  }
-
-  .inventory__title {
-    margin-bottom: 42px;
-  }
-
-  .inventory__header-content {
-    margin-bottom: 0;
-  }
-
-  .inventory__header::before {
-    content: none;
-  }
-
-  .inventory__banner-placeholder {
-    display: block;
-    height: 244px;
-  }
-
-  .inventory__banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 600px;
-    margin-top: 0;
-  }
-
-  .inventory__filters {
-    margin: 0 -16px;
-  }
-
-  .inventory__filters::before {
-    height: 158px;
-    bottom: -24px;
-  }
-
   .inventory__grid::before {
     width: calc(100% + 32px);
     left: -16px;
     right: -16px;
   }
+}
+
+.header__filter {
+  z-index: 10;
 }
