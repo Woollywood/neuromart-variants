@@ -12,8 +12,6 @@ document.querySelectorAll("[data-component='filters-select']").forEach((select) 
   drawerContainer?.append(drawer);
 
   const toggle = () => {
-    console.log('toggle');
-
     if (getMediaCssParsedVariable(MediaSizes.MD) < windowWidth) {
       return;
     }
@@ -24,5 +22,4 @@ document.querySelectorAll("[data-component='filters-select']").forEach((select) 
 
   select.addEventListener('click', toggle);
   closeButton?.addEventListener('click', toggle);
-  console.log('listener added');
 });

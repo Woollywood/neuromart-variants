@@ -3,13 +3,14 @@
 
 .filter-accordion {
   .filter-accordion__trigger {
-    color: var(--secondary);
+    background-color: rgba(0, 0, 0, 0.08);
+    color: black;
   }
   &.open {
     margin-bottom: 16px;
 
     .filter-accordion__trigger {
-      color: var(--primary);
+      color: #d10c54;
     }
   }
 
@@ -24,25 +25,27 @@
   }
 
   &__icon {
-    color: var(--primary);
+    color: black;
+
+    .open & {
+      color: #d10c54;
+    }
   }
 
   &__filter {
     height: 32px;
     padding: 10px 12px;
     border-radius: 8px;
-    background-color: var(--white);
-    @include border(1px, var(--light-2));
+    @include border(1px, rgba(0, 0, 0, 0.12));
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-family: var(--font-primary);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
-    color: var(--secondary);
+    color: black;
     transition: color 0.3s ease-in-out;
 
     &:hover {
@@ -60,18 +63,18 @@
   height: 28px;
   padding: 6px 8px;
   border-radius: 8px;
-  background-color: var(--light);
+  background: rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6x);
 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 
-  font-family: var(--font-primary);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
-  color: var(--secondary);
+  color: black;
 
   span {
     transform: translateY(1px);
@@ -227,8 +230,8 @@
   &__title {
     font-weight: 800;
     font-size: 16px;
+    color: black;
     text-transform: uppercase;
-    color: var(--secondary);
 
     @include media('xl') {
       font-size: 24px;
@@ -251,8 +254,10 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
 
-  background-color: var(--light);
+  background-color: rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px);
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   padding: 8px 0;
@@ -303,13 +308,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 
-    font-family: var(--font-primary);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
-    color: var(--secondary);
+    color: black;
     transition: color 0.3s ease-in-out;
+
+    svg {
+      width: 10px;
+      height: 10px;
+      color: black;
+    }
 
     &:hover {
       color: var(--primary);
@@ -323,68 +334,33 @@
 
   &__submit {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 64px;
     height: 48px;
     padding: 10px 12px;
-    background-color: var(--primary);
+    background-color: black;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-family: var(--font-primary);
     font-weight: 900;
-    font-style: italic;
-    font-size: 20px;
+    font-size: 18px;
     text-transform: uppercase;
     color: var(--white);
-
-    @include media('lg') {
-      height: 48px;
-    }
   }
 }
 
 .filters-select {
+  height: 32px;
+
+  @include media('lg') {
+    height: 40px;
+  }
+
   &__trigger {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 4px 12px;
-    background-color: transparent;
-    border-radius: 8px;
-    @include border(1px, var(--light-2));
-    height: 32px;
-
-    svg {
-      color: var(--secondary);
-      width: 6px;
-      height: 4px;
-    }
-
-    @include media('xl') {
-      height: 40px;
-    }
   }
 
   &__trigger-text {
-    color: var(--secondary);
-    font-weight: 800;
-    font-size: 12px;
-    text-transform: uppercase;
-
-    span {
-      color: var(--primary);
-    }
-
-    @include media('lg') {
-      font-size: 14px;
-    }
-
-    @include media('xl') {
-      font-size: 16px;
-    }
   }
 
   &__drawer {
@@ -425,12 +401,12 @@
     gap: 8px;
     padding: 2px 8px;
     height: 28px;
-    background-color: var(--light);
     border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(6px);
 
-    font-family: var(--font-primary);
-    color: var(--secondary);
-    font-weight: 800;
+    color: black;
+    font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
 
@@ -446,15 +422,14 @@
   }
 
   &__title {
-    font-weight: 900;
-    font-style: italic;
     font-size: 16px;
+    font-weight: 700;
     text-transform: uppercase;
-    color: var(--secondary);
+    color: black;
     margin-bottom: 13px;
 
     span {
-      color: var(--primary);
+      color: #d10c54;
     }
   }
 
@@ -464,7 +439,7 @@
     font-style: italic;
     font-size: 12px;
     text-transform: lowercase;
-    color: var(--secondary);
+    color: black;
 
     margin-bottom: 10px;
   }
@@ -475,9 +450,9 @@
     gap: 4px;
 
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
-    color: var(--secondary);
+    color: black;
 
     &:not(:last-child) {
       margin-bottom: 10px;
@@ -495,7 +470,7 @@
     height: 24px;
     border-radius: 100%;
     background-color: transparent;
-    @include border(1px, var(--light-2));
+    @include border(1px, rgba(0, 0, 0, 0.12));
 
     display: flex;
     align-items: center;
@@ -503,7 +478,7 @@
 
     &::before {
       content: '';
-      background-color: var(--primary);
+      background-color: #d10c54;
       width: 12px;
       height: 12px;
       border-radius: 100%;
@@ -511,7 +486,7 @@
     }
 
     .active & {
-      @include border(1px, var(--primary));
+      @include border(1px, #d10c54);
 
       &::before {
         display: block;

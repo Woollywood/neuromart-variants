@@ -5,13 +5,8 @@ include ../../mixins/provider
 div.inventory__filters.filters
   div.filters__wrapper
     div.filters__row.full-width
-      button.filters__select.icon-prepend.full-width
-        +icon('o-filters')
-        span Все фильтры
-      button.filters__select.icon-prepend.full-width
-        +icon('o-sort')
-        span по Популярности
-        +icon('s-arrow-down')
+      include ./o-filters-modal
+      include ./o-filters-select
       button.filters__select.mobile
         span Бренд
         +icon('s-arrow-down')

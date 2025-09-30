@@ -21,8 +21,6 @@ closeButton?.addEventListener('click', () => {
 });
 
 trigger?.addEventListener('click', () => {
-  console.log('click');
-
   const windowWidth = window.innerWidth;
   modal?.classList.add('opened');
   inventory?.classList.add('opened');
