@@ -3,21 +3,32 @@
   border-bottom-right-radius: 0;
   margin: 0;
 }
+
 .open .contact-accordion__trigger-icon {
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
+
 .contact-accordion__body {
   display: none;
   background-color: var(--light);
   padding: 0 12px 12px;
 }
+
 .open .contact-accordion__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 4px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+
 .contact-accordion__address {
   font-family: var(--font-secondary);
   font-weight: 500;
@@ -27,9 +38,11 @@
   margin-bottom: 12px;
   margin-right: 36px;
 }
+
 .contact-accordion__address span {
   font-style: italic;
 }
+
 .contact-accordion__phone {
   height: 32px;
   padding: 8px 10px;
@@ -37,16 +50,24 @@
   outline: 1px solid var(--primary);
   outline-offset: -1px;
   border-radius: 8px;
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 16px;
   font-weight: 800;
   font-size: 14px;
   text-transform: uppercase;
   color: var(--secondary);
 }
+
 .contact-accordion__map-frame {
   position: relative;
   aspect-ratio: 335/192;

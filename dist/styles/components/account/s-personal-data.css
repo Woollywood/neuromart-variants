@@ -4,9 +4,15 @@
   padding: 8px 12px;
   border-radius: 8px;
   background-color: var(--light);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 16px;
   font-family: var(--font-primary);
   font-weight: 800;
@@ -14,38 +20,34 @@
   text-transform: uppercase;
   color: var(--secondary);
 }
-@media only screen and (min-width: 1440px) {
-  .personal-data__trigger {
-    height: 40px;
-    font-size: 16px;
-  }
-}
+
 .personal-data__trigger svg {
   width: 10px;
   height: 6px;
   color: var(--secondary);
 }
-@media only screen and (min-width: 1440px) {
-  .personal-data__trigger svg {
-    width: 12px;
-    height: 8px;
-  }
-}
+
 .modal-opened .personal-data__trigger svg {
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
+
 .personal-data__content {
   display: none;
 }
+
 .modal-opened .personal-data__content {
   display: block;
   margin-top: 16px;
   margin-bottom: 64px;
 }
+
 .personal-data__dates {
   padding: 0 12px;
   margin-bottom: 19px;
 }
+
 .personal-data__date {
   font-family: var(--font-secondary);
   font-weight: 500;
@@ -53,25 +55,50 @@
   line-height: 16px;
   color: var(--secondary);
 }
+
 .personal-data__form-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 4px;
   margin-bottom: 16px;
 }
+
 .personal-data__submit-button {
   width: 100%;
   height: 64px;
   padding: 10px 12px;
   border-radius: 12px;
   background-color: var(--primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: var(--primary);
   font-weight: 900;
   font-style: italic;
   font-size: 20px;
   text-transform: uppercase;
   color: var(--white);
+}
+
+@media only screen and (min-width: 1440px) {
+  .personal-data__trigger {
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .personal-data__trigger svg {
+    width: 12px;
+    height: 8px;
+  }
 }

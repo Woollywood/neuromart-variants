@@ -4,21 +4,6 @@
   text-transform: uppercase;
   color: var(--secondary);
 }
-@media only screen and (min-width: 768px) {
-  .title-block {
-    font-size: 20px;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .title-block {
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .title-block {
-    font-size: 32px;
-  }
-}
 
 .subtitle-block {
   font-family: var(--font-secondary);
@@ -26,17 +11,6 @@
   font-size: 13px;
   line-height: 16px;
   color: var(--primary);
-}
-@media only screen and (min-width: 768px) {
-  .subtitle-block {
-    font-size: 14px;
-    line-height: 16px;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .subtitle-block {
-    text-align: center;
-  }
 }
 
 .page-title {
@@ -48,12 +22,37 @@
   color: var(--secondary);
   margin-bottom: 12px;
 }
+
+@media only screen and (min-width: 768px) {
+  .title-block {
+    font-size: 20px;
+  }
+
+  .subtitle-block {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
 @media only screen and (min-width: 1180px) {
+  .title-block {
+    text-align: center;
+  }
+
+  .subtitle-block {
+    text-align: center;
+  }
+
   .page-title {
     font-size: 32px;
   }
 }
+
 @media only screen and (min-width: 1440px) {
+  .title-block {
+    font-size: 32px;
+  }
+
   .page-title {
     font-size: 48px;
     line-height: 40px;

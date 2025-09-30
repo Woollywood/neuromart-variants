@@ -1,6 +1,10 @@
 .breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 4px;
   white-space: nowrap;
   overflow: auto;
@@ -11,9 +15,21 @@
   scrollbar-width: none;
   font-size: 11px;
 }
+
 .breadcrumbs::-webkit-scrollbar {
   display: none;
 }
+
+.breadcrumbs__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+
 @media only screen and (min-width: 1180px) {
   .breadcrumbs {
     margin-right: 0;
@@ -21,9 +37,4 @@
     margin-bottom: 6px;
     font-size: 14px;
   }
-}
-.breadcrumbs__item {
-  display: flex;
-  align-items: center;
-  gap: 4px;
 }

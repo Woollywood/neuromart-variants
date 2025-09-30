@@ -2,6 +2,7 @@
   padding-top: 16px;
   padding-bottom: 24px;
 }
+
 @media only screen and (min-width: 1180px) {
   .catalog-slider-block {
     padding-top: 20px;

@@ -1,33 +1,37 @@
 .filters__wrapper {
   overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 4px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .filters__wrapper::-webkit-scrollbar {
   display: none;
 }
+
 .banner .filters__wrapper {
   padding-right: 8px;
 }
-@media only screen and (min-width: 1180px) {
-  .banner .filters__wrapper {
-    padding-right: 16px;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .filters__wrapper {
-    gap: 8px;
-  }
-}
+
 .filters__button {
   position: relative;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 8px;
   height: 32px;
   border-radius: 8px;
@@ -41,32 +45,30 @@
   text-transform: uppercase;
   word-wrap: nowrap;
 }
-@media only screen and (min-width: 1180px) {
-  .filters__button {
-    height: 40px;
-    font-size: 16px;
-    font-weight: 700;
-  }
-}
+
 .filters__button.desktop {
   display: none;
 }
-@media only screen and (min-width: 1180px) {
-  .filters__button.desktop {
-    display: flex;
-  }
-}
+
 .filters__button svg {
   color: #ff6412;
   width: 18px;
   height: 18px;
 }
+
 .filters__select {
   position: relative;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 8px;
   border-radius: 8px;
   padding: 6px 10px;
@@ -78,23 +80,43 @@
   text-transform: uppercase;
   color: var(--white);
 }
+
+.filters__select svg {
+  display: none;
+}
+
 @media only screen and (min-width: 1180px) {
+  .banner .filters__wrapper {
+    padding-right: 16px;
+  }
+
+  .filters__wrapper {
+    gap: 8px;
+  }
+
+  .filters__button {
+    height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .filters__button.desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .filters__select.mobile {
     display: none;
   }
-}
-@media only screen and (min-width: 1180px) {
+
   .filters__select {
     gap: 16px;
     height: 40px;
     font-size: 16px;
     padding: 8px 12px;
   }
-}
-.filters__select svg {
-  display: none;
-}
-@media only screen and (min-width: 1180px) {
+
   .filters__select svg {
     display: block;
     width: 16px;
