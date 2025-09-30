@@ -1,0 +1,57 @@
+include ../../mixins/provider
+
+-
+  const modalProducts = [
+    {
+      title: 'Женская обувь',
+      subtitle: 'Одежда для охоты, рыбалки и активного отдыха',
+      href: '#',
+    },
+    {
+      title: 'Женская обувь',
+      subtitle: 'Одежда для охоты, рыбалки и активного отдыха',
+      href: '#',
+    },
+    {
+      title: 'Женская обувь',
+      subtitle: 'Одежда для охоты, рыбалки и активного отдыха',
+      href: '#',
+    },
+    {
+      title: 'Женская обувь',
+      subtitle: 'Одежда для охоты, рыбалки и активного отдыха',
+      href: '#',
+    },
+    {
+      title: 'Женская обувь',
+      subtitle: 'Одежда для охоты, рыбалки и активного отдыха',
+      href: '#',
+    },
+    {
+      title: 'Женская обувь',
+      subtitle: 'Одежда для охоты, рыбалки и активного отдыха',
+      href: '#',
+    },
+    {
+      title: 'Женская обувь',
+      subtitle: 'Одежда для охоты, рыбалки и активного отдыха',
+      href: '#',
+    },
+    {
+      title: 'Женская обувь',
+      subtitle: 'Одежда для охоты, рыбалки и активного отдыха',
+      href: '#',
+    },
+  ];
+
+div.header-modal(data-component='header-modal')
+  div.header-modal__products
+    each product in modalProducts
+      a.header-modal__product(href=product.href)
+        div.header-modal__product-image-wrapper
+          div.header-modal__product-image
+            img(src="@img/o-theme/catalog-slide.png" alt="image")
+        div.header-modal__product-body
+          h3.header-modal__product-title= product.title
+          h4.header-modal__product-subtitle= product.subtitle
+  include ../../components/footer/o-modal-footer

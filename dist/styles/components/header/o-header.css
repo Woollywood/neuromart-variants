@@ -261,15 +261,32 @@
 }
 
 .hamburger__button {
-  width: 32px;
   height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   border-radius: 8px;
+  padding: 8px;
   backdrop-filter: blur(6.0000429153px);
   outline: 1px solid rgba(0, 0, 0, 0.12);
   outline-offset: -1px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+.hamburger__button_closed {
+  width: 32px;
+}
+.modal-open .hamburger__button_closed {
+  display: none !important;
+}
+.hamburger__button_opened {
+  display: none !important;
+}
+.modal-open .hamburger__button_opened {
+  display: flex !important;
 }
 .hamburger__button svg {
   color: #322d2a;

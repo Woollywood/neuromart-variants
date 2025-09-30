@@ -6,8 +6,11 @@ header.header(data-component='header')
       div.header__left-blocks
         div.header__left-blocks-top
           div.hamburger(data-component='hamburger')
-            button.hamburger__button.hamburger__button_desktop
+            button.hamburger__button.hamburger__button_closed(data-hamburger-button)
               +icon('s-menu')
+            button.hamburger__button.hamburger__button_opened(data-hamburger-button)
+              span Закрыть
+              +icon('s-close')
           div.header__categories(data-overflow)
             -
               const topCategories = [

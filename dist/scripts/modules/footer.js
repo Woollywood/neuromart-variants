@@ -4,7 +4,7 @@
     ?.querySelectorAll("[data-component='accordion']");
   const modalAccordions = document
     .querySelector("[data-component='modal-footer']")
-    .querySelectorAll("[data-component='accordion']");
+    ?.querySelectorAll("[data-component='accordion']");
 
   const accordions = [...(footerAccordions ?? []), ...(modalAccordions ?? [])];
 

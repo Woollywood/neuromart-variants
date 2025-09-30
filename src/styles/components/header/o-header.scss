@@ -275,14 +275,36 @@
 
 .hamburger {
   &__button {
-    width: 32px;
     height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
     border-radius: 8px;
+    padding: 8px;
     backdrop-filter: blur(6.000042915344238px);
     @include border(1px, rgba(0, 0, 0, 0.12));
+
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--secondary);
+    text-transform: uppercase;
+
+    &_closed {
+      width: 32px;
+
+      .modal-open & {
+        display: none !important;
+      }
+    }
+
+    &_opened {
+      display: none !important;
+
+      .modal-open & {
+        display: flex !important;
+      }
+    }
 
     svg {
       color: #322d2a;

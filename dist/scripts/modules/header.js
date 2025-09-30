@@ -72,6 +72,8 @@
 
     item.querySelectorAll('[data-hamburger-button]').forEach((button) => {
       button.addEventListener('click', () => {
+        console.log('click');
+
         isOpened = !isOpened;
         if (isOpened) {
           bodyScroll = window.scrollY;

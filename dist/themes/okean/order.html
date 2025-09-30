@@ -33,9 +33,14 @@
             <div class="header__left-blocks">
               <div class="header__left-blocks-top">
                 <div class="hamburger" data-component="hamburger">
-                  <button class="hamburger__button hamburger__button_desktop">
+                  <button class="hamburger__button hamburger__button_closed" data-hamburger-button>
                           <svg>
                             <use xlink:href="#s-menu"></use>
+                          </svg>
+                  </button>
+                  <button class="hamburger__button hamburger__button_opened" data-hamburger-button><span>Закрыть</span>
+                          <svg>
+                            <use xlink:href="#s-close"></use>
                           </svg>
                   </button>
                 </div>
@@ -346,112 +351,98 @@
       <div class="header-modal" data-component="header-modal">
         <div class="header-modal__products"><a class="header-modal__product" href="#">
             <div class="header-modal__product-image-wrapper">
-              <div class="header-modal__product-image"><img src="../../img/s-theme/products/product-01.png" alt="image"></div>
+              <div class="header-modal__product-image"><img src="../../img/o-theme/catalog-slide.png" alt="image"></div>
             </div>
             <div class="header-modal__product-body">
-              <h3 class="header-modal__product-title">Мужская</h3>
+              <h3 class="header-modal__product-title">Женская обувь</h3>
               <h4 class="header-modal__product-subtitle">Одежда для охоты, рыбалки и активного отдыха</h4>
             </div></a><a class="header-modal__product" href="#">
             <div class="header-modal__product-image-wrapper">
-              <div class="header-modal__product-image"><img src="../../img/s-theme/products/product-01.png" alt="image"></div>
+              <div class="header-modal__product-image"><img src="../../img/o-theme/catalog-slide.png" alt="image"></div>
             </div>
             <div class="header-modal__product-body">
-              <h3 class="header-modal__product-title">Мужская</h3>
+              <h3 class="header-modal__product-title">Женская обувь</h3>
               <h4 class="header-modal__product-subtitle">Одежда для охоты, рыбалки и активного отдыха</h4>
             </div></a><a class="header-modal__product" href="#">
             <div class="header-modal__product-image-wrapper">
-              <div class="header-modal__product-image"><img src="../../img/s-theme/products/product-01.png" alt="image"></div>
+              <div class="header-modal__product-image"><img src="../../img/o-theme/catalog-slide.png" alt="image"></div>
             </div>
             <div class="header-modal__product-body">
-              <h3 class="header-modal__product-title">Мужская</h3>
+              <h3 class="header-modal__product-title">Женская обувь</h3>
               <h4 class="header-modal__product-subtitle">Одежда для охоты, рыбалки и активного отдыха</h4>
             </div></a><a class="header-modal__product" href="#">
             <div class="header-modal__product-image-wrapper">
-              <div class="header-modal__product-image"><img src="../../img/s-theme/products/product-01.png" alt="image"></div>
+              <div class="header-modal__product-image"><img src="../../img/o-theme/catalog-slide.png" alt="image"></div>
             </div>
             <div class="header-modal__product-body">
-              <h3 class="header-modal__product-title">Мужская</h3>
+              <h3 class="header-modal__product-title">Женская обувь</h3>
+              <h4 class="header-modal__product-subtitle">Одежда для охоты, рыбалки и активного отдыха</h4>
+            </div></a><a class="header-modal__product" href="#">
+            <div class="header-modal__product-image-wrapper">
+              <div class="header-modal__product-image"><img src="../../img/o-theme/catalog-slide.png" alt="image"></div>
+            </div>
+            <div class="header-modal__product-body">
+              <h3 class="header-modal__product-title">Женская обувь</h3>
+              <h4 class="header-modal__product-subtitle">Одежда для охоты, рыбалки и активного отдыха</h4>
+            </div></a><a class="header-modal__product" href="#">
+            <div class="header-modal__product-image-wrapper">
+              <div class="header-modal__product-image"><img src="../../img/o-theme/catalog-slide.png" alt="image"></div>
+            </div>
+            <div class="header-modal__product-body">
+              <h3 class="header-modal__product-title">Женская обувь</h3>
+              <h4 class="header-modal__product-subtitle">Одежда для охоты, рыбалки и активного отдыха</h4>
+            </div></a><a class="header-modal__product" href="#">
+            <div class="header-modal__product-image-wrapper">
+              <div class="header-modal__product-image"><img src="../../img/o-theme/catalog-slide.png" alt="image"></div>
+            </div>
+            <div class="header-modal__product-body">
+              <h3 class="header-modal__product-title">Женская обувь</h3>
+              <h4 class="header-modal__product-subtitle">Одежда для охоты, рыбалки и активного отдыха</h4>
+            </div></a><a class="header-modal__product" href="#">
+            <div class="header-modal__product-image-wrapper">
+              <div class="header-modal__product-image"><img src="../../img/o-theme/catalog-slide.png" alt="image"></div>
+            </div>
+            <div class="header-modal__product-body">
+              <h3 class="header-modal__product-title">Женская обувь</h3>
               <h4 class="header-modal__product-subtitle">Одежда для охоты, рыбалки и активного отдыха</h4>
             </div></a>
         </div>
-        <div class="header-modal__buttons"><a class="header-modal-button" href="#">Прайс</a><a class="header-modal-button" href="#">Акции</a></div>
-        <div class="header-modal__contacts">
-          <div class="header-modal-contact">
-            <div class="header-modal-contact__name">Татьяна</div>
-            <div class="header-modal-contact__button header-modal-button">
-              <div class="header-modal-contact__phone"><a href="tel+7-906-512-25-55">+7-906-512-25-55</a></div>
-              <div class="header-modal-contact__icons"><a class="header-modal-contact__icon" href="#">
-                        <svg>
-                          <use xlink:href="#s-whatsapp"></use>
-                        </svg></a><a class="header-modal-contact__icon" href="#">
-                        <svg>
-                          <use xlink:href="#s-telegram"></use>
-                        </svg></a></div>
-            </div>
-            <div class="header-modal-button-outlined">mta37@stayer-tex.ru</div>
-          </div>
-          <div class="header-modal-contact">
-            <div class="header-modal-contact__name">Татьяна</div>
-            <div class="header-modal-contact__button header-modal-button">
-              <div class="header-modal-contact__phone"><a href="tel+7-906-512-25-55">+7-906-512-25-55</a></div>
-              <div class="header-modal-contact__icons"><a class="header-modal-contact__icon" href="#">
-                        <svg>
-                          <use xlink:href="#s-whatsapp"></use>
-                        </svg></a><a class="header-modal-contact__icon" href="#">
-                        <svg>
-                          <use xlink:href="#s-telegram"></use>
-                        </svg></a></div>
-            </div>
-            <div class="header-modal-button-outlined">mta37@stayer-tex.ru</div>
-          </div>
-        </div>
-        <footer class="footer" data-component="modal-footer">
+        <footer class="footer">
           <div class="footer__container container">
             <div class="footer__inner">
-              <div class="footer__accordions">
-                        <div class="accordion" data-component="accordion">
-                          <button class="accordion-trigger" data-component="accordion-trigger"><span>О компании</span>
-                            <div class="accordion-trigger__icon">
-                                      <svg>
-                                        <use xlink:href="#s-arrow-down"></use>
-                                      </svg>
-                            </div>
-                          </button>
-                          <div class="accordion__body"><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a></div>
-                        </div>
-                        <div class="accordion" data-component="accordion">
-                          <button class="accordion-trigger" data-component="accordion-trigger"><span>Интернет-Магазин</span>
-                            <div class="accordion-trigger__icon">
-                                      <svg>
-                                        <use xlink:href="#s-arrow-down"></use>
-                                      </svg>
-                            </div>
-                          </button>
-                          <div class="accordion__body"><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a></div>
-                        </div>
-                        <div class="accordion" data-component="accordion">
-                          <button class="accordion-trigger" data-component="accordion-trigger"><span>Информация</span>
-                            <div class="accordion-trigger__icon">
-                                      <svg>
-                                        <use xlink:href="#s-arrow-down"></use>
-                                      </svg>
-                            </div>
-                          </button>
-                          <div class="accordion__body"><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a></div>
-                        </div>
-                        <div class="accordion" data-component="accordion">
-                          <button class="accordion-trigger" data-component="accordion-trigger"><span>Мы с в Соц.Сетях</span>
-                            <div class="accordion-trigger__icon">
-                                      <svg>
-                                        <use xlink:href="#s-arrow-down"></use>
-                                      </svg>
-                            </div>
-                          </button>
-                          <div class="accordion__body"><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a><a class="accordion__link" href="#">Главная</a></div>
-                        </div>
+              <div class="footer__top">
+                <nav class="footer__nav">
+                  <div class="footer__nav-list">
+                    <p class="footer__nav-title">О компании</p>
+                    <ul class="footer__nav-list-item">
+                      <li class="footer__nav-item"><a class="footer__nav-link" href="#">Контакты</a></li>
+                      <li class="footer__nav-item"><a class="footer__nav-link" href="#">Реквизиты</a></li>
+                      <li class="footer__nav-item"><a class="footer__nav-link" href="#">Новости</a></li>
+                      <li class="footer__nav-item"><a class="footer__nav-link" href="#">Производство</a></li>
+                      <li class="footer__nav-item"><a class="footer__nav-link" href="#">Часто задаваемые вопросы</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer__nav-list">
+                    <p class="footer__nav-title">Магазин</p>
+                    <ul class="footer__nav-list-item">
+                      <li class="footer__nav-item"><a class="footer__nav-link" href="#">Личный кабинет</a></li>
+                      <li class="footer__nav-item"><a class="footer__nav-link" href="#">Доставка и оплата</a></li>
+                      <li class="footer__nav-item"><a class="footer__nav-link" href="#">Как сделать заказ</a></li>
+                    </ul>
+                  </div>
+                </nav>
+                <div class="footer__placeholder"></div>
+                <div class="footer__subscribtion">
+                  <p class="footer__subscribtion-title">Получайте выгодное предложение уже сейчас</p>
+                  <form class="footer__subscribtion-form">
+                    <input class="footer__subscribtion-input" placeholder="Введите свой E-mail">
+                    <button class="footer__subscribtion-button">Подписаться</button>
+                  </form>
+                  <p class="footer__subscription-agreement">Нажимая кнопку «Подписаться», я даю свое согласие на обработку персональных данных в соответствии с указанным <a href="#">здесь</a>текстом.</p>
+                </div>
               </div>
               <div class="footer__copyright copyright">
-                <p class="copyright__text">2025 stayer-tex.ru © Все права защищены biznetman ® - создание сайта</p><a class="copyright__link" href="#">Пользовательское соглашение</a>
+                <p class="copyright__text">2025 okeanobuvi.ru © Все права защищены biznetman ® - создание сайта</p><a class="copyright__link" href="#">Пользовательское соглашение</a>
               </div>
             </div>
           </div>
