@@ -1,22 +1,15 @@
 .agreement {
   padding: 14px 0 44px;
 }
-@media only screen and (min-width: 1180px) {
-  .agreement {
-    padding: 24px 0 76px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .agreement {
-    padding: 30px 0 106px;
-  }
-}
+
 .agreement__top {
   margin-bottom: 8px;
 }
+
 .agreement__content > *:not(:last-child) {
   margin-bottom: 20px;
 }
+
 .agreement__content p {
   font-family: var(--font-secondary);
   font-style: italic;
@@ -24,31 +17,13 @@
   line-height: 16px;
   color: var(--secondary);
 }
-@media only screen and (min-width: 1180px) {
-  .agreement__content p {
-    max-width: 616px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .agreement__content p {
-    max-width: 960px;
-  }
-}
+
 .agreement__content ol {
   list-style-type: none;
   counter-reset: num;
   padding-left: 16px;
 }
-@media only screen and (min-width: 1180px) {
-  .agreement__content ol {
-    padding-left: 248px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .agreement__content ol {
-    padding-left: 316px;
-  }
-}
+
 .agreement__content ol li {
   position: relative;
   text-indent: 18px;
@@ -57,25 +32,11 @@
   line-height: 16px;
   color: var(--secondary);
 }
-@media only screen and (min-width: 1180px) {
-  .agreement__content ol li {
-    text-indent: 24px;
-    max-width: 496px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .agreement__content ol li {
-    max-width: 610px;
-  }
-}
+
 .agreement__content ol li:not(:last-child) {
   margin-bottom: 8px;
 }
-@media only screen and (min-width: 1180px) {
-  .agreement__content ol li:not(:last-child) {
-    margin-bottom: 16px;
-  }
-}
+
 .agreement__content ol li::before {
   content: "(" counter(num) ")";
   counter-increment: num;
@@ -88,8 +49,48 @@
   text-transform: uppercase;
   color: #d10c54;
 }
+
 @media only screen and (min-width: 1180px) {
+  .agreement {
+    padding: 24px 0 76px;
+  }
+
+  .agreement__content p {
+    max-width: 616px;
+  }
+
+  .agreement__content ol {
+    padding-left: 248px;
+  }
+
+  .agreement__content ol li {
+    text-indent: 24px;
+    max-width: 496px;
+  }
+
+  .agreement__content ol li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
   .agreement__content ol li::before {
     left: -24px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .agreement {
+    padding: 30px 0 106px;
+  }
+
+  .agreement__content p {
+    max-width: 960px;
+  }
+
+  .agreement__content ol {
+    padding-left: 316px;
+  }
+
+  .agreement__content ol li {
+    max-width: 610px;
   }
 }

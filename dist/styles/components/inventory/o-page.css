@@ -1,130 +1,142 @@
 .inventory {
   padding: 12px 0 40px;
 }
-@media only screen and (min-width: 768px) {
-  .inventory {
-    padding: 14px 0 96px;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .inventory {
-    padding: 16px 0 128px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .inventory {
-    padding-top: 14px;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .inventory {
-    padding-top: 16px;
-  }
-}
+
 .inventory__grid {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  column-gap: 4px;
+  -webkit-column-gap: 4px;
+     -moz-column-gap: 4px;
+          column-gap: 4px;
   row-gap: 6px;
   overflow: hidden;
 }
-@media only screen and (min-width: 768px) {
-  .inventory__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .inventory__grid {
-    overflow: visible;
-    position: relative;
-    grid-template-columns: repeat(6, 1fr);
-    column-gap: 16px;
-    row-gap: 16px;
-  }
-}
+
 .inventory__header {
   position: relative;
   overflow: hidden;
 }
-@media only screen and (min-width: 1180px) {
-  .inventory__header {
-    position: static;
-    overflow: auto;
-  }
-}
+
 .inventory__title {
   margin-bottom: 16px;
 }
-@media only screen and (min-width: 1180px) {
-  .inventory__title {
-    margin-bottom: 4px;
-  }
-}
+
 .inventory__description {
   display: none;
 }
-@media only screen and (min-width: 1180px) {
-  .inventory__description {
-    display: block;
-    margin-bottom: 34px;
-  }
-}
+
 .inventory__filters {
   margin-bottom: 16px;
 }
-@media only screen and (min-width: 1180px) {
-  .inventory__filters {
-    margin-bottom: 20px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .inventory__filters {
-    margin-bottom: 24px;
-  }
-}
+
 .inventory__slider-section {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-column: 1/span 2;
 }
+
 .inventory__slider-section.border-top {
   margin-top: 72px;
 }
+
 .inventory__slider-section.border-top.bottom {
   margin-top: 34px;
 }
-@media only screen and (min-width: 1180px) {
-  .inventory__slider-section.border-top.bottom {
-    margin-top: 64px;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .inventory__slider-section.border-top {
-    margin-top: 112px;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .inventory__slider-section.border-bottom {
-    margin-top: 112px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .inventory__slider-section {
-    grid-column: 1/span 4;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .inventory__slider-section {
-    grid-column: 1/span 6;
-  }
-}
+
 .inventory__pagination {
   padding: 8px 0;
   margin: 6px 0 0;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
+
+@media only screen and (min-width: 768px) {
+  .inventory {
+    padding: 14px 0 96px;
+  }
+
+  .inventory {
+    padding-top: 14px;
+  }
+
+  .inventory__grid {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .inventory__slider-section {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/span 4;
+  }
+}
+
 @media only screen and (min-width: 1180px) {
+  .inventory {
+    padding: 16px 0 128px;
+  }
+
+  .inventory {
+    padding-top: 16px;
+  }
+
+  .inventory__grid {
+    overflow: visible;
+    position: relative;
+    -ms-grid-columns: (1fr)[6];
+    grid-template-columns: repeat(6, 1fr);
+    -webkit-column-gap: 16px;
+       -moz-column-gap: 16px;
+            column-gap: 16px;
+    row-gap: 16px;
+  }
+
+  .inventory__header {
+    position: static;
+    overflow: auto;
+  }
+
+  .inventory__title {
+    margin-bottom: 4px;
+  }
+
+  .inventory__description {
+    display: block;
+    margin-bottom: 34px;
+  }
+
+  .inventory__filters {
+    margin-bottom: 20px;
+  }
+
+  .inventory__slider-section.border-top.bottom {
+    margin-top: 64px;
+  }
+
+  .inventory__slider-section.border-top {
+    margin-top: 112px;
+  }
+
+  .inventory__slider-section.border-bottom {
+    margin-top: 112px;
+  }
+
+  .inventory__slider-section {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/span 6;
+  }
+
   .inventory__pagination {
     margin: 32px 0 0;
     padding: 8px 0;
     border-top: none;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .inventory__filters {
+    margin-bottom: 24px;
   }
 }
