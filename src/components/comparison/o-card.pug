@@ -1,0 +1,14 @@
+div.comparison-card
+  div.comparison-card__card
+    div.comparison-card__image
+      img(src="@img/o-theme/catalog-slide.png", alt="image")
+    div.card-content
+      h3.card-content__price-wrapper
+        span.card-content__price.card-content__price_old 7 712 руб
+        span.card-content__price.card-content__price_new 500 руб
+      p.card-content__subtitle(href='#') Босоножки SEBASTIAN Босоножки SEBASTIAN Босоножки SEBASTIAN
+  div.comparison-card__list
+    each comparisonItem in [0, 1, 2, 3, 4, 5, 6, 7]
+      div.comparison-card__list-item
+        p.comparison-card__list-item-subtitle Пол:
+        p.comparison-card__list-item-description Женский

@@ -1,0 +1,45 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.comparison-filters {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+
+  @include media('lg') {
+    gap: 8px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include border(1px, rgba(0, 0, 0, 0.12));
+
+    height: 32px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include media('lg') {
+      height: 40px;
+      padding: 6px 8px;
+
+      font-size: 16px;
+    }
+
+    svg {
+      color: rgba(0, 0, 0, 0.4);
+      width: 14px;
+      height: 14px;
+    }
+
+    &.clear {
+      background-color: rgba(0, 0, 0, 0.08);
+      outline: none;
+    }
+  }
+}

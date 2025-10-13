@@ -1,0 +1,126 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.brands-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+
+  @include media('lg') {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+
+    @include media('lg') {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+  }
+
+  &__item {
+    &:nth-child(even) {
+      margin-bottom: 32px;
+
+      @include media('lg') {
+        margin: 0;
+      }
+    }
+
+    @include media('lg') {
+      display: grid;
+      grid-template-columns: 2fr 14fr;
+      gap: 8px;
+    }
+  }
+
+  &__item-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+
+    @include media('lg') {
+      display: block;
+      width: auto;
+      font-size: 48px;
+    }
+  }
+
+  &__item-button {
+    width: 100%;
+    padding: 4px 10px;
+    height: 32px;
+    border-radius: 8px;
+    @include border(1px, rgba(0, 0, 0, 0.12));
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+
+    @include media('lg') {
+      height: 40px;
+      padding: 6px 8px;
+    }
+  }
+
+  &__item-button-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include media('lg') {
+      font-size: 16px;
+    }
+  }
+
+  &__item-button-labels {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    @include media('lg') {
+      gap: 6px;
+    }
+  }
+
+  &__item-button-label {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 6px;
+    border-radius: 6px;
+
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include media('lg') {
+      height: 24px;
+      font-size: 14px;
+    }
+
+    &.accent {
+      background-color: #d10c54;
+    }
+
+    &.dark {
+      background-color: black;
+    }
+  }
+}

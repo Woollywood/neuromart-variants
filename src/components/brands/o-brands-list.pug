@@ -1,0 +1,153 @@
+-
+  const brandsList = [
+    {
+      symbol: 'A',
+      brands: [
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA',
+          isNew: true
+        },
+        {
+          label: 'A.ANBAINA',
+          isNew: true,
+          isPercent: true
+        },
+        {
+          label: 'A.ANBAINA',
+          isPercent: true
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+      ]
+    },
+    {
+      symbol: 'A',
+      brands: [
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA',
+          isNew: true
+        },
+        {
+          label: 'A.ANBAINA',
+          isNew: true,
+          isPercent: true
+        },
+        {
+          label: 'A.ANBAINA',
+          isPercent: true
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+      ]
+    },
+    {
+      symbol: 'A',
+      brands: [
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA',
+          isNew: true
+        },
+        {
+          label: 'A.ANBAINA',
+          isNew: true,
+          isPercent: true
+        },
+        {
+          label: 'A.ANBAINA',
+          isPercent: true
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+        {
+          label: 'A.ANBAINA'
+        },
+      ]
+    },
+  ]
+
+div.brands-list
+  each brand in brandsList
+    div.brands-list__item
+      p.brands-list__item-symbol= brand.symbol
+      div.brands-list__items
+        each brandItem in brand.brands
+          button.brands-list__item-button
+            span.brands-list__item-button-title= brandItem.label
+            if brandItem.isNew || brandItem.isPercent
+              div.brands-list__item-button-labels
+                if brandItem.isPercent
+                  div.brands-list__item-button-label.dark %
+                if brandItem.isNew
+                  div.brands-list__item-button-label.accent NEW

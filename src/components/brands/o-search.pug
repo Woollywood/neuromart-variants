@@ -1,0 +1,11 @@
+include ../../mixins/provider
+
+div.search-brands
+  div.search-brands__top
+    div.search-brands__input.input-search-brand
+      +icon('o-search')
+      input(type="text" placeholder='Поиск по производителям').input-search-brand__input
+    button.search-brands__submit-button Поиск
+  div.search-brands__symbols
+    each symbol in ['0-9', '-', 'A', 'B', 'C', 'A', 'B', 'C' ,'A', 'B', 'C' ,'A', 'B', 'C' ,'A', 'B', 'C' ,'A', 'B', 'C' ,'A', 'B', 'C']
+      button.search-brands__symbol= symbol

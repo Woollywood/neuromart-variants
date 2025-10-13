@@ -1,0 +1,30 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.brands {
+  &__container {
+  }
+
+  &__wrapper {
+    margin: 16px 0 72px;
+
+    @include media('lg') {
+      margin: 16px 0 172px;
+    }
+  }
+
+  &__top {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+  }
+
+  &__search {
+    margin-bottom: 32px;
+
+    @include media('lg') {
+      margin-bottom: 92px;
+    }
+  }
+}
