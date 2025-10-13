@@ -1,0 +1,71 @@
+extends ../../layouts/themes/o-layout
+
+include ../../mixins/provider
+include ../../mixins/contact/o-section
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/o-theme.css")
+  link(rel="stylesheet" href="../../styles/themes/o-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/o-header.css")
+  link(rel="stylesheet" href="../../styles/components/header-modal/o-header-modal.css")
+  link(rel="stylesheet" href="../../styles/components/footer/o-footer.css")
+  link(rel="stylesheet" href="../../styles/components/breadcrumbs/o-breadcrumbs.css")
+  link(rel="stylesheet" href="../../styles/components/pagination/o-pagination.css")
+  link(rel="stylesheet" href="../../styles/components/inputs/o-inputs.css")
+  link(rel="stylesheet" href="../../styles/components/contact/o-page.css")
+  link(rel="stylesheet" href="../../styles/components/contact/o-accordion.css")
+  link(rel="stylesheet" href="../../styles/components/contact/o-section.css")
+
+block scripts
+  script(src="https://api-maps.yandex.ru/v3/?apikey=32d0cc07-0fdf-4f55-8fa8-b03a63b80dc3&lang=ru_RU")
+  script(src="../../scripts/modules/contact.js")
+  script(src="../../scripts/modules/map.js")
+  script(src="../../scripts/core/ui-kit.js")
+
+
+block main
+  -
+    const path = ['Магазин мужской одежды', 'Контакты'];
+    const sections = [
+      {
+        title: 'Главный офис',
+        accordions: [
+          {
+            label: 'Бухгалтерия',
+            content: {
+              address: 'Адрес: г.Москва, Сигнальный проезд 16, строение 20 (продаж нет).',
+              phone: '+7 (499) 703-39-03',
+              text: '(продаж нет)',
+            },
+          },
+          {
+            label: 'Бухгалтерия',
+            content: {
+              address: 'Адрес: г.Москва, Сигнальный проезд 16, строение 20 (продаж нет).',
+              phone: '+7 (499) 703-39-03',
+              text: '(продаж нет)',
+            },
+          },
+          {
+            label: 'Бухгалтерия',
+            content: {
+              address: 'Адрес: г.Москва, Сигнальный проезд 16, строение 20 (продаж нет).',
+              phone: '+7 (499) 703-39-03',
+              text: '(продаж нет)',
+            },
+          },
+        ],
+      }
+    ];
+  div.contact
+    div.contact__container.container
+      div.contact__wrapper
+        div.contact__top
+          +breadcrumbs(path)
+          h1.contact__title.page-title Контакты
+        div.contact__cols
+          div.contact__sections
+            each section in sections
+              +section(section)
+          div.contact__sticky-section
+            include ../../components/contact/o-submit-section

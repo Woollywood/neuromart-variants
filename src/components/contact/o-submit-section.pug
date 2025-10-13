@@ -1,0 +1,13 @@
+include ../../mixins/provider
+
+div.contact-section.submit
+  div.contact-section__title Вы всегда можете связаться с нами в удобное время:
+  div.contact-section__accordions
+    +fieldInput('Ваше имя', true)
+    +fieldInput('Телефон', true)
+    +fieldInput('E-mail')
+    +fieldInput('Тема обращения', true)
+    +fieldSelect('Сформулируйте Ваш Вопрос', false, 'outlined')
+  div.contact-section__checkbox
+    +checkbox('я даю согласие на обработку своих персональных данных')
+  button.contact-section__submit-button Отправить
