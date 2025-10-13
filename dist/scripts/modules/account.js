@@ -11,10 +11,27 @@ if (account && trigger && personalData) {
 
 const slider = document.querySelector("[data-component='history-slider']");
 if (slider) {
+  const type = slider.dataset.type ?? 's';
+  const getOptions = () => {
+    switch (type) {
+      case 's':
+        return { gap: 4, autoWidth: true };
+      case 'o':
+        return {
+          gap: 4,
+          autoWidth: true,
+          mediaQuery: 'min',
+          breakpoints: {
+            [getMediaCssParsedVariable(MediaSizes.LG)]: { perPage: 3, gap: 8, autoWidth: false },
+          },
+        };
+      default:
+        return { gap: 4, autoWidth: true };
+    }
+  };
   new Splide(slider, {
     pagination: false,
     arrows: false,
-    gap: 4,
-    autoWidth: true,
+    ...getOptions(),
   }).mount();
 }

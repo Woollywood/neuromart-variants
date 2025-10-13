@@ -1,0 +1,95 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.personal-data {
+  &__trigger {
+    width: 100%;
+    height: 32px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    @include media('xl') {
+      height: 40px;
+      font-size: 16px;
+    }
+
+    svg {
+      width: 10px;
+      height: 6px;
+      color: black;
+      transform: rotate(-90deg);
+
+      @include media('xl') {
+        width: 12px;
+        height: 8px;
+      }
+
+      .modal-opened & {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+
+    .modal-opened & {
+      display: block;
+
+      margin-top: 16px;
+      margin-bottom: 64px;
+    }
+  }
+
+  &__dates {
+    padding: 0 12px;
+    margin-bottom: 19px;
+  }
+
+  &__date {
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  &__form {
+  }
+
+  &__form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    margin-bottom: 16px;
+  }
+
+  &__submit-button {
+    width: 100%;
+    height: 64px;
+    padding: 10px 12px;
+    border-radius: 32px;
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 900;
+    font-style: italic;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+}

@@ -1,0 +1,48 @@
+.account {
+  padding: 14px 0 48px;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1180px) {
+  .account {
+    padding: 20px 0 76px;
+  }
+}
+.account__personal-data-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media only screen and (min-width: 1180px) {
+  .account__personal-data-wrapper {
+    gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.account__content {
+  margin-top: 50px;
+}
+@media only screen and (min-width: 1180px) {
+  .account__content {
+    margin-top: 62px;
+  }
+}
+.modal-opened .account__content {
+  margin: 0;
+  display: none;
+}
+.account__history {
+  margin-bottom: 32px;
+}
+@media only screen and (min-width: 1180px) {
+  .account__history {
+    margin-bottom: 80px;
+  }
+}
+.account__bought {
+  margin-bottom: 14px;
+}
+@media only screen and (min-width: 1180px) {
+  .account__bought {
+    margin-bottom: 80px;
+  }
+}

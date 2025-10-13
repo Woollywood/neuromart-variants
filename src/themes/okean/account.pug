@@ -1,0 +1,44 @@
+extends ../../layouts/themes/o-layout
+
+include ../../mixins/provider
+
+block styles
+  link(rel="stylesheet" href="../../styles/themes/o-theme.css")
+  link(rel="stylesheet" href="../../styles/themes/o-typography.css")
+  link(rel="stylesheet" href="../../styles/components/header/o-header.css")
+  link(rel="stylesheet" href="../../styles/components/header-modal/o-header-modal.css")
+  link(rel="stylesheet" href="../../styles/components/footer/o-footer.css")
+  link(rel="stylesheet" href="../../styles/components/card-button/o-card-button.css")
+  link(rel="stylesheet" href="../../styles/components/catalog-slider/o-catalog-slider.css")
+  link(rel="stylesheet" href="../../styles/components/breadcrumbs/o-breadcrumbs.css")
+  link(rel="stylesheet" href="../../styles/components/pagination/o-pagination.css")
+  link(rel="stylesheet" href="../../styles/components/inputs/o-inputs.css")
+  link(rel="stylesheet" href="../../styles/components/account/o-page.css")
+  link(rel="stylesheet" href="../../styles/components/account/o-history.css")
+  link(rel="stylesheet" href="../../styles/components/account/o-personal-data.css")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css")
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js")
+  script(src="../../scripts/modules/catalogSlider.js")
+  script(src="../../scripts/modules/account.js")
+  script(src="../../scripts/core/ui-kit.js")
+
+block main
+  - const path = ['Магазин обуви', 'личный кабинет'];
+
+  div.account(data-component='account')
+    div.account__container.container
+      div.account__wrapper
+        div.account__top
+          +breadcrumbs(path)
+          h1.account__title.page-title Личный кабинет
+      div.account__personal-data-wrapper
+        include ../../components/account/o-personal-data
+      div.account__content
+        div.account__history
+          include ../../components/account/o-history
+        div.account__bought.border-top
+          include ../../components/catalog-slider/o-catalog-slider-section
+        div.account__recommendatitions.border-top
+          include ../../components/catalog-slider/o-catalog-slider-section

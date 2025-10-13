@@ -1,0 +1,66 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.account {
+  padding: 14px 0 48px;
+  overflow: hidden;
+
+  @include media('lg') {
+    padding: 20px 0 76px;
+  }
+
+  &__container {
+  }
+
+  &__wrapper {
+  }
+
+  &__top {
+  }
+
+  &__title {
+  }
+
+  &__personal-data-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include media('lg') {
+      gap: 8px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__personal-data {
+  }
+
+  &__content {
+    margin-top: 50px;
+
+    @include media('lg') {
+      margin-top: 62px;
+    }
+
+    .modal-opened & {
+      margin: 0;
+      display: none;
+    }
+  }
+
+  &__history {
+    margin-bottom: 32px;
+
+    @include media('lg') {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__bought {
+    margin-bottom: 14px;
+
+    @include media('lg') {
+      margin-bottom: 80px;
+    }
+  }
+}
