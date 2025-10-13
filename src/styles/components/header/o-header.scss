@@ -95,6 +95,14 @@
     padding-right: 8px;
     @include hideScrollbar();
 
+    .modal-open & {
+      display: none;
+    }
+
+    .categories-open & {
+      display: none;
+    }
+
     &.mobile {
       @include media('lg') {
         display: none;

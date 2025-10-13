@@ -1,0 +1,23 @@
+include ../../mixins/provider
+
+-
+  const modalCategories = ['Балетки', 'Балетки', 'Балетки', 'Балетки', 'Балетки', 'Балетки', 'Балетки', 'Балетки', 'Балетки', 'Балетки', 'Балетки', 'Балетки'];
+
+div.categories-modal(data-component='categories-modal')
+  div.categories-modal__top
+    button.categories-modal__button
+      +icon('s-arrow-down')
+      span Назад
+    h2.categories-modal__title.page-title Женская обувь
+  div.categories-modal__select
+    button.categories-modal__button.select
+      span Смотреть все
+      +icon('s-arrow-down')
+  div.categories-modal__categories
+    each section in ['по типу:', 'по сезону:', 'по цвету:']
+      div.categories-modal__categories-item
+        p.categories-modal__categories-title= section
+        div.categories-modal__categories-list
+          each category in modalCategories
+            a(href="#").categories-modal__category= category
+  button.categories-modal__all Смотреть все

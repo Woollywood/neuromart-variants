@@ -1,3 +1,6 @@
+.footer.modal-open {
+  display: none;
+}
 .footer__inner {
   padding: 16px 0;
 }

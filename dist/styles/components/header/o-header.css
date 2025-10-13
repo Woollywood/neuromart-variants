@@ -91,6 +91,12 @@
 .header__categories::-webkit-scrollbar {
   display: none;
 }
+.modal-open .header__categories {
+  display: none;
+}
+.categories-open .header__categories {
+  display: none;
+}
 @media only screen and (min-width: 1180px) {
   .header__categories.mobile {
     display: none;

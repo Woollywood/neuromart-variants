@@ -66,30 +66,58 @@
 })();
 
 (() => {
-  document.querySelectorAll("[data-component='hamburger']").forEach((item) => {
-    let bodyScroll = 0;
-    let isOpened = false;
+  let isModalOpen = false;
+  let isCategoriesOpen = false;
 
-    item.querySelectorAll('[data-hamburger-button]').forEach((button) => {
-      button.addEventListener('click', () => {
-        isOpened = !isOpened;
-        if (isOpened) {
-          bodyScroll = window.scrollY;
-        }
+  let bodyScroll = 0;
+  let isOpened = false;
 
-        document.querySelector("[data-component='header-modal']")?.classList.toggle('modal-open');
-        document.querySelector("[data-layout-part='main']")?.classList.toggle('modal-open');
-        document.querySelector("[data-component='header']")?.classList.toggle('modal-open');
-        document.querySelector("[data-component='footer']")?.classList.toggle('modal-open');
-
-        if (isOpened) {
-          window.scrollTo({ top: 0 });
-        } else {
-          window.scrollTo({ top: bodyScroll });
-        }
-      });
-    });
+  document.querySelector("[data-component='hamburger']").addEventListener('click', () => {
+    if (isCategoriesOpen) {
+      toggleCategories();
+    } else {
+      toggleHamburger();
+    }
   });
+  document.querySelectorAll('.header__category').forEach((category) =>
+    category.addEventListener('click', () => {
+      toggleCategories();
+    })
+  );
+
+  const toggleModal = (cb) => {
+    isOpened = !isOpened;
+    if (isOpened) {
+      bodyScroll = window.scrollY;
+    }
+
+    cb();
+
+    if (isOpened) {
+      window.scrollTo({ top: 0 });
+    } else {
+      window.scrollTo({ top: bodyScroll });
+    }
+  };
+
+  const toggleHamburger = () =>
+    toggleModal(() => {
+      isModalOpen = !isModalOpen;
+      document.querySelector("[data-component='header-modal']")?.classList.toggle('modal-open');
+      document.querySelector("[data-layout-part='main']")?.classList.toggle('modal-open');
+      document.querySelector("[data-component='header']")?.classList.toggle('modal-open');
+      document.querySelector("[data-component='footer']")?.classList.toggle('modal-open');
+    });
+
+  const toggleCategories = () =>
+    toggleModal(() => {
+      isCategoriesOpen = !isCategoriesOpen;
+      document.querySelector("[data-component='categories-modal']")?.classList.toggle('modal-open');
+      document.querySelector("[data-layout-part='main']")?.classList.toggle('modal-open');
+      document.querySelector("[data-component='header']")?.classList.toggle('modal-open');
+      document.querySelector("[data-component='header']")?.classList.toggle('categories-open');
+      document.querySelector("[data-component='footer']")?.classList.toggle('modal-open');
+    });
 })();
 
 (() => {

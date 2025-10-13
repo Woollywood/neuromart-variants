@@ -1,0 +1,124 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.categories-modal {
+  display: none;
+  max-width: 100vw;
+  overflow-y: hidden;
+
+  &.modal-open {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: calc(var(--header-height) + 4px);
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding: 8px;
+
+    @include media('lg') {
+      display: none;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    height: 32px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.08);
+
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &.select {
+      svg {
+        transform: rotate(-90deg);
+        color: rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    svg {
+      color: black;
+      transform: rotate(90deg);
+      width: 12px;
+      height: 6px;
+    }
+  }
+
+  &__title {
+  }
+
+  &__select {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    margin-bottom: 32px;
+  }
+
+  &__categories {
+    margin-bottom: 60px;
+  }
+
+  &__categories-item {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__categories-title {
+    font-family: var(--font-secondary);
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 4px;
+  }
+
+  &__categories-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  &__category {
+    border-radius: 8px;
+    @include border(1px, rgba(0, 0, 0, 0.12));
+    height: 32px;
+    padding: 4px 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__all {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+
+    border-radius: 8px;
+    @include border(1px, rgba(0, 0, 0, 0.12));
+    background-color: black;
+
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
