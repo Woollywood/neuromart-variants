@@ -85,11 +85,13 @@ const overflowItems = (container) => {
     }
   };
 
-  const lastItemBox = items[items.length - 1].getBoundingClientRect();
-  const itemsWidth = lastItemBox.right - containerBox.left;
-  if (itemsWidth > containerBox.width) {
-    overflowItemsInner();
-  }
+  try {
+    const lastItemBox = items[items.length - 1]?.getBoundingClientRect();
+    const itemsWidth = lastItemBox.right - containerBox.left;
+    if (itemsWidth > containerBox.width) {
+      overflowItemsInner();
+    }
+  } catch (error) {}
 };
 
 const unoverflowItems = (container) => {

@@ -1,0 +1,55 @@
+-
+  const products = [
+    {
+      title: 'Костюм Горка Зима Финл. ПК олива',
+      sizeCount: '3 размера, ',
+      productCount: '9 шт.',
+      price: '16 820'
+    },
+    {
+      title: 'Костюм Горка Зима Финл. ПК олива',
+      sizeCount: '3 размера, ',
+      productCount: '9 шт.',
+      price: '16 820'
+    },
+    {
+      title: 'Костюм Горка Зима Финл. ПК олива',
+      sizeCount: '3 размера, ',
+      productCount: '9 шт.',
+      price: '16 820'
+    },
+    {
+      title: 'Костюм Горка Зима Финл. ПК олива',
+      sizeCount: '3 размера, ',
+      productCount: '9 шт.',
+      price: '16 820'
+    }
+  ]
+
+div.header-cart(header-cart)
+  div.header-cart__header
+    div.header-cart__title Корзина
+    button.header-cart__clear Очистить список
+  div.header-cart__separator
+  div.header-cart__content
+    div.header-cart__products
+      each product in products
+        div.header-cart__product.product-header-cart
+          div.product-header-cart__image
+            img(src="@img/i-theme/detail.png" alt="image")
+          div.product-header-cart__text-info
+            div.product-header-cart__title= product.title
+            div.product-header-cart__subtitle= product.sizeCount
+                span= product.productCount
+          div.product-header-cart__right
+            div.product-header-cart__price= product.price
+              span руб
+            div.product-header-cart__separator
+            button.product-header-cart__delete убрать
+  div.header-cart__separator
+  div.header-cart__footer
+    div.header-cart__price-wrapper
+      div.header-cart__price-label итого:
+      div.header-cart__price-value 800 000
+        span руб
+    a.header-cart__link(href='#') перейти в корзину

@@ -1,0 +1,240 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.add-cart-modal {
+  display: none;
+  &.open {
+    display: block;
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  overflow: hidden;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark);
+    opacity: 0.7;
+  }
+
+  &__modal-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__modal {
+    max-width: 466px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: var(--white);
+  }
+
+  &__separator {
+    width: 100%;
+    height: 1px;
+    background-color: var(--light);
+  }
+
+  &__header {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--dark);
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 8px;
+    background-color: var(--light);
+    padding: 8px 12px;
+    height: 40px;
+
+    font-family: var(--font-secondary);
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--dark);
+
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &__content {
+  }
+
+  &__product {
+    padding: 4px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__product-image {
+    position: relative;
+    width: 56px;
+    height: 64px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__product-text-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+
+  &__product-title {
+    color: var(--dark);
+  }
+
+  &__product-subtitle {
+    color: var(--primary);
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  &__dimensions {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__dimension {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__dimension-size {
+    font-family: var(--font-secondary);
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--dark);
+
+    span {
+      font-style: italic;
+    }
+  }
+
+  &__dimension-counter-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__dimension-counter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__dimension-counter-decrement,
+  &__dimension-counter-increment {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light);
+    border-radius: 12px;
+
+    font-family: var(--font-secondary);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--dark);
+  }
+
+  &__dimension-counter-value {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 115px;
+    border-radius: 8px;
+    @include border(1px, var(--light));
+  }
+
+  &__dimension-counter-label {
+    font-family: var(--font-secondary);
+    font-weight: 800;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--dark);
+  }
+
+  &__footer {
+    padding: 16px;
+  }
+
+  &__add-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 8px 12px;
+    background-color: var(--primary);
+    border-radius: 8px;
+
+    font-family: var(--font-secondary);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--white);
+    width: 100%;
+  }
+}

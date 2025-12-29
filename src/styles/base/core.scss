@@ -1,8 +1,15 @@
 @use '../mixins' as *;
 @use '../variables' as *;
 
-body {
+html {
   overflow-x: hidden;
+}
+
+[data-layout-part="main"] {
+  padding-top: var(--header-height);
+}
+
+body {
   font-family: var(--font-primary);
   font-weight: var(--font-weight);
 

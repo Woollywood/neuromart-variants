@@ -23,8 +23,11 @@ header.header(data-component='header')
           div.header__actions
             a.header__action(href="#")
               +icon('s-account-icon')
-            a.header__action(href="#")
-              +icon('s-cart-icon')
+            div.header__action-wrapper
+              button.header__action(href="#" cart-button)
+                +icon('s-cart-icon')
+                div.header__action-budge 4
+              include ../header-cart/s-header-cart
         div.header__separator.header__separator_inner
         div.header__bottom-block(data-overflow)
           div.hamburger(data-component='hamburger')

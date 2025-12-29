@@ -1,0 +1,63 @@
+include ../../mixins/provider
+
+-
+  const itemModalList = [
+    { price: '5 200', label: 'Крупный опт' },
+    { price: '5 200', label: 'Крупный опт' },
+    { price: '5 200', label: 'Крупный опт' },
+  ];
+
+  const sections = [
+    {
+      'Сезон': 'демисезон',
+      'Размер на модели': '52-54',
+      'Рост модели на фото': '185 см',
+      'Параметры модели на фото (ОГ-ОТ-ОБ)': '110-98-112'
+    },
+    {
+      'Сезон': 'демисезон',
+      'Размер на модели': '52-54',
+      'Рост модели на фото': '185 см',
+      'Параметры модели на фото (ОГ-ОТ-ОБ)': '110-98-112'
+    }
+  ]
+
+  const advantages = ['Тёплый флис: удержание тепла и вентиляция', 'Универсальный дизайн: для рыбалки, охоты, дачи, работы', 'Надёжная защита от ветра и сырости', 'Быстрая сушка и простой уход', 'Прочные швы и свободная посадка', 'Оптимально для межсезонья, ранней зимы и прохлады']
+
+div.details-modal(details-modal)
+  div.details-modal__overlay
+  div.details-modal__modal
+    div.details-modal__modal-content
+      div.details-modal__header
+        button.details-modal__close(details-modal-close)
+          span Закрыть
+          +icon('s-close')
+      div.details-modal__content
+        div.details-modal__content-sections
+          div.details-modal__content-sections-wrapper
+            each section in sections
+              div
+                div.details__main-info-title Основная информация:
+                div.details__main-info-list
+                  each value, label in section
+                    div.details__main-info-item
+                      div.details__main-info-label= label
+                      div.details__main-info-separator
+                      div.details__main-info-label= value
+          div
+              div.details__main-info-title Описание:
+              p.details__main-info-description Флисовый мужской костюм — универсальное решение для рыбалки, охоты и активного отдыха на природе. Мягкий и легкий материал сохраняет тепло, защищает от ветра и быстро сохнет даже в полевых условиях. Костюм подходит для работы, ежедневной носки, прогулок и туризма: вы сможете носить его весной, осенью и зимой. Свободный крой не стесняет движения, а плотная флисовая ткань надёжно удерживает тепло, предотвращая переохлаждение. Подходит для занятий спортом, дачи, командировок и длительных выездов. Легко стирается, не требует специального ухода, комплектуется курткой с молнией, брюками, удобными карманами. Предусмотрены эластичные манжеты и пояса, что обеспечивает комфорт при активном движении. 
+              div.details__main-info-title Преимущества: 
+              ul.details__main-info-ul
+                each item in advantages
+                  li.details__main-info-ul-item= item
+              p.details__main-info-description Можно использовать с термобельем и другим слоем одежды. Купите мужской флисовый костюм и оставайтесь в тепле и комфорте в любой ситуации.
+      div.details-modal__footer
+      div.details__price-items
+        each item in itemModalList
+          div.details__price-item.price-item
+            div.price-item__value
+              span= item.price
+              | &nbsp;руб
+              div.price-item__label= item.label
+      button.details-modal__add-product добавить в корзину

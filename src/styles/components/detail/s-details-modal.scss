@@ -1,0 +1,150 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.details-modal {
+  display: none;
+  &.open {
+    display: block;
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  overflow: hidden;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark);
+    opacity: 0.7;
+  }
+
+  &__modal {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    max-height: 90vh;
+
+    @include media('lg') {
+      max-height: 100%;
+      height: 100%;
+      padding: 16px;
+    }
+  }
+
+  &__modal-content {
+    background-color: var(--white);
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--light-2);
+
+    @include media('lg') {
+      width: 620px;
+      padding: 16px;
+    }
+
+    @include media('xl') {
+      width: 466px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 28px;
+
+    @include media('xl') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 28px;
+    padding: 4px 8px;
+    background-color: var(--light-2);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 100%;
+    text-transform: uppercase;
+    border-radius: 8px;
+    color: var(--dark);
+
+    @include media('lg') {
+      font-size: 13px;
+      height: 32px;
+      padding: 8px 12px;
+    }
+
+    @include media('xl') {
+      height: 40px;
+      gap: 12px;
+      font-size: 16px;
+    }
+
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 26px;
+  }
+
+  &__content-sections {
+  }
+
+  &__content-sections-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 16px;
+  }
+
+  &__footer {
+  }
+
+  &__add-product {
+    font-family: var(--font-secondary);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    border-radius: 12px;
+    font-size: 20px;
+    height: 64px;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--white);
+
+    @include media('md') {
+      height: 48px;
+    }
+
+    @include media('xl') {
+      font-size: 24px;
+    }
+  }
+}
+
+.price-item {
+  &__value {
+  }
+
+  &__label {
+  }
+}

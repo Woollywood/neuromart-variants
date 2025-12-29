@@ -1,0 +1,59 @@
+include ../../mixins/provider
+
+-
+  const cartDimensions = [
+    {
+      size: '44–46',
+      secondSize: '(170 / 176)',
+      count: '5'
+    },
+    {
+      size: '44–46',
+      secondSize: '(170 / 176)',
+      count: '5'
+    },
+    {
+      size: '44–46',
+      secondSize: '(170 / 176)',
+      count: '5'
+    },
+    {
+      size: '44–46',
+      secondSize: '(170 / 176)',
+      count: '5'
+    },
+  ]
+
+div.add-cart-modal(add-cart-modal)
+  div.add-cart-modal__overlay
+  div.add-cart-modal__modal-wrapper
+    div.add-cart-modal__modal
+      div.add-cart-modal__header
+        div.add-cart-modal__title укажите размеры и количество
+        button.add-cart-modal__close(add-cart-modal-close)
+          span Закрыть
+          +icon('s-close')
+      div.add-cart-modal__separator
+      div.add-cart-modal__content
+        div.add-cart-modal__product
+          div.add-cart-modal__product-image
+            img(src="@img/i-theme/detail.png" alt="image")
+          div.add-cart-modal__product-text-wrapper
+            div.add-cart-modal__product-title Костюм Горка Зима Финл. ПК олива
+            div.add-cart-modal__product-subtitle 16 600
+              span руб
+        div.add-cart-modal__separator
+        div.add-cart-modal__dimensions
+          each dimension in cartDimensions
+            div.add-cart-modal__dimension
+              div.add-cart-modal__dimension-size= dimension.size
+                span= dimension.secondSize
+              div.add-cart-modal__dimension-counter-wrapper
+                div.add-cart-modal__dimension-counter
+                  button.add-cart-modal__dimension-counter-decrement -
+                  div.add-cart-modal__dimension-counter-value= dimension.count
+                  button.add-cart-modal__dimension-counter-increment +
+                div.add-cart-modal__dimension-counter-label шт.
+      div.add-cart-modal__separator
+      div.add-cart-modal__footer
+        button.add-cart-modal__add-cart в корзину

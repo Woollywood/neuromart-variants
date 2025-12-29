@@ -1,9 +1,39 @@
 include ../card-button/s-card-button
+include ../provider
 
 mixin inventoryCard(card)
+  -
+    const cartLabels = [
+      {
+        label: 'Новинка',
+        type: 'primary'
+      },
+      {
+        label: '-20%',
+        type: 'warning'
+      },
+    ]
+
+    const bottomLabels = [
+      {
+        label: '2 роста',
+        type: 'secondary',
+      }
+    ]
+
   div.card
     div.card__image
       img(src="@img/s-theme/inventory/card.png" alt="image")
+      div.card__labels
+        each label in cartLabels
+          div.card__label.md(class=label.type)
+            span= label.label
+      div.card__bottom-labels
+        each label in bottomLabels
+          div.card__label.lg(class=label.type)
+            div.card__label-arrow.up
+            span= label.label
+            div.card__label-arrow.down
     div.card-content.card__content.sm
       p.card-content__title= card.country
       h2.card-content__subtitle= card.title
