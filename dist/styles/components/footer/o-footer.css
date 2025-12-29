@@ -1,0 +1,229 @@
+.footer.modal-open {
+  display: none;
+}
+
+.footer__inner {
+  padding: 16px 0;
+}
+
+.footer__placeholder {
+  display: none;
+}
+
+.footer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 28px;
+  gap: 52px;
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 34px;
+  width: 100%;
+}
+
+.footer__nav-title {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.footer__nav-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.footer__nav-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+
+.footer__nav-link {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.footer__subscribtion-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.footer__subscribtion-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.footer__subscribtion-input {
+  font-size: 14px;
+  height: 48px;
+  padding: 8px;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.footer__subscribtion-button {
+  height: 48px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 12px 16px;
+  border-radius: 8px;
+  outline: 1px solid black;
+  outline-offset: -1px;
+}
+
+.footer__subscription-agreement {
+  font-size: 12px;
+  line-height: 16px;
+  max-width: 444px;
+}
+
+.footer__subscription-agreement a {
+  padding-right: 2px;
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: center;
+  font-size: 10px;
+  font-family: var(--font-secondary);
+}
+
+.copyright__link:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer__inner {
+    padding: 12px 0 14px;
+  }
+
+  .footer__nav {
+    width: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .footer__nav-title {
+    font-size: 16px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+
+  .footer__nav-link {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1180px) {
+  .footer__top {
+    gap: 16px;
+    margin-bottom: 54px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 4fr 4fr;
+    grid-template-columns: 4fr 4fr;
+  }
+
+  .footer__nav-list-item {
+    gap: 8px;
+  }
+
+  .footer__subscribtion-title {
+    margin-bottom: 16px;
+  }
+
+  .footer__subscribtion-input {
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .footer__subscribtion-button {
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  .copyright {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer__placeholder {
+    display: block;
+  }
+
+  .footer__top {
+    -ms-grid-columns: 4fr 4fr 4fr;
+    grid-template-columns: 4fr 4fr 4fr;
+  }
+
+  .footer__subscribtion-form {
+    -ms-grid-columns: 4fr 1fr;
+    grid-template-columns: 4fr 1fr;
+    margin-bottom: 4px;
+  }
+}

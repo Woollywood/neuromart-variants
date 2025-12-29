@@ -1,0 +1,20 @@
+.contact-section__title {
+  font-weight: 900;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.contact-section__accordions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}

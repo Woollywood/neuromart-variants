@@ -1,0 +1,52 @@
+.comparison__wrapper {
+  margin: 16px 0 72px;
+}
+
+.comparison__top {
+  margin-bottom: 18px;
+}
+
+.comparison__filters {
+  margin-bottom: 8px;
+}
+
+.comparison__info {
+  font-family: var(--font-secondary);
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 8px;
+}
+
+.comparison__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+@media only screen and (min-width: 1180px) {
+  .comparison__wrapper {
+    margin: 16px 0 116px;
+  }
+
+  .comparison__top {
+    margin-bottom: 12px;
+  }
+
+  .comparison__filters {
+    margin-bottom: 16px;
+  }
+
+  .comparison__info {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .comparison__grid {
+    -ms-grid-columns: (1fr)[8];
+    grid-template-columns: repeat(8, 1fr);
+    gap: 8px;
+  }
+}

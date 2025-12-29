@@ -1,0 +1,10 @@
+:root {
+  --container-gap-x: 8px;
+  --container-max-width: 100%;
+}
+
+@media only screen and (min-width: 1180px) {
+  :root {
+    --container-gap-x: 16px;
+  }
+}

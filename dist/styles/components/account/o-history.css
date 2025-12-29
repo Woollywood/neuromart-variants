@@ -1,0 +1,165 @@
+.history__top {
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.history__subtitle {
+  margin-bottom: 8px;
+}
+
+.history__slider-track {
+  overflow: visible;
+}
+
+.card-history {
+  width: 108px;
+  padding: 16px 8px 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.card-history.in_progress {
+  outline: 1px solid rgba(0, 0, 0, 0.08);
+  outline-offset: -1px;
+}
+
+.card-history__title {
+  font-weight: 900;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+.card-history__subtitle {
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.card-history__sep {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.card-history__sep_sm {
+  width: 16px;
+  margin: 8px auto;
+}
+
+.card-history__sep_md {
+  width: 100%;
+  margin: 12px auto 8px;
+}
+
+.card-history__content {
+  margin-bottom: 4px;
+}
+
+.card-history__price {
+  text-align: center;
+  font-weight: 800;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.card-history__price span {
+  font-size: 14px;
+}
+
+.card-history__count-wrapper {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.card-history__status {
+  text-align: center;
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.in_progress .card-history__status {
+  color: #d10c54;
+}
+
+.done .card-history__status {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (min-width: 768px) {
+  .card-history {
+    width: calc(25vw - 12px);
+  }
+}
+
+@media only screen and (min-width: 1180px) {
+  .history__title {
+    text-align: left;
+  }
+
+  .history__subtitle {
+    text-align: left;
+  }
+
+  .history__slider-track {
+    overflow: hidden;
+  }
+
+  .card-history {
+    padding: 30px 12px 12px;
+    width: calc(25vw - 12px + 1px);
+  }
+
+  .card-history__title {
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .card-history__subtitle {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .card-history__sep_md {
+    margin: 24px auto 8px;
+  }
+
+  .card-history__price {
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .card-history__price span {
+    font-size: 24px;
+  }
+
+  .card-history__count-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 14px;
+    gap: 4px;
+  }
+
+  .card-history__status {
+    font-size: 16px;
+  }
+}

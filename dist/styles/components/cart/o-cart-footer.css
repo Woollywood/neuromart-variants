@@ -1,0 +1,124 @@
+.cart-footer__wrapper {
+  padding: 8px 0;
+}
+
+.cart-footer__bottom {
+  display: none;
+}
+
+.cart-footer__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+
+.cart-footer__sep {
+  width: 1px;
+  height: 20px;
+  background-color: var(--light-2);
+}
+
+.cart-footer__link {
+  position: relative;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: black;
+}
+
+.cart-footer__link_desktop {
+  display: none;
+}
+
+.cart-footer__link::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #d10c54;
+}
+
+.order-button {
+  width: 100%;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 12px;
+  border-radius: 48px;
+  background-color: black;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+  .cart-footer__sep {
+    display: none;
+  }
+
+  .cart-footer__link {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 1180px) {
+  .cart-footer__wrapper {
+    padding: 0;
+  }
+
+  .cart-footer__bottom {
+    padding: 8px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 4px;
+    padding: 24px 0 0;
+  }
+
+  .cart-footer__link {
+    font-size: 14px;
+  }
+
+  .cart-footer__link span {
+    padding-left: 4px;
+    display: inline-block;
+  }
+
+  .cart-footer__link_mobile {
+    display: none;
+  }
+
+  .cart-footer__link_desktop {
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .cart-footer__link {
+    font-size: 16px;
+  }
+
+  .order-button {
+    height: 64px;
+    font-size: 20px;
+  }
+}
