@@ -97,64 +97,64 @@
 }
 
 @font-face {
-  font-family: SofiaSans;
-  src: url("../fonts/SofiaSans-Regular.woff2") format("woff2"), url("../fonts/SofiaSans-Regular.woff") format("woff");
-  font-weight: 400;
+  font-family: SofiaSansCondensed;
+  src: url("../fonts/SofiaSansCondensed-Medium.woff2") format("woff2"), url("../fonts/SofiaSansCondensed-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: SofiaSans;
-  src: url("../fonts/SofiaSans-MediumItalic.woff2") format("woff2"), url("../fonts/SofiaSans-MediumItalic.woff") format("woff");
+  font-family: SofiaSansCondensed;
+  src: url("../fonts/SofiaSansCondensed-MediumItalic.woff2") format("woff2"), url("../fonts/SofiaSansCondensed-MediumItalic.woff") format("woff");
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
-  font-family: SofiaSans;
-  src: url("../fonts/SofiaSans-SemiBoldItalic.woff2") format("woff2"), url("../fonts/SofiaSans-SemiBoldItalic.woff") format("woff");
+  font-family: SofiaSansCondensed;
+  src: url("../fonts/SofiaSansCondensed-SemiBoldItalic.woff2") format("woff2"), url("../fonts/SofiaSansCondensed-SemiBoldItalic.woff") format("woff");
   font-weight: 600;
   font-style: italic;
 }
 
 @font-face {
-  font-family: SofiaSans;
-  src: url("../fonts/SofiaSans-Bold.woff2") format("woff2"), url("../fonts/SofiaSans-Bold.woff") format("woff");
+  font-family: SofiaSansCondensed;
+  src: url("../fonts/SofiaSansCondensed-Bold.woff2") format("woff2"), url("../fonts/SofiaSansCondensed-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: SofiaSans;
-  src: url("../fonts/SofiaSans-BoldItalic.woff2") format("woff2"), url("../fonts/SofiaSans-BoldItalic.woff") format("woff");
+  font-family: SofiaSansCondensed;
+  src: url("../fonts/SofiaSansCondensed-BoldItalic.woff2") format("woff2"), url("../fonts/SofiaSansCondensed-BoldItalic.woff") format("woff");
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
-  font-family: SofiaSans;
-  src: url("../fonts/SofiaSans-ExtraBold.woff2") format("woff2"), url("../fonts/SofiaSans-ExtraBold.woff") format("woff");
+  font-family: SofiaSansCondensed;
+  src: url("../fonts/SofiaSansCondensed-ExtraBold.woff2") format("woff2"), url("../fonts/SofiaSansCondensed-ExtraBold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: SofiaSans;
-  src: url("../fonts/SofiaSans-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/SofiaSans-ExtraBoldItalic.woff") format("woff");
+  font-family: SofiaSansCondensed;
+  src: url("../fonts/SofiaSansCondensed-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/SofiaSansCondensed-ExtraBoldItalic.woff") format("woff");
   font-weight: 800;
   font-style: italic;
 }
 
 @font-face {
-  font-family: SofiaSans;
-  src: url("../fonts/SofiaSans-Black.woff2") format("woff2"), url("../fonts/SofiaSans-Black.woff") format("woff");
+  font-family: SofiaSansCondensed;
+  src: url("../fonts/SofiaSansCondensed-Black.woff2") format("woff2"), url("../fonts/SofiaSansCondensed-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: SofiaSans;
-  src: url("../fonts/SofiaSans-BlackItalic.woff2") format("woff2"), url("../fonts/SofiaSans-BlackItalic.woff") format("woff");
+  font-family: SofiaSansCondensed;
+  src: url("../fonts/SofiaSansCondensed-BlackItalic.woff2") format("woff2"), url("../fonts/SofiaSansCondensed-BlackItalic.woff") format("woff");
   font-weight: 900;
   font-style: italic;
 }

@@ -19,67 +19,67 @@
 @include fontFace(NotoSerif, 400, normal, '../fonts/NotoSerif-Regular.woff', '../fonts/NotoSerif-Regular.woff2');
 
 @include fontFace(
-  SofiaSans,
-  400,
+  SofiaSansCondensed,
+  500,
   normal,
-  '../fonts/SofiaSans-Regular.woff',
-  '../fonts/SofiaSans-Regular.woff2'
+  '../fonts/SofiaSansCondensed-Medium.woff',
+  '../fonts/SofiaSansCondensed-Medium.woff2'
 );
 @include fontFace(
-  SofiaSans,
+  SofiaSansCondensed,
   500,
   italic,
-  '../fonts/SofiaSans-MediumItalic.woff',
-  '../fonts/SofiaSans-MediumItalic.woff2'
+  '../fonts/SofiaSansCondensed-MediumItalic.woff',
+  '../fonts/SofiaSansCondensed-MediumItalic.woff2'
 );
 @include fontFace(
-  SofiaSans,
+  SofiaSansCondensed,
   600,
   italic,
-  '../fonts/SofiaSans-SemiBoldItalic.woff',
-  '../fonts/SofiaSans-SemiBoldItalic.woff2'
+  '../fonts/SofiaSansCondensed-SemiBoldItalic.woff',
+  '../fonts/SofiaSansCondensed-SemiBoldItalic.woff2'
 );
 @include fontFace(
-  SofiaSans,
+  SofiaSansCondensed,
   700,
   normal,
-  '../fonts/SofiaSans-Bold.woff',
-  '../fonts/SofiaSans-Bold.woff2'
+  '../fonts/SofiaSansCondensed-Bold.woff',
+  '../fonts/SofiaSansCondensed-Bold.woff2'
 );
 @include fontFace(
-  SofiaSans,
+  SofiaSansCondensed,
   700,
   italic,
-  '../fonts/SofiaSans-BoldItalic.woff',
-  '../fonts/SofiaSans-BoldItalic.woff2'
+  '../fonts/SofiaSansCondensed-BoldItalic.woff',
+  '../fonts/SofiaSansCondensed-BoldItalic.woff2'
 );
 @include fontFace(
-  SofiaSans,
+  SofiaSansCondensed,
   800,
   normal,
-  '../fonts/SofiaSans-ExtraBold.woff',
-  '../fonts/SofiaSans-ExtraBold.woff2'
+  '../fonts/SofiaSansCondensed-ExtraBold.woff',
+  '../fonts/SofiaSansCondensed-ExtraBold.woff2'
 );
 @include fontFace(
-  SofiaSans,
+  SofiaSansCondensed,
   800,
   italic,
-  '../fonts/SofiaSans-ExtraBoldItalic.woff',
-  '../fonts/SofiaSans-ExtraBoldItalic.woff2'
+  '../fonts/SofiaSansCondensed-ExtraBoldItalic.woff',
+  '../fonts/SofiaSansCondensed-ExtraBoldItalic.woff2'
 );
 @include fontFace(
-  SofiaSans,
+  SofiaSansCondensed,
   900,
   normal,
-  '../fonts/SofiaSans-Black.woff',
-  '../fonts/SofiaSans-Black.woff2'
+  '../fonts/SofiaSansCondensed-Black.woff',
+  '../fonts/SofiaSansCondensed-Black.woff2'
 );
 @include fontFace(
-  SofiaSans,
+  SofiaSansCondensed,
   900,
   italic,
-  '../fonts/SofiaSans-BlackItalic.woff',
-  '../fonts/SofiaSans-BlackItalic.woff2'
+  '../fonts/SofiaSansCondensed-BlackItalic.woff',
+  '../fonts/SofiaSansCondensed-BlackItalic.woff2'
 );
 
 @include fontFace(SourceSans3, 700, normal, '../fonts/SourceSans3-Bold.woff', '../fonts/SourceSans3-Bold.woff2');
