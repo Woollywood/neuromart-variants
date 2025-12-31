@@ -37,7 +37,7 @@
   color: var(--white);
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .order-footer {
     position: static;
     z-index: 0;

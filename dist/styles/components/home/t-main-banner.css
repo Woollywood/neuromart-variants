@@ -151,7 +151,7 @@
   }
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .main-banner {
     -ms-grid-rows: auto;
     grid-template-rows: auto;

@@ -82,7 +82,7 @@
   overflow: hidden;
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .contact-accordion__trigger {
     height: 56px;
     font-size: 16px;

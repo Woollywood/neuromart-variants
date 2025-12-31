@@ -195,7 +195,7 @@
   }
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .footer__top {
     display: -ms-grid;
     display: grid;

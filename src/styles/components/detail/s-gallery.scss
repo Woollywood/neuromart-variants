@@ -12,6 +12,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 8px;
+
+    @include media('lg') {
+      gap: 8px;
+    }
   }
 
   &__item {

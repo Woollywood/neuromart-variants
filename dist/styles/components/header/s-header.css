@@ -92,8 +92,12 @@
   height: 20px;
 }
 
-.header__action-wrapper {
+.header__action-modal {
   position: relative;
+}
+
+.header__action-modal:hover [header-cart-modal] {
+  display: block;
 }
 
 .header__action-budge {
@@ -463,7 +467,7 @@
   }
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .header__wrapper {
     -webkit-box-align: start;
         -ms-flex-align: start;

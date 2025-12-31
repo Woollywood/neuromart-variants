@@ -1,3 +1,7 @@
+.history {
+  margin-bottom: 8px;
+}
+
 .history__top {
   margin-bottom: 8px;
   text-align: left;
@@ -99,13 +103,11 @@
   color: var(--primary);
 }
 
-@media only screen and (min-width: 768px) {
-  .card-history {
-    width: calc(25vw - 12px);
+@media only screen and (min-width: 1280px) {
+  .history {
+    margin-bottom: 14px;
   }
-}
 
-@media only screen and (min-width: 1180px) {
   .history__title {
     text-align: left;
   }
@@ -120,7 +122,6 @@
 
   .card-history {
     padding: 20px 12px 8px;
-    width: calc(25vw - 12px + 1px);
   }
 
   .card-history__title {
@@ -157,5 +158,11 @@
 
   .card-history__status {
     font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .history {
+    margin-bottom: 16px;
   }
 }

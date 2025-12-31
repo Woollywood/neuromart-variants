@@ -24,7 +24,7 @@
   }
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .detail__main {
     margin-top: calc(-1 * var(--header-height) + 24px + var(--logo-wrapper-height));
     display: -ms-grid;

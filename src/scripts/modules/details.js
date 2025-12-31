@@ -1,24 +1,4 @@
 (() => {
-  const addCartButtons = document.querySelectorAll('[add-cart-button]');
-  const addCartModal = document.querySelector('[add-cart-modal]');
-  const addCartModalClose = document.querySelector('[add-cart-modal-close]');
-
-  if (addCartButtons && addCartButtons.length > 0 && addCartModal && addCartModalClose) {
-    const toggleModal = () => {
-      scrollLock();
-      if (addCartModal.classList.contains('open')) {
-        addCartModal.classList.remove('open');
-      } else {
-        addCartModal.classList.add('open');
-      }
-    };
-
-    addCartButtons.forEach((button) => button.addEventListener('click', toggleModal));
-    addCartModalClose.addEventListener('click', toggleModal);
-  }
-})();
-
-(() => {
   const descriptionButton = document.querySelector('[details-description]');
   const descriptionModal = document.querySelector('[details-modal]');
   const descriptionModalCloseButton = document.querySelector('[details-modal-close]');
@@ -35,6 +15,19 @@
 
     descriptionButton.addEventListener('click', toggleModal);
     descriptionModalCloseButton.addEventListener('click', toggleModal);
+  }
+})();
+
+(() => {
+  const detailCards = document.querySelector(`[data-component='detail-cards']`);
+
+  if (detailCards) {
+    new Splide(detailCards, {
+      perPage: 6,
+      gap: 8,
+      pagination: false,
+      arrows: false,
+    }).mount();
   }
 })();
 

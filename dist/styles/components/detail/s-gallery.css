@@ -112,9 +112,13 @@
      object-fit: cover;
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .gallery {
     display: block;
+  }
+
+  .gallery__items {
+    gap: 8px;
   }
 
   .gallery-slider {

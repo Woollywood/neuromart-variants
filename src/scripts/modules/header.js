@@ -127,17 +127,3 @@
   getScrollPosition();
   window.addEventListener('scroll', getScrollPosition);
 })();
-
-(() => {
-  const cartButton = document.querySelector('[cart-button]');
-  const cartModal = document.querySelector('[header-cart]');
-  if (cartButton && cartModal) {
-    cartButton.addEventListener('click', () => {
-      if (cartModal.classList.contains('open')) {
-        cartModal.classList.remove('open');
-      } else {
-        cartModal.classList.add('open');
-      }
-    });
-  }
-})();

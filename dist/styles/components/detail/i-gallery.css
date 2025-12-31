@@ -28,7 +28,7 @@
      object-fit: cover;
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .gallery-slider__image {
     width: 100%;
     aspect-ratio: 424/640;

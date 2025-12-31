@@ -15,7 +15,15 @@ if (slider) {
   const getOptions = () => {
     switch (type) {
       case 's':
-        return { gap: 4, autoWidth: true };
+        return {
+          gap: 4,
+          autoWidth: true,
+          mediaQuery: 'min',
+          breakpoints: {
+            [getMediaCssParsedVariable(MediaSizes.MD)]: { perPage: 4, autoWidth: false },
+            [getMediaCssParsedVariable(MediaSizes.LG)]: { gap: 8 },
+          },
+        };
       case 'o':
         return {
           gap: 4,

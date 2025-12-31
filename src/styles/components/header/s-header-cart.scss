@@ -4,19 +4,17 @@
 .header-cart {
   display: none;
 
-  &.open {
-    display: block;
-  }
-
   position: absolute;
-  top: calc(100% + 8px);
+  padding-top: 8px;
+  top: 100%;
   right: calc(100% - 40px);
-  min-width: 466px;
 
-  background-color: var(--white);
-  border-radius: 12px;
-  border: 1px solid var(--light-2);
-  padding: 0 8px;
+  &__card {
+    min-width: 466px;
+    background-color: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--light-2);
+  }
 
   &__header {
     display: flex;
@@ -39,12 +37,19 @@
     font-size: 16px;
     line-height: 16px;
     text-transform: uppercase;
-    font-style: italic;
     color: var(--primary);
   }
 
-  &__separator {
+  &__upper-separator {
     background-color: var(--light-2);
+  }
+
+  &__bottom-separator {
+    background-color: var(--light);
+  }
+
+  &__upper-separator,
+  &__bottom-separator {
     width: 100%;
     height: 1px;
   }
@@ -104,6 +109,7 @@
     background-color: var(--primary);
     border-radius: 8px;
     font-weight: 900;
+    font-style: italic;
     font-size: 20px;
     line-height: 16px;
     text-transform: uppercase;
@@ -165,7 +171,7 @@
 
   &__right {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
   }
 
@@ -183,9 +189,9 @@
   }
 
   &__separator {
+    background-color: var(--light-2);
     width: 1px;
     height: 16px;
-    background-color: var(--primary);
   }
 
   &__delete {

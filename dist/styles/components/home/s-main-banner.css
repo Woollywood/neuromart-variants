@@ -164,13 +164,13 @@
   }
 }
 
-@media only screen and (min-width: 768px) and (min-width: 73.75em) {
+@media only screen and (min-width: 768px) and (min-width: 80em) {
   .banner-slide__title {
     font-size: 1.625rem;
   }
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .banner {
     margin-bottom: 20px;
   }
@@ -209,7 +209,7 @@
   }
 }
 
-@media only screen and (min-width: 1180px) and (min-width: 120em) {
+@media only screen and (min-width: 1280px) and (min-width: 120em) {
   .banner-slide {
     height: 30rem;
   }
@@ -272,7 +272,7 @@
   }
 }
 
-@media only screen and (min-width: 1180px) and (min-width: 23.4375em) and (max-width: 120em) {
+@media only screen and (min-width: 1280px) and (min-width: 23.4375em) and (max-width: 120em) {
 @supports (height: clamp( 20rem , 17.572815534rem  +  10.355987055vw , 30rem )) {
     .banner-slide {
       height: clamp( 20rem , 17.572815534rem  +  10.355987055vw , 30rem );
@@ -286,7 +286,7 @@
 }
 }
 
-@media only screen and (min-width: 1180px) and (max-width: 23.4375em) {
+@media only screen and (min-width: 1280px) and (max-width: 23.4375em) {
   .banner-slide {
     height: 20rem;
   }
@@ -414,16 +414,16 @@
 }
 }
 
-@media only screen and (min-width: 768px) and (min-width: 23.4375em) and (max-width: 73.75em) {
-@supports (font-size: clamp( 1.5rem , 1.4417701863rem  +  0.248447205vw , 1.625rem )) {
+@media only screen and (min-width: 768px) and (min-width: 23.4375em) and (max-width: 80em) {
+@supports (font-size: clamp( 1.5rem , 1.4482044199rem  +  0.2209944751vw , 1.625rem )) {
     .banner-slide__title {
-      font-size: clamp( 1.5rem , 1.4417701863rem  +  0.248447205vw , 1.625rem );
+      font-size: clamp( 1.5rem , 1.4482044199rem  +  0.2209944751vw , 1.625rem );
     }
 }
 
-@supports not (font-size: clamp( 1.5rem , 1.4417701863rem  +  0.248447205vw , 1.625rem )) {
+@supports not (font-size: clamp( 1.5rem , 1.4482044199rem  +  0.2209944751vw , 1.625rem )) {
     .banner-slide__title {
-      font-size: calc(1.5rem + 0.125 * (100vw - 23.4375rem) / 50.3125);
+      font-size: calc(1.5rem + 0.125 * (100vw - 23.4375rem) / 56.5625);
     }
 }
 }

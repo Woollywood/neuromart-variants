@@ -67,7 +67,7 @@
   padding: 4px 0;
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .category-blocks {
     display: -ms-grid;
     display: grid;

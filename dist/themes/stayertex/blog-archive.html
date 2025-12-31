@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="../../styles/components/pagination/s-pagination.css">
     <link rel="stylesheet" href="../../styles/components/blog-archive/s-cart.css">
     <link rel="stylesheet" href="../../styles/components/blog-archive/s-page.css">
+    <link rel="stylesheet" href="../../styles/components/add-cart-modal/s-add-cart-modal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
   </head>
   <body>
@@ -53,77 +54,79 @@
                           <svg>
                             <use xlink:href="#s-account-icon"></use>
                           </svg></a>
-                  <div class="header__action-wrapper">
+                  <div class="header__action-modal">
                     <button class="header__action" href="#" cart-button>
                             <svg>
                               <use xlink:href="#s-cart-icon"></use>
                             </svg>
                       <div class="header__action-budge">4</div>
                     </button>
-                    <div class="header-cart" header-cart>
-                      <div class="header-cart__header">
-                        <div class="header-cart__title">Корзина</div>
-                        <button class="header-cart__clear">Очистить список</button>
-                      </div>
-                      <div class="header-cart__separator"></div>
-                      <div class="header-cart__content">
-                        <div class="header-cart__products">
-                          <div class="header-cart__product product-header-cart">
-                            <div class="product-header-cart__image"><picture><source srcset="../../img/i-theme/detail.webp" type="image/webp"><img src="../../img/i-theme/detail.png" alt="image"></picture></div>
-                            <div class="product-header-cart__text-info">
-                              <div class="product-header-cart__title">Костюм Горка Зима Финл. ПК олива</div>
-                              <div class="product-header-cart__subtitle">3 размера, <span>9 шт.</span></div>
+                    <div class="header-cart" header-cart-modal>
+                      <div class="header-cart__card">
+                        <div class="header-cart__header">
+                          <div class="header-cart__title">Корзина</div>
+                          <button class="header-cart__clear">Очистить список</button>
+                        </div>
+                        <div class="header-cart__upper-separator"></div>
+                        <div class="header-cart__content">
+                          <div class="header-cart__products">
+                            <div class="header-cart__product product-header-cart">
+                              <div class="product-header-cart__image"><picture><source srcset="../../img/i-theme/detail.webp" type="image/webp"><img src="../../img/i-theme/detail.png" alt="image"></picture></div>
+                              <div class="product-header-cart__text-info">
+                                <div class="product-header-cart__title">Костюм Горка Зима Финл. ПК олива</div>
+                                <div class="product-header-cart__subtitle">3 размера, <span>9 шт.</span></div>
+                              </div>
+                              <div class="product-header-cart__right">
+                                <div class="product-header-cart__price">16 820<span>руб</span></div>
+                                <div class="product-header-cart__separator"></div>
+                                <button class="product-header-cart__delete">убрать</button>
+                              </div>
                             </div>
-                            <div class="product-header-cart__right">
-                              <div class="product-header-cart__price">16 820<span>руб</span></div>
-                              <div class="product-header-cart__separator"></div>
-                              <button class="product-header-cart__delete">убрать</button>
+                            <div class="header-cart__product product-header-cart">
+                              <div class="product-header-cart__image"><picture><source srcset="../../img/i-theme/detail.webp" type="image/webp"><img src="../../img/i-theme/detail.png" alt="image"></picture></div>
+                              <div class="product-header-cart__text-info">
+                                <div class="product-header-cart__title">Костюм Горка Зима Финл. ПК олива</div>
+                                <div class="product-header-cart__subtitle">3 размера, <span>9 шт.</span></div>
+                              </div>
+                              <div class="product-header-cart__right">
+                                <div class="product-header-cart__price">16 820<span>руб</span></div>
+                                <div class="product-header-cart__separator"></div>
+                                <button class="product-header-cart__delete">убрать</button>
+                              </div>
                             </div>
-                          </div>
-                          <div class="header-cart__product product-header-cart">
-                            <div class="product-header-cart__image"><picture><source srcset="../../img/i-theme/detail.webp" type="image/webp"><img src="../../img/i-theme/detail.png" alt="image"></picture></div>
-                            <div class="product-header-cart__text-info">
-                              <div class="product-header-cart__title">Костюм Горка Зима Финл. ПК олива</div>
-                              <div class="product-header-cart__subtitle">3 размера, <span>9 шт.</span></div>
+                            <div class="header-cart__product product-header-cart">
+                              <div class="product-header-cart__image"><picture><source srcset="../../img/i-theme/detail.webp" type="image/webp"><img src="../../img/i-theme/detail.png" alt="image"></picture></div>
+                              <div class="product-header-cart__text-info">
+                                <div class="product-header-cart__title">Костюм Горка Зима Финл. ПК олива</div>
+                                <div class="product-header-cart__subtitle">3 размера, <span>9 шт.</span></div>
+                              </div>
+                              <div class="product-header-cart__right">
+                                <div class="product-header-cart__price">16 820<span>руб</span></div>
+                                <div class="product-header-cart__separator"></div>
+                                <button class="product-header-cart__delete">убрать</button>
+                              </div>
                             </div>
-                            <div class="product-header-cart__right">
-                              <div class="product-header-cart__price">16 820<span>руб</span></div>
-                              <div class="product-header-cart__separator"></div>
-                              <button class="product-header-cart__delete">убрать</button>
-                            </div>
-                          </div>
-                          <div class="header-cart__product product-header-cart">
-                            <div class="product-header-cart__image"><picture><source srcset="../../img/i-theme/detail.webp" type="image/webp"><img src="../../img/i-theme/detail.png" alt="image"></picture></div>
-                            <div class="product-header-cart__text-info">
-                              <div class="product-header-cart__title">Костюм Горка Зима Финл. ПК олива</div>
-                              <div class="product-header-cart__subtitle">3 размера, <span>9 шт.</span></div>
-                            </div>
-                            <div class="product-header-cart__right">
-                              <div class="product-header-cart__price">16 820<span>руб</span></div>
-                              <div class="product-header-cart__separator"></div>
-                              <button class="product-header-cart__delete">убрать</button>
-                            </div>
-                          </div>
-                          <div class="header-cart__product product-header-cart">
-                            <div class="product-header-cart__image"><picture><source srcset="../../img/i-theme/detail.webp" type="image/webp"><img src="../../img/i-theme/detail.png" alt="image"></picture></div>
-                            <div class="product-header-cart__text-info">
-                              <div class="product-header-cart__title">Костюм Горка Зима Финл. ПК олива</div>
-                              <div class="product-header-cart__subtitle">3 размера, <span>9 шт.</span></div>
-                            </div>
-                            <div class="product-header-cart__right">
-                              <div class="product-header-cart__price">16 820<span>руб</span></div>
-                              <div class="product-header-cart__separator"></div>
-                              <button class="product-header-cart__delete">убрать</button>
+                            <div class="header-cart__product product-header-cart">
+                              <div class="product-header-cart__image"><picture><source srcset="../../img/i-theme/detail.webp" type="image/webp"><img src="../../img/i-theme/detail.png" alt="image"></picture></div>
+                              <div class="product-header-cart__text-info">
+                                <div class="product-header-cart__title">Костюм Горка Зима Финл. ПК олива</div>
+                                <div class="product-header-cart__subtitle">3 размера, <span>9 шт.</span></div>
+                              </div>
+                              <div class="product-header-cart__right">
+                                <div class="product-header-cart__price">16 820<span>руб</span></div>
+                                <div class="product-header-cart__separator"></div>
+                                <button class="product-header-cart__delete">убрать</button>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="header-cart__separator"></div>
-                      <div class="header-cart__footer">
-                        <div class="header-cart__price-wrapper">
-                          <div class="header-cart__price-label">итого:</div>
-                          <div class="header-cart__price-value">800 000<span>руб</span></div>
-                        </div><a class="header-cart__link" href="#">перейти в корзину</a>
+                        <div class="header-cart__bottom-separator"></div>
+                        <div class="header-cart__footer">
+                          <div class="header-cart__price-wrapper">
+                            <div class="header-cart__price-label">итого:</div>
+                            <div class="header-cart__price-value">800 000<span>руб</span></div>
+                          </div><a class="header-cart__link" href="#">перейти в корзину</a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -284,7 +287,7 @@
                               <h2 class="card-content__subtitle">Костюм Горка Зима Финл. ПК #309</h2>
                               <p class="card-content__description">Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая</p>
                               <div class="catalog-slide__action-wrapper">
-                                                        <button class="card-button">
+                                                        <button class="card-button" add-cart-button>
                                                           <div class="card-button__inner primary">опт<span>7 712</span>руб
                                                           </div>
                                                         </button>
@@ -300,7 +303,7 @@
                               <h2 class="card-content__subtitle">Костюм Горка Зима Финл. ПК #309</h2>
                               <p class="card-content__description">Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая</p>
                               <div class="catalog-slide__action-wrapper">
-                                                        <button class="card-button">
+                                                        <button class="card-button" add-cart-button>
                                                           <div class="card-button__inner primary">опт<span>7 712</span>руб
                                                           </div>
                                                         </button>
@@ -316,7 +319,7 @@
                               <h2 class="card-content__subtitle">Костюм Горка Зима Финл. ПК #309</h2>
                               <p class="card-content__description">Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая</p>
                               <div class="catalog-slide__action-wrapper">
-                                                        <button class="card-button">
+                                                        <button class="card-button" add-cart-button>
                                                           <div class="card-button__inner primary">опт<span>7 712</span>руб
                                                           </div>
                                                         </button>
@@ -332,7 +335,7 @@
                               <h2 class="card-content__subtitle">Костюм Горка Зима Финл. ПК #309</h2>
                               <p class="card-content__description">Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая</p>
                               <div class="catalog-slide__action-wrapper">
-                                                        <button class="card-button">
+                                                        <button class="card-button" add-cart-button>
                                                           <div class="card-button__inner primary">опт<span>7 712</span>руб
                                                           </div>
                                                         </button>
@@ -348,7 +351,7 @@
                               <h2 class="card-content__subtitle">Костюм Горка Зима Финл. ПК #309</h2>
                               <p class="card-content__description">Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая</p>
                               <div class="catalog-slide__action-wrapper">
-                                                        <button class="card-button">
+                                                        <button class="card-button" add-cart-button>
                                                           <div class="card-button__inner primary">опт<span>7 712</span>руб
                                                           </div>
                                                         </button>
@@ -364,7 +367,7 @@
                               <h2 class="card-content__subtitle">Костюм Горка Зима Финл. ПК #309</h2>
                               <p class="card-content__description">Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая</p>
                               <div class="catalog-slide__action-wrapper">
-                                                        <button class="card-button">
+                                                        <button class="card-button" add-cart-button>
                                                           <div class="card-button__inner primary">опт<span>7 712</span>руб
                                                           </div>
                                                         </button>
@@ -380,7 +383,7 @@
                               <h2 class="card-content__subtitle">Костюм Горка Зима Финл. ПК #309</h2>
                               <p class="card-content__description">Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая</p>
                               <div class="catalog-slide__action-wrapper">
-                                                        <button class="card-button">
+                                                        <button class="card-button" add-cart-button>
                                                           <div class="card-button__inner primary">опт<span>7 712</span>руб
                                                           </div>
                                                         </button>
@@ -396,7 +399,7 @@
                               <h2 class="card-content__subtitle">Костюм Горка Зима Финл. ПК #309</h2>
                               <p class="card-content__description">Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая</p>
                               <div class="catalog-slide__action-wrapper">
-                                                        <button class="card-button">
+                                                        <button class="card-button" add-cart-button>
                                                           <div class="card-button__inner primary">опт<span>7 712</span>руб
                                                           </div>
                                                         </button>
@@ -578,6 +581,82 @@
           </div>
         </div>
       </footer>
+      <div class="add-cart-modal" add-cart-modal>
+        <div class="add-cart-modal__overlay"></div>
+        <div class="add-cart-modal__modal-wrapper">
+          <div class="add-cart-modal__modal">
+            <div class="add-cart-modal__header">
+              <div class="add-cart-modal__title">укажите размеры и количество</div>
+              <button class="add-cart-modal__close" add-cart-modal-close><span>Закрыть</span>
+                      <svg>
+                        <use xlink:href="#s-close"></use>
+                      </svg>
+              </button>
+            </div>
+            <div class="add-cart-modal__separator"></div>
+            <div class="add-cart-modal__content">
+              <div class="add-cart-modal__product">
+                <div class="add-cart-modal__product-image"><picture><source srcset="../../img/i-theme/detail.webp" type="image/webp"><img src="../../img/i-theme/detail.png" alt="image"></picture></div>
+                <div class="add-cart-modal__product-text-wrapper">
+                  <div class="add-cart-modal__product-title">Костюм Горка Зима Финл. ПК олива</div>
+                  <div class="add-cart-modal__product-subtitle">16 600<span>руб</span></div>
+                </div>
+              </div>
+              <div class="add-cart-modal__separator"></div>
+              <div class="add-cart-modal__dimensions">
+                <div class="add-cart-modal__dimension">
+                  <div class="add-cart-modal__dimension-size">44–46<span>(170 / 176)</span></div>
+                  <div class="add-cart-modal__dimension-counter-wrapper">
+                    <div class="add-cart-modal__dimension-counter">
+                      <button class="add-cart-modal__dimension-counter-decrement">-</button>
+                      <div class="add-cart-modal__dimension-counter-value">5</div>
+                      <button class="add-cart-modal__dimension-counter-increment">+</button>
+                    </div>
+                    <div class="add-cart-modal__dimension-counter-label">шт.</div>
+                  </div>
+                </div>
+                <div class="add-cart-modal__dimension">
+                  <div class="add-cart-modal__dimension-size">44–46<span>(170 / 176)</span></div>
+                  <div class="add-cart-modal__dimension-counter-wrapper">
+                    <div class="add-cart-modal__dimension-counter">
+                      <button class="add-cart-modal__dimension-counter-decrement">-</button>
+                      <div class="add-cart-modal__dimension-counter-value">5</div>
+                      <button class="add-cart-modal__dimension-counter-increment">+</button>
+                    </div>
+                    <div class="add-cart-modal__dimension-counter-label">шт.</div>
+                  </div>
+                </div>
+                <div class="add-cart-modal__dimension">
+                  <div class="add-cart-modal__dimension-size">44–46<span>(170 / 176)</span></div>
+                  <div class="add-cart-modal__dimension-counter-wrapper">
+                    <div class="add-cart-modal__dimension-counter">
+                      <button class="add-cart-modal__dimension-counter-decrement">-</button>
+                      <div class="add-cart-modal__dimension-counter-value">5</div>
+                      <button class="add-cart-modal__dimension-counter-increment">+</button>
+                    </div>
+                    <div class="add-cart-modal__dimension-counter-label">шт.</div>
+                  </div>
+                </div>
+                <div class="add-cart-modal__dimension">
+                  <div class="add-cart-modal__dimension-size">44–46<span>(170 / 176)</span></div>
+                  <div class="add-cart-modal__dimension-counter-wrapper">
+                    <div class="add-cart-modal__dimension-counter">
+                      <button class="add-cart-modal__dimension-counter-decrement">-</button>
+                      <div class="add-cart-modal__dimension-counter-value">5</div>
+                      <button class="add-cart-modal__dimension-counter-increment">+</button>
+                    </div>
+                    <div class="add-cart-modal__dimension-counter-label">шт.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="add-cart-modal__separator"></div>
+            <div class="add-cart-modal__footer">
+              <button class="add-cart-modal__add-cart">в корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="backdrop"></div>
     <div id="select-drawers-container"></div>
@@ -588,6 +667,7 @@
     <script src="../../scripts/modules/footer.js"></script>
     <script src="../../scripts/modules/header.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="../../scripts/modules/add-cart-modal.js"></script>
     <script src="../../scripts/modules/catalogSlider.js"></script>
     <script src="../../scripts/modules/cart.js"></script>
   </body>

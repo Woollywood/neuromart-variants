@@ -1,4 +1,5 @@
 include ../../mixins/provider
+include ../../mixins/card-button/s-card-button
 
 -
   const path = ['Магазин мужской одежды', 'Каталог', 'Костюм Горка Зима Финл. ПК олива'];
@@ -43,9 +44,34 @@ div.details
           div.dimension__label= dimension.label
           if dimension.count
             div.dimension__badge= dimension.count
+    div.sticky-button(data-component='sticky-button')
+      div.sticky-button__container.container
+        button.add-cart-button добавить в корзину
+    div.details__add-cart
+      button.add-cart-button(data-button-position) добавить в корзину
     p.details__description
       | Куртка прямого силуэта, с центральной бортовой застёжкой на молнию, ветрозащитным клапаном,  застёгивающимся на
       | петлю и пуговицу,съёмным капюшоном - по лицевому вырезу стягивается шнуром.
+    div.splide.details__cards(data-component='detail-cards')
+      div.splide__track.details__cards-track
+        ul.splide__list.details__cards-list
+          each card in [0, 1, 2, 3, 4, 5, 6, 7, 8]
+            div.splide__slide.details__card(class=card === 1 && 'selected')
+              button.details__card-wrapper
+                div.details__card-image
+                  img(src="@img/s-theme/inventory/card.png" alt="image")
+                div.details__card-text Бежевый
+              div.details__card-modal-wrapper(modal-wrapper)
+                div.catalog-slide.details__card-modal
+                  div.catalog-slide__inner
+                    div.catalog-slide__image
+                      img(src="@img/s-theme/home/hits/hits-slide-image.png" alt="image")
+                    div.card-content.md
+                      p.card-content__title Финляндия
+                      h2.card-content__subtitle Костюм Горка Зима Финл. ПК #309
+                      p.card-content__description Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая, Морозоустойчивая, Непромокаемая, Дышащая
+                      div.catalog-slide__action-wrapper
+                        +cardButton('опт', '7 712')
     div.details__main-info
       div.details__main-info-title Основная информация:
       div.details__main-info-list

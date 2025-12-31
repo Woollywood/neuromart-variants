@@ -163,8 +163,14 @@
     }
   }
 
-  &__action-wrapper {
+  &__action-modal {
     position: relative;
+
+    &:hover {
+      [header-cart-modal] {
+        display: block;
+      }
+    }
   }
 
   &__action-budge {

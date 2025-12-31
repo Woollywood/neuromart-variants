@@ -99,7 +99,7 @@
   color: rgba(0, 0, 0, 0.4);
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .catalog-slider-section__title-wrapper {
     gap: 10px;
   }

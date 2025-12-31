@@ -59,7 +59,7 @@
   text-transform: uppercase;
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .comparison-card__image {
     aspect-ratio: 229/340;
     margin-bottom: 16px;

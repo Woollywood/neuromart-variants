@@ -29,7 +29,7 @@
   }
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .detail__main {
     max-height: calc(100svh - var(--header-height) - 8px);
     display: -ms-grid;

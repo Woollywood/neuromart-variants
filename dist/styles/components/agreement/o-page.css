@@ -50,7 +50,7 @@
   color: #d10c54;
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .agreement {
     padding: 24px 0 76px;
   }

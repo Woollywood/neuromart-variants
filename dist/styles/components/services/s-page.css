@@ -63,7 +63,7 @@
   color: var(--secondary);
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .services {
     padding: 20px 0 76px;
   }

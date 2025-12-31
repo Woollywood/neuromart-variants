@@ -39,7 +39,7 @@
   outline: none;
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .comparison-filters {
     gap: 8px;
   }

@@ -80,8 +80,90 @@
     color: var(--secondary);
   }
 
+  &__cards {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 20px;
+  }
+
+  &__cards-track {
+    overflow: visible !important;
+  }
+
+  &__cards-list {
+  }
+
+  &__card {
+    position: relative;
+    padding: 8px 0 6px;
+    border-radius: 8px;
+    @include border(1px, var(--light-2));
+
+    &.selected {
+      @include border(1px, var(--primary));
+    }
+
+    &:hover {
+      [modal-wrapper] {
+        display: block;
+      }
+    }
+  }
+
+  &__card-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__card-image {
+    position: relative;
+    aspect-ratio: 71 / 96;
+    width: 100%;
+    margin-bottom: 2px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__card-text {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--dark);
+    padding: 0 2px;
+
+    .selected & {
+      color: var(--primary);
+    }
+  }
+
+  &__card-modal-wrapper {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 8px;
+  }
+
+  &__card-modal {
+    width: 229px;
+    background-color: var(--white);
+    border-radius: 8px;
+    @include border(1px, var(--light-2));
+  }
+
   &__main-info {
     margin-bottom: 20px;
+    padding: 0 12px;
   }
 
   &__main-info-title {
@@ -163,7 +245,7 @@
     flex-shrink: 1;
     width: 100%;
     height: 1px;
-    background-color: var(--primary);
+    background-color: var(--light-2);
   }
 
   &__description-button {

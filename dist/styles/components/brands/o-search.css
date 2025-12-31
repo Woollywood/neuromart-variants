@@ -102,7 +102,7 @@
   padding: 0 6px;
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .search-brands__top {
     display: -ms-grid;
     display: grid;

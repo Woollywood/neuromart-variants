@@ -87,7 +87,7 @@
   text-align: center;
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .header-modal.modal-open {
     display: none;
   }

@@ -85,7 +85,7 @@
   display: none;
 }
 
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1280px) {
   .banner .filters__wrapper {
     padding-right: 16px;
   }
