@@ -1,4 +1,54 @@
 (() => {
+  const megaMenuItems = document.querySelectorAll('[mega-menu-trigger]');
+  const megaMenu = document.querySelector('[mega-menu]');
+  const otherSection = document.querySelector('[data-layout-part="main"]');
+  if (megaMenu && megaMenuItems && !!megaMenuItems.length) {
+    const resetItemsStyles = () => {
+      for (const item of megaMenuItems) {
+        item.classList.remove('open');
+      }
+    };
+    const hide = () => {
+      megaMenu.classList.remove('open');
+      resetItemsStyles();
+    };
+    const show = (item) => {
+      megaMenu.classList.add('open');
+      resetItemsStyles();
+      item.classList.add('open');
+    };
+
+    const toggle = (item) => {
+      if (megaMenu.classList.contains('open')) {
+        hide();
+      } else {
+        show(item);
+      }
+    };
+
+    for (const item of megaMenuItems) {
+      item.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= MediaSizesValue.MD) {
+          show(item);
+        }
+      });
+      item.addEventListener('click', () => {
+        if (window.innerWidth < MediaSizesValue.MD) {
+          if (item.classList.contains('open')) {
+            toggle(item);
+          } else {
+            show(item);
+          }
+        }
+      });
+    }
+    otherSection.addEventListener('mouseenter', () => {
+      hide();
+    });
+  }
+})();
+
+(() => {
   const header = document.querySelector("[data-component='header']");
   const logoWrapper = document.querySelector("[data-component='logo-wrapper']");
   observeHeight(header, '--header-height');
@@ -79,11 +129,11 @@
       toggleHamburger();
     }
   });
-  document.querySelectorAll('.header__category').forEach((category) =>
-    category.addEventListener('click', () => {
-      toggleCategories();
-    })
-  );
+  // document.querySelectorAll('.header__category').forEach((category) =>
+  //   category.addEventListener('click', () => {
+  //     toggleCategories();
+  //   })
+  // );
 
   const toggleModal = (cb) => {
     isOpened = !isOpened;

@@ -1,5 +1,21 @@
 include ../../mixins/provider
 
+-
+  const megaMenuCategories = [
+    {
+      label: 'По сезону:',
+      items: ['Летняя', 'Демисезонная', 'Зимняя']
+    },
+    {
+      label: 'По типу:',
+      items: ['Костюмы', 'Флисовые костюмы', 'Горка', 'Куртки', 'Жилеты', 'Брюки', 'Полукомбинезоны', 'Дождевики']
+    },
+    {
+      label: 'По сезону:',
+      items: ['Мембранная', 'Противомоскитная']
+    },
+  ]
+
 header.header(data-component='header')
   div.header__container.container
     div.header__wrapper
@@ -58,4 +74,16 @@ header.header(data-component='header')
                     a.header__contact-phone(href=`tel:${contact}`)= contact
             div.header__categories
               each category in categories
-                a.header__category(href=category.href)= category.label
+                div.header__mega-menu-item-wrapper
+                  button.header__category(href=category.href mega-menu-trigger)= category.label
+      div.header__mega-menu.mega-menu(mega-menu)
+        div.mega-menu__categories
+          each category in megaMenuCategories
+            div.mega-menu__category
+              div.mega-menu__category-label= category.label
+              ul.mega-menu__category-items
+                each item in category.items
+                  li.mega-menu__category-item
+                    a.mega-menu__category-item-link(href='#')
+                      span= item
+                      +icon('s-arrow-down')

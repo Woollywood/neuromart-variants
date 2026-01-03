@@ -17,6 +17,7 @@
   }
 
   &__wrapper {
+    position: relative;
     padding: 8px 0;
     padding-right: 0px;
 
@@ -32,6 +33,9 @@
       padding: 16px 0;
       gap: 16px;
     }
+  }
+
+  &__mega-menu {
   }
 
   &__logo {
@@ -252,6 +256,10 @@
     color: var(--secondary);
 
     transition: color 0.3s ease-in-out;
+
+    &.open {
+      @include border(1px, var(--primary));
+    }
 
     &:hover {
       color: var(--primary);
@@ -547,6 +555,108 @@
       .modal-open & {
         display: flex !important;
       }
+    }
+  }
+}
+
+.mega-menu {
+  display: none;
+  &.open {
+    display: block;
+  }
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 20px;
+  @include border(1px, var(--light-2));
+
+  @include media('md') {
+    padding: 20px 36px;
+  }
+
+  @include media('lg') {
+    padding: 26px 16px 44px;
+    padding-left: calc(122px + 8px);
+  }
+
+  @include media('xl') {
+    padding-left: calc(166px + 16px * 2 + 1px);
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+
+    @include media('lg') {
+      gap: 8px;
+      align-items: flex-start;
+      flex-direction: row;
+    }
+  }
+
+  &__category {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    @include media('lg') {
+      gap: 17px;
+    }
+  }
+
+  &__category-label {
+    padding-left: 12px;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--primary);
+  }
+
+  &__category-items {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    @include media('md') {
+      gap: 8px;
+    }
+  }
+
+  &__category-item {
+  }
+
+  &__category-item-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light);
+    padding: 12px;
+    border-radius: 5.33px;
+    color: var(--dark);
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    @include media('lg') {
+      min-width: 306px;
+    }
+
+    @include media('xl') {
+      min-width: 346px;
+    }
+
+    svg {
+      transform: rotate(-90deg);
+      width: 16px;
+      height: 8px;
     }
   }
 }
